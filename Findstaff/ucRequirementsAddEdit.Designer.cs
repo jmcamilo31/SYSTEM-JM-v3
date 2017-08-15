@@ -38,9 +38,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbDesignation1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtReqirement2 = new System.Windows.Forms.TextBox();
+            this.txtRequirement2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtRequirementID = new System.Windows.Forms.TextBox();
@@ -92,7 +92,8 @@
             this.cbDesignation.FormattingEnabled = true;
             this.cbDesignation.Items.AddRange(new object[] {
             "Country",
-            "Job"});
+            "Job",
+            "Basic"});
             this.cbDesignation.Location = new System.Drawing.Point(524, 167);
             this.cbDesignation.Name = "cbDesignation";
             this.cbDesignation.Size = new System.Drawing.Size(200, 27);
@@ -163,18 +164,18 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnCancel2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbDesignation1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtReqirement2);
+            this.panel2.Controls.Add(this.txtRequirement2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.txtRequirementID);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblEditRequirements);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(507, 0);
+            this.panel2.Location = new System.Drawing.Point(1108, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(611, 400);
+            this.panel2.Size = new System.Drawing.Size(10, 400);
             this.panel2.TabIndex = 2;
             // 
             // btnCancel2
@@ -193,16 +194,20 @@
             this.btnCancel2.UseVisualStyleBackColor = false;
             this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
             // 
-            // comboBox1
+            // cbDesignation1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbDesignation1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Country",
+            "Job",
+            "Basic"});
+            this.cbDesignation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbDesignation1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDesignation1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDesignation1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDesignation1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDesignation1.ForeColor = System.Drawing.Color.Black;
+            this.cbDesignation1.FormattingEnabled = true;
+            this.cbDesignation1.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -215,10 +220,10 @@
             "October",
             "November",
             "December"});
-            this.comboBox1.Location = new System.Drawing.Point(516, 187);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 27);
-            this.comboBox1.TabIndex = 281;
+            this.cbDesignation1.Location = new System.Drawing.Point(516, 187);
+            this.cbDesignation1.Name = "cbDesignation1";
+            this.cbDesignation1.Size = new System.Drawing.Size(200, 27);
+            this.cbDesignation1.TabIndex = 281;
             // 
             // label3
             // 
@@ -232,16 +237,16 @@
             this.label3.TabIndex = 280;
             this.label3.Text = "Designation:";
             // 
-            // txtReqirement2
+            // txtRequirement2
             // 
-            this.txtReqirement2.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtReqirement2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReqirement2.ForeColor = System.Drawing.Color.Black;
-            this.txtReqirement2.Location = new System.Drawing.Point(516, 154);
-            this.txtReqirement2.MaxLength = 30;
-            this.txtReqirement2.Name = "txtReqirement2";
-            this.txtReqirement2.Size = new System.Drawing.Size(200, 26);
-            this.txtReqirement2.TabIndex = 279;
+            this.txtRequirement2.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtRequirement2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRequirement2.ForeColor = System.Drawing.Color.Black;
+            this.txtRequirement2.Location = new System.Drawing.Point(516, 154);
+            this.txtRequirement2.MaxLength = 30;
+            this.txtRequirement2.Name = "txtRequirement2";
+            this.txtRequirement2.Size = new System.Drawing.Size(200, 26);
+            this.txtRequirement2.TabIndex = 279;
             // 
             // label4
             // 
@@ -331,17 +336,17 @@
         private System.Windows.Forms.TextBox txtRequirement;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbDesignation;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtReqirement2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtRequirementID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEditRequirements;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnCancel2;
+        public System.Windows.Forms.TextBox txtRequirement2;
+        public System.Windows.Forms.TextBox txtRequirementID;
+        public System.Windows.Forms.ComboBox cbDesignation1;
     }
 }

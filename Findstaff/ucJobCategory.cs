@@ -35,10 +35,19 @@ namespace Findstaff
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ucJobCategoryAddEdit.Dock = DockStyle.Fill;
-            ucJobCategoryAddEdit.Visible = true;
-            ucJobCategoryAddEdit.panel1.Visible = false;
-            ucJobCategoryAddEdit.panel2.Visible = true;
+            if(dgvJobCategory.Rows.Count != 0)
+            {
+                ucJobCategoryAddEdit.Dock = DockStyle.Fill;
+                ucJobCategoryAddEdit.Visible = true;
+                ucJobCategoryAddEdit.panel1.Visible = false;
+                ucJobCategoryAddEdit.panel2.Visible = true;
+                ucJobCategoryAddEdit.txtID.Text = dgvJobCategory.SelectedRows[0].Cells[0].Value.ToString();
+                ucJobCategoryAddEdit.txtName.Text = dgvJobCategory.SelectedRows[0].Cells[1].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No record available for edit","No Record Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ucJobCategory_Load(object sender, EventArgs e)

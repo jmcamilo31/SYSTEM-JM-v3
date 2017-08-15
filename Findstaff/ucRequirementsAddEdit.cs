@@ -19,6 +19,7 @@ namespace Findstaff
         private string database;
         private string uid;
         private string password;
+        MySqlCommand com = new MySqlCommand();
 
         public ucRequirementsAddEdit()
         {
@@ -35,7 +36,7 @@ namespace Findstaff
                 int ctr = 0;
                 string cID = "";
                 string cou = "select count(*) from genreqs_t;";
-                MySqlCommand com = new MySqlCommand(cou, connection);
+                com = new MySqlCommand(cou, connection);
                 ctr = int.Parse(com.ExecuteScalar() + "");
                 if ((ctr + "").Length == 1)
                 {
@@ -105,8 +106,30 @@ namespace Findstaff
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
+            connection.Open();
+            string cmd = "";
+            if (txtRequirement2.Text == "")
+            {
+                MessageBox.Show("Skill name must not be empty.", "Empty Fee Name Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult rs = MessageBox.Show("Are you sure You want to update the record with the following details?"
+                    + "\nRequirement ID: " + txtRequirementID.Text + "\nNew Requirement Name: " + txtRequirement2.Text
+                    +"\nNew Designation: "+ cbDesignation1.Text, "Confirmation", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    cmd = "Update Genreqs_t set reqname = '" + txtRequirement2.Text + "', Allocation = '"+cbDesignation1.Text+"' where Req_id = '" + txtRequirementID.Text + "';";
+                    com = new MySqlCommand(cmd, connection);
+                    com.ExecuteNonQuery();
+                    MessageBox.Show("Changes Saved!", "Updated Requirement Record!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtRequirementID.Clear();
+                    txtRequirement2.Clear();
+                    cbDesignation1.SelectedIndex = -1;
+                    this.Hide();
+                }
+            }
+            connection.Close();
         }
 
         private void btnCancel2_Click(object sender, EventArgs e)

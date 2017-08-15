@@ -19,9 +19,6 @@ namespace Findstaff
         private string uid;
         private string password;
 
-        public string Fee_ID;
-        public string Feename;
-
         public ucFees()
         {
             InitializeComponent();
@@ -37,12 +34,19 @@ namespace Findstaff
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ucFeesAddEdit.Dock = DockStyle.Fill;
-            ucFeesAddEdit.Visible = true;
-            ucFeesAddEdit.panel1.Visible = false;
-            ucFeesAddEdit.panel2.Visible = true;
-            ucFeesAddEdit.txtID.Text = dgvFees.SelectedRows[0].Cells[0].Value.ToString();
-            ucFeesAddEdit.txtName.Text = dgvFees.SelectedRows[0].Cells[1].Value.ToString();
+            if(dgvFees.Rows.Count != 0)
+            {
+                ucFeesAddEdit.Dock = DockStyle.Fill;
+                ucFeesAddEdit.Visible = true;
+                ucFeesAddEdit.panel1.Visible = false;
+                ucFeesAddEdit.panel2.Visible = true;
+                ucFeesAddEdit.txtID.Text = dgvFees.SelectedRows[0].Cells[0].Value.ToString();
+                ucFeesAddEdit.txtName.Text = dgvFees.SelectedRows[0].Cells[1].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No record available for edit.","No Existing Record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ucFees_Load(object sender, EventArgs e)
@@ -56,17 +60,6 @@ namespace Findstaff
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
-
-            string com = "Select Fee_ID'Fee ID', Feename'Fee Name' from Genfees_t";
-            using (connection)
-            {
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
-                {
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    dgvFees.DataSource = ds.Tables[0];
-                }
-            }
         }
     }
 }

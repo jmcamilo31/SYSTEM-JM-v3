@@ -27,10 +27,19 @@ namespace Findstaff
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ucSkillsAddEdit.Dock = DockStyle.Fill;
-            ucSkillsAddEdit.Visible = true;
-            ucSkillsAddEdit.panel1.Visible = false;
-            ucSkillsAddEdit.panel2.Visible = true;
+            if(dgvSkills.Rows.Count != 0)
+            {
+                ucSkillsAddEdit.Dock = DockStyle.Fill;
+                ucSkillsAddEdit.Visible = true;
+                ucSkillsAddEdit.panel1.Visible = false;
+                ucSkillsAddEdit.panel2.Visible = true;
+                ucSkillsAddEdit.txtSkillID.Text = dgvSkills.SelectedRows[0].Cells[0].Value.ToString();
+                ucSkillsAddEdit.txtSkillName2.Text = dgvSkills.SelectedRows[0].Cells[1].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No record available for edit.", "No Existing Record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

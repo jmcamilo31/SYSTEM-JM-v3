@@ -13,9 +13,6 @@ namespace Findstaff
 {
     public partial class Login : Form
     {
-        //SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=FINDSTAFF;Integrated Security=True");
-        //SqlCommand com = new SqlCommand();
-        //SqlDataReader dr;
         public int tries = 3;
 
         public Login()

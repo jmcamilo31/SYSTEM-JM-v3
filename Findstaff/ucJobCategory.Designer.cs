@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvJobCategory = new System.Windows.Forms.DataGridView();
@@ -74,6 +75,8 @@
             this.dgvJobCategory.AllowUserToDeleteRows = false;
             this.dgvJobCategory.AllowUserToResizeColumns = false;
             this.dgvJobCategory.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
+            this.dgvJobCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvJobCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJobCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvJobCategory.Location = new System.Drawing.Point(100, 100);
@@ -146,9 +149,9 @@
 
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.DataGridView dgvJobCategory;
         private System.Windows.Forms.Label lblJobCategory;
         private System.Windows.Forms.Button btnAdd;
         private ucJobCategoryAddEdit ucJobCategoryAddEdit;
+        public System.Windows.Forms.DataGridView dgvJobCategory;
     }
 }

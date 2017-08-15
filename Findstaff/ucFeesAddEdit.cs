@@ -18,6 +18,7 @@ namespace Findstaff
         private string database;
         private string uid;
         private string password;
+        private MySqlCommand com = new MySqlCommand();
 
         public ucFeesAddEdit()
         {
@@ -32,7 +33,7 @@ namespace Findstaff
             int ctr = 0;
             string cID = "";
             string cou = "select count(*) from genfees_t;";
-            MySqlCommand com = new MySqlCommand(cou, connection);
+            com = new MySqlCommand(cou, connection);
             ctr = int.Parse(com.ExecuteScalar()+"");
             if ((ctr+"").Length == 1)
             {
@@ -88,12 +89,34 @@ namespace Findstaff
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Saved!", "Saved!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
+            connection.Open();
+            string cmd = "";
+            if(txtName.Text == "")
+            {
+                MessageBox.Show("Fee name must not be empty.", "Empty Fee Name Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult rs = MessageBox.Show("Are you sure You want to update the record with the following details?"
+                    +"\nFee ID: "+txtID.Text+"\nNew Fee Name: "+txtName.Text, "Confirmation", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    cmd = "Update Genfees_t set feename = '" + txtName.Text + "' where fee_id = '" + txtID.Text + "';";
+                    com = new MySqlCommand(cmd, connection);
+                    com.ExecuteNonQuery();
+                    MessageBox.Show("Changes Saved!", "Update Fee Record!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtID.Clear();
+                    txtName.Clear();
+                    this.Hide();
+                }
+            }
+            connection.Close();
         }
 
         private void btnCancel2_Click(object sender, EventArgs e)
         {
+            txtID.Clear();
+            txtName.Clear();
             this.Hide();
         }
 

@@ -38,12 +38,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCategory1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEditJobs = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(627, 400);
+            this.panel1.Size = new System.Drawing.Size(10, 400);
             this.panel1.TabIndex = 2;
             // 
             // btnCancel1
@@ -90,19 +90,6 @@
             this.cbCategory.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.ForeColor = System.Drawing.Color.Black;
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
             this.cbCategory.Location = new System.Drawing.Point(486, 122);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(216, 27);
@@ -173,12 +160,12 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnCancel2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbCategory1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblEditJobs);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -203,16 +190,16 @@
             this.btnCancel2.UseVisualStyleBackColor = false;
             this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
             // 
-            // comboBox1
+            // cbCategory1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbCategory1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbCategory1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbCategory1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategory1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory1.ForeColor = System.Drawing.Color.Black;
+            this.cbCategory1.FormattingEnabled = true;
+            this.cbCategory1.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -225,10 +212,10 @@
             "October",
             "November",
             "December"});
-            this.comboBox1.Location = new System.Drawing.Point(504, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 27);
-            this.comboBox1.TabIndex = 281;
+            this.cbCategory1.Location = new System.Drawing.Point(504, 136);
+            this.cbCategory1.Name = "cbCategory1";
+            this.cbCategory1.Size = new System.Drawing.Size(200, 27);
+            this.cbCategory1.TabIndex = 281;
             // 
             // label3
             // 
@@ -242,16 +229,16 @@
             this.label3.TabIndex = 280;
             this.label3.Text = "Job Name:";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(504, 169);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 279;
+            this.txtName.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(504, 169);
+            this.txtName.MaxLength = 30;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 26);
+            this.txtName.TabIndex = 279;
             // 
             // label4
             // 
@@ -281,16 +268,16 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // textBox2
+            // txtID
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(504, 104);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 276;
+            this.txtID.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtID.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.Black;
+            this.txtID.Location = new System.Drawing.Point(504, 104);
+            this.txtID.MaxLength = 30;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(200, 26);
+            this.txtID.TabIndex = 276;
             // 
             // label2
             // 
@@ -340,12 +327,12 @@
         private System.Windows.Forms.Label lblAddJobs;
         private System.Windows.Forms.TextBox txtJobs;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCategory1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEditJobs;
         public System.Windows.Forms.Panel panel1;

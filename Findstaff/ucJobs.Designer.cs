@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
@@ -70,9 +71,21 @@
             // 
             // dgvJobs
             // 
+            this.dgvJobs.AllowUserToAddRows = false;
+            this.dgvJobs.AllowUserToDeleteRows = false;
+            this.dgvJobs.AllowUserToResizeColumns = false;
+            this.dgvJobs.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvJobs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvJobs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJobs.Location = new System.Drawing.Point(100, 100);
+            this.dgvJobs.MultiSelect = false;
             this.dgvJobs.Name = "dgvJobs";
+            this.dgvJobs.ReadOnly = true;
+            this.dgvJobs.RowHeadersVisible = false;
+            this.dgvJobs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvJobs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvJobs.Size = new System.Drawing.Size(918, 200);
             this.dgvJobs.TabIndex = 108;
             // 
@@ -136,9 +149,9 @@
 
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.DataGridView dgvJobs;
         private System.Windows.Forms.Label lblJobs;
         private System.Windows.Forms.Button btnAdd;
         private ucJobsAddEdit ucJobsAddEdit;
+        public System.Windows.Forms.DataGridView dgvJobs;
     }
 }

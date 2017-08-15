@@ -29,7 +29,7 @@ namespace Findstaff
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            timer1.Start();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

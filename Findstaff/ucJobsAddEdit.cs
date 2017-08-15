@@ -19,6 +19,7 @@ namespace Findstaff
         private string database;
         private string uid;
         private string password;
+        MySqlCommand com = new MySqlCommand();
 
         public ucJobsAddEdit()
         {
@@ -60,6 +61,17 @@ namespace Findstaff
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
+            connection.Open();
+            string cmd = "Select categoryname from jobcategory_t;";
+            com = new MySqlCommand(cmd, connection);
+            MySqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                cbCategory.Items.Add(dr[0].ToString());
+                cbCategory1.Items.Add(dr[0].ToString());
+            }
+            dr.Close();
+            connection.Close();
         }
     }
 }

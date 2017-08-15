@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvSkills = new System.Windows.Forms.DataGridView();
@@ -70,9 +71,19 @@
             // 
             // dgvSkills
             // 
+            this.dgvSkills.AllowUserToAddRows = false;
+            this.dgvSkills.AllowUserToDeleteRows = false;
+            this.dgvSkills.AllowUserToResizeColumns = false;
+            this.dgvSkills.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvSkills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSkills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSkills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSkills.Location = new System.Drawing.Point(100, 100);
             this.dgvSkills.Name = "dgvSkills";
+            this.dgvSkills.RowHeadersVisible = false;
+            this.dgvSkills.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSkills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSkills.Size = new System.Drawing.Size(918, 200);
             this.dgvSkills.TabIndex = 103;
             // 
@@ -136,9 +147,9 @@
 
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.DataGridView dgvSkills;
         private System.Windows.Forms.Label lblSkills;
         private System.Windows.Forms.Button btnAdd;
         private ucSkillsAddEdit ucSkillsAddEdit;
+        public System.Windows.Forms.DataGridView dgvSkills;
     }
 }

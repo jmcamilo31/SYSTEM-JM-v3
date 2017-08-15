@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvRequirements = new System.Windows.Forms.DataGridView();
@@ -74,6 +75,8 @@
             this.dgvRequirements.AllowUserToDeleteRows = false;
             this.dgvRequirements.AllowUserToResizeColumns = false;
             this.dgvRequirements.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgvRequirements.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRequirements.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRequirements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRequirements.Location = new System.Drawing.Point(100, 100);
@@ -135,7 +138,6 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "ucRequirements";
             this.Size = new System.Drawing.Size(1118, 400);
-            this.Load += new System.EventHandler(this.ucRequirements_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequirements)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

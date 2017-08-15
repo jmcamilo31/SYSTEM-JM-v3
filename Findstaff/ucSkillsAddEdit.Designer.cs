@@ -37,7 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtSkillId = new System.Windows.Forms.TextBox();
+            this.txtSkillID = new System.Windows.Forms.TextBox();
             this.lblSkillId = new System.Windows.Forms.Label();
             this.lblEditSkills = new System.Windows.Forms.Label();
             this.txtSkillName2 = new System.Windows.Forms.TextBox();
@@ -129,15 +129,15 @@
             // 
             this.panel2.Controls.Add(this.btnCancel2);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.txtSkillId);
+            this.panel2.Controls.Add(this.txtSkillID);
             this.panel2.Controls.Add(this.lblSkillId);
             this.panel2.Controls.Add(this.lblEditSkills);
             this.panel2.Controls.Add(this.txtSkillName2);
             this.panel2.Controls.Add(this.lblSkillName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1108, 0);
+            this.panel2.Location = new System.Drawing.Point(478, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 400);
+            this.panel2.Size = new System.Drawing.Size(640, 400);
             this.panel2.TabIndex = 2;
             // 
             // btnCancel2
@@ -172,16 +172,17 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtSkillId
+            // txtSkillID
             // 
-            this.txtSkillId.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSkillId.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSkillId.ForeColor = System.Drawing.Color.Black;
-            this.txtSkillId.Location = new System.Drawing.Point(502, 132);
-            this.txtSkillId.MaxLength = 30;
-            this.txtSkillId.Name = "txtSkillId";
-            this.txtSkillId.Size = new System.Drawing.Size(200, 26);
-            this.txtSkillId.TabIndex = 276;
+            this.txtSkillID.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtSkillID.Enabled = false;
+            this.txtSkillID.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSkillID.ForeColor = System.Drawing.Color.Black;
+            this.txtSkillID.Location = new System.Drawing.Point(502, 132);
+            this.txtSkillID.MaxLength = 30;
+            this.txtSkillID.Name = "txtSkillID";
+            this.txtSkillID.Size = new System.Drawing.Size(200, 26);
+            this.txtSkillID.TabIndex = 276;
             // 
             // lblSkillId
             // 
@@ -253,14 +254,14 @@
         private System.Windows.Forms.TextBox txtSkillName1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtSkillId;
         private System.Windows.Forms.Label lblSkillId;
         private System.Windows.Forms.Label lblEditSkills;
-        private System.Windows.Forms.TextBox txtSkillName2;
         private System.Windows.Forms.Label lblSkillName;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnCancel2;
+        public System.Windows.Forms.TextBox txtSkillID;
+        public System.Windows.Forms.TextBox txtSkillName2;
     }
 }

@@ -37,10 +37,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEditJobCategory = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,15 +129,15 @@
             // 
             this.panel2.Controls.Add(this.btnCancel2);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblEditJobCategory);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1108, 0);
+            this.panel2.Location = new System.Drawing.Point(424, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 400);
+            this.panel2.Size = new System.Drawing.Size(694, 400);
             this.panel2.TabIndex = 1;
             // 
             // btnCancel2
@@ -172,16 +172,16 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // textBox2
+            // txtID
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(509, 134);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 282;
+            this.txtID.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtID.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.Black;
+            this.txtID.Location = new System.Drawing.Point(509, 134);
+            this.txtID.MaxLength = 30;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(200, 26);
+            this.txtID.TabIndex = 282;
             // 
             // label1
             // 
@@ -206,16 +206,16 @@
             this.lblEditJobCategory.TabIndex = 280;
             this.lblEditJobCategory.Text = "Edit Job Category";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(509, 166);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 279;
+            this.txtName.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(509, 166);
+            this.txtName.MaxLength = 30;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 26);
+            this.txtName.TabIndex = 279;
             // 
             // label2
             // 
@@ -253,14 +253,14 @@
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEditJobCategory;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnCancel2;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.TextBox txtName;
     }
 }
