@@ -136,6 +136,7 @@
             this.Controls.Add(this.dgvJobCategory);
             this.Controls.Add(this.lblJobCategory);
             this.Controls.Add(this.btnAdd);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobCategory";
             this.Size = new System.Drawing.Size(1118, 400);
             this.Load += new System.EventHandler(this.ucJobCategory_Load);

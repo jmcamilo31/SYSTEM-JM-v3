@@ -150,6 +150,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvCountry);
             this.Controls.Add(this.lblJobFees);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobFees";
             this.Size = new System.Drawing.Size(1118, 450);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).EndInit();

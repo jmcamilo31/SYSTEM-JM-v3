@@ -185,6 +185,7 @@
             this.Controls.Add(this.txtJobOrderSearch);
             this.Controls.Add(this.lblJobOrderId);
             this.Controls.Add(this.lblJobOrder);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobOrder";
             this.Size = new System.Drawing.Size(1118, 450);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobOrder)).EndInit();

@@ -101,7 +101,7 @@ namespace Findstaff
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucFees.dgvFees.DataSource = ds.Tables[0];
+                    ucRequirements.dgvRequirements.DataSource = ds.Tables[0];
                 }
             }
         }
@@ -130,7 +130,8 @@ namespace Findstaff
             server = "localhost";
             database = "rms";
             uid = "root";
-            password = "anterograde";
+            //password = "anterograde";
+            password = "rootpass";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";

@@ -137,6 +137,7 @@
             this.Controls.Add(this.dgvJobs);
             this.Controls.Add(this.lblJobs);
             this.Controls.Add(this.btnAdd);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobs";
             this.Size = new System.Drawing.Size(1118, 400);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();

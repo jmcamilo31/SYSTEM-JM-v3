@@ -160,6 +160,7 @@
             this.Controls.Add(this.btnEmpEdit);
             this.Controls.Add(this.btnEmpAdd);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucEmployee";
             this.Size = new System.Drawing.Size(1118, 450);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();

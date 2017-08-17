@@ -216,6 +216,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblJobList);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobList";
             this.Size = new System.Drawing.Size(1118, 450);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).EndInit();

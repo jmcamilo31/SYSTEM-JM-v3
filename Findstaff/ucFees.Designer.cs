@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFees = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.ucFeesAddEdit = new Findstaff.ucFeesAddEdit();
             this.dgvFees = new System.Windows.Forms.DataGridView();
+            this.ucFeesAddEdit = new Findstaff.ucFeesAddEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,25 +98,31 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // ucFeesAddEdit
-            // 
-            this.ucFeesAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucFeesAddEdit.Location = new System.Drawing.Point(0, 0);
-            this.ucFeesAddEdit.Name = "ucFeesAddEdit";
-            this.ucFeesAddEdit.Size = new System.Drawing.Size(16, 17);
-            this.ucFeesAddEdit.TabIndex = 101;
-            this.ucFeesAddEdit.Visible = false;
-            // 
             // dgvFees
             // 
             this.dgvFees.AllowUserToAddRows = false;
             this.dgvFees.AllowUserToDeleteRows = false;
             this.dgvFees.AllowUserToResizeColumns = false;
             this.dgvFees.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
-            this.dgvFees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFees.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFees.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgvFees.Location = new System.Drawing.Point(100, 100);
             this.dgvFees.Name = "dgvFees";
             this.dgvFees.ReadOnly = true;
@@ -124,6 +131,15 @@
             this.dgvFees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFees.Size = new System.Drawing.Size(918, 200);
             this.dgvFees.TabIndex = 106;
+            // 
+            // ucFeesAddEdit
+            // 
+            this.ucFeesAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucFeesAddEdit.Location = new System.Drawing.Point(0, 0);
+            this.ucFeesAddEdit.Name = "ucFeesAddEdit";
+            this.ucFeesAddEdit.Size = new System.Drawing.Size(16, 17);
+            this.ucFeesAddEdit.TabIndex = 101;
+            this.ucFeesAddEdit.Visible = false;
             // 
             // ucFees
             // 
@@ -136,6 +152,7 @@
             this.Controls.Add(this.lblFees);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvFees);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucFees";
             this.Size = new System.Drawing.Size(1118, 400);
             this.Load += new System.EventHandler(this.ucFees_Load);

@@ -215,6 +215,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblEmployer);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucEmployer";
             this.Size = new System.Drawing.Size(1118, 450);
             this.Load += new System.EventHandler(this.ucEmployer_Load);
