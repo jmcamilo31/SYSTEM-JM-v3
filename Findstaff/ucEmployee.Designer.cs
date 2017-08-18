@@ -172,12 +172,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvEmployee;
         private System.Windows.Forms.Button btnEmpView;
         private System.Windows.Forms.Button btnEmpDel;
         private System.Windows.Forms.Button btnEmpEdit;
         private System.Windows.Forms.Button btnEmpAdd;
         private ucEmployeeAddEdit ucEmployeeAddEdit;
         private ucEmployeeView ucEmployeeView;
+        public System.Windows.Forms.DataGridView dgvEmployee;
     }
 }

@@ -236,6 +236,7 @@
             // ucJobFees
             // 
             this.ucJobFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobFees.ForeColor = System.Drawing.Color.Black;
             this.ucJobFees.Location = new System.Drawing.Point(645, 56);
             this.ucJobFees.Name = "ucJobFees";
             this.ucJobFees.Size = new System.Drawing.Size(100, 100);
@@ -244,6 +245,7 @@
             // ucApplicant
             // 
             this.ucApplicant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucApplicant.ForeColor = System.Drawing.Color.Black;
             this.ucApplicant.Location = new System.Drawing.Point(115, 56);
             this.ucApplicant.Name = "ucApplicant";
             this.ucApplicant.Size = new System.Drawing.Size(100, 100);
@@ -252,6 +254,7 @@
             // ucEmployer
             // 
             this.ucEmployer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucEmployer.ForeColor = System.Drawing.Color.Black;
             this.ucEmployer.Location = new System.Drawing.Point(327, 56);
             this.ucEmployer.Name = "ucEmployer";
             this.ucEmployer.Size = new System.Drawing.Size(100, 100);
@@ -260,6 +263,7 @@
             // ucEmployee
             // 
             this.ucEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucEmployee.ForeColor = System.Drawing.Color.Black;
             this.ucEmployee.Location = new System.Drawing.Point(9, 56);
             this.ucEmployee.Name = "ucEmployee";
             this.ucEmployee.Size = new System.Drawing.Size(100, 100);
@@ -268,6 +272,7 @@
             // ucJobOrder
             // 
             this.ucJobOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobOrder.ForeColor = System.Drawing.Color.Black;
             this.ucJobOrder.Location = new System.Drawing.Point(433, 56);
             this.ucJobOrder.Name = "ucJobOrder";
             this.ucJobOrder.Size = new System.Drawing.Size(100, 100);
@@ -276,6 +281,7 @@
             // ucCountry
             // 
             this.ucCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucCountry.ForeColor = System.Drawing.Color.Black;
             this.ucCountry.Location = new System.Drawing.Point(221, 56);
             this.ucCountry.Name = "ucCountry";
             this.ucCountry.Size = new System.Drawing.Size(100, 100);
@@ -292,6 +298,7 @@
             // ucJobList
             // 
             this.ucJobList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobList.ForeColor = System.Drawing.Color.Black;
             this.ucJobList.Location = new System.Drawing.Point(539, 56);
             this.ucJobList.Name = "ucJobList";
             this.ucJobList.Size = new System.Drawing.Size(100, 100);
@@ -313,6 +320,7 @@
             this.Controls.Add(this.pnlTabs);
             this.Name = "ucMaintenance";
             this.Size = new System.Drawing.Size(1118, 500);
+            this.Load += new System.EventHandler(this.ucMaintenance_Load);
             this.pnlTabs.ResumeLayout(false);
             this.ResumeLayout(false);
 

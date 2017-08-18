@@ -43,9 +43,17 @@
             // 
             // dgvJobOrder
             // 
+            this.dgvJobOrder.AllowUserToAddRows = false;
+            this.dgvJobOrder.AllowUserToDeleteRows = false;
+            this.dgvJobOrder.AllowUserToResizeColumns = false;
+            this.dgvJobOrder.AllowUserToResizeRows = false;
+            this.dgvJobOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJobOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJobOrder.Location = new System.Drawing.Point(100, 140);
             this.dgvJobOrder.Name = "dgvJobOrder";
+            this.dgvJobOrder.ReadOnly = true;
+            this.dgvJobOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvJobOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvJobOrder.Size = new System.Drawing.Size(918, 200);
             this.dgvJobOrder.TabIndex = 51;
             // 
@@ -188,6 +196,8 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobOrder";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucJobOrder_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucJobOrder_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,7 +205,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvJobOrder;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtJobOrderSearch;
         private System.Windows.Forms.Label lblJobOrderId;
@@ -205,5 +214,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private ucJobOrderAddEdit ucJobOrderAddEdit;
+        public System.Windows.Forms.DataGridView dgvJobOrder;
     }
 }

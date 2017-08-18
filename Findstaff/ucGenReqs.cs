@@ -28,6 +28,11 @@ namespace Findstaff
             ucSkills.Dock = DockStyle.Fill;
             ucRequirements.Dock = DockStyle.Fill;
             ucJobs.Dock = DockStyle.Fill;
+            ucFees.Visible = false;
+            ucJobCategory.Visible = false;
+            ucSkills.Visible = false;
+            ucRequirements.Visible = false;
+            ucJobs.Visible = false;
         }
 
         private void rbFees_CheckedChanged(object sender, EventArgs e)

@@ -60,7 +60,7 @@
             this.btnAddRequire = new System.Windows.Forms.Button();
             this.cbReq = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCoun = new System.Windows.Forms.TextBox();
+            this.txtCountryName1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).BeginInit();
@@ -428,13 +428,13 @@
             this.panel1.Controls.Add(this.btnAddRequire);
             this.panel1.Controls.Add(this.cbReq);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtCoun);
+            this.panel1.Controls.Add(this.txtCountryName1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(1058, 450);
             this.panel1.TabIndex = 2;
             // 
             // btnCancel1
@@ -539,6 +539,7 @@
             this.cbReq.Name = "cbReq";
             this.cbReq.Size = new System.Drawing.Size(184, 27);
             this.cbReq.TabIndex = 265;
+            this.cbReq.SelectedIndexChanged += new System.EventHandler(this.cbReq_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -551,16 +552,16 @@
             this.label7.TabIndex = 264;
             this.label7.Text = "Requirement Name:";
             // 
-            // txtCoun
+            // txtCountryName1
             // 
-            this.txtCoun.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtCoun.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoun.ForeColor = System.Drawing.Color.Black;
-            this.txtCoun.Location = new System.Drawing.Point(228, 97);
-            this.txtCoun.MaxLength = 30;
-            this.txtCoun.Name = "txtCoun";
-            this.txtCoun.Size = new System.Drawing.Size(200, 26);
-            this.txtCoun.TabIndex = 107;
+            this.txtCountryName1.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCountryName1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountryName1.ForeColor = System.Drawing.Color.Black;
+            this.txtCountryName1.Location = new System.Drawing.Point(228, 97);
+            this.txtCountryName1.MaxLength = 30;
+            this.txtCountryName1.Name = "txtCountryName1";
+            this.txtCountryName1.Size = new System.Drawing.Size(200, 26);
+            this.txtCountryName1.TabIndex = 107;
             // 
             // label8
             // 
@@ -595,6 +596,8 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucCountryAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucCountryAddEdit_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucCountryAddEdit_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).EndInit();
             this.pnlButtons1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -633,9 +636,8 @@
         private System.Windows.Forms.DataGridView dgvCountry;
         private System.Windows.Forms.Button btnRemoveRequire;
         private System.Windows.Forms.Button btnAddRequire;
-        private System.Windows.Forms.ComboBox cbReq;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCoun;
+        private System.Windows.Forms.TextBox txtCountryName1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCancel1;
@@ -644,5 +646,6 @@
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.ComboBox cbReq;
     }
 }
