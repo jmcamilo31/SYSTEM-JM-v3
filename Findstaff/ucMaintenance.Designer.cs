@@ -313,6 +313,7 @@
             this.Controls.Add(this.pnlTabs);
             this.Name = "ucMaintenance";
             this.Size = new System.Drawing.Size(1118, 500);
+            this.VisibleChanged += new System.EventHandler(this.ucMaintenance_VisibleChanged);
             this.pnlTabs.ResumeLayout(false);
             this.ResumeLayout(false);
 

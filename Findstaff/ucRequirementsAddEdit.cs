@@ -15,10 +15,6 @@ namespace Findstaff
     {
 
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
 
         public ucRequirementsAddEdit()
@@ -138,17 +134,10 @@ namespace Findstaff
             this.Hide();
         }
 
-        private void ucRequirementsAddEdit_Load(object sender, EventArgs e)
+        private void ucRequirementsAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            password = "anterograde";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
+            Connection con = new Connection();
+            connection = con.dbConnection();
         }
     }
 }

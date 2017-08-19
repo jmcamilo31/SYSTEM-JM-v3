@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Findstaff
 {
     public partial class ucEmployee : UserControl
     {
+        private MySqlConnection connection;
+        MySqlCommand com = new MySqlCommand();
+        MySqlDataAdapter adapter = new MySqlDataAdapter();
+        private string cmd = "";
+
         public ucEmployee()
         {
             InitializeComponent();
@@ -42,6 +48,22 @@ namespace Findstaff
         {
             ucEmployeeView.Dock = DockStyle.Fill;
             ucEmployeeView.Visible = true;
+        }
+
+        private void ucEmployeeAddEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            cmd = "select username'Username', Concat(fname , ' ' , lname)'Employee Name', DEPTNAME'Department' from Emp_t;";
+            using (connection)
+            {
+                using (adapter = new MySqlDataAdapter(cmd, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvEmployee.DataSource = ds.Tables[0];
+                }
+            }
         }
     }
 }

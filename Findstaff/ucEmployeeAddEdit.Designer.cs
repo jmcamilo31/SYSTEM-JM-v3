@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDeptStatus = new System.Windows.Forms.Label();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.cbDay = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
@@ -114,6 +115,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lblDeptStatus);
             this.panel1.Controls.Add(this.cbYear);
             this.panel1.Controls.Add(this.cbDay);
             this.panel1.Controls.Add(this.cbMonth);
@@ -151,8 +153,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(837, 450);
             this.panel1.TabIndex = 2;
+            // 
+            // lblDeptStatus
+            // 
+            this.lblDeptStatus.AutoSize = true;
+            this.lblDeptStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeptStatus.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblDeptStatus.Location = new System.Drawing.Point(506, 505);
+            this.lblDeptStatus.Name = "lblDeptStatus";
+            this.lblDeptStatus.Size = new System.Drawing.Size(17, 19);
+            this.lblDeptStatus.TabIndex = 105;
+            this.lblDeptStatus.Text = "*";
             // 
             // cbYear
             // 
@@ -211,6 +225,7 @@
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(100, 27);
             this.cbYear.TabIndex = 104;
+            this.cbYear.SelectedIndexChanged += new System.EventHandler(this.cbYear_SelectedIndexChanged);
             // 
             // cbDay
             // 
@@ -257,6 +272,7 @@
             this.cbDay.Name = "cbDay";
             this.cbDay.Size = new System.Drawing.Size(75, 27);
             this.cbDay.TabIndex = 103;
+            this.cbDay.SelectedIndexChanged += new System.EventHandler(this.cbDay_SelectedIndexChanged);
             // 
             // cbMonth
             // 
@@ -284,6 +300,7 @@
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.Size = new System.Drawing.Size(131, 27);
             this.cbMonth.TabIndex = 102;
+            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             // 
             // lblGenderStatus
             // 
@@ -400,10 +417,17 @@
             this.cbDept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDept.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDept.FormattingEnabled = true;
+            this.cbDept.Items.AddRange(new object[] {
+            "Recruitment",
+            "Docmentation",
+            "Accounting",
+            "Marketing",
+            "Operations"});
             this.cbDept.Location = new System.Drawing.Point(305, 505);
             this.cbDept.Name = "cbDept";
             this.cbDept.Size = new System.Drawing.Size(195, 27);
             this.cbDept.TabIndex = 83;
+            this.cbDept.SelectedIndexChanged += new System.EventHandler(this.cbDept_SelectedIndexChanged);
             // 
             // txtContact
             // 
@@ -415,6 +439,8 @@
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(300, 26);
             this.txtContact.TabIndex = 82;
+            this.txtContact.TextChanged += new System.EventHandler(this.txtContact_TextChanged);
+            this.txtContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContact_KeyPress);
             // 
             // txtAddress
             // 
@@ -427,6 +453,8 @@
             this.txtAddress.Size = new System.Drawing.Size(436, 26);
             this.txtAddress.TabIndex = 81;
             this.txtAddress.Text = "House Number, Street, City/Province";
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.Enter += new System.EventHandler(this.txtAddress_Enter);
             // 
             // rbFemale
             // 
@@ -442,6 +470,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = false;
+            this.rbFemale.Click += new System.EventHandler(this.rbFemale_Click);
             // 
             // rbMale
             // 
@@ -457,6 +486,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = false;
+            this.rbMale.Click += new System.EventHandler(this.rbMale_Click);
             // 
             // lblDept
             // 
@@ -577,6 +607,8 @@
             this.txtMiddleName.Size = new System.Drawing.Size(300, 26);
             this.txtMiddleName.TabIndex = 45;
             this.txtMiddleName.Text = "Middle Name";
+            this.txtMiddleName.Enter += new System.EventHandler(this.txtMiddleName_Enter);
+            this.txtMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMiddleName_KeyPress);
             // 
             // txtFirstName
             // 
@@ -589,6 +621,9 @@
             this.txtFirstName.Size = new System.Drawing.Size(300, 26);
             this.txtFirstName.TabIndex = 44;
             this.txtFirstName.Text = "First Name";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
+            this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
             // txtLastName
             // 
@@ -601,6 +636,9 @@
             this.txtLastName.Size = new System.Drawing.Size(300, 26);
             this.txtLastName.TabIndex = 43;
             this.txtLastName.Text = "Last Name";
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
+            this.txtLastName.Enter += new System.EventHandler(this.txtLastName_Enter);
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // lblName
             // 
@@ -661,6 +699,8 @@
             this.txtConPass.PasswordChar = '•';
             this.txtConPass.Size = new System.Drawing.Size(300, 26);
             this.txtConPass.TabIndex = 33;
+            this.txtConPass.TextChanged += new System.EventHandler(this.txtConPass_TextChanged);
+            this.txtConPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConPass_KeyPress);
             // 
             // txtPass
             // 
@@ -673,6 +713,8 @@
             this.txtPass.PasswordChar = '•';
             this.txtPass.Size = new System.Drawing.Size(300, 26);
             this.txtPass.TabIndex = 32;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
+            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
             // 
             // lblAddEmp
             // 
@@ -696,6 +738,8 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(300, 26);
             this.txtUsername.TabIndex = 30;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // panel2
             // 
@@ -737,9 +781,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(1108, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1118, 450);
+            this.panel2.Size = new System.Drawing.Size(10, 450);
             this.panel2.TabIndex = 3;
             // 
             // comboBox1
@@ -1317,6 +1361,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucEmployeeAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.VisibleChanged += new System.EventHandler(this.ucEmployeeAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlButtons1.ResumeLayout(false);
@@ -1404,5 +1449,6 @@
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblDeptStatus;
     }
 }

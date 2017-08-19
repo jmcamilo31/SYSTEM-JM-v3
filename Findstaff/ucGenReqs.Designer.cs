@@ -214,7 +214,7 @@
             this.Controls.Add(this.pnlTabs);
             this.Name = "ucGenReqs";
             this.Size = new System.Drawing.Size(1118, 450);
-            this.Load += new System.EventHandler(this.ucGenReqs_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucGenReqs_VisibleChanged);
             this.pnlTabs.ResumeLayout(false);
             this.ResumeLayout(false);
 

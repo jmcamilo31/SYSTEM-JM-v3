@@ -35,13 +35,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.empID = new System.Windows.Forms.Label();
             this.lblEmpID = new System.Windows.Forms.Label();
-            this.position = new System.Windows.Forms.Label();
             this.dept = new System.Windows.Forms.Label();
             this.contactNum = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
             this.lblDept = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -141,18 +139,6 @@
             this.lblEmpID.TabIndex = 88;
             this.lblEmpID.Text = "Employee ID :";
             // 
-            // position
-            // 
-            this.position.AutoSize = true;
-            this.position.BackColor = System.Drawing.Color.Transparent;
-            this.position.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.position.ForeColor = System.Drawing.Color.Black;
-            this.position.Location = new System.Drawing.Point(558, 334);
-            this.position.Name = "position";
-            this.position.Size = new System.Drawing.Size(73, 19);
-            this.position.TabIndex = 87;
-            this.position.Text = "position";
-            // 
             // dept
             // 
             this.dept.AutoSize = true;
@@ -212,18 +198,6 @@
             this.username.Size = new System.Drawing.Size(87, 19);
             this.username.TabIndex = 82;
             this.username.Text = "username";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
-            this.lblPosition.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.Black;
-            this.lblPosition.Location = new System.Drawing.Point(459, 334);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(74, 19);
-            this.lblPosition.TabIndex = 81;
-            this.lblPosition.Text = "Position :";
             // 
             // lblDept
             // 
@@ -309,13 +283,11 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.empID);
             this.Controls.Add(this.lblEmpID);
-            this.Controls.Add(this.position);
             this.Controls.Add(this.dept);
             this.Controls.Add(this.contactNum);
             this.Controls.Add(this.address);
             this.Controls.Add(this.name);
             this.Controls.Add(this.username);
-            this.Controls.Add(this.lblPosition);
             this.Controls.Add(this.lblDept);
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.lblAddress);
@@ -338,13 +310,11 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label empID;
         private System.Windows.Forms.Label lblEmpID;
-        private System.Windows.Forms.Label position;
         private System.Windows.Forms.Label dept;
         private System.Windows.Forms.Label contactNum;
         private System.Windows.Forms.Label address;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label username;
-        private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblDept;
         private System.Windows.Forms.Label lblContact;
         private System.Windows.Forms.Label lblAddress;

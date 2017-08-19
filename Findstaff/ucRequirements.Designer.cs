@@ -148,9 +148,9 @@
 
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.DataGridView dgvRequirements;
         private System.Windows.Forms.Label lblRequirements;
         private System.Windows.Forms.Button btnAdd;
         private ucRequirementsAddEdit ucRequirementsAddEdit;
+        public System.Windows.Forms.DataGridView dgvRequirements;
     }
 }

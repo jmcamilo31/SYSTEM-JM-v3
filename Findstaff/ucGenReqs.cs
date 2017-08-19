@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucGenReqs : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         private MySqlCommand com = new MySqlCommand();
 
         public ucGenReqs()
@@ -28,6 +24,11 @@ namespace Findstaff
             ucSkills.Dock = DockStyle.Fill;
             ucRequirements.Dock = DockStyle.Fill;
             ucJobs.Dock = DockStyle.Fill;
+            ucFees.Visible = false;
+            ucJobCategory.Visible = false;
+            ucSkills.Visible = false;
+            ucRequirements.Visible = false;
+            ucJobs.Visible = false;
         }
 
         private void rbFees_CheckedChanged(object sender, EventArgs e)
@@ -94,14 +95,14 @@ namespace Findstaff
             ucSkills.Visible = false;
             ucRequirements.Visible = true;
             ucJobs.Visible = false;
-            string com = "Select Req_ID'Requirement ID', Reqname'Reqirement Name', Allocation'Requiremnet for' from Genreqs_t";
+            string com = "Select Req_ID'Requirement ID', Reqname'Requirement Name', Allocation'Requirement for' from Genreqs_t;";
             using (connection)
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucFees.dgvFees.DataSource = ds.Tables[0];
+                    ucRequirements.dgvRequirements.DataSource = ds.Tables[0];
                 }
             }
         }
@@ -125,17 +126,10 @@ namespace Findstaff
             }
         }
 
-        private void ucGenReqs_Load(object sender, EventArgs e)
+        private void ucGenReqs_VisibleChanged(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            password = "anterograde";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
+            Connection con = new Connection();
+            connection = con.dbConnection();
         }
     }
 }

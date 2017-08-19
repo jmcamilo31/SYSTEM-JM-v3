@@ -30,9 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.cbJobType = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.lblAddJobs = new System.Windows.Forms.Label();
             this.txtJobs = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,9 +55,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCancel1);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.cbJobType);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cbCategory);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.lblAddJobs);
             this.panel1.Controls.Add(this.txtJobs);
             this.panel1.Controls.Add(this.label8);
@@ -73,13 +77,58 @@
             this.btnCancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel1.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel1.Location = new System.Drawing.Point(563, 270);
+            this.btnCancel1.Location = new System.Drawing.Point(562, 270);
             this.btnCancel1.Name = "btnCancel1";
             this.btnCancel1.Size = new System.Drawing.Size(100, 50);
-            this.btnCancel1.TabIndex = 274;
+            this.btnCancel1.TabIndex = 280;
             this.btnCancel1.Text = "CANCEL";
             this.btnCancel1.UseVisualStyleBackColor = false;
             this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(456, 270);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 50);
+            this.btnAdd.TabIndex = 279;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // cbJobType
+            // 
+            this.cbJobType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbJobType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbJobType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbJobType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbJobType.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbJobType.ForeColor = System.Drawing.Color.Black;
+            this.cbJobType.FormattingEnabled = true;
+            this.cbJobType.Items.AddRange(new object[] {
+            "Vulnerable",
+            "Skilled"});
+            this.cbJobType.Location = new System.Drawing.Point(486, 187);
+            this.cbJobType.Name = "cbJobType";
+            this.cbJobType.Size = new System.Drawing.Size(216, 27);
+            this.cbJobType.TabIndex = 278;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(396, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 19);
+            this.label5.TabIndex = 277;
+            this.label5.Text = "Category:";
             // 
             // cbCategory
             // 
@@ -106,22 +155,6 @@
             this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 272;
             this.label1.Text = "Job Name:";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(457, 270);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 50);
-            this.btnAdd.TabIndex = 271;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblAddJobs
             // 
@@ -311,7 +344,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucJobsAddEdit";
             this.Size = new System.Drawing.Size(1118, 400);
-            this.Load += new System.EventHandler(this.ucJobsAddEdit_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucJobsAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -321,13 +354,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblAddJobs;
         private System.Windows.Forms.TextBox txtJobs;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbCategory1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
@@ -337,7 +367,12 @@
         private System.Windows.Forms.Label lblEditJobs;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnCancel2;
+        public System.Windows.Forms.ComboBox cbCategory;
+        public System.Windows.Forms.ComboBox cbCategory1;
+        private System.Windows.Forms.Button btnCancel1;
+        private System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.ComboBox cbJobType;
+        private System.Windows.Forms.Label label5;
     }
 }

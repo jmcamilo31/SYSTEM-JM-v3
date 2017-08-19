@@ -34,8 +34,8 @@
             this.btnEmpDel = new System.Windows.Forms.Button();
             this.btnEmpEdit = new System.Windows.Forms.Button();
             this.btnEmpAdd = new System.Windows.Forms.Button();
-            this.ucEmployeeAddEdit = new Findstaff.ucEmployeeAddEdit();
             this.ucEmployeeView = new Findstaff.ucEmployeeView();
+            this.ucEmployeeAddEdit = new Findstaff.ucEmployeeAddEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +60,8 @@
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployee.Location = new System.Drawing.Point(100, 100);
             this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.ReadOnly = true;
+            this.dgvEmployee.RowHeadersVisible = false;
             this.dgvEmployee.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(918, 230);
@@ -129,15 +131,6 @@
             this.btnEmpAdd.UseVisualStyleBackColor = false;
             this.btnEmpAdd.Click += new System.EventHandler(this.btnEmpAdd_Click);
             // 
-            // ucEmployeeAddEdit
-            // 
-            this.ucEmployeeAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucEmployeeAddEdit.Location = new System.Drawing.Point(0, 0);
-            this.ucEmployeeAddEdit.Name = "ucEmployeeAddEdit";
-            this.ucEmployeeAddEdit.Size = new System.Drawing.Size(10, 10);
-            this.ucEmployeeAddEdit.TabIndex = 17;
-            this.ucEmployeeAddEdit.Visible = false;
-            // 
             // ucEmployeeView
             // 
             this.ucEmployeeView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -146,6 +139,16 @@
             this.ucEmployeeView.Size = new System.Drawing.Size(10, 10);
             this.ucEmployeeView.TabIndex = 18;
             this.ucEmployeeView.Visible = false;
+            // 
+            // ucEmployeeAddEdit
+            // 
+            this.ucEmployeeAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucEmployeeAddEdit.Location = new System.Drawing.Point(0, 0);
+            this.ucEmployeeAddEdit.Name = "ucEmployeeAddEdit";
+            this.ucEmployeeAddEdit.Size = new System.Drawing.Size(10, 10);
+            this.ucEmployeeAddEdit.TabIndex = 17;
+            this.ucEmployeeAddEdit.Visible = false;
+            this.ucEmployeeAddEdit.VisibleChanged += new System.EventHandler(this.ucEmployeeAddEdit_VisibleChanged);
             // 
             // ucEmployee
             // 
@@ -171,12 +174,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvEmployee;
         private System.Windows.Forms.Button btnEmpView;
         private System.Windows.Forms.Button btnEmpDel;
         private System.Windows.Forms.Button btnEmpEdit;
         private System.Windows.Forms.Button btnEmpAdd;
         private ucEmployeeAddEdit ucEmployeeAddEdit;
         private ucEmployeeView ucEmployeeView;
+        public System.Windows.Forms.DataGridView dgvEmployee;
     }
 }

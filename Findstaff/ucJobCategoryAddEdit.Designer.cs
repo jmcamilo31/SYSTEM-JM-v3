@@ -135,9 +135,9 @@
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(424, 0);
+            this.panel2.Location = new System.Drawing.Point(1108, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(694, 400);
+            this.panel2.Size = new System.Drawing.Size(10, 400);
             this.panel2.TabIndex = 1;
             // 
             // btnCancel2
@@ -175,6 +175,7 @@
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.Black;
             this.txtID.Location = new System.Drawing.Point(509, 134);
