@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCountry = new System.Windows.Forms.DataGridView();
             this.lblCountry = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -39,9 +40,26 @@
             // 
             // dgvCountry
             // 
+            this.dgvCountry.AllowUserToAddRows = false;
+            this.dgvCountry.AllowUserToDeleteRows = false;
+            this.dgvCountry.AllowUserToResizeColumns = false;
+            this.dgvCountry.AllowUserToResizeRows = false;
+            this.dgvCountry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCountry.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCountry.Location = new System.Drawing.Point(103, 87);
             this.dgvCountry.Name = "dgvCountry";
+            this.dgvCountry.ReadOnly = true;
+            this.dgvCountry.RowHeadersVisible = false;
+            this.dgvCountry.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCountry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCountry.Size = new System.Drawing.Size(918, 200);
             this.dgvCountry.TabIndex = 43;
             // 
@@ -106,11 +124,13 @@
             // ucCountryAddEdit
             // 
             this.ucCountryAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucCountryAddEdit.ForeColor = System.Drawing.Color.Black;
             this.ucCountryAddEdit.Location = new System.Drawing.Point(0, 0);
             this.ucCountryAddEdit.Name = "ucCountryAddEdit";
             this.ucCountryAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucCountryAddEdit.TabIndex = 51;
             this.ucCountryAddEdit.Visible = false;
+            this.ucCountryAddEdit.VisibleChanged += new System.EventHandler(this.ucCountryAddEdit_VisibleChanged);
             // 
             // ucCountry
             // 
@@ -123,8 +143,10 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvCountry);
             this.Controls.Add(this.lblCountry);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucCountry";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucCountry_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,11 +154,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvCountry;
         private System.Windows.Forms.Label lblCountry;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private ucCountryAddEdit ucCountryAddEdit;
+        public System.Windows.Forms.DataGridView dgvCountry;
     }
 }

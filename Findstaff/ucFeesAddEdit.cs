@@ -72,6 +72,7 @@ namespace Findstaff
                     MessageBox.Show("Added!", "Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtFees1.Clear();
                     this.Hide();
+                    
                 }
                 else if (ctr != 0)
                 {
@@ -125,7 +126,8 @@ namespace Findstaff
             server = "localhost";
             database = "rms";
             uid = "root";
-            password = "anterograde";
+            //password = "anterograde";
+            password = "rootpass";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";

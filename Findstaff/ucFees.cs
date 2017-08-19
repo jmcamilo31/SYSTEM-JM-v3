@@ -30,6 +30,8 @@ namespace Findstaff
             ucFeesAddEdit.Visible = true;
             ucFeesAddEdit.panel1.Visible = true;
             ucFeesAddEdit.panel2.Visible = false;
+            dgvFees.DataSource = ucFeesAddEdit;
+            dgvFees.Refresh();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -54,7 +56,8 @@ namespace Findstaff
             server = "localhost";
             database = "rms";
             uid = "root";
-            password = "anterograde";
+            //password = "anterograde";
+            password = "rootpass";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";

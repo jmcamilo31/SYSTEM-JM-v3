@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEmployer = new System.Windows.Forms.DataGridView();
             this.btnAdvSe = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -38,16 +39,33 @@
             this.btnEmpDel = new System.Windows.Forms.Button();
             this.btnEmpEdit = new System.Windows.Forms.Button();
             this.btnEmpAdd = new System.Windows.Forms.Button();
-            this.ucEmployerAddEdit = new Findstaff.ucEmployerAddEdit();
             this.ucEmployerView = new Findstaff.ucEmployerView();
+            this.ucEmployerAddEdit = new Findstaff.ucEmployerAddEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployer)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEmployer
             // 
+            this.dgvEmployer.AllowUserToAddRows = false;
+            this.dgvEmployer.AllowUserToDeleteRows = false;
+            this.dgvEmployer.AllowUserToResizeColumns = false;
+            this.dgvEmployer.AllowUserToResizeRows = false;
+            this.dgvEmployer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployer.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmployer.Location = new System.Drawing.Point(100, 140);
             this.dgvEmployer.Name = "dgvEmployer";
+            this.dgvEmployer.ReadOnly = true;
+            this.dgvEmployer.RowHeadersVisible = false;
+            this.dgvEmployer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvEmployer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployer.Size = new System.Drawing.Size(918, 200);
             this.dgvEmployer.TabIndex = 43;
             // 
@@ -180,15 +198,6 @@
             this.btnEmpAdd.UseVisualStyleBackColor = false;
             this.btnEmpAdd.Click += new System.EventHandler(this.btnEmpAdd_Click);
             // 
-            // ucEmployerAddEdit
-            // 
-            this.ucEmployerAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucEmployerAddEdit.Location = new System.Drawing.Point(0, 0);
-            this.ucEmployerAddEdit.Name = "ucEmployerAddEdit";
-            this.ucEmployerAddEdit.Size = new System.Drawing.Size(10, 10);
-            this.ucEmployerAddEdit.TabIndex = 51;
-            this.ucEmployerAddEdit.Visible = false;
-            // 
             // ucEmployerView
             // 
             this.ucEmployerView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -197,6 +206,16 @@
             this.ucEmployerView.Size = new System.Drawing.Size(10, 10);
             this.ucEmployerView.TabIndex = 52;
             this.ucEmployerView.Visible = false;
+            // 
+            // ucEmployerAddEdit
+            // 
+            this.ucEmployerAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucEmployerAddEdit.Location = new System.Drawing.Point(0, 0);
+            this.ucEmployerAddEdit.Name = "ucEmployerAddEdit";
+            this.ucEmployerAddEdit.Size = new System.Drawing.Size(10, 10);
+            this.ucEmployerAddEdit.TabIndex = 51;
+            this.ucEmployerAddEdit.Visible = false;
+            this.ucEmployerAddEdit.VisibleChanged += new System.EventHandler(this.ucEmployerAddEdit_VisibleChanged);
             // 
             // ucEmployer
             // 
@@ -215,6 +234,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblEmployer);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucEmployer";
             this.Size = new System.Drawing.Size(1118, 450);
             this.Load += new System.EventHandler(this.ucEmployer_Load);
@@ -225,7 +245,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvEmployer;
         private System.Windows.Forms.Button btnAdvSe;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
@@ -237,5 +256,6 @@
         private System.Windows.Forms.Button btnEmpAdd;
         private ucEmployerAddEdit ucEmployerAddEdit;
         private ucEmployerView ucEmployerView;
+        public System.Windows.Forms.DataGridView dgvEmployer;
     }
 }

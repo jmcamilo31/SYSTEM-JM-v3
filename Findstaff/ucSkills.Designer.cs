@@ -135,6 +135,7 @@
             this.Controls.Add(this.dgvSkills);
             this.Controls.Add(this.lblSkills);
             this.Controls.Add(this.btnAdd);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucSkills";
             this.Size = new System.Drawing.Size(1118, 400);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();

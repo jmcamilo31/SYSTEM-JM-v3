@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbEmployer = new System.Windows.Forms.ComboBox();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.cbContractYear = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
             this.cbContractDay = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmployer = new System.Windows.Forms.TextBox();
             this.cbContractMonth = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtJobNo = new System.Windows.Forms.TextBox();
@@ -46,24 +46,24 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.cbEditDay = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEditEmp = new System.Windows.Forms.TextBox();
             this.cbEditMonth = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEditJobNo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblEditJobOrder = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbEmployer);
             this.panel1.Controls.Add(this.btnCancel1);
             this.panel1.Controls.Add(this.cbContractYear);
-            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.btnAdd1);
             this.panel1.Controls.Add(this.cbContractDay);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtEmployer);
             this.panel1.Controls.Add(this.cbContractMonth);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtJobNo);
@@ -74,6 +74,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cbEmployer
+            // 
+            this.cbEmployer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbEmployer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbEmployer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEmployer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEmployer.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmployer.ForeColor = System.Drawing.Color.Black;
+            this.cbEmployer.FormattingEnabled = true;
+            this.cbEmployer.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cbEmployer.Location = new System.Drawing.Point(491, 188);
+            this.cbEmployer.Name = "cbEmployer";
+            this.cbEmployer.Size = new System.Drawing.Size(200, 27);
+            this.cbEmployer.TabIndex = 275;
             // 
             // btnCancel1
             // 
@@ -121,24 +149,24 @@
             this.cbContractYear.Size = new System.Drawing.Size(83, 27);
             this.cbContractYear.TabIndex = 274;
             // 
-            // btnAdd
+            // btnAdd1
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(436, 330);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 50);
-            this.btnAdd.TabIndex = 56;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAdd1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd1.FlatAppearance.BorderSize = 0;
+            this.btnAdd1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnAdd1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd1.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd1.Location = new System.Drawing.Point(436, 330);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(120, 50);
+            this.btnAdd1.TabIndex = 56;
+            this.btnAdd1.Text = "ADD";
+            this.btnAdd1.UseVisualStyleBackColor = false;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cbContractDay
             // 
@@ -174,20 +202,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(354, 224);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 19);
+            this.label1.Size = new System.Drawing.Size(117, 19);
             this.label1.TabIndex = 272;
-            this.label1.Text = "Contract Expiry:";
-            // 
-            // txtEmployer
-            // 
-            this.txtEmployer.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtEmployer.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployer.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployer.Location = new System.Drawing.Point(491, 189);
-            this.txtEmployer.MaxLength = 30;
-            this.txtEmployer.Name = "txtEmployer";
-            this.txtEmployer.Size = new System.Drawing.Size(200, 26);
-            this.txtEmployer.TabIndex = 271;
+            this.label1.Text = "Contract Start:";
             // 
             // cbContractMonth
             // 
@@ -263,12 +280,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.btnCancel2);
             this.panel2.Controls.Add(this.cbEditYear);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.cbEditDay);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtEditEmp);
             this.panel2.Controls.Add(this.cbEditMonth);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtEditJobNo);
@@ -379,20 +396,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(354, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 19);
+            this.label2.Size = new System.Drawing.Size(117, 19);
             this.label2.TabIndex = 272;
-            this.label2.Text = "Contract Expiry:";
-            // 
-            // txtEditEmp
-            // 
-            this.txtEditEmp.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtEditEmp.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditEmp.ForeColor = System.Drawing.Color.Black;
-            this.txtEditEmp.Location = new System.Drawing.Point(491, 170);
-            this.txtEditEmp.MaxLength = 30;
-            this.txtEditEmp.Name = "txtEditEmp";
-            this.txtEditEmp.Size = new System.Drawing.Size(200, 26);
-            this.txtEditEmp.TabIndex = 271;
+            this.label2.Text = "Contract Start:";
             // 
             // cbEditMonth
             // 
@@ -466,6 +472,33 @@
             this.lblEditJobOrder.TabIndex = 39;
             this.lblEditJobOrder.Text = "Edit Job Order";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.comboBox1.Location = new System.Drawing.Point(491, 169);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 27);
+            this.comboBox1.TabIndex = 276;
+            // 
             // ucJobOrderAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,6 +508,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucJobOrderAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucJobOrderAddEdit_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucJobOrderAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -485,7 +520,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnCancel1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnAdd1;
         private System.Windows.Forms.ComboBox cbContractMonth;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtJobNo;
@@ -494,13 +529,11 @@
         private System.Windows.Forms.ComboBox cbContractYear;
         private System.Windows.Forms.ComboBox cbContractDay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmployer;
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.ComboBox cbEditYear;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ComboBox cbEditDay;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEditEmp;
         private System.Windows.Forms.ComboBox cbEditMonth;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEditJobNo;
@@ -508,5 +541,7 @@
         private System.Windows.Forms.Label lblEditJobOrder;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cbEmployer;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -40,6 +40,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancel2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtCountryID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridReq = new System.Windows.Forms.DataGridView();
@@ -51,18 +53,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel1 = new System.Windows.Forms.Button();
+            this.btnAddCountry = new System.Windows.Forms.Button();
             this.dgvCountry = new System.Windows.Forms.DataGridView();
             this.btnRemoveRequire = new System.Windows.Forms.Button();
             this.btnAddRequire = new System.Windows.Forms.Button();
             this.cbReq = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCoun = new System.Windows.Forms.TextBox();
+            this.txtCountryName1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnCancel1 = new System.Windows.Forms.Button();
-            this.btnAddCountry = new System.Windows.Forms.Button();
-            this.btnCancel2 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).BeginInit();
             this.pnlButtons1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -248,6 +248,44 @@
             this.panel2.Size = new System.Drawing.Size(10, 450);
             this.panel2.TabIndex = 1;
             // 
+            // btnCancel2
+            // 
+            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel2.FlatAppearance.BorderSize = 0;
+            this.btnCancel2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCancel2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel2.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel2.Location = new System.Drawing.Point(562, 370);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(120, 50);
+            this.btnCancel2.TabIndex = 274;
+            this.btnCancel2.Text = "CANCEL";
+            this.btnCancel2.UseVisualStyleBackColor = false;
+            this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(436, 370);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(120, 50);
+            this.btnSave.TabIndex = 273;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // txtCountryID
             // 
             this.txtCountryID.BackColor = System.Drawing.Color.Gainsboro;
@@ -390,14 +428,52 @@
             this.panel1.Controls.Add(this.btnAddRequire);
             this.panel1.Controls.Add(this.cbReq);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtCoun);
+            this.panel1.Controls.Add(this.txtCountryName1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(1058, 450);
             this.panel1.TabIndex = 2;
+            // 
+            // btnCancel1
+            // 
+            this.btnCancel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel1.FlatAppearance.BorderSize = 0;
+            this.btnCancel1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCancel1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel1.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel1.Location = new System.Drawing.Point(562, 350);
+            this.btnCancel1.Name = "btnCancel1";
+            this.btnCancel1.Size = new System.Drawing.Size(120, 50);
+            this.btnCancel1.TabIndex = 271;
+            this.btnCancel1.Text = "CANCEL";
+            this.btnCancel1.UseVisualStyleBackColor = false;
+            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
+            // 
+            // btnAddCountry
+            // 
+            this.btnAddCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAddCountry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCountry.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddCountry.FlatAppearance.BorderSize = 0;
+            this.btnAddCountry.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnAddCountry.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAddCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCountry.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCountry.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCountry.Location = new System.Drawing.Point(436, 350);
+            this.btnAddCountry.Name = "btnAddCountry";
+            this.btnAddCountry.Size = new System.Drawing.Size(120, 50);
+            this.btnAddCountry.TabIndex = 270;
+            this.btnAddCountry.Text = "ADD COUNTRY";
+            this.btnAddCountry.UseVisualStyleBackColor = false;
+            this.btnAddCountry.Click += new System.EventHandler(this.btnAddCountry_Click);
             // 
             // dgvCountry
             // 
@@ -463,6 +539,7 @@
             this.cbReq.Name = "cbReq";
             this.cbReq.Size = new System.Drawing.Size(184, 27);
             this.cbReq.TabIndex = 265;
+            this.cbReq.SelectedIndexChanged += new System.EventHandler(this.cbReq_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -475,16 +552,16 @@
             this.label7.TabIndex = 264;
             this.label7.Text = "Requirement Name:";
             // 
-            // txtCoun
+            // txtCountryName1
             // 
-            this.txtCoun.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtCoun.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoun.ForeColor = System.Drawing.Color.Black;
-            this.txtCoun.Location = new System.Drawing.Point(228, 97);
-            this.txtCoun.MaxLength = 30;
-            this.txtCoun.Name = "txtCoun";
-            this.txtCoun.Size = new System.Drawing.Size(200, 26);
-            this.txtCoun.TabIndex = 107;
+            this.txtCountryName1.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCountryName1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountryName1.ForeColor = System.Drawing.Color.Black;
+            this.txtCountryName1.Location = new System.Drawing.Point(228, 97);
+            this.txtCountryName1.MaxLength = 30;
+            this.txtCountryName1.Name = "txtCountryName1";
+            this.txtCountryName1.Size = new System.Drawing.Size(200, 26);
+            this.txtCountryName1.TabIndex = 107;
             // 
             // label8
             // 
@@ -509,82 +586,6 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Add Country";
             // 
-            // btnCancel1
-            // 
-            this.btnCancel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel1.FlatAppearance.BorderSize = 0;
-            this.btnCancel1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCancel1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel1.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel1.Location = new System.Drawing.Point(562, 350);
-            this.btnCancel1.Name = "btnCancel1";
-            this.btnCancel1.Size = new System.Drawing.Size(120, 50);
-            this.btnCancel1.TabIndex = 271;
-            this.btnCancel1.Text = "CANCEL";
-            this.btnCancel1.UseVisualStyleBackColor = false;
-            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
-            // 
-            // btnAddCountry
-            // 
-            this.btnAddCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAddCountry.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddCountry.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddCountry.FlatAppearance.BorderSize = 0;
-            this.btnAddCountry.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnAddCountry.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAddCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCountry.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCountry.ForeColor = System.Drawing.Color.Black;
-            this.btnAddCountry.Location = new System.Drawing.Point(436, 350);
-            this.btnAddCountry.Name = "btnAddCountry";
-            this.btnAddCountry.Size = new System.Drawing.Size(120, 50);
-            this.btnAddCountry.TabIndex = 270;
-            this.btnAddCountry.Text = "ADD COUNTRY";
-            this.btnAddCountry.UseVisualStyleBackColor = false;
-            this.btnAddCountry.Click += new System.EventHandler(this.btnAddCountry_Click);
-            // 
-            // btnCancel2
-            // 
-            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel2.FlatAppearance.BorderSize = 0;
-            this.btnCancel2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCancel2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel2.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel2.Location = new System.Drawing.Point(562, 370);
-            this.btnCancel2.Name = "btnCancel2";
-            this.btnCancel2.Size = new System.Drawing.Size(120, 50);
-            this.btnCancel2.TabIndex = 274;
-            this.btnCancel2.Text = "CANCEL";
-            this.btnCancel2.UseVisualStyleBackColor = false;
-            this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(436, 370);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 50);
-            this.btnSave.TabIndex = 273;
-            this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // ucCountryAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,8 +593,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucCountryAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucCountryAddEdit_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucCountryAddEdit_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).EndInit();
             this.pnlButtons1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -632,9 +636,8 @@
         private System.Windows.Forms.DataGridView dgvCountry;
         private System.Windows.Forms.Button btnRemoveRequire;
         private System.Windows.Forms.Button btnAddRequire;
-        private System.Windows.Forms.ComboBox cbReq;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCoun;
+        private System.Windows.Forms.TextBox txtCountryName1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCancel1;
@@ -643,5 +646,6 @@
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.ComboBox cbReq;
     }
 }
