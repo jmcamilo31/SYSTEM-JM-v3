@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucEmployerAddEdit : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
 
         public ucEmployerAddEdit()
@@ -105,22 +101,10 @@ namespace Findstaff
             this.Hide();
         }
 
-        private void ucEmployerAddEdit_Load(object sender, EventArgs e)
-        {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
-
         private void ucEmployerAddEdit_VisibleChanged(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            connection = con.dbConnection();
             if (this.Visible == true)
             {
                 connection.Open();

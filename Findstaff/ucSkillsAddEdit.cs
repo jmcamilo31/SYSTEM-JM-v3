@@ -116,7 +116,7 @@ namespace Findstaff
 
         private void ucSkillsAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            Connection con = new Findstaff.Connection();
+            Connection con = new Connection();
             connection = con.dbConnection();
         }
     }

@@ -348,7 +348,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucEmployerAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
-            this.Load += new System.EventHandler(this.ucEmployerAddEdit_Load);
             this.VisibleChanged += new System.EventHandler(this.ucEmployerAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

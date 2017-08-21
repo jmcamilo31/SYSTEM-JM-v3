@@ -237,7 +237,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucEmployer";
             this.Size = new System.Drawing.Size(1118, 450);
-            this.Load += new System.EventHandler(this.ucEmployer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

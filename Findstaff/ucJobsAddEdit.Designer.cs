@@ -126,9 +126,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(396, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 19);
+            this.label5.Size = new System.Drawing.Size(79, 19);
             this.label5.TabIndex = 277;
-            this.label5.Text = "Category:";
+            this.label5.Text = "Job Type:";
             // 
             // cbCategory
             // 

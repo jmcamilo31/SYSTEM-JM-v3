@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucFeesAddEdit : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         private MySqlCommand com = new MySqlCommand();
 
         public ucFeesAddEdit()
@@ -123,7 +119,7 @@ namespace Findstaff
 
         private void ucFeesAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            Connection con = new Findstaff.Connection();
+            Connection con = new Connection();
             connection = con.dbConnection();
         }
     }

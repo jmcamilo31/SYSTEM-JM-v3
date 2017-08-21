@@ -81,6 +81,7 @@
             this.btnDelete.TabIndex = 100;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -155,7 +156,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucFees";
             this.Size = new System.Drawing.Size(1118, 400);
-            this.Load += new System.EventHandler(this.ucFees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

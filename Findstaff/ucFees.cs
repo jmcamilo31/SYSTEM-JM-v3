@@ -14,10 +14,7 @@ namespace Findstaff
     public partial class ucFees : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
+        MySqlCommand com = new MySqlCommand();
 
         public ucFees()
         {
@@ -30,8 +27,6 @@ namespace Findstaff
             ucFeesAddEdit.Visible = true;
             ucFeesAddEdit.panel1.Visible = true;
             ucFeesAddEdit.panel2.Visible = false;
-            dgvFees.DataSource = ucFeesAddEdit;
-            dgvFees.Refresh();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -51,18 +46,33 @@ namespace Findstaff
             }
         }
 
-        private void ucFees_Load(object sender, EventArgs e)
+        private void ucFeesAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            string com = "Select Fee_ID'Fee ID', Feename'Fee Name' from Genfees_t";
+            using (connection)
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvFees.DataSource = ds.Tables[0];
+                }
+            }
+        }
 
-            connection = new MySqlConnection(connectionString);
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from genfees_t where fee_id = '" + dgvFees.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvFees.Rows.Remove(dgvFees.SelectedRows[0]);
+            MessageBox.Show("Fee Deleted!", "Fee Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
         }
     }
 }

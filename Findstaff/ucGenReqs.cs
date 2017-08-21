@@ -57,7 +57,7 @@ namespace Findstaff
             ucSkills.Visible = false;
             ucRequirements.Visible = false;
             ucJobs.Visible = false;
-            string com = "Select Category_ID'Category ID', categoryname'category Name' from jobcategory_t";
+            string com = "Select Category_ID'Category ID', categoryname'Category Name' from jobcategory_t";
             using (connection)
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))

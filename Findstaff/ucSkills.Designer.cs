@@ -52,6 +52,7 @@
             this.btnDelete.TabIndex = 105;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -123,6 +124,7 @@
             this.ucSkillsAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucSkillsAddEdit.TabIndex = 106;
             this.ucSkillsAddEdit.Visible = false;
+            this.ucSkillsAddEdit.VisibleChanged += new System.EventHandler(this.ucSkillsAddEdit_VisibleChanged);
             // 
             // ucSkills
             // 

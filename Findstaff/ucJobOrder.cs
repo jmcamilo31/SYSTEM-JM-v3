@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucJobOrder : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
 
         public ucJobOrder()
@@ -47,23 +43,49 @@ namespace Findstaff
             ucJobOrderAddEdit.panel2.Visible = true;
         }
 
-        private void ucJobOrder_Load(object sender, EventArgs e)
-        {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
-
         private void ucJobOrder_VisibleChanged(object sender, EventArgs e)
         {
-       
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            string com = "Select country_id 'Country Id', countryname 'Country Name' from Country_t";
+            using (connection)
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvJobOrder.DataSource = ds.Tables[0];
+                }
+            }
+        }
+
+        private void ucJobOrderAddEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            string com = "Select jorder_id 'Job Order ID', Cntrctstart 'Contract Start' from Joborder_t";
+            using (connection)
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvJobOrder.DataSource = ds.Tables[0];
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from joborder_t where jorder_id = '" + dgvJobOrder.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvJobOrder.Rows.Remove(dgvJobOrder.SelectedRows[0]);
+            MessageBox.Show("Job Order Deleted!", "Job Order Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
         }
     }
 }

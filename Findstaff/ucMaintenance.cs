@@ -144,14 +144,14 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
-            cmd = "select username'Username', fname + ' ' + lname'Employee Name', DEPTNAME'Department' from Emp_t;";
+            cmd = "select jorder_id'Job Order ID', Cntrctstart'Contract Start' from Joborder_t;";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucEmployee.dgvEmployee.DataSource = ds.Tables[0];
+                    ucJobOrder.dgvJobOrder.DataSource = ds.Tables[0];
                 }
             }
         }

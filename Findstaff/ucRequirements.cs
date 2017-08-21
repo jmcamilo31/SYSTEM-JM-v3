@@ -13,6 +13,9 @@ namespace Findstaff
 {
     public partial class ucRequirements : UserControl
     {
+        private MySqlConnection connection;
+        MySqlCommand com = new MySqlCommand();
+
         public ucRequirements()
         {
             InitializeComponent();
@@ -41,6 +44,35 @@ namespace Findstaff
             else
             {
                 MessageBox.Show("No record available for edit.", "No Existing Record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from genreqs_t where req_id = '" + dgvRequirements.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvRequirements.Rows.Remove(dgvRequirements.SelectedRows[0]);
+            MessageBox.Show("Requirement Deleted!", "Requirement Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
+        }
+
+        private void ucRequirementsAddEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            string com = "Select Req_ID'Requirement ID', Reqname'Requirement Name', Allocation'Requirement for' from Genreqs_t";
+            using (connection)
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvRequirements.DataSource = ds.Tables[0];
+                }
             }
         }
     }
