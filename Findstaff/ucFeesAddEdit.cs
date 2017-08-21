@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucFeesAddEdit : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         private MySqlCommand com = new MySqlCommand();
 
         public ucFeesAddEdit()
@@ -121,18 +117,10 @@ namespace Findstaff
             this.Hide();
         }
 
-        private void ucFeesAddEdit_Load(object sender, EventArgs e)
+        private void ucFeesAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
+            Connection con = new Connection();
+            connection = con.dbConnection();
         }
     }
 }

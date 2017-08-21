@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucCountryAddEdit : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
 
         public ucCountryAddEdit()
@@ -97,19 +93,6 @@ namespace Findstaff
             this.Hide();
         }
 
-        private void ucCountryAddEdit_Load(object sender, EventArgs e)
-        {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
 
         private void cbReq_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -118,7 +101,9 @@ namespace Findstaff
 
         private void ucCountryAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            if(this.Visible == true)
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            if (this.Visible == true)
             {
                 connection.Open();
                 string cmd = "select reqname from genreqs_t where allocation = 'country';";

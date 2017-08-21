@@ -15,10 +15,7 @@ namespace Findstaff
     {
 
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
+        MySqlCommand com = new MySqlCommand();
 
         public ucJobCategory()
         {
@@ -50,20 +47,24 @@ namespace Findstaff
             }
         }
 
-        private void ucJobCategory_Load(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from jobcategory_t where category_id = '" + dgvJobCategory.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvJobCategory.Rows.Remove(dgvJobCategory.SelectedRows[0]);
+            MessageBox.Show("Job Category Deleted!", "Job Category Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
+        }
 
-            connection = new MySqlConnection(connectionString);
-
-            string com = "Select category_ID'Category ID', categoryname'Category Name' from jobcategory_t";
+        private void ucJobCategoryAddEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            string com = "Select Category_ID'Category ID', categoryname'Category Name' from jobcategory_t";
             using (connection)
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))

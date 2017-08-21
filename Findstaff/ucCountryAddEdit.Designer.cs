@@ -596,7 +596,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucCountryAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
-            this.Load += new System.EventHandler(this.ucCountryAddEdit_Load);
             this.VisibleChanged += new System.EventHandler(this.ucCountryAddEdit_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).EndInit();
             this.pnlButtons1.ResumeLayout(false);

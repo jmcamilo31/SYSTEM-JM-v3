@@ -136,6 +136,7 @@
             this.btnDelete.TabIndex = 56;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -177,6 +178,7 @@
             this.ucJobOrderAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucJobOrderAddEdit.TabIndex = 57;
             this.ucJobOrderAddEdit.Visible = false;
+            this.ucJobOrderAddEdit.VisibleChanged += new System.EventHandler(this.ucJobOrderAddEdit_VisibleChanged);
             // 
             // ucJobOrder
             // 
@@ -196,7 +198,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobOrder";
             this.Size = new System.Drawing.Size(1118, 450);
-            this.Load += new System.EventHandler(this.ucJobOrder_Load);
             this.VisibleChanged += new System.EventHandler(this.ucJobOrder_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobOrder)).EndInit();
             this.ResumeLayout(false);

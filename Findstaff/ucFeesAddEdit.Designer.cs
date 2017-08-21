@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 400);
+            this.panel1.Size = new System.Drawing.Size(830, 400);
             this.panel1.TabIndex = 0;
             // 
             // btnCancel1
@@ -239,7 +239,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "ucFeesAddEdit";
             this.Size = new System.Drawing.Size(1118, 400);
-            this.Load += new System.EventHandler(this.ucFeesAddEdit_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucFeesAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -14,11 +14,8 @@ namespace Findstaff
     public partial class ucJobOrderAddEdit : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
+        MySqlDataReader dr;
 
         public ucJobOrderAddEdit()
         {
@@ -29,8 +26,39 @@ namespace Findstaff
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Added!", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
+            connection.Open();
+            int ctr = 0;
+            if (txtJobNo.Text != "")
+            {
+                if (cbEmployer.SelectedIndex != -1)
+                {
+                    string empid = "", getID = "select employer_id from employer_t where employername = '" + cbEmployer.Text + "';";
+                    com = new MySqlCommand(getID, connection);
+                    dr = com.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        empid = dr[0].ToString();
+                    }
+                    dr.Close();
+                    string check = "Select Count(jorder_id) from joborder_t where jorder_id = '" + txtJobNo.Text + "'";
+                    com = new MySqlCommand(check, connection);
+                    ctr = int.Parse(com.ExecuteScalar() + "");
+                    if (ctr == 0)
+                    {
+                        string cmd = "Insert into joborder_t (Jorder_id, employer_id, cntrctstart, cntrctend, cntrctstat) values ('" + txtJobNo.Text + "','" + empid + "','" + cbContractYear.Text + "-" + cbContractMonth.SelectedIndex+1 + "-" + cbContractDay.Text + "','" + (Convert.ToUInt32(cbContractYear.Text)+4).ToString() + "-" + cbContractMonth.SelectedIndex + 1 + "-" + cbContractDay.Text + "', 'Active')";
+                        com = new MySqlCommand(cmd, connection);
+                        com.ExecuteNonQuery();
+                        MessageBox.Show("Added!", "Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtJobNo.Clear();
+                        this.Hide();
+                    }
+                    else if (ctr != 0)
+                    {
+                        MessageBox.Show("Record already exists.", "Error Message");
+                    }
+                }
+            }
+            connection.Close();
         }
 
         private void btnCancel1_Click(object sender, EventArgs e)
@@ -49,31 +77,15 @@ namespace Findstaff
             this.Hide();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ucJobOrderAddEdit_Load(object sender, EventArgs e)
-        {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
-
         private void ucJobOrderAddEdit_VisibleChanged(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+
             if (this.Visible == true)
             {
                 connection.Open();
-                string cmd = "select employername from employer_t;";
+                string cmd = "Select employername from employer_t;";
                 com = new MySqlCommand(cmd, connection);
                 MySqlDataReader dr = com.ExecuteReader();
                 while (dr.Read())

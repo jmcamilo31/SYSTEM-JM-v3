@@ -41,6 +41,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lblAddJobOrder = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.cbEditYear = new System.Windows.Forms.ComboBox();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.txtEditJobNo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblEditJobOrder = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,9 +72,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(958, 450);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cbEmployer
             // 
@@ -132,18 +131,14 @@
             this.cbContractYear.ForeColor = System.Drawing.Color.Black;
             this.cbContractYear.FormattingEnabled = true;
             this.cbContractYear.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
             this.cbContractYear.Location = new System.Drawing.Point(731, 221);
             this.cbContractYear.Name = "cbContractYear";
             this.cbContractYear.Size = new System.Drawing.Size(83, 27);
@@ -178,18 +173,37 @@
             this.cbContractDay.ForeColor = System.Drawing.Color.Black;
             this.cbContractDay.FormattingEnabled = true;
             this.cbContractDay.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.cbContractDay.Location = new System.Drawing.Point(665, 221);
             this.cbContractDay.Name = "cbContractDay";
             this.cbContractDay.Size = new System.Drawing.Size(60, 27);
@@ -296,6 +310,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 450);
             this.panel2.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.comboBox1.Location = new System.Drawing.Point(491, 169);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 27);
+            this.comboBox1.TabIndex = 276;
             // 
             // btnCancel2
             // 
@@ -472,33 +513,6 @@
             this.lblEditJobOrder.TabIndex = 39;
             this.lblEditJobOrder.Text = "Edit Job Order";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBox1.Location = new System.Drawing.Point(491, 169);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 27);
-            this.comboBox1.TabIndex = 276;
-            // 
             // ucJobOrderAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,7 +522,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucJobOrderAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
-            this.Load += new System.EventHandler(this.ucJobOrderAddEdit_Load);
             this.VisibleChanged += new System.EventHandler(this.ucJobOrderAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

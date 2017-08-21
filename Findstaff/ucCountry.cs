@@ -14,10 +14,6 @@ namespace Findstaff
     public partial class ucCountry : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
 
         public ucCountry()
@@ -41,22 +37,10 @@ namespace Findstaff
             ucCountryAddEdit.panel2.Visible = true;
         }
 
-        private void ucCountry_Load(object sender, EventArgs e)
-        {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
-
         private void ucCountryAddEdit_VisibleChanged(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            connection = con.dbConnection();
             string com = "Select country_id 'Country Id', countryname 'Country Name' from Country_t";
             using (connection)
             {
@@ -67,6 +51,19 @@ namespace Findstaff
                     dgvCountry.DataSource = ds.Tables[0];
                 }
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from country_t where country_id = '" + dgvCountry.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvCountry.Rows.Remove(dgvCountry.SelectedRows[0]);
+            MessageBox.Show("Country Deleted!", "Coutry Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
         }
     }
 }

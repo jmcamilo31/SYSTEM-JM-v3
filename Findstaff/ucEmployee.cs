@@ -15,9 +15,7 @@ namespace Findstaff
     {
         private MySqlConnection connection;
         MySqlCommand com = new MySqlCommand();
-        MySqlDataAdapter adapter = new MySqlDataAdapter();
-        private string cmd = "";
-
+         
         public ucEmployee()
         {
             InitializeComponent();
@@ -41,7 +39,15 @@ namespace Findstaff
 
         private void btnEmpDel_Click(object sender, EventArgs e)
         {
-
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from emp_t where username = '" + dgvEmployee.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvEmployee.Rows.Remove(dgvEmployee.SelectedRows[0]);
+            MessageBox.Show("Employee Deleted!", "Employee Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
         }
 
         private void btnEmpView_Click(object sender, EventArgs e)
@@ -54,10 +60,10 @@ namespace Findstaff
         {
             Connection con = new Connection();
             connection = con.dbConnection();
-            cmd = "select username'Username', Concat(fname , ' ' , lname)'Employee Name', DEPTNAME'Department' from Emp_t;";
+            string com = "select username'Username', Concat(fname , ' ' , lname)'Employee Name', DEPTNAME'Department' from Emp_t;";
             using (connection)
             {
-                using (adapter = new MySqlDataAdapter(cmd, connection))
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);

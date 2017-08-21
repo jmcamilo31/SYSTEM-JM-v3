@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Findstaff
 {
     public partial class ucSkills : UserControl
     {
+        private MySqlConnection connection;
+        MySqlCommand com = new MySqlCommand();
+
         public ucSkills()
         {
             InitializeComponent();
@@ -39,6 +43,35 @@ namespace Findstaff
             else
             {
                 MessageBox.Show("No record available for edit.", "No Existing Record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from genskills_t where skill_id = '" + dgvSkills.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvSkills.Rows.Remove(dgvSkills.SelectedRows[0]);
+            MessageBox.Show("Skills Deleted!", "Skills Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
+        }
+
+        private void ucSkillsAddEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            string com = "Select skill_id 'Skill Id', skillname 'Skill Name' from Genskills_t";
+            using (connection)
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvSkills.DataSource = ds.Tables[0];
+                }
             }
         }
     }

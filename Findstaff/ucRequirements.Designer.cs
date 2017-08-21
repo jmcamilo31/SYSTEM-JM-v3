@@ -52,6 +52,7 @@
             this.btnDelete.TabIndex = 105;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -75,7 +76,7 @@
             this.dgvRequirements.AllowUserToDeleteRows = false;
             this.dgvRequirements.AllowUserToResizeColumns = false;
             this.dgvRequirements.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvRequirements.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRequirements.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRequirements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -124,6 +125,7 @@
             this.ucRequirementsAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucRequirementsAddEdit.TabIndex = 106;
             this.ucRequirementsAddEdit.Visible = false;
+            this.ucRequirementsAddEdit.VisibleChanged += new System.EventHandler(this.ucRequirementsAddEdit_VisibleChanged);
             // 
             // ucRequirements
             // 
@@ -136,6 +138,7 @@
             this.Controls.Add(this.dgvRequirements);
             this.Controls.Add(this.lblRequirements);
             this.Controls.Add(this.btnAdd);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucRequirements";
             this.Size = new System.Drawing.Size(1118, 400);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequirements)).EndInit();

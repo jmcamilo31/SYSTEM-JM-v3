@@ -15,10 +15,6 @@ namespace Findstaff
     {
 
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         MySqlCommand com = new MySqlCommand();
 
         public ucJobsAddEdit()

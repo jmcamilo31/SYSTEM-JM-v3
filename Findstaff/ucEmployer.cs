@@ -14,10 +14,7 @@ namespace Findstaff
     public partial class ucEmployer : UserControl
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
+        MySqlCommand com = new MySqlCommand();
 
         public ucEmployer()
         {
@@ -48,7 +45,15 @@ namespace Findstaff
 
         private void btnEmpDel_Click(object sender, EventArgs e)
         {
-
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from employer_t where employer_id = '" + dgvEmployer.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvEmployer.Rows.Remove(dgvEmployer.SelectedRows[0]);
+            MessageBox.Show("Employer Deleted!", "Employer Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
         }
 
         private void btnEmpView_Click(object sender, EventArgs e)
@@ -57,22 +62,10 @@ namespace Findstaff
             ucEmployerView.Visible = true;
         }
 
-        private void ucEmployer_Load(object sender, EventArgs e)
-        {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
-
         private void ucEmployerAddEdit_VisibleChanged(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            connection = con.dbConnection();
             string com = "Select EMPLOYER_ID'Employer ID', EMPLOYERNAME'Employer Name', FOREIGNPRIN'Foreign Principal' from employer_t";
             using (connection)
             {

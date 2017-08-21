@@ -52,6 +52,7 @@
             this.btnDelete.TabIndex = 105;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -75,7 +76,7 @@
             this.dgvJobCategory.AllowUserToDeleteRows = false;
             this.dgvJobCategory.AllowUserToResizeColumns = false;
             this.dgvJobCategory.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvJobCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvJobCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJobCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -124,6 +125,7 @@
             this.ucJobCategoryAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucJobCategoryAddEdit.TabIndex = 106;
             this.ucJobCategoryAddEdit.Visible = false;
+            this.ucJobCategoryAddEdit.VisibleChanged += new System.EventHandler(this.ucJobCategoryAddEdit_VisibleChanged);
             // 
             // ucJobCategory
             // 
@@ -139,7 +141,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobCategory";
             this.Size = new System.Drawing.Size(1118, 400);
-            this.Load += new System.EventHandler(this.ucJobCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

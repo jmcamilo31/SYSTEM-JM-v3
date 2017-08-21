@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
@@ -52,6 +52,7 @@
             this.btnDelete.TabIndex = 110;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -75,8 +76,8 @@
             this.dgvJobs.AllowUserToDeleteRows = false;
             this.dgvJobs.AllowUserToResizeColumns = false;
             this.dgvJobs.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvJobs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvJobs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvJobs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJobs.Location = new System.Drawing.Point(100, 100);
@@ -125,6 +126,7 @@
             this.ucJobsAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucJobsAddEdit.TabIndex = 111;
             this.ucJobsAddEdit.Visible = false;
+            this.ucJobsAddEdit.VisibleChanged += new System.EventHandler(this.ucJobsAddEdit_VisibleChanged);
             // 
             // ucJobs
             // 
