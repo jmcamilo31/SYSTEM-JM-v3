@@ -51,7 +51,7 @@ namespace Findstaff
                     existuser = dr[0].ToString();
                 }
                 dr.Close();
-                cmd = "select fname + ' ' + mname + ' ' + lname from emp_t where fname + ' ' + mname + ' ' + lname = '" + txtFirstName.Text + "' + ' ' + '" + txtMiddleName.Text + "' + ' ' + '" + txtLastName.Text + "'";
+                cmd = "select fname, mname, lname from emp_t where fname = '"+txtFirstName.Text+"' and  mname = '" + txtMiddleName.Text + "' and lname =  '" + txtLastName.Text + "'";
                 com = new MySqlCommand(cmd, connection);
                 dr = com.ExecuteReader();
                 while (dr.Read())

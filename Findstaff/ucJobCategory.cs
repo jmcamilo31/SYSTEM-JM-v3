@@ -15,10 +15,6 @@ namespace Findstaff
     {
 
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
 
         public ucJobCategory()
         {
@@ -52,17 +48,8 @@ namespace Findstaff
 
         private void ucJobCategory_Load(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-
+            Connection con = new Connection();
+            connection = con.dbConnection();
             string com = "Select category_ID'Category ID', categoryname'Category Name' from jobcategory_t";
             using (connection)
             {

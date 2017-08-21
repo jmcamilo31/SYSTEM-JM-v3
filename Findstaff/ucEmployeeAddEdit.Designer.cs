@@ -419,7 +419,7 @@
             this.cbDept.FormattingEnabled = true;
             this.cbDept.Items.AddRange(new object[] {
             "Recruitment",
-            "Docmentation",
+            "Documentation",
             "Accounting",
             "Marketing",
             "Operations"});

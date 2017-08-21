@@ -121,18 +121,10 @@ namespace Findstaff
             this.Hide();
         }
 
-        private void ucFeesAddEdit_Load(object sender, EventArgs e)
+        private void ucFeesAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "rms";
-            uid = "root";
-            //password = "anterograde";
-            password = "rootpass";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
+            Connection con = new Findstaff.Connection();
+            connection = con.dbConnection();
         }
     }
 }

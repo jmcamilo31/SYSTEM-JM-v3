@@ -71,14 +71,19 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
-            cmd = "select username'Username', Concat(fname , ' ' , lname)'Employee Name', DEPTNAME'Department' from Emp_t;";
+            cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', apps.app_no'Active Application', job.jobname'Applying for' "
+                    + "from app_t app join applications_t apps " 
+                    + "on app.app_id = apps.app_id "
+                    + "join job_t job "
+                    + "on apps.job_id = job.job_id "
+                    + "where apps.appstats = 'Active';";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucEmployee.dgvEmployee.DataSource = ds.Tables[0];
+                    ucApplicant.dgvApplicant.DataSource = ds.Tables[0];
                 }
             }
         }
@@ -93,14 +98,14 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
-            cmd = "select username'Username', fname + ' ' + lname'Employee Name', DEPTNAME'Department' from Emp_t;";
+            cmd = "select c.COUNTRY_ID'Country ID', c.COUNTRYNAME'Name of Country', count(cr.req_id)'No. of requirements' from country_t c join countryreqs_t cr on  c.country_id = cr.country_id;";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucEmployee.dgvEmployee.DataSource = ds.Tables[0];
+                    ucCountry.dgvCountry.DataSource = ds.Tables[0];
                 }
             }
         }
@@ -115,14 +120,16 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
-            cmd = "select username'Username', fname + ' ' + lname'Employee Name', DEPTNAME'Department' from Emp_t;";
+            cmd = "select e.employer_id'Employer_ID', e.employername'Name of Employer', e.foreignprin'Foreign Principal', c.countryname'Country' "
+                + "from employer_t e join country_t c "
+                + "on e.country_id = c.country_id;";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucEmployee.dgvEmployee.DataSource = ds.Tables[0];
+                    ucEmployer.dgvEmployer.DataSource = ds.Tables[0];
                 }
             }
         }

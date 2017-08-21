@@ -25,6 +25,10 @@ namespace Findstaff
             ucDocumentation.Dock = DockStyle.Fill;
             ucAcco.Dock = DockStyle.Fill;
             ucMaintenance.Dock = DockStyle.Fill;
+            ucRecruitment.Visible = false;
+            ucDocumentation.Visible = false;
+            ucAcco.Visible = false;
+            ucMaintenance.Visible = false;
         }
 
         private void Main_Load(object sender, EventArgs e)

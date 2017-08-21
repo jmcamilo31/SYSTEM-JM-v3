@@ -239,7 +239,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucSkillsAddEdit";
             this.Size = new System.Drawing.Size(1118, 400);
-            this.Load += new System.EventHandler(this.ucSkillsAddEdit_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucSkillsAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

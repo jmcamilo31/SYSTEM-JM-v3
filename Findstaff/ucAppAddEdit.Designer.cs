@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbSkills = new System.Windows.Forms.ComboBox();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.btnRemoveContact = new System.Windows.Forms.Button();
             this.btnAddContact = new System.Windows.Forms.Button();
             this.txtContactNo = new System.Windows.Forms.TextBox();
@@ -63,14 +66,13 @@
             this.textBox75 = new System.Windows.Forms.TextBox();
             this.btnRemoveSkills = new System.Windows.Forms.Button();
             this.btnAddSkills = new System.Windows.Forms.Button();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dgvSkills = new System.Windows.Forms.DataGridView();
             this.cbProficiency = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtSkillName = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.btnRemoveEduc = new System.Windows.Forms.Button();
             this.btnAddEduc = new System.Windows.Forms.Button();
-            this.textBox73 = new System.Windows.Forms.TextBox();
+            this.txtDegree = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtYearEnded = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -106,6 +108,7 @@
             this.cbDay = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
             this.pnlButtons1 = new System.Windows.Forms.Panel();
+            this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
@@ -122,16 +125,13 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.dataGridEduc = new System.Windows.Forms.DataGridView();
+            this.dgvEducBack = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.txtCivilStat = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
@@ -139,12 +139,7 @@
             this.txtMiddleName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtDesired = new System.Windows.Forms.TextBox();
-            this.txtPosition = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAddApp = new System.Windows.Forms.Label();
             this.label117 = new System.Windows.Forms.Label();
@@ -174,6 +169,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancel2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.textBox31 = new System.Windows.Forms.TextBox();
@@ -263,29 +261,28 @@
             this.label37 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label38 = new System.Windows.Forms.Label();
-            this.btnCancel1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCancel2 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContactPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChildren)).BeginInit();
             this.pnlButtons1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEducBack)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.cbSkills);
+            this.panel1.Controls.Add(this.cbPosition);
+            this.panel1.Controls.Add(this.comboBox11);
             this.panel1.Controls.Add(this.btnRemoveContact);
             this.panel1.Controls.Add(this.btnAddContact);
             this.panel1.Controls.Add(this.txtContactNo);
@@ -320,14 +317,13 @@
             this.panel1.Controls.Add(this.textBox75);
             this.panel1.Controls.Add(this.btnRemoveSkills);
             this.panel1.Controls.Add(this.btnAddSkills);
-            this.panel1.Controls.Add(this.dataGridView6);
+            this.panel1.Controls.Add(this.dgvSkills);
             this.panel1.Controls.Add(this.cbProficiency);
             this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.txtSkillName);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.btnRemoveEduc);
             this.panel1.Controls.Add(this.btnAddEduc);
-            this.panel1.Controls.Add(this.textBox73);
+            this.panel1.Controls.Add(this.txtDegree);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.txtYearEnded);
             this.panel1.Controls.Add(this.label18);
@@ -378,16 +374,13 @@
             this.panel1.Controls.Add(this.label53);
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.dataGridEduc);
+            this.panel1.Controls.Add(this.dgvEducBack);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.txtWeight);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtHeight);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtAge);
-            this.panel1.Controls.Add(this.txtCivilStat);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.rbFemale);
             this.panel1.Controls.Add(this.rbMale);
@@ -395,19 +388,80 @@
             this.panel1.Controls.Add(this.txtMiddleName);
             this.panel1.Controls.Add(this.txtFirstName);
             this.panel1.Controls.Add(this.txtLastName);
-            this.panel1.Controls.Add(this.txtDesired);
-            this.panel1.Controls.Add(this.txtPosition);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblAddApp);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(930, 450);
             this.panel1.TabIndex = 32;
+            // 
+            // cbSkills
+            // 
+            this.cbSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbSkills.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSkills.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSkills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSkills.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSkills.ForeColor = System.Drawing.Color.Black;
+            this.cbSkills.FormattingEnabled = true;
+            this.cbSkills.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbSkills.Location = new System.Drawing.Point(198, 701);
+            this.cbSkills.Name = "cbSkills";
+            this.cbSkills.Size = new System.Drawing.Size(267, 27);
+            this.cbSkills.TabIndex = 307;
+            // 
+            // cbPosition
+            // 
+            this.cbPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbPosition.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPosition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbPosition.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPosition.ForeColor = System.Drawing.Color.Black;
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cbPosition.Location = new System.Drawing.Point(181, 97);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(181, 27);
+            this.cbPosition.TabIndex = 306;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comboBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox11.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox11.ForeColor = System.Drawing.Color.Black;
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "Single",
+            "Married",
+            "Widowed",
+            "Separated"});
+            this.comboBox11.Location = new System.Drawing.Point(452, 161);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(180, 27);
+            this.comboBox11.TabIndex = 305;
             // 
             // btnRemoveContact
             // 
@@ -417,7 +471,7 @@
             this.btnRemoveContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveContact.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveContact.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveContact.Location = new System.Drawing.Point(824, 2359);
+            this.btnRemoveContact.Location = new System.Drawing.Point(824, 2413);
             this.btnRemoveContact.Name = "btnRemoveContact";
             this.btnRemoveContact.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveContact.TabIndex = 304;
@@ -432,7 +486,7 @@
             this.btnAddContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddContact.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddContact.ForeColor = System.Drawing.Color.Black;
-            this.btnAddContact.Location = new System.Drawing.Point(457, 2153);
+            this.btnAddContact.Location = new System.Drawing.Point(457, 2207);
             this.btnAddContact.Name = "btnAddContact";
             this.btnAddContact.Size = new System.Drawing.Size(100, 30);
             this.btnAddContact.TabIndex = 303;
@@ -444,7 +498,7 @@
             this.txtContactNo.BackColor = System.Drawing.Color.Gainsboro;
             this.txtContactNo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactNo.ForeColor = System.Drawing.Color.Black;
-            this.txtContactNo.Location = new System.Drawing.Point(672, 2117);
+            this.txtContactNo.Location = new System.Drawing.Point(672, 2171);
             this.txtContactNo.MaxLength = 30;
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(252, 26);
@@ -455,7 +509,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(569, 2124);
+            this.label33.Location = new System.Drawing.Point(569, 2178);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(101, 19);
             this.label33.TabIndex = 301;
@@ -466,7 +520,7 @@
             this.txtContactPerson.BackColor = System.Drawing.Color.Gainsboro;
             this.txtContactPerson.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactPerson.ForeColor = System.Drawing.Color.Black;
-            this.txtContactPerson.Location = new System.Drawing.Point(297, 2121);
+            this.txtContactPerson.Location = new System.Drawing.Point(297, 2175);
             this.txtContactPerson.MaxLength = 30;
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Size = new System.Drawing.Size(252, 26);
@@ -477,7 +531,7 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(100, 2124);
+            this.label32.Location = new System.Drawing.Point(100, 2178);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(191, 19);
             this.label32.TabIndex = 299;
@@ -491,7 +545,7 @@
             this.btnRemoveChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveChild.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveChild.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveChild.Location = new System.Drawing.Point(824, 2033);
+            this.btnRemoveChild.Location = new System.Drawing.Point(824, 2083);
             this.btnRemoveChild.Name = "btnRemoveChild";
             this.btnRemoveChild.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveChild.TabIndex = 298;
@@ -506,7 +560,7 @@
             this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddChild.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddChild.ForeColor = System.Drawing.Color.Black;
-            this.btnAddChild.Location = new System.Drawing.Point(457, 1829);
+            this.btnAddChild.Location = new System.Drawing.Point(457, 1879);
             this.btnAddChild.Name = "btnAddChild";
             this.btnAddChild.Size = new System.Drawing.Size(100, 30);
             this.btnAddChild.TabIndex = 297;
@@ -535,7 +589,7 @@
             "October",
             "November",
             "December"});
-            this.cbChildYear.Location = new System.Drawing.Point(435, 1789);
+            this.cbChildYear.Location = new System.Drawing.Point(435, 1839);
             this.cbChildYear.Name = "cbChildYear";
             this.cbChildYear.Size = new System.Drawing.Size(92, 27);
             this.cbChildYear.TabIndex = 296;
@@ -562,7 +616,7 @@
             "October",
             "November",
             "December"});
-            this.cbChildDay.Location = new System.Drawing.Point(374, 1789);
+            this.cbChildDay.Location = new System.Drawing.Point(374, 1839);
             this.cbChildDay.Name = "cbChildDay";
             this.cbChildDay.Size = new System.Drawing.Size(55, 27);
             this.cbChildDay.TabIndex = 295;
@@ -589,7 +643,7 @@
             "October",
             "November",
             "December"});
-            this.cbChildMonth.Location = new System.Drawing.Point(211, 1789);
+            this.cbChildMonth.Location = new System.Drawing.Point(211, 1839);
             this.cbChildMonth.Name = "cbChildMonth";
             this.cbChildMonth.Size = new System.Drawing.Size(157, 27);
             this.cbChildMonth.TabIndex = 294;
@@ -599,7 +653,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(100, 1792);
+            this.label31.Location = new System.Drawing.Point(100, 1842);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(105, 19);
             this.label31.TabIndex = 293;
@@ -610,7 +664,7 @@
             this.txtChildAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtChildAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChildAge.ForeColor = System.Drawing.Color.Black;
-            this.txtChildAge.Location = new System.Drawing.Point(541, 1758);
+            this.txtChildAge.Location = new System.Drawing.Point(541, 1808);
             this.txtChildAge.MaxLength = 30;
             this.txtChildAge.Name = "txtChildAge";
             this.txtChildAge.Size = new System.Drawing.Size(54, 26);
@@ -621,7 +675,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(483, 1761);
+            this.label29.Location = new System.Drawing.Point(483, 1811);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(44, 19);
             this.label29.TabIndex = 291;
@@ -632,7 +686,7 @@
             this.txtChildName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtChildName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChildName.ForeColor = System.Drawing.Color.Black;
-            this.txtChildName.Location = new System.Drawing.Point(223, 1758);
+            this.txtChildName.Location = new System.Drawing.Point(223, 1808);
             this.txtChildName.MaxLength = 30;
             this.txtChildName.Name = "txtChildName";
             this.txtChildName.Size = new System.Drawing.Size(252, 26);
@@ -643,7 +697,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(100, 1761);
+            this.label28.Location = new System.Drawing.Point(100, 1811);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(119, 19);
             this.label28.TabIndex = 289;
@@ -657,7 +711,7 @@
             this.btnRemoveEmpHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveEmpHistory.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveEmpHistory.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveEmpHistory.Location = new System.Drawing.Point(844, 1421);
+            this.btnRemoveEmpHistory.Location = new System.Drawing.Point(844, 1473);
             this.btnRemoveEmpHistory.Name = "btnRemoveEmpHistory";
             this.btnRemoveEmpHistory.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveEmpHistory.TabIndex = 288;
@@ -672,7 +726,7 @@
             this.btnAddEmpHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmpHistory.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmpHistory.ForeColor = System.Drawing.Color.Black;
-            this.btnAddEmpHistory.Location = new System.Drawing.Point(456, 1219);
+            this.btnAddEmpHistory.Location = new System.Drawing.Point(456, 1271);
             this.btnAddEmpHistory.Name = "btnAddEmpHistory";
             this.btnAddEmpHistory.Size = new System.Drawing.Size(100, 30);
             this.btnAddEmpHistory.TabIndex = 287;
@@ -682,7 +736,7 @@
             // dataEmpHistory
             // 
             this.dataEmpHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEmpHistory.Location = new System.Drawing.Point(104, 1265);
+            this.dataEmpHistory.Location = new System.Drawing.Point(104, 1317);
             this.dataEmpHistory.Name = "dataEmpHistory";
             this.dataEmpHistory.Size = new System.Drawing.Size(840, 150);
             this.dataEmpHistory.TabIndex = 286;
@@ -709,7 +763,7 @@
             "October",
             "November",
             "December"});
-            this.cbEmploymentYear.Location = new System.Drawing.Point(431, 1018);
+            this.cbEmploymentYear.Location = new System.Drawing.Point(431, 1063);
             this.cbEmploymentYear.Name = "cbEmploymentYear";
             this.cbEmploymentYear.Size = new System.Drawing.Size(108, 27);
             this.cbEmploymentYear.TabIndex = 285;
@@ -736,7 +790,7 @@
             "October",
             "November",
             "December"});
-            this.cbEmploymentMonth.Location = new System.Drawing.Point(267, 1018);
+            this.cbEmploymentMonth.Location = new System.Drawing.Point(267, 1063);
             this.cbEmploymentMonth.Name = "cbEmploymentMonth";
             this.cbEmploymentMonth.Size = new System.Drawing.Size(157, 27);
             this.cbEmploymentMonth.TabIndex = 284;
@@ -746,7 +800,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(97, 1183);
+            this.label11.Location = new System.Drawing.Point(97, 1235);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 19);
             this.label11.TabIndex = 283;
@@ -757,7 +811,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(256, 1180);
+            this.textBox1.Location = new System.Drawing.Point(256, 1232);
             this.textBox1.MaxLength = 30;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(679, 26);
@@ -767,7 +821,7 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.richTextBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(163, 1074);
+            this.richTextBox1.Location = new System.Drawing.Point(163, 1126);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(770, 100);
             this.richTextBox1.TabIndex = 281;
@@ -778,7 +832,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(100, 1052);
+            this.label14.Location = new System.Drawing.Point(100, 1097);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(217, 19);
             this.label14.TabIndex = 280;
@@ -789,7 +843,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(555, 1021);
+            this.label24.Location = new System.Drawing.Point(555, 1066);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(170, 19);
             this.label24.TabIndex = 279;
@@ -800,7 +854,7 @@
             this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(731, 1018);
+            this.textBox2.Location = new System.Drawing.Point(731, 1063);
             this.textBox2.MaxLength = 30;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(204, 26);
@@ -811,7 +865,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(100, 1021);
+            this.label25.Location = new System.Drawing.Point(100, 1066);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(168, 19);
             this.label25.TabIndex = 276;
@@ -822,7 +876,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(456, 989);
+            this.label26.Location = new System.Drawing.Point(456, 1034);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(173, 19);
             this.label26.TabIndex = 274;
@@ -833,7 +887,7 @@
             this.textBox74.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox74.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox74.ForeColor = System.Drawing.Color.Black;
-            this.textBox74.Location = new System.Drawing.Point(635, 986);
+            this.textBox74.Location = new System.Drawing.Point(635, 1031);
             this.textBox74.MaxLength = 30;
             this.textBox74.Name = "textBox74";
             this.textBox74.Size = new System.Drawing.Size(300, 26);
@@ -844,7 +898,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(100, 989);
+            this.label27.Location = new System.Drawing.Point(100, 1034);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(156, 19);
             this.label27.TabIndex = 272;
@@ -855,7 +909,7 @@
             this.textBox75.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox75.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox75.ForeColor = System.Drawing.Color.Black;
-            this.textBox75.Location = new System.Drawing.Point(256, 986);
+            this.textBox75.Location = new System.Drawing.Point(256, 1031);
             this.textBox75.MaxLength = 30;
             this.textBox75.Name = "textBox75";
             this.textBox75.Size = new System.Drawing.Size(195, 26);
@@ -869,12 +923,13 @@
             this.btnRemoveSkills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveSkills.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveSkills.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveSkills.Location = new System.Drawing.Point(841, 893);
+            this.btnRemoveSkills.Location = new System.Drawing.Point(841, 938);
             this.btnRemoveSkills.Name = "btnRemoveSkills";
             this.btnRemoveSkills.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveSkills.TabIndex = 270;
             this.btnRemoveSkills.Text = "REMOVE";
             this.btnRemoveSkills.UseVisualStyleBackColor = false;
+            this.btnRemoveSkills.Click += new System.EventHandler(this.btnRemoveSkills_Click);
             // 
             // btnAddSkills
             // 
@@ -884,20 +939,32 @@
             this.btnAddSkills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSkills.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSkills.ForeColor = System.Drawing.Color.Black;
-            this.btnAddSkills.Location = new System.Drawing.Point(453, 691);
+            this.btnAddSkills.Location = new System.Drawing.Point(453, 735);
             this.btnAddSkills.Name = "btnAddSkills";
             this.btnAddSkills.Size = new System.Drawing.Size(100, 30);
             this.btnAddSkills.TabIndex = 269;
             this.btnAddSkills.Text = "ADD";
             this.btnAddSkills.UseVisualStyleBackColor = false;
+            this.btnAddSkills.Click += new System.EventHandler(this.btnAddSkills_Click);
             // 
-            // dataGridView6
+            // dgvSkills
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(101, 737);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(840, 150);
-            this.dataGridView6.TabIndex = 268;
+            this.dgvSkills.AllowUserToAddRows = false;
+            this.dgvSkills.AllowUserToDeleteRows = false;
+            this.dgvSkills.AllowUserToResizeColumns = false;
+            this.dgvSkills.AllowUserToResizeRows = false;
+            this.dgvSkills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSkills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSkills.ColumnHeadersVisible = false;
+            this.dgvSkills.Location = new System.Drawing.Point(101, 781);
+            this.dgvSkills.MultiSelect = false;
+            this.dgvSkills.Name = "dgvSkills";
+            this.dgvSkills.ReadOnly = true;
+            this.dgvSkills.RowHeadersVisible = false;
+            this.dgvSkills.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSkills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSkills.Size = new System.Drawing.Size(840, 150);
+            this.dgvSkills.TabIndex = 268;
             // 
             // cbProficiency
             // 
@@ -909,19 +976,12 @@
             this.cbProficiency.ForeColor = System.Drawing.Color.Black;
             this.cbProficiency.FormattingEnabled = true;
             this.cbProficiency.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbProficiency.Location = new System.Drawing.Point(611, 657);
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbProficiency.Location = new System.Drawing.Point(611, 701);
             this.cbProficiency.Name = "cbProficiency";
             this.cbProficiency.Size = new System.Drawing.Size(184, 27);
             this.cbProficiency.TabIndex = 267;
@@ -931,29 +991,18 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(508, 660);
+            this.label23.Location = new System.Drawing.Point(508, 704);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(95, 19);
             this.label23.TabIndex = 266;
             this.label23.Text = "Proficiency:";
-            // 
-            // txtSkillName
-            // 
-            this.txtSkillName.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSkillName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSkillName.ForeColor = System.Drawing.Color.Black;
-            this.txtSkillName.Location = new System.Drawing.Point(189, 657);
-            this.txtSkillName.MaxLength = 30;
-            this.txtSkillName.Name = "txtSkillName";
-            this.txtSkillName.Size = new System.Drawing.Size(290, 26);
-            this.txtSkillName.TabIndex = 265;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(100, 660);
+            this.label22.Location = new System.Drawing.Point(100, 704);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(92, 19);
             this.label22.TabIndex = 264;
@@ -967,7 +1016,7 @@
             this.btnRemoveEduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveEduc.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveEduc.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveEduc.Location = new System.Drawing.Point(840, 585);
+            this.btnRemoveEduc.Location = new System.Drawing.Point(840, 631);
             this.btnRemoveEduc.Name = "btnRemoveEduc";
             this.btnRemoveEduc.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveEduc.TabIndex = 263;
@@ -982,30 +1031,32 @@
             this.btnAddEduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEduc.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEduc.ForeColor = System.Drawing.Color.Black;
-            this.btnAddEduc.Location = new System.Drawing.Point(452, 383);
+            this.btnAddEduc.Location = new System.Drawing.Point(452, 429);
             this.btnAddEduc.Name = "btnAddEduc";
             this.btnAddEduc.Size = new System.Drawing.Size(100, 30);
             this.btnAddEduc.TabIndex = 262;
             this.btnAddEduc.Text = "ADD";
             this.btnAddEduc.UseVisualStyleBackColor = false;
+            this.btnAddEduc.Click += new System.EventHandler(this.btnAddEduc_Click);
             // 
-            // textBox73
+            // txtDegree
             // 
-            this.textBox73.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox73.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox73.ForeColor = System.Drawing.Color.Black;
-            this.textBox73.Location = new System.Drawing.Point(253, 345);
-            this.textBox73.MaxLength = 30;
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(432, 26);
-            this.textBox73.TabIndex = 261;
+            this.txtDegree.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtDegree.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDegree.ForeColor = System.Drawing.Color.Black;
+            this.txtDegree.HideSelection = false;
+            this.txtDegree.Location = new System.Drawing.Point(253, 391);
+            this.txtDegree.MaxLength = 100;
+            this.txtDegree.Name = "txtDegree";
+            this.txtDegree.Size = new System.Drawing.Size(432, 26);
+            this.txtDegree.TabIndex = 261;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(100, 348);
+            this.label19.Location = new System.Drawing.Point(100, 394);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(152, 19);
             this.label19.TabIndex = 260;
@@ -1016,8 +1067,8 @@
             this.txtYearEnded.BackColor = System.Drawing.Color.Gainsboro;
             this.txtYearEnded.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYearEnded.ForeColor = System.Drawing.Color.Black;
-            this.txtYearEnded.Location = new System.Drawing.Point(677, 313);
-            this.txtYearEnded.MaxLength = 30;
+            this.txtYearEnded.Location = new System.Drawing.Point(686, 359);
+            this.txtYearEnded.MaxLength = 4;
             this.txtYearEnded.Name = "txtYearEnded";
             this.txtYearEnded.Size = new System.Drawing.Size(77, 26);
             this.txtYearEnded.TabIndex = 259;
@@ -1027,7 +1078,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(577, 316);
+            this.label18.Location = new System.Drawing.Point(586, 362);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(101, 19);
             this.label18.TabIndex = 258;
@@ -1038,8 +1089,8 @@
             this.txtYearStarted.BackColor = System.Drawing.Color.Gainsboro;
             this.txtYearStarted.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYearStarted.ForeColor = System.Drawing.Color.Black;
-            this.txtYearStarted.Location = new System.Drawing.Point(498, 313);
-            this.txtYearStarted.MaxLength = 30;
+            this.txtYearStarted.Location = new System.Drawing.Point(507, 359);
+            this.txtYearStarted.MaxLength = 4;
             this.txtYearStarted.Name = "txtYearStarted";
             this.txtYearStarted.Size = new System.Drawing.Size(77, 26);
             this.txtYearStarted.TabIndex = 257;
@@ -1049,7 +1100,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(391, 316);
+            this.label17.Location = new System.Drawing.Point(400, 362);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(107, 19);
             this.label17.TabIndex = 256;
@@ -1065,29 +1116,21 @@
             this.cbSchoolType.ForeColor = System.Drawing.Color.Black;
             this.cbSchoolType.FormattingEnabled = true;
             this.cbSchoolType.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbSchoolType.Location = new System.Drawing.Point(203, 313);
+            "Elementary",
+            "High school",
+            "College"});
+            this.cbSchoolType.Location = new System.Drawing.Point(212, 359);
             this.cbSchoolType.Name = "cbSchoolType";
             this.cbSchoolType.Size = new System.Drawing.Size(184, 27);
             this.cbSchoolType.TabIndex = 255;
+            this.cbSchoolType.SelectedIndexChanged += new System.EventHandler(this.cbSchoolType_SelectedIndexChanged);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(100, 316);
+            this.label16.Location = new System.Drawing.Point(100, 362);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(103, 19);
             this.label16.TabIndex = 254;
@@ -1098,8 +1141,8 @@
             this.txtSchoolName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSchoolName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSchoolName.ForeColor = System.Drawing.Color.Black;
-            this.txtSchoolName.Location = new System.Drawing.Point(212, 281);
-            this.txtSchoolName.MaxLength = 30;
+            this.txtSchoolName.Location = new System.Drawing.Point(212, 327);
+            this.txtSchoolName.MaxLength = 100;
             this.txtSchoolName.Name = "txtSchoolName";
             this.txtSchoolName.Size = new System.Drawing.Size(473, 26);
             this.txtSchoolName.TabIndex = 253;
@@ -1109,7 +1152,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(100, 284);
+            this.label15.Location = new System.Drawing.Point(100, 330);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 19);
             this.label15.TabIndex = 252;
@@ -1118,7 +1161,7 @@
             // dataGridContactPerson
             // 
             this.dataGridContactPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridContactPerson.Location = new System.Drawing.Point(104, 2203);
+            this.dataGridContactPerson.Location = new System.Drawing.Point(104, 2257);
             this.dataGridContactPerson.Name = "dataGridContactPerson";
             this.dataGridContactPerson.Size = new System.Drawing.Size(820, 150);
             this.dataGridContactPerson.TabIndex = 251;
@@ -1128,7 +1171,7 @@
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label129.ForeColor = System.Drawing.Color.Black;
-            this.label129.Location = new System.Drawing.Point(13, 2086);
+            this.label129.Location = new System.Drawing.Point(13, 2140);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(607, 25);
             this.label129.TabIndex = 250;
@@ -1137,7 +1180,7 @@
             // dataGridChildren
             // 
             this.dataGridChildren.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridChildren.Location = new System.Drawing.Point(104, 1877);
+            this.dataGridChildren.Location = new System.Drawing.Point(104, 1927);
             this.dataGridChildren.Name = "dataGridChildren";
             this.dataGridChildren.Size = new System.Drawing.Size(820, 150);
             this.dataGridChildren.TabIndex = 247;
@@ -1147,7 +1190,7 @@
             this.label127.AutoSize = true;
             this.label127.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label127.ForeColor = System.Drawing.Color.Black;
-            this.label127.Location = new System.Drawing.Point(100, 1734);
+            this.label127.Location = new System.Drawing.Point(100, 1784);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(265, 19);
             this.label127.TabIndex = 246;
@@ -1158,7 +1201,7 @@
             this.txtSOccu.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSOccu.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSOccu.ForeColor = System.Drawing.Color.Black;
-            this.txtSOccu.Location = new System.Drawing.Point(708, 1701);
+            this.txtSOccu.Location = new System.Drawing.Point(708, 1751);
             this.txtSOccu.MaxLength = 30;
             this.txtSOccu.Name = "txtSOccu";
             this.txtSOccu.Size = new System.Drawing.Size(223, 26);
@@ -1169,7 +1212,7 @@
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.Color.Black;
-            this.label124.Location = new System.Drawing.Point(609, 1707);
+            this.label124.Location = new System.Drawing.Point(609, 1757);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(98, 19);
             this.label124.TabIndex = 244;
@@ -1180,7 +1223,7 @@
             this.txtSAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSAge.ForeColor = System.Drawing.Color.Black;
-            this.txtSAge.Location = new System.Drawing.Point(541, 1703);
+            this.txtSAge.Location = new System.Drawing.Point(541, 1753);
             this.txtSAge.MaxLength = 30;
             this.txtSAge.Name = "txtSAge";
             this.txtSAge.Size = new System.Drawing.Size(54, 26);
@@ -1191,7 +1234,7 @@
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label125.ForeColor = System.Drawing.Color.Black;
-            this.label125.Location = new System.Drawing.Point(483, 1707);
+            this.label125.Location = new System.Drawing.Point(483, 1757);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(44, 19);
             this.label125.TabIndex = 242;
@@ -1202,7 +1245,7 @@
             this.txtSpouse.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSpouse.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpouse.ForeColor = System.Drawing.Color.Black;
-            this.txtSpouse.Location = new System.Drawing.Point(223, 1701);
+            this.txtSpouse.Location = new System.Drawing.Point(223, 1751);
             this.txtSpouse.MaxLength = 30;
             this.txtSpouse.Name = "txtSpouse";
             this.txtSpouse.Size = new System.Drawing.Size(252, 26);
@@ -1213,7 +1256,7 @@
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.ForeColor = System.Drawing.Color.Black;
-            this.label126.Location = new System.Drawing.Point(100, 1704);
+            this.label126.Location = new System.Drawing.Point(100, 1754);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(115, 19);
             this.label126.TabIndex = 240;
@@ -1224,7 +1267,7 @@
             this.txtMOccu.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMOccu.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMOccu.ForeColor = System.Drawing.Color.Black;
-            this.txtMOccu.Location = new System.Drawing.Point(708, 1669);
+            this.txtMOccu.Location = new System.Drawing.Point(708, 1720);
             this.txtMOccu.MaxLength = 30;
             this.txtMOccu.Name = "txtMOccu";
             this.txtMOccu.Size = new System.Drawing.Size(223, 26);
@@ -1235,7 +1278,7 @@
             this.label120.AutoSize = true;
             this.label120.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Black;
-            this.label120.Location = new System.Drawing.Point(609, 1675);
+            this.label120.Location = new System.Drawing.Point(609, 1726);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(98, 19);
             this.label120.TabIndex = 238;
@@ -1246,7 +1289,7 @@
             this.txtMAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMAge.ForeColor = System.Drawing.Color.Black;
-            this.txtMAge.Location = new System.Drawing.Point(541, 1671);
+            this.txtMAge.Location = new System.Drawing.Point(541, 1722);
             this.txtMAge.MaxLength = 30;
             this.txtMAge.Name = "txtMAge";
             this.txtMAge.Size = new System.Drawing.Size(54, 26);
@@ -1257,7 +1300,7 @@
             this.label122.AutoSize = true;
             this.label122.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label122.ForeColor = System.Drawing.Color.Black;
-            this.label122.Location = new System.Drawing.Point(483, 1675);
+            this.label122.Location = new System.Drawing.Point(483, 1726);
             this.label122.Name = "label122";
             this.label122.Size = new System.Drawing.Size(44, 19);
             this.label122.TabIndex = 236;
@@ -1268,7 +1311,7 @@
             this.txtMother.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMother.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMother.ForeColor = System.Drawing.Color.Black;
-            this.txtMother.Location = new System.Drawing.Point(223, 1669);
+            this.txtMother.Location = new System.Drawing.Point(223, 1720);
             this.txtMother.MaxLength = 30;
             this.txtMother.Name = "txtMother";
             this.txtMother.Size = new System.Drawing.Size(252, 26);
@@ -1279,7 +1322,7 @@
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.ForeColor = System.Drawing.Color.Black;
-            this.label123.Location = new System.Drawing.Point(100, 1672);
+            this.label123.Location = new System.Drawing.Point(100, 1723);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(125, 19);
             this.label123.TabIndex = 234;
@@ -1290,7 +1333,7 @@
             this.txtFOccu.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFOccu.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFOccu.ForeColor = System.Drawing.Color.Black;
-            this.txtFOccu.Location = new System.Drawing.Point(708, 1637);
+            this.txtFOccu.Location = new System.Drawing.Point(708, 1688);
             this.txtFOccu.MaxLength = 30;
             this.txtFOccu.Name = "txtFOccu";
             this.txtFOccu.Size = new System.Drawing.Size(223, 26);
@@ -1301,7 +1344,7 @@
             this.label121.AutoSize = true;
             this.label121.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label121.ForeColor = System.Drawing.Color.Black;
-            this.label121.Location = new System.Drawing.Point(609, 1643);
+            this.label121.Location = new System.Drawing.Point(609, 1694);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(98, 19);
             this.label121.TabIndex = 232;
@@ -1312,7 +1355,7 @@
             this.txtFAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFAge.ForeColor = System.Drawing.Color.Black;
-            this.txtFAge.Location = new System.Drawing.Point(541, 1639);
+            this.txtFAge.Location = new System.Drawing.Point(541, 1690);
             this.txtFAge.MaxLength = 30;
             this.txtFAge.Name = "txtFAge";
             this.txtFAge.Size = new System.Drawing.Size(54, 26);
@@ -1323,7 +1366,7 @@
             this.label118.AutoSize = true;
             this.label118.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.ForeColor = System.Drawing.Color.Black;
-            this.label118.Location = new System.Drawing.Point(483, 1643);
+            this.label118.Location = new System.Drawing.Point(483, 1694);
             this.label118.Name = "label118";
             this.label118.Size = new System.Drawing.Size(44, 19);
             this.label118.TabIndex = 230;
@@ -1334,7 +1377,7 @@
             this.txtFather.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFather.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFather.ForeColor = System.Drawing.Color.Black;
-            this.txtFather.Location = new System.Drawing.Point(223, 1637);
+            this.txtFather.Location = new System.Drawing.Point(223, 1688);
             this.txtFather.MaxLength = 30;
             this.txtFather.Name = "txtFather";
             this.txtFather.Size = new System.Drawing.Size(252, 26);
@@ -1345,7 +1388,7 @@
             this.label119.AutoSize = true;
             this.label119.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label119.ForeColor = System.Drawing.Color.Black;
-            this.label119.Location = new System.Drawing.Point(100, 1640);
+            this.label119.Location = new System.Drawing.Point(100, 1691);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(120, 19);
             this.label119.TabIndex = 228;
@@ -1404,7 +1447,7 @@
             "1959",
             "1958",
             "1957"});
-            this.cbYear.Location = new System.Drawing.Point(404, 193);
+            this.cbYear.Location = new System.Drawing.Point(398, 195);
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(100, 27);
             this.cbYear.TabIndex = 202;
@@ -1450,7 +1493,7 @@
             "29",
             "30",
             "31"});
-            this.cbDay.Location = new System.Drawing.Point(323, 193);
+            this.cbDay.Location = new System.Drawing.Point(317, 195);
             this.cbDay.Name = "cbDay";
             this.cbDay.Size = new System.Drawing.Size(75, 27);
             this.cbDay.TabIndex = 201;
@@ -1477,7 +1520,7 @@
             "October",
             "November",
             "December"});
-            this.cbMonth.Location = new System.Drawing.Point(186, 193);
+            this.cbMonth.Location = new System.Drawing.Point(180, 195);
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.Size = new System.Drawing.Size(131, 27);
             this.cbMonth.TabIndex = 200;
@@ -1488,10 +1531,29 @@
             this.pnlButtons1.Controls.Add(this.btnCancel1);
             this.pnlButtons1.Controls.Add(this.btnAdd);
             this.pnlButtons1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlButtons1.Location = new System.Drawing.Point(432, 2453);
+            this.pnlButtons1.Location = new System.Drawing.Point(432, 2479);
             this.pnlButtons1.Name = "pnlButtons1";
             this.pnlButtons1.Size = new System.Drawing.Size(250, 80);
             this.pnlButtons1.TabIndex = 199;
+            // 
+            // btnCancel1
+            // 
+            this.btnCancel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel1.FlatAppearance.BorderSize = 0;
+            this.btnCancel1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCancel1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel1.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel1.Location = new System.Drawing.Point(128, 3);
+            this.btnCancel1.Name = "btnCancel1";
+            this.btnCancel1.Size = new System.Drawing.Size(120, 50);
+            this.btnCancel1.TabIndex = 57;
+            this.btnCancel1.Text = "CANCEL";
+            this.btnCancel1.UseVisualStyleBackColor = false;
+            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
             // 
             // btnAdd
             // 
@@ -1517,7 +1579,7 @@
             this.textBox17.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox17.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox17.ForeColor = System.Drawing.Color.Black;
-            this.textBox17.Location = new System.Drawing.Point(679, 1604);
+            this.textBox17.Location = new System.Drawing.Point(679, 1655);
             this.textBox17.MaxLength = 30;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(217, 26);
@@ -1528,7 +1590,7 @@
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.Black;
-            this.label57.Location = new System.Drawing.Point(515, 1607);
+            this.label57.Location = new System.Drawing.Point(515, 1658);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(161, 19);
             this.label57.TabIndex = 197;
@@ -1539,7 +1601,7 @@
             this.textBox18.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox18.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox18.ForeColor = System.Drawing.Color.Black;
-            this.textBox18.Location = new System.Drawing.Point(310, 1604);
+            this.textBox18.Location = new System.Drawing.Point(310, 1655);
             this.textBox18.MaxLength = 30;
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(200, 26);
@@ -1550,7 +1612,7 @@
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(100, 1607);
+            this.label58.Location = new System.Drawing.Point(100, 1658);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(204, 19);
             this.label58.TabIndex = 195;
@@ -1561,7 +1623,7 @@
             this.txtProvAdd.BackColor = System.Drawing.Color.Gainsboro;
             this.txtProvAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProvAdd.ForeColor = System.Drawing.Color.Black;
-            this.txtProvAdd.Location = new System.Drawing.Point(342, 1572);
+            this.txtProvAdd.Location = new System.Drawing.Point(342, 1623);
             this.txtProvAdd.MaxLength = 30;
             this.txtProvAdd.Name = "txtProvAdd";
             this.txtProvAdd.Size = new System.Drawing.Size(554, 26);
@@ -1572,7 +1634,7 @@
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(100, 1575);
+            this.label59.Location = new System.Drawing.Point(100, 1626);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(236, 19);
             this.label59.TabIndex = 193;
@@ -1583,7 +1645,7 @@
             this.txtCityPhone.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCityPhone.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCityPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtCityPhone.Location = new System.Drawing.Point(676, 1540);
+            this.txtCityPhone.Location = new System.Drawing.Point(676, 1591);
             this.txtCityPhone.MaxLength = 30;
             this.txtCityPhone.Name = "txtCityPhone";
             this.txtCityPhone.Size = new System.Drawing.Size(220, 26);
@@ -1594,7 +1656,7 @@
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Black;
-            this.label56.Location = new System.Drawing.Point(494, 1543);
+            this.label56.Location = new System.Drawing.Point(494, 1594);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(176, 19);
             this.label56.TabIndex = 191;
@@ -1605,7 +1667,7 @@
             this.txtPhoneNumber.BackColor = System.Drawing.Color.Gainsboro;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(268, 1540);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(268, 1591);
             this.txtPhoneNumber.MaxLength = 30;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(220, 26);
@@ -1616,7 +1678,7 @@
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Black;
-            this.label55.Location = new System.Drawing.Point(100, 1543);
+            this.label55.Location = new System.Drawing.Point(100, 1594);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(162, 19);
             this.label55.TabIndex = 189;
@@ -1627,7 +1689,7 @@
             this.txtCityAddress.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCityAddress.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCityAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtCityAddress.Location = new System.Drawing.Point(219, 1508);
+            this.txtCityAddress.Location = new System.Drawing.Point(219, 1559);
             this.txtCityAddress.MaxLength = 30;
             this.txtCityAddress.Name = "txtCityAddress";
             this.txtCityAddress.Size = new System.Drawing.Size(677, 26);
@@ -1638,7 +1700,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.Location = new System.Drawing.Point(100, 1511);
+            this.label54.Location = new System.Drawing.Point(100, 1562);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(113, 19);
             this.label54.TabIndex = 187;
@@ -1649,7 +1711,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Black;
-            this.label53.Location = new System.Drawing.Point(25, 1471);
+            this.label53.Location = new System.Drawing.Point(25, 1522);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(196, 25);
             this.label53.TabIndex = 186;
@@ -1660,7 +1722,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(25, 938);
+            this.label30.Location = new System.Drawing.Point(25, 983);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(689, 25);
             this.label30.TabIndex = 170;
@@ -1671,19 +1733,26 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(25, 630);
+            this.label21.Location = new System.Drawing.Point(25, 674);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(86, 25);
             this.label21.TabIndex = 141;
             this.label21.Text = "SKILLS";
             // 
-            // dataGridEduc
+            // dgvEducBack
             // 
-            this.dataGridEduc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEduc.Location = new System.Drawing.Point(100, 429);
-            this.dataGridEduc.Name = "dataGridEduc";
-            this.dataGridEduc.Size = new System.Drawing.Size(840, 150);
-            this.dataGridEduc.TabIndex = 140;
+            this.dgvEducBack.AllowUserToAddRows = false;
+            this.dgvEducBack.AllowUserToDeleteRows = false;
+            this.dgvEducBack.AllowUserToResizeColumns = false;
+            this.dgvEducBack.AllowUserToResizeRows = false;
+            this.dgvEducBack.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEducBack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEducBack.ColumnHeadersVisible = false;
+            this.dgvEducBack.Location = new System.Drawing.Point(100, 475);
+            this.dgvEducBack.Name = "dgvEducBack";
+            this.dgvEducBack.RowHeadersVisible = false;
+            this.dgvEducBack.Size = new System.Drawing.Size(840, 150);
+            this.dgvEducBack.TabIndex = 140;
             // 
             // label20
             // 
@@ -1691,7 +1760,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(28, 239);
+            this.label20.Location = new System.Drawing.Point(28, 287);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(340, 25);
             this.label20.TabIndex = 139;
@@ -1701,19 +1770,20 @@
             // 
             this.txtWeight.BackColor = System.Drawing.Color.Gainsboro;
             this.txtWeight.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.ForeColor = System.Drawing.Color.Black;
-            this.txtWeight.Location = new System.Drawing.Point(937, 161);
+            this.txtWeight.ForeColor = System.Drawing.Color.Gray;
+            this.txtWeight.Location = new System.Drawing.Point(338, 230);
             this.txtWeight.MaxLength = 30;
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(75, 26);
             this.txtWeight.TabIndex = 126;
+            this.txtWeight.Text = "in kg";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(860, 164);
+            this.label13.Location = new System.Drawing.Point(261, 233);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 19);
             this.label13.TabIndex = 125;
@@ -1723,19 +1793,20 @@
             // 
             this.txtHeight.BackColor = System.Drawing.Color.Gainsboro;
             this.txtHeight.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.ForeColor = System.Drawing.Color.Black;
-            this.txtHeight.Location = new System.Drawing.Point(779, 161);
+            this.txtHeight.ForeColor = System.Drawing.Color.Gray;
+            this.txtHeight.Location = new System.Drawing.Point(180, 230);
             this.txtHeight.MaxLength = 30;
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(75, 26);
             this.txtHeight.TabIndex = 124;
+            this.txtHeight.Text = "in cm";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(707, 164);
+            this.label12.Location = new System.Drawing.Point(99, 231);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 19);
             this.label12.TabIndex = 123;
@@ -1747,51 +1818,18 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(100, 196);
+            this.label10.Location = new System.Drawing.Point(98, 198);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 19);
             this.label10.TabIndex = 117;
             this.label10.Text = "Birthday :";
-            // 
-            // txtAge
-            // 
-            this.txtAge.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.ForeColor = System.Drawing.Color.Black;
-            this.txtAge.Location = new System.Drawing.Point(652, 161);
-            this.txtAge.MaxLength = 30;
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(50, 26);
-            this.txtAge.TabIndex = 116;
-            // 
-            // txtCivilStat
-            // 
-            this.txtCivilStat.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtCivilStat.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCivilStat.ForeColor = System.Drawing.Color.Black;
-            this.txtCivilStat.Location = new System.Drawing.Point(412, 161);
-            this.txtCivilStat.MaxLength = 30;
-            this.txtCivilStat.Name = "txtCivilStat";
-            this.txtCivilStat.Size = new System.Drawing.Size(180, 26);
-            this.txtCivilStat.TabIndex = 115;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(598, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 19);
-            this.label9.TabIndex = 114;
-            this.label9.Text = "Age :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(307, 164);
+            this.label8.Location = new System.Drawing.Point(347, 164);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 19);
             this.label8.TabIndex = 113;
@@ -1802,7 +1840,7 @@
             this.rbFemale.AutoSize = true;
             this.rbFemale.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFemale.ForeColor = System.Drawing.Color.Black;
-            this.rbFemale.Location = new System.Drawing.Point(220, 162);
+            this.rbFemale.Location = new System.Drawing.Point(249, 162);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(81, 23);
             this.rbFemale.TabIndex = 112;
@@ -1815,7 +1853,7 @@
             this.rbMale.AutoSize = true;
             this.rbMale.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMale.ForeColor = System.Drawing.Color.Black;
-            this.rbMale.Location = new System.Drawing.Point(151, 162);
+            this.rbMale.Location = new System.Drawing.Point(180, 162);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(63, 23);
             this.rbMale.TabIndex = 111;
@@ -1839,78 +1877,40 @@
             // 
             this.txtMiddleName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMiddleName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddleName.ForeColor = System.Drawing.Color.Black;
-            this.txtMiddleName.Location = new System.Drawing.Point(800, 129);
+            this.txtMiddleName.ForeColor = System.Drawing.Color.Gray;
+            this.txtMiddleName.Location = new System.Drawing.Point(605, 129);
             this.txtMiddleName.MaxLength = 30;
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(180, 26);
             this.txtMiddleName.TabIndex = 109;
+            this.txtMiddleName.Text = "Middle Name";
+            this.txtMiddleName.Enter += new System.EventHandler(this.txtMiddleName_Enter);
             // 
             // txtFirstName
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFirstName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.ForeColor = System.Drawing.Color.Black;
-            this.txtFirstName.Location = new System.Drawing.Point(491, 129);
+            this.txtFirstName.ForeColor = System.Drawing.Color.Gray;
+            this.txtFirstName.Location = new System.Drawing.Point(366, 129);
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(180, 26);
+            this.txtFirstName.Size = new System.Drawing.Size(233, 26);
             this.txtFirstName.TabIndex = 108;
+            this.txtFirstName.Text = "First Name";
+            this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
             // 
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtLastName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.ForeColor = System.Drawing.Color.Black;
-            this.txtLastName.Location = new System.Drawing.Point(200, 129);
+            this.txtLastName.ForeColor = System.Drawing.Color.Gray;
+            this.txtLastName.Location = new System.Drawing.Point(180, 129);
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(180, 26);
             this.txtLastName.TabIndex = 107;
-            // 
-            // txtDesired
-            // 
-            this.txtDesired.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtDesired.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesired.ForeColor = System.Drawing.Color.Black;
-            this.txtDesired.Location = new System.Drawing.Point(519, 97);
-            this.txtDesired.MaxLength = 30;
-            this.txtDesired.Name = "txtDesired";
-            this.txtDesired.Size = new System.Drawing.Size(152, 26);
-            this.txtDesired.TabIndex = 106;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtPosition.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.ForeColor = System.Drawing.Color.Black;
-            this.txtPosition.Location = new System.Drawing.Point(180, 97);
-            this.txtPosition.MaxLength = 30;
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(200, 26);
-            this.txtPosition.TabIndex = 105;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(677, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 19);
-            this.label6.TabIndex = 104;
-            this.label6.Text = "Middle Name :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(387, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 19);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "First Name :";
+            this.txtLastName.Text = "Last Name";
+            this.txtLastName.Enter += new System.EventHandler(this.txtLastName_Enter);
             // 
             // label4
             // 
@@ -1920,20 +1920,9 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(100, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 19);
+            this.label4.Size = new System.Drawing.Size(58, 19);
             this.label4.TabIndex = 102;
-            this.label4.Text = "Last Name :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(386, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 19);
-            this.label3.TabIndex = 101;
-            this.label3.Text = "Desired Salary :";
+            this.label4.Text = "Name:";
             // 
             // label2
             // 
@@ -2474,6 +2463,54 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 450);
             this.panel2.TabIndex = 33;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.btnCancel2);
+            this.panel3.Controls.Add(this.btnSave);
+            this.panel3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(399, 2464);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 80);
+            this.panel3.TabIndex = 355;
+            // 
+            // btnCancel2
+            // 
+            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel2.FlatAppearance.BorderSize = 0;
+            this.btnCancel2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCancel2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel2.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel2.Location = new System.Drawing.Point(128, 3);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(120, 50);
+            this.btnCancel2.TabIndex = 57;
+            this.btnCancel2.Text = "CANCEL";
+            this.btnCancel2.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(2, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(120, 50);
+            this.btnSave.TabIndex = 56;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button8
             // 
@@ -3587,73 +3624,6 @@
             this.label38.TabIndex = 264;
             this.label38.Text = "EDUCATIONAL BACKGROUND\r\n";
             // 
-            // btnCancel1
-            // 
-            this.btnCancel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel1.FlatAppearance.BorderSize = 0;
-            this.btnCancel1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCancel1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel1.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel1.Location = new System.Drawing.Point(128, 3);
-            this.btnCancel1.Name = "btnCancel1";
-            this.btnCancel1.Size = new System.Drawing.Size(120, 50);
-            this.btnCancel1.TabIndex = 57;
-            this.btnCancel1.Text = "CANCEL";
-            this.btnCancel1.UseVisualStyleBackColor = false;
-            this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.btnCancel2);
-            this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(399, 2464);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 80);
-            this.panel3.TabIndex = 355;
-            // 
-            // btnCancel2
-            // 
-            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel2.FlatAppearance.BorderSize = 0;
-            this.btnCancel2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCancel2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel2.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel2.Location = new System.Drawing.Point(128, 3);
-            this.btnCancel2.Name = "btnCancel2";
-            this.btnCancel2.Size = new System.Drawing.Size(120, 50);
-            this.btnCancel2.TabIndex = 57;
-            this.btnCancel2.Text = "CANCEL";
-            this.btnCancel2.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(2, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 50);
-            this.btnSave.TabIndex = 56;
-            this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // ucAppAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3663,22 +3633,23 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucAppAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.VisibleChanged += new System.EventHandler(this.ucAppAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContactPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChildren)).EndInit();
             this.pnlButtons1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEduc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEducBack)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3705,16 +3676,13 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DataGridView dataGridEduc;
+        private System.Windows.Forms.DataGridView dgvEducBack;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.TextBox txtCivilStat;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.RadioButton rbMale;
@@ -3722,12 +3690,7 @@
         private System.Windows.Forms.TextBox txtMiddleName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtDesired;
-        private System.Windows.Forms.TextBox txtPosition;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAddApp;
         private System.Windows.Forms.DataGridView dataGridContactPerson;
@@ -3752,7 +3715,7 @@
         private System.Windows.Forms.Label label118;
         private System.Windows.Forms.TextBox txtFather;
         private System.Windows.Forms.Label label119;
-        private System.Windows.Forms.TextBox textBox73;
+        private System.Windows.Forms.TextBox txtDegree;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtYearEnded;
         private System.Windows.Forms.Label label18;
@@ -3792,10 +3755,9 @@
         private System.Windows.Forms.TextBox textBox75;
         private System.Windows.Forms.Button btnRemoveSkills;
         private System.Windows.Forms.Button btnAddSkills;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dgvSkills;
         private System.Windows.Forms.ComboBox cbProficiency;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtSkillName;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnRemoveEduc;
         private System.Windows.Forms.Button btnAddEduc;
@@ -3923,5 +3885,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cbPosition;
+        private System.Windows.Forms.ComboBox cbSkills;
     }
 }

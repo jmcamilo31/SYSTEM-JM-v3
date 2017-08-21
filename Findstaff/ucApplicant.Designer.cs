@@ -28,42 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvRecruitment = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvApplicant = new System.Windows.Forms.DataGridView();
             this.lblApplicant = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.ucAppAddEdit = new Findstaff.ucAppAddEdit();
             this.ucAppView = new Findstaff.ucAppView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).BeginInit();
+            this.ucAppAddEdit = new Findstaff.ucAppAddEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApplicant)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvRecruitment
+            // dgvApplicant
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecruitment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRecruitment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecruitment.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRecruitment.Location = new System.Drawing.Point(100, 100);
-            this.dgvRecruitment.Name = "dgvRecruitment";
-            this.dgvRecruitment.Size = new System.Drawing.Size(918, 230);
-            this.dgvRecruitment.TabIndex = 44;
+            this.dgvApplicant.AllowUserToAddRows = false;
+            this.dgvApplicant.AllowUserToDeleteRows = false;
+            this.dgvApplicant.AllowUserToResizeColumns = false;
+            this.dgvApplicant.AllowUserToResizeRows = false;
+            this.dgvApplicant.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApplicant.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvApplicant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvApplicant.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvApplicant.Location = new System.Drawing.Point(100, 100);
+            this.dgvApplicant.Name = "dgvApplicant";
+            this.dgvApplicant.ReadOnly = true;
+            this.dgvApplicant.RowHeadersVisible = false;
+            this.dgvApplicant.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvApplicant.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvApplicant.Size = new System.Drawing.Size(918, 230);
+            this.dgvApplicant.TabIndex = 44;
             // 
             // lblApplicant
             // 
@@ -140,15 +149,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // ucAppAddEdit
-            // 
-            this.ucAppAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucAppAddEdit.Location = new System.Drawing.Point(0, 0);
-            this.ucAppAddEdit.Name = "ucAppAddEdit";
-            this.ucAppAddEdit.Size = new System.Drawing.Size(10, 10);
-            this.ucAppAddEdit.TabIndex = 49;
-            this.ucAppAddEdit.Visible = false;
-            // 
             // ucAppView
             // 
             this.ucAppView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -157,6 +157,16 @@
             this.ucAppView.Size = new System.Drawing.Size(10, 10);
             this.ucAppView.TabIndex = 50;
             this.ucAppView.Visible = false;
+            // 
+            // ucAppAddEdit
+            // 
+            this.ucAppAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucAppAddEdit.Location = new System.Drawing.Point(0, 0);
+            this.ucAppAddEdit.Name = "ucAppAddEdit";
+            this.ucAppAddEdit.Size = new System.Drawing.Size(10, 10);
+            this.ucAppAddEdit.TabIndex = 49;
+            this.ucAppAddEdit.Visible = false;
+            this.ucAppAddEdit.VisibleChanged += new System.EventHandler(this.ucAppAddEdit_VisibleChanged);
             // 
             // ucApplicant
             // 
@@ -169,19 +179,18 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dgvRecruitment);
+            this.Controls.Add(this.dgvApplicant);
             this.Controls.Add(this.lblApplicant);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucApplicant";
             this.Size = new System.Drawing.Size(1118, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApplicant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvRecruitment;
         private System.Windows.Forms.Label lblApplicant;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnDelete;
@@ -189,5 +198,6 @@
         private System.Windows.Forms.Button btnAdd;
         private ucAppAddEdit ucAppAddEdit;
         private ucAppView ucAppView;
+        public System.Windows.Forms.DataGridView dgvApplicant;
     }
 }
