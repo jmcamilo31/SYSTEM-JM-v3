@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbYearEnd = new System.Windows.Forms.ComboBox();
+            this.cbMonthEnd = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbSkills = new System.Windows.Forms.ComboBox();
             this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.cbCivilStat = new System.Windows.Forms.ComboBox();
             this.btnRemoveContact = new System.Windows.Forms.Button();
             this.btnAddContact = new System.Windows.Forms.Button();
             this.txtContactNo = new System.Windows.Forms.TextBox();
@@ -50,20 +53,20 @@
             this.label28 = new System.Windows.Forms.Label();
             this.btnRemoveEmpHistory = new System.Windows.Forms.Button();
             this.btnAddEmpHistory = new System.Windows.Forms.Button();
-            this.dataEmpHistory = new System.Windows.Forms.DataGridView();
-            this.cbEmploymentYear = new System.Windows.Forms.ComboBox();
-            this.cbEmploymentMonth = new System.Windows.Forms.ComboBox();
+            this.dgvEmpHistory = new System.Windows.Forms.DataGridView();
+            this.cbYearStart = new System.Windows.Forms.ComboBox();
+            this.cbMonthStart = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtReason = new System.Windows.Forms.TextBox();
+            this.rtxtDesc = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPos = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox74 = new System.Windows.Forms.TextBox();
+            this.txtEmpAdd = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox75 = new System.Windows.Forms.TextBox();
+            this.txtEmp = new System.Windows.Forms.TextBox();
             this.btnRemoveSkills = new System.Windows.Forms.Button();
             this.btnAddSkills = new System.Windows.Forms.Button();
             this.dgvSkills = new System.Windows.Forms.DataGridView();
@@ -82,9 +85,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtSchoolName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridContactPerson = new System.Windows.Forms.DataGridView();
+            this.dgvContactPersons = new System.Windows.Forms.DataGridView();
             this.label129 = new System.Windows.Forms.Label();
-            this.dataGridChildren = new System.Windows.Forms.DataGridView();
+            this.dgvChildren = new System.Windows.Forms.DataGridView();
             this.label127 = new System.Windows.Forms.Label();
             this.txtSOccu = new System.Windows.Forms.TextBox();
             this.label124 = new System.Windows.Forms.Label();
@@ -110,9 +113,9 @@
             this.pnlButtons1 = new System.Windows.Forms.Panel();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtProvCP = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtProvNum = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.txtProvAdd = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
@@ -262,10 +265,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label38 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataEmpHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridContactPerson)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridChildren)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactPersons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChildren)).BeginInit();
             this.pnlButtons1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEducBack)).BeginInit();
             this.panel2.SuspendLayout();
@@ -280,9 +283,12 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.cbYearEnd);
+            this.panel1.Controls.Add(this.cbMonthEnd);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbSkills);
             this.panel1.Controls.Add(this.cbPosition);
-            this.panel1.Controls.Add(this.comboBox11);
+            this.panel1.Controls.Add(this.cbCivilStat);
             this.panel1.Controls.Add(this.btnRemoveContact);
             this.panel1.Controls.Add(this.btnAddContact);
             this.panel1.Controls.Add(this.txtContactNo);
@@ -301,20 +307,20 @@
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.btnRemoveEmpHistory);
             this.panel1.Controls.Add(this.btnAddEmpHistory);
-            this.panel1.Controls.Add(this.dataEmpHistory);
-            this.panel1.Controls.Add(this.cbEmploymentYear);
-            this.panel1.Controls.Add(this.cbEmploymentMonth);
+            this.panel1.Controls.Add(this.dgvEmpHistory);
+            this.panel1.Controls.Add(this.cbYearStart);
+            this.panel1.Controls.Add(this.cbMonthStart);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.txtReason);
+            this.panel1.Controls.Add(this.rtxtDesc);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtPos);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.textBox74);
+            this.panel1.Controls.Add(this.txtEmpAdd);
             this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.textBox75);
+            this.panel1.Controls.Add(this.txtEmp);
             this.panel1.Controls.Add(this.btnRemoveSkills);
             this.panel1.Controls.Add(this.btnAddSkills);
             this.panel1.Controls.Add(this.dgvSkills);
@@ -333,9 +339,9 @@
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.txtSchoolName);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.dataGridContactPerson);
+            this.panel1.Controls.Add(this.dgvContactPersons);
             this.panel1.Controls.Add(this.label129);
-            this.panel1.Controls.Add(this.dataGridChildren);
+            this.panel1.Controls.Add(this.dgvChildren);
             this.panel1.Controls.Add(this.label127);
             this.panel1.Controls.Add(this.txtSOccu);
             this.panel1.Controls.Add(this.label124);
@@ -359,9 +365,9 @@
             this.panel1.Controls.Add(this.cbDay);
             this.panel1.Controls.Add(this.cbMonth);
             this.panel1.Controls.Add(this.pnlButtons1);
-            this.panel1.Controls.Add(this.textBox17);
+            this.panel1.Controls.Add(this.txtProvCP);
             this.panel1.Controls.Add(this.label57);
-            this.panel1.Controls.Add(this.textBox18);
+            this.panel1.Controls.Add(this.txtProvNum);
             this.panel1.Controls.Add(this.label58);
             this.panel1.Controls.Add(this.txtProvAdd);
             this.panel1.Controls.Add(this.label59);
@@ -396,6 +402,107 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 450);
             this.panel1.TabIndex = 32;
+            // 
+            // cbYearEnd
+            // 
+            this.cbYearEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbYearEnd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbYearEnd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbYearEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbYearEnd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYearEnd.ForeColor = System.Drawing.Color.Black;
+            this.cbYearEnd.FormattingEnabled = true;
+            this.cbYearEnd.Items.AddRange(new object[] {
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970"});
+            this.cbYearEnd.Location = new System.Drawing.Point(833, 1063);
+            this.cbYearEnd.Name = "cbYearEnd";
+            this.cbYearEnd.Size = new System.Drawing.Size(108, 27);
+            this.cbYearEnd.TabIndex = 310;
+            // 
+            // cbMonthEnd
+            // 
+            this.cbMonthEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbMonthEnd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbMonthEnd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonthEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMonthEnd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonthEnd.ForeColor = System.Drawing.Color.Black;
+            this.cbMonthEnd.FormattingEnabled = true;
+            this.cbMonthEnd.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cbMonthEnd.Location = new System.Drawing.Point(669, 1063);
+            this.cbMonthEnd.Name = "cbMonthEnd";
+            this.cbMonthEnd.Size = new System.Drawing.Size(157, 27);
+            this.cbMonthEnd.TabIndex = 309;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(549, 1066);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.TabIndex = 308;
+            this.label3.Text = "Date of Leave :";
             // 
             // cbSkills
             // 
@@ -444,24 +551,24 @@
             this.cbPosition.Size = new System.Drawing.Size(181, 27);
             this.cbPosition.TabIndex = 306;
             // 
-            // comboBox11
+            // cbCivilStat
             // 
-            this.comboBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox11.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox11.ForeColor = System.Drawing.Color.Black;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
+            this.cbCivilStat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbCivilStat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbCivilStat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCivilStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCivilStat.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCivilStat.ForeColor = System.Drawing.Color.Black;
+            this.cbCivilStat.FormattingEnabled = true;
+            this.cbCivilStat.Items.AddRange(new object[] {
             "Single",
             "Married",
             "Widowed",
             "Separated"});
-            this.comboBox11.Location = new System.Drawing.Point(452, 161);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(180, 27);
-            this.comboBox11.TabIndex = 305;
+            this.cbCivilStat.Location = new System.Drawing.Point(452, 161);
+            this.cbCivilStat.Name = "cbCivilStat";
+            this.cbCivilStat.Size = new System.Drawing.Size(180, 27);
+            this.cbCivilStat.TabIndex = 305;
             // 
             // btnRemoveContact
             // 
@@ -471,12 +578,13 @@
             this.btnRemoveContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveContact.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveContact.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveContact.Location = new System.Drawing.Point(824, 2413);
+            this.btnRemoveContact.Location = new System.Drawing.Point(824, 2465);
             this.btnRemoveContact.Name = "btnRemoveContact";
             this.btnRemoveContact.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveContact.TabIndex = 304;
             this.btnRemoveContact.Text = "REMOVE";
             this.btnRemoveContact.UseVisualStyleBackColor = false;
+            this.btnRemoveContact.Click += new System.EventHandler(this.btnRemoveContact_Click);
             // 
             // btnAddContact
             // 
@@ -486,20 +594,21 @@
             this.btnAddContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddContact.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddContact.ForeColor = System.Drawing.Color.Black;
-            this.btnAddContact.Location = new System.Drawing.Point(457, 2207);
+            this.btnAddContact.Location = new System.Drawing.Point(457, 2259);
             this.btnAddContact.Name = "btnAddContact";
             this.btnAddContact.Size = new System.Drawing.Size(100, 30);
             this.btnAddContact.TabIndex = 303;
             this.btnAddContact.Text = "ADD";
             this.btnAddContact.UseVisualStyleBackColor = false;
+            this.btnAddContact.Click += new System.EventHandler(this.btnAddContact_Click);
             // 
             // txtContactNo
             // 
             this.txtContactNo.BackColor = System.Drawing.Color.Gainsboro;
             this.txtContactNo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactNo.ForeColor = System.Drawing.Color.Black;
-            this.txtContactNo.Location = new System.Drawing.Point(672, 2171);
-            this.txtContactNo.MaxLength = 30;
+            this.txtContactNo.Location = new System.Drawing.Point(672, 2223);
+            this.txtContactNo.MaxLength = 11;
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(252, 26);
             this.txtContactNo.TabIndex = 302;
@@ -509,7 +618,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(569, 2178);
+            this.label33.Location = new System.Drawing.Point(569, 2230);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(101, 19);
             this.label33.TabIndex = 301;
@@ -520,7 +629,7 @@
             this.txtContactPerson.BackColor = System.Drawing.Color.Gainsboro;
             this.txtContactPerson.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactPerson.ForeColor = System.Drawing.Color.Black;
-            this.txtContactPerson.Location = new System.Drawing.Point(297, 2175);
+            this.txtContactPerson.Location = new System.Drawing.Point(297, 2227);
             this.txtContactPerson.MaxLength = 30;
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Size = new System.Drawing.Size(252, 26);
@@ -531,7 +640,7 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(100, 2178);
+            this.label32.Location = new System.Drawing.Point(100, 2230);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(191, 19);
             this.label32.TabIndex = 299;
@@ -545,12 +654,13 @@
             this.btnRemoveChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveChild.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveChild.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveChild.Location = new System.Drawing.Point(824, 2083);
+            this.btnRemoveChild.Location = new System.Drawing.Point(824, 2135);
             this.btnRemoveChild.Name = "btnRemoveChild";
             this.btnRemoveChild.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveChild.TabIndex = 298;
             this.btnRemoveChild.Text = "REMOVE";
             this.btnRemoveChild.UseVisualStyleBackColor = false;
+            this.btnRemoveChild.Click += new System.EventHandler(this.btnRemoveChild_Click);
             // 
             // btnAddChild
             // 
@@ -560,12 +670,13 @@
             this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddChild.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddChild.ForeColor = System.Drawing.Color.Black;
-            this.btnAddChild.Location = new System.Drawing.Point(457, 1879);
+            this.btnAddChild.Location = new System.Drawing.Point(457, 1931);
             this.btnAddChild.Name = "btnAddChild";
             this.btnAddChild.Size = new System.Drawing.Size(100, 30);
             this.btnAddChild.TabIndex = 297;
             this.btnAddChild.Text = "ADD";
             this.btnAddChild.UseVisualStyleBackColor = false;
+            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
             // 
             // cbChildYear
             // 
@@ -577,19 +688,45 @@
             this.cbChildYear.ForeColor = System.Drawing.Color.Black;
             this.cbChildYear.FormattingEnabled = true;
             this.cbChildYear.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbChildYear.Location = new System.Drawing.Point(435, 1839);
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980"});
+            this.cbChildYear.Location = new System.Drawing.Point(435, 1891);
             this.cbChildYear.Name = "cbChildYear";
             this.cbChildYear.Size = new System.Drawing.Size(92, 27);
             this.cbChildYear.TabIndex = 296;
@@ -603,20 +740,7 @@
             this.cbChildDay.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChildDay.ForeColor = System.Drawing.Color.Black;
             this.cbChildDay.FormattingEnabled = true;
-            this.cbChildDay.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbChildDay.Location = new System.Drawing.Point(374, 1839);
+            this.cbChildDay.Location = new System.Drawing.Point(374, 1891);
             this.cbChildDay.Name = "cbChildDay";
             this.cbChildDay.Size = new System.Drawing.Size(55, 27);
             this.cbChildDay.TabIndex = 295;
@@ -643,17 +767,18 @@
             "October",
             "November",
             "December"});
-            this.cbChildMonth.Location = new System.Drawing.Point(211, 1839);
+            this.cbChildMonth.Location = new System.Drawing.Point(211, 1891);
             this.cbChildMonth.Name = "cbChildMonth";
             this.cbChildMonth.Size = new System.Drawing.Size(157, 27);
             this.cbChildMonth.TabIndex = 294;
+            this.cbChildMonth.SelectedIndexChanged += new System.EventHandler(this.cbChildMonth_SelectedIndexChanged);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(100, 1842);
+            this.label31.Location = new System.Drawing.Point(100, 1895);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(105, 19);
             this.label31.TabIndex = 293;
@@ -664,7 +789,7 @@
             this.txtChildAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtChildAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChildAge.ForeColor = System.Drawing.Color.Black;
-            this.txtChildAge.Location = new System.Drawing.Point(541, 1808);
+            this.txtChildAge.Location = new System.Drawing.Point(575, 1860);
             this.txtChildAge.MaxLength = 30;
             this.txtChildAge.Name = "txtChildAge";
             this.txtChildAge.Size = new System.Drawing.Size(54, 26);
@@ -675,7 +800,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(483, 1811);
+            this.label29.Location = new System.Drawing.Point(517, 1863);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(44, 19);
             this.label29.TabIndex = 291;
@@ -686,10 +811,10 @@
             this.txtChildName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtChildName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChildName.ForeColor = System.Drawing.Color.Black;
-            this.txtChildName.Location = new System.Drawing.Point(223, 1808);
+            this.txtChildName.Location = new System.Drawing.Point(223, 1860);
             this.txtChildName.MaxLength = 30;
             this.txtChildName.Name = "txtChildName";
-            this.txtChildName.Size = new System.Drawing.Size(252, 26);
+            this.txtChildName.Size = new System.Drawing.Size(287, 26);
             this.txtChildName.TabIndex = 290;
             // 
             // label28
@@ -697,7 +822,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(100, 1811);
+            this.label28.Location = new System.Drawing.Point(100, 1863);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(119, 19);
             this.label28.TabIndex = 289;
@@ -711,12 +836,13 @@
             this.btnRemoveEmpHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveEmpHistory.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveEmpHistory.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveEmpHistory.Location = new System.Drawing.Point(844, 1473);
+            this.btnRemoveEmpHistory.Location = new System.Drawing.Point(844, 1510);
             this.btnRemoveEmpHistory.Name = "btnRemoveEmpHistory";
             this.btnRemoveEmpHistory.Size = new System.Drawing.Size(100, 30);
             this.btnRemoveEmpHistory.TabIndex = 288;
             this.btnRemoveEmpHistory.Text = "REMOVE";
             this.btnRemoveEmpHistory.UseVisualStyleBackColor = false;
+            this.btnRemoveEmpHistory.Click += new System.EventHandler(this.btnRemoveEmpHistory_Click);
             // 
             // btnAddEmpHistory
             // 
@@ -726,31 +852,106 @@
             this.btnAddEmpHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmpHistory.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmpHistory.ForeColor = System.Drawing.Color.Black;
-            this.btnAddEmpHistory.Location = new System.Drawing.Point(456, 1271);
+            this.btnAddEmpHistory.Location = new System.Drawing.Point(456, 1308);
             this.btnAddEmpHistory.Name = "btnAddEmpHistory";
             this.btnAddEmpHistory.Size = new System.Drawing.Size(100, 30);
             this.btnAddEmpHistory.TabIndex = 287;
             this.btnAddEmpHistory.Text = "ADD";
             this.btnAddEmpHistory.UseVisualStyleBackColor = false;
+            this.btnAddEmpHistory.Click += new System.EventHandler(this.btnAddEmpHistory_Click);
             // 
-            // dataEmpHistory
+            // dgvEmpHistory
             // 
-            this.dataEmpHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEmpHistory.Location = new System.Drawing.Point(104, 1317);
-            this.dataEmpHistory.Name = "dataEmpHistory";
-            this.dataEmpHistory.Size = new System.Drawing.Size(840, 150);
-            this.dataEmpHistory.TabIndex = 286;
+            this.dgvEmpHistory.AllowUserToAddRows = false;
+            this.dgvEmpHistory.AllowUserToDeleteRows = false;
+            this.dgvEmpHistory.AllowUserToResizeColumns = false;
+            this.dgvEmpHistory.AllowUserToResizeRows = false;
+            this.dgvEmpHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpHistory.ColumnHeadersVisible = false;
+            this.dgvEmpHistory.Location = new System.Drawing.Point(104, 1354);
+            this.dgvEmpHistory.MultiSelect = false;
+            this.dgvEmpHistory.Name = "dgvEmpHistory";
+            this.dgvEmpHistory.ReadOnly = true;
+            this.dgvEmpHistory.RowHeadersVisible = false;
+            this.dgvEmpHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvEmpHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpHistory.Size = new System.Drawing.Size(840, 150);
+            this.dgvEmpHistory.TabIndex = 286;
             // 
-            // cbEmploymentYear
+            // cbYearStart
             // 
-            this.cbEmploymentYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbEmploymentYear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbEmploymentYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmploymentYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEmploymentYear.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmploymentYear.ForeColor = System.Drawing.Color.Black;
-            this.cbEmploymentYear.FormattingEnabled = true;
-            this.cbEmploymentYear.Items.AddRange(new object[] {
+            this.cbYearStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbYearStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbYearStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbYearStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbYearStart.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYearStart.ForeColor = System.Drawing.Color.Black;
+            this.cbYearStart.FormattingEnabled = true;
+            this.cbYearStart.Items.AddRange(new object[] {
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970"});
+            this.cbYearStart.Location = new System.Drawing.Point(431, 1063);
+            this.cbYearStart.Name = "cbYearStart";
+            this.cbYearStart.Size = new System.Drawing.Size(108, 27);
+            this.cbYearStart.TabIndex = 285;
+            // 
+            // cbMonthStart
+            // 
+            this.cbMonthStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbMonthStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbMonthStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonthStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMonthStart.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonthStart.ForeColor = System.Drawing.Color.Black;
+            this.cbMonthStart.FormattingEnabled = true;
+            this.cbMonthStart.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -763,76 +964,49 @@
             "October",
             "November",
             "December"});
-            this.cbEmploymentYear.Location = new System.Drawing.Point(431, 1063);
-            this.cbEmploymentYear.Name = "cbEmploymentYear";
-            this.cbEmploymentYear.Size = new System.Drawing.Size(108, 27);
-            this.cbEmploymentYear.TabIndex = 285;
-            // 
-            // cbEmploymentMonth
-            // 
-            this.cbEmploymentMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbEmploymentMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbEmploymentMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmploymentMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEmploymentMonth.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmploymentMonth.ForeColor = System.Drawing.Color.Black;
-            this.cbEmploymentMonth.FormattingEnabled = true;
-            this.cbEmploymentMonth.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbEmploymentMonth.Location = new System.Drawing.Point(267, 1063);
-            this.cbEmploymentMonth.Name = "cbEmploymentMonth";
-            this.cbEmploymentMonth.Size = new System.Drawing.Size(157, 27);
-            this.cbEmploymentMonth.TabIndex = 284;
+            this.cbMonthStart.Location = new System.Drawing.Point(267, 1063);
+            this.cbMonthStart.Name = "cbMonthStart";
+            this.cbMonthStart.Size = new System.Drawing.Size(157, 27);
+            this.cbMonthStart.TabIndex = 284;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(97, 1235);
+            this.label11.Location = new System.Drawing.Point(97, 1272);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 19);
             this.label11.TabIndex = 283;
             this.label11.Text = "Reason for Leaving :";
             // 
-            // textBox1
+            // txtReason
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(256, 1232);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(679, 26);
-            this.textBox1.TabIndex = 282;
+            this.txtReason.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtReason.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReason.ForeColor = System.Drawing.Color.Black;
+            this.txtReason.Location = new System.Drawing.Point(256, 1269);
+            this.txtReason.MaxLength = 30;
+            this.txtReason.Name = "txtReason";
+            this.txtReason.Size = new System.Drawing.Size(679, 26);
+            this.txtReason.TabIndex = 282;
             // 
-            // richTextBox1
+            // rtxtDesc
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(163, 1126);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(770, 100);
-            this.richTextBox1.TabIndex = 281;
-            this.richTextBox1.Text = "";
+            this.rtxtDesc.BackColor = System.Drawing.Color.Gainsboro;
+            this.rtxtDesc.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtDesc.Location = new System.Drawing.Point(163, 1163);
+            this.rtxtDesc.Name = "rtxtDesc";
+            this.rtxtDesc.Size = new System.Drawing.Size(770, 100);
+            this.rtxtDesc.TabIndex = 281;
+            this.rtxtDesc.Text = "";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(100, 1097);
+            this.label14.Location = new System.Drawing.Point(100, 1134);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(217, 19);
             this.label14.TabIndex = 280;
@@ -843,22 +1017,22 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(555, 1066);
+            this.label24.Location = new System.Drawing.Point(100, 1099);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(170, 19);
             this.label24.TabIndex = 279;
             this.label24.Text = "Position/Department :";
             // 
-            // textBox2
+            // txtPos
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(731, 1063);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 26);
-            this.textBox2.TabIndex = 278;
+            this.txtPos.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPos.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPos.ForeColor = System.Drawing.Color.Black;
+            this.txtPos.Location = new System.Drawing.Point(276, 1096);
+            this.txtPos.MaxLength = 30;
+            this.txtPos.Name = "txtPos";
+            this.txtPos.Size = new System.Drawing.Size(204, 26);
+            this.txtPos.TabIndex = 278;
             // 
             // label25
             // 
@@ -882,16 +1056,16 @@
             this.label26.TabIndex = 274;
             this.label26.Text = "Address of Employer :";
             // 
-            // textBox74
+            // txtEmpAdd
             // 
-            this.textBox74.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox74.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox74.ForeColor = System.Drawing.Color.Black;
-            this.textBox74.Location = new System.Drawing.Point(635, 1031);
-            this.textBox74.MaxLength = 30;
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(300, 26);
-            this.textBox74.TabIndex = 273;
+            this.txtEmpAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmpAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpAdd.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpAdd.Location = new System.Drawing.Point(635, 1031);
+            this.txtEmpAdd.MaxLength = 30;
+            this.txtEmpAdd.Name = "txtEmpAdd";
+            this.txtEmpAdd.Size = new System.Drawing.Size(300, 26);
+            this.txtEmpAdd.TabIndex = 273;
             // 
             // label27
             // 
@@ -904,16 +1078,16 @@
             this.label27.TabIndex = 272;
             this.label27.Text = "Name of Employer :";
             // 
-            // textBox75
+            // txtEmp
             // 
-            this.textBox75.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox75.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox75.ForeColor = System.Drawing.Color.Black;
-            this.textBox75.Location = new System.Drawing.Point(256, 1031);
-            this.textBox75.MaxLength = 30;
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(195, 26);
-            this.textBox75.TabIndex = 271;
+            this.txtEmp.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmp.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmp.ForeColor = System.Drawing.Color.Black;
+            this.txtEmp.Location = new System.Drawing.Point(256, 1031);
+            this.txtEmp.MaxLength = 30;
+            this.txtEmp.Name = "txtEmp";
+            this.txtEmp.Size = new System.Drawing.Size(195, 26);
+            this.txtEmp.TabIndex = 271;
             // 
             // btnRemoveSkills
             // 
@@ -1022,6 +1196,7 @@
             this.btnRemoveEduc.TabIndex = 263;
             this.btnRemoveEduc.Text = "REMOVE";
             this.btnRemoveEduc.UseVisualStyleBackColor = false;
+            this.btnRemoveEduc.Click += new System.EventHandler(this.btnRemoveEduc_Click);
             // 
             // btnAddEduc
             // 
@@ -1072,6 +1247,7 @@
             this.txtYearEnded.Name = "txtYearEnded";
             this.txtYearEnded.Size = new System.Drawing.Size(77, 26);
             this.txtYearEnded.TabIndex = 259;
+            this.txtYearEnded.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearEnded_KeyPress);
             // 
             // label18
             // 
@@ -1094,6 +1270,7 @@
             this.txtYearStarted.Name = "txtYearStarted";
             this.txtYearStarted.Size = new System.Drawing.Size(77, 26);
             this.txtYearStarted.TabIndex = 257;
+            this.txtYearStarted.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearStarted_KeyPress);
             // 
             // label17
             // 
@@ -1158,39 +1335,61 @@
             this.label15.TabIndex = 252;
             this.label15.Text = "School Name:";
             // 
-            // dataGridContactPerson
+            // dgvContactPersons
             // 
-            this.dataGridContactPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridContactPerson.Location = new System.Drawing.Point(104, 2257);
-            this.dataGridContactPerson.Name = "dataGridContactPerson";
-            this.dataGridContactPerson.Size = new System.Drawing.Size(820, 150);
-            this.dataGridContactPerson.TabIndex = 251;
+            this.dgvContactPersons.AllowUserToAddRows = false;
+            this.dgvContactPersons.AllowUserToDeleteRows = false;
+            this.dgvContactPersons.AllowUserToResizeColumns = false;
+            this.dgvContactPersons.AllowUserToResizeRows = false;
+            this.dgvContactPersons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvContactPersons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContactPersons.ColumnHeadersVisible = false;
+            this.dgvContactPersons.Location = new System.Drawing.Point(104, 2307);
+            this.dgvContactPersons.MultiSelect = false;
+            this.dgvContactPersons.Name = "dgvContactPersons";
+            this.dgvContactPersons.ReadOnly = true;
+            this.dgvContactPersons.RowHeadersVisible = false;
+            this.dgvContactPersons.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvContactPersons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContactPersons.Size = new System.Drawing.Size(820, 150);
+            this.dgvContactPersons.TabIndex = 251;
             // 
             // label129
             // 
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label129.ForeColor = System.Drawing.Color.Black;
-            this.label129.Location = new System.Drawing.Point(13, 2140);
+            this.label129.Location = new System.Drawing.Point(13, 2188);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(607, 25);
             this.label129.TabIndex = 250;
             this.label129.Text = "PERSONS TO BE CONTACTED IN CASE OF EMERGENCY";
             // 
-            // dataGridChildren
+            // dgvChildren
             // 
-            this.dataGridChildren.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridChildren.Location = new System.Drawing.Point(104, 1927);
-            this.dataGridChildren.Name = "dataGridChildren";
-            this.dataGridChildren.Size = new System.Drawing.Size(820, 150);
-            this.dataGridChildren.TabIndex = 247;
+            this.dgvChildren.AllowUserToAddRows = false;
+            this.dgvChildren.AllowUserToDeleteRows = false;
+            this.dgvChildren.AllowUserToResizeColumns = false;
+            this.dgvChildren.AllowUserToResizeRows = false;
+            this.dgvChildren.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChildren.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChildren.ColumnHeadersVisible = false;
+            this.dgvChildren.Location = new System.Drawing.Point(104, 1979);
+            this.dgvChildren.MultiSelect = false;
+            this.dgvChildren.Name = "dgvChildren";
+            this.dgvChildren.ReadOnly = true;
+            this.dgvChildren.RowHeadersVisible = false;
+            this.dgvChildren.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvChildren.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvChildren.Size = new System.Drawing.Size(820, 150);
+            this.dgvChildren.TabIndex = 247;
             // 
             // label127
             // 
             this.label127.AutoSize = true;
             this.label127.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label127.ForeColor = System.Drawing.Color.Black;
-            this.label127.Location = new System.Drawing.Point(100, 1784);
+            this.label127.Location = new System.Drawing.Point(100, 1836);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(265, 19);
             this.label127.TabIndex = 246;
@@ -1201,7 +1400,7 @@
             this.txtSOccu.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSOccu.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSOccu.ForeColor = System.Drawing.Color.Black;
-            this.txtSOccu.Location = new System.Drawing.Point(708, 1751);
+            this.txtSOccu.Location = new System.Drawing.Point(742, 1803);
             this.txtSOccu.MaxLength = 30;
             this.txtSOccu.Name = "txtSOccu";
             this.txtSOccu.Size = new System.Drawing.Size(223, 26);
@@ -1212,7 +1411,7 @@
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.Color.Black;
-            this.label124.Location = new System.Drawing.Point(609, 1757);
+            this.label124.Location = new System.Drawing.Point(643, 1809);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(98, 19);
             this.label124.TabIndex = 244;
@@ -1223,7 +1422,7 @@
             this.txtSAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSAge.ForeColor = System.Drawing.Color.Black;
-            this.txtSAge.Location = new System.Drawing.Point(541, 1753);
+            this.txtSAge.Location = new System.Drawing.Point(575, 1805);
             this.txtSAge.MaxLength = 30;
             this.txtSAge.Name = "txtSAge";
             this.txtSAge.Size = new System.Drawing.Size(54, 26);
@@ -1234,7 +1433,7 @@
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label125.ForeColor = System.Drawing.Color.Black;
-            this.label125.Location = new System.Drawing.Point(483, 1757);
+            this.label125.Location = new System.Drawing.Point(517, 1809);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(44, 19);
             this.label125.TabIndex = 242;
@@ -1245,10 +1444,10 @@
             this.txtSpouse.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSpouse.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpouse.ForeColor = System.Drawing.Color.Black;
-            this.txtSpouse.Location = new System.Drawing.Point(223, 1751);
+            this.txtSpouse.Location = new System.Drawing.Point(223, 1803);
             this.txtSpouse.MaxLength = 30;
             this.txtSpouse.Name = "txtSpouse";
-            this.txtSpouse.Size = new System.Drawing.Size(252, 26);
+            this.txtSpouse.Size = new System.Drawing.Size(287, 26);
             this.txtSpouse.TabIndex = 241;
             // 
             // label126
@@ -1256,7 +1455,7 @@
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.ForeColor = System.Drawing.Color.Black;
-            this.label126.Location = new System.Drawing.Point(100, 1754);
+            this.label126.Location = new System.Drawing.Point(100, 1806);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(115, 19);
             this.label126.TabIndex = 240;
@@ -1267,7 +1466,7 @@
             this.txtMOccu.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMOccu.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMOccu.ForeColor = System.Drawing.Color.Black;
-            this.txtMOccu.Location = new System.Drawing.Point(708, 1720);
+            this.txtMOccu.Location = new System.Drawing.Point(742, 1772);
             this.txtMOccu.MaxLength = 30;
             this.txtMOccu.Name = "txtMOccu";
             this.txtMOccu.Size = new System.Drawing.Size(223, 26);
@@ -1278,7 +1477,7 @@
             this.label120.AutoSize = true;
             this.label120.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Black;
-            this.label120.Location = new System.Drawing.Point(609, 1726);
+            this.label120.Location = new System.Drawing.Point(643, 1778);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(98, 19);
             this.label120.TabIndex = 238;
@@ -1289,7 +1488,7 @@
             this.txtMAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMAge.ForeColor = System.Drawing.Color.Black;
-            this.txtMAge.Location = new System.Drawing.Point(541, 1722);
+            this.txtMAge.Location = new System.Drawing.Point(575, 1774);
             this.txtMAge.MaxLength = 30;
             this.txtMAge.Name = "txtMAge";
             this.txtMAge.Size = new System.Drawing.Size(54, 26);
@@ -1300,7 +1499,7 @@
             this.label122.AutoSize = true;
             this.label122.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label122.ForeColor = System.Drawing.Color.Black;
-            this.label122.Location = new System.Drawing.Point(483, 1726);
+            this.label122.Location = new System.Drawing.Point(517, 1778);
             this.label122.Name = "label122";
             this.label122.Size = new System.Drawing.Size(44, 19);
             this.label122.TabIndex = 236;
@@ -1311,10 +1510,10 @@
             this.txtMother.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMother.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMother.ForeColor = System.Drawing.Color.Black;
-            this.txtMother.Location = new System.Drawing.Point(223, 1720);
+            this.txtMother.Location = new System.Drawing.Point(223, 1772);
             this.txtMother.MaxLength = 30;
             this.txtMother.Name = "txtMother";
-            this.txtMother.Size = new System.Drawing.Size(252, 26);
+            this.txtMother.Size = new System.Drawing.Size(287, 26);
             this.txtMother.TabIndex = 235;
             // 
             // label123
@@ -1322,7 +1521,7 @@
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.ForeColor = System.Drawing.Color.Black;
-            this.label123.Location = new System.Drawing.Point(100, 1723);
+            this.label123.Location = new System.Drawing.Point(100, 1775);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(125, 19);
             this.label123.TabIndex = 234;
@@ -1333,7 +1532,7 @@
             this.txtFOccu.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFOccu.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFOccu.ForeColor = System.Drawing.Color.Black;
-            this.txtFOccu.Location = new System.Drawing.Point(708, 1688);
+            this.txtFOccu.Location = new System.Drawing.Point(742, 1740);
             this.txtFOccu.MaxLength = 30;
             this.txtFOccu.Name = "txtFOccu";
             this.txtFOccu.Size = new System.Drawing.Size(223, 26);
@@ -1344,7 +1543,7 @@
             this.label121.AutoSize = true;
             this.label121.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label121.ForeColor = System.Drawing.Color.Black;
-            this.label121.Location = new System.Drawing.Point(609, 1694);
+            this.label121.Location = new System.Drawing.Point(643, 1746);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(98, 19);
             this.label121.TabIndex = 232;
@@ -1355,7 +1554,7 @@
             this.txtFAge.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFAge.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFAge.ForeColor = System.Drawing.Color.Black;
-            this.txtFAge.Location = new System.Drawing.Point(541, 1690);
+            this.txtFAge.Location = new System.Drawing.Point(575, 1742);
             this.txtFAge.MaxLength = 30;
             this.txtFAge.Name = "txtFAge";
             this.txtFAge.Size = new System.Drawing.Size(54, 26);
@@ -1366,7 +1565,7 @@
             this.label118.AutoSize = true;
             this.label118.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.ForeColor = System.Drawing.Color.Black;
-            this.label118.Location = new System.Drawing.Point(483, 1694);
+            this.label118.Location = new System.Drawing.Point(517, 1746);
             this.label118.Name = "label118";
             this.label118.Size = new System.Drawing.Size(44, 19);
             this.label118.TabIndex = 230;
@@ -1377,10 +1576,10 @@
             this.txtFather.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFather.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFather.ForeColor = System.Drawing.Color.Black;
-            this.txtFather.Location = new System.Drawing.Point(223, 1688);
+            this.txtFather.Location = new System.Drawing.Point(223, 1740);
             this.txtFather.MaxLength = 30;
             this.txtFather.Name = "txtFather";
-            this.txtFather.Size = new System.Drawing.Size(252, 26);
+            this.txtFather.Size = new System.Drawing.Size(287, 26);
             this.txtFather.TabIndex = 229;
             // 
             // label119
@@ -1388,7 +1587,7 @@
             this.label119.AutoSize = true;
             this.label119.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label119.ForeColor = System.Drawing.Color.Black;
-            this.label119.Location = new System.Drawing.Point(100, 1691);
+            this.label119.Location = new System.Drawing.Point(100, 1743);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(120, 19);
             this.label119.TabIndex = 228;
@@ -1448,6 +1647,7 @@
             "1958",
             "1957"});
             this.cbYear.Location = new System.Drawing.Point(398, 195);
+            this.cbYear.MaxDropDownItems = 10;
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(100, 27);
             this.cbYear.TabIndex = 202;
@@ -1524,6 +1724,7 @@
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.Size = new System.Drawing.Size(131, 27);
             this.cbMonth.TabIndex = 200;
+            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             // 
             // pnlButtons1
             // 
@@ -1531,7 +1732,7 @@
             this.pnlButtons1.Controls.Add(this.btnCancel1);
             this.pnlButtons1.Controls.Add(this.btnAdd);
             this.pnlButtons1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlButtons1.Location = new System.Drawing.Point(432, 2479);
+            this.pnlButtons1.Location = new System.Drawing.Point(432, 2539);
             this.pnlButtons1.Name = "pnlButtons1";
             this.pnlButtons1.Size = new System.Drawing.Size(250, 80);
             this.pnlButtons1.TabIndex = 199;
@@ -1574,45 +1775,45 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox17
+            // txtProvCP
             // 
-            this.textBox17.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox17.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.ForeColor = System.Drawing.Color.Black;
-            this.textBox17.Location = new System.Drawing.Point(679, 1655);
-            this.textBox17.MaxLength = 30;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(217, 26);
-            this.textBox17.TabIndex = 198;
+            this.txtProvCP.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtProvCP.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProvCP.ForeColor = System.Drawing.Color.Black;
+            this.txtProvCP.Location = new System.Drawing.Point(679, 1707);
+            this.txtProvCP.MaxLength = 30;
+            this.txtProvCP.Name = "txtProvCP";
+            this.txtProvCP.Size = new System.Drawing.Size(217, 26);
+            this.txtProvCP.TabIndex = 198;
             // 
             // label57
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.Black;
-            this.label57.Location = new System.Drawing.Point(515, 1658);
+            this.label57.Location = new System.Drawing.Point(515, 1710);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(161, 19);
             this.label57.TabIndex = 197;
             this.label57.Text = "Cell Phone Number :";
             // 
-            // textBox18
+            // txtProvNum
             // 
-            this.textBox18.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox18.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.ForeColor = System.Drawing.Color.Black;
-            this.textBox18.Location = new System.Drawing.Point(310, 1655);
-            this.textBox18.MaxLength = 30;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(200, 26);
-            this.textBox18.TabIndex = 196;
+            this.txtProvNum.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtProvNum.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProvNum.ForeColor = System.Drawing.Color.Black;
+            this.txtProvNum.Location = new System.Drawing.Point(310, 1707);
+            this.txtProvNum.MaxLength = 30;
+            this.txtProvNum.Name = "txtProvNum";
+            this.txtProvNum.Size = new System.Drawing.Size(200, 26);
+            this.txtProvNum.TabIndex = 196;
             // 
             // label58
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(100, 1658);
+            this.label58.Location = new System.Drawing.Point(100, 1710);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(204, 19);
             this.label58.TabIndex = 195;
@@ -1623,7 +1824,7 @@
             this.txtProvAdd.BackColor = System.Drawing.Color.Gainsboro;
             this.txtProvAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProvAdd.ForeColor = System.Drawing.Color.Black;
-            this.txtProvAdd.Location = new System.Drawing.Point(342, 1623);
+            this.txtProvAdd.Location = new System.Drawing.Point(342, 1674);
             this.txtProvAdd.MaxLength = 30;
             this.txtProvAdd.Name = "txtProvAdd";
             this.txtProvAdd.Size = new System.Drawing.Size(554, 26);
@@ -1634,7 +1835,7 @@
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(100, 1626);
+            this.label59.Location = new System.Drawing.Point(100, 1678);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(236, 19);
             this.label59.TabIndex = 193;
@@ -1645,7 +1846,7 @@
             this.txtCityPhone.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCityPhone.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCityPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtCityPhone.Location = new System.Drawing.Point(676, 1591);
+            this.txtCityPhone.Location = new System.Drawing.Point(676, 1643);
             this.txtCityPhone.MaxLength = 30;
             this.txtCityPhone.Name = "txtCityPhone";
             this.txtCityPhone.Size = new System.Drawing.Size(220, 26);
@@ -1656,7 +1857,7 @@
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Black;
-            this.label56.Location = new System.Drawing.Point(494, 1594);
+            this.label56.Location = new System.Drawing.Point(494, 1646);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(176, 19);
             this.label56.TabIndex = 191;
@@ -1667,7 +1868,7 @@
             this.txtPhoneNumber.BackColor = System.Drawing.Color.Gainsboro;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(268, 1591);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(268, 1643);
             this.txtPhoneNumber.MaxLength = 30;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(220, 26);
@@ -1678,7 +1879,7 @@
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Black;
-            this.label55.Location = new System.Drawing.Point(100, 1594);
+            this.label55.Location = new System.Drawing.Point(100, 1646);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(162, 19);
             this.label55.TabIndex = 189;
@@ -1689,7 +1890,7 @@
             this.txtCityAddress.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCityAddress.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCityAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtCityAddress.Location = new System.Drawing.Point(219, 1559);
+            this.txtCityAddress.Location = new System.Drawing.Point(219, 1611);
             this.txtCityAddress.MaxLength = 30;
             this.txtCityAddress.Name = "txtCityAddress";
             this.txtCityAddress.Size = new System.Drawing.Size(677, 26);
@@ -1700,7 +1901,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.Location = new System.Drawing.Point(100, 1562);
+            this.label54.Location = new System.Drawing.Point(100, 1614);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(113, 19);
             this.label54.TabIndex = 187;
@@ -1711,7 +1912,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Black;
-            this.label53.Location = new System.Drawing.Point(25, 1522);
+            this.label53.Location = new System.Drawing.Point(25, 1574);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(196, 25);
             this.label53.TabIndex = 186;
@@ -1749,8 +1950,10 @@
             this.dgvEducBack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEducBack.ColumnHeadersVisible = false;
             this.dgvEducBack.Location = new System.Drawing.Point(100, 475);
+            this.dgvEducBack.MultiSelect = false;
             this.dgvEducBack.Name = "dgvEducBack";
             this.dgvEducBack.RowHeadersVisible = false;
+            this.dgvEducBack.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEducBack.Size = new System.Drawing.Size(840, 150);
             this.dgvEducBack.TabIndex = 140;
             // 
@@ -1777,6 +1980,7 @@
             this.txtWeight.Size = new System.Drawing.Size(75, 26);
             this.txtWeight.TabIndex = 126;
             this.txtWeight.Text = "in kg";
+            this.txtWeight.Enter += new System.EventHandler(this.txtWeight_Enter);
             // 
             // label13
             // 
@@ -1800,6 +2004,7 @@
             this.txtHeight.Size = new System.Drawing.Size(75, 26);
             this.txtHeight.TabIndex = 124;
             this.txtHeight.Text = "in cm";
+            this.txtHeight.Enter += new System.EventHandler(this.txtHeight_Enter);
             // 
             // label12
             // 
@@ -1847,6 +2052,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.Click += new System.EventHandler(this.rbFemale_Click);
             // 
             // rbMale
             // 
@@ -1860,6 +2066,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.Click += new System.EventHandler(this.rbMale_Click);
             // 
             // label7
             // 
@@ -1885,6 +2092,7 @@
             this.txtMiddleName.TabIndex = 109;
             this.txtMiddleName.Text = "Middle Name";
             this.txtMiddleName.Enter += new System.EventHandler(this.txtMiddleName_Enter);
+            this.txtMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMiddleName_KeyPress);
             // 
             // txtFirstName
             // 
@@ -1898,6 +2106,7 @@
             this.txtFirstName.TabIndex = 108;
             this.txtFirstName.Text = "First Name";
             this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
             // txtLastName
             // 
@@ -1911,6 +2120,7 @@
             this.txtLastName.TabIndex = 107;
             this.txtLastName.Text = "Last Name";
             this.txtLastName.Enter += new System.EventHandler(this.txtLastName_Enter);
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // label4
             // 
@@ -3636,10 +3846,10 @@
             this.VisibleChanged += new System.EventHandler(this.ucAppAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataEmpHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridContactPerson)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridChildren)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactPersons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChildren)).EndInit();
             this.pnlButtons1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEducBack)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -3661,9 +3871,9 @@
         private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.Panel pnlButtons1;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtProvCP;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtProvNum;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TextBox txtProvAdd;
         private System.Windows.Forms.Label label59;
@@ -3693,9 +3903,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAddApp;
-        private System.Windows.Forms.DataGridView dataGridContactPerson;
+        private System.Windows.Forms.DataGridView dgvContactPersons;
         private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.DataGridView dataGridChildren;
+        private System.Windows.Forms.DataGridView dgvChildren;
         private System.Windows.Forms.Label label127;
         private System.Windows.Forms.TextBox txtSOccu;
         private System.Windows.Forms.Label label124;
@@ -3739,20 +3949,20 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btnRemoveEmpHistory;
         private System.Windows.Forms.Button btnAddEmpHistory;
-        private System.Windows.Forms.DataGridView dataEmpHistory;
-        private System.Windows.Forms.ComboBox cbEmploymentYear;
-        private System.Windows.Forms.ComboBox cbEmploymentMonth;
+        private System.Windows.Forms.DataGridView dgvEmpHistory;
+        private System.Windows.Forms.ComboBox cbYearStart;
+        private System.Windows.Forms.ComboBox cbMonthStart;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtReason;
+        private System.Windows.Forms.RichTextBox rtxtDesc;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPos;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox74;
+        private System.Windows.Forms.TextBox txtEmpAdd;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox75;
+        private System.Windows.Forms.TextBox txtEmp;
         private System.Windows.Forms.Button btnRemoveSkills;
         private System.Windows.Forms.Button btnAddSkills;
         private System.Windows.Forms.DataGridView dgvSkills;
@@ -3885,8 +4095,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cbCivilStat;
         private System.Windows.Forms.ComboBox cbPosition;
         private System.Windows.Forms.ComboBox cbSkills;
+        private System.Windows.Forms.ComboBox cbYearEnd;
+        private System.Windows.Forms.ComboBox cbMonthEnd;
+        private System.Windows.Forms.Label label3;
     }
 }
