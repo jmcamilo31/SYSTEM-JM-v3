@@ -164,42 +164,52 @@
             // ucFees
             // 
             this.ucFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucFees.ForeColor = System.Drawing.Color.Black;
             this.ucFees.Location = new System.Drawing.Point(9, 56);
             this.ucFees.Name = "ucFees";
             this.ucFees.Size = new System.Drawing.Size(100, 100);
             this.ucFees.TabIndex = 33;
+            this.ucFees.Visible = false;
             // 
             // ucJobCategory
             // 
             this.ucJobCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobCategory.ForeColor = System.Drawing.Color.Black;
             this.ucJobCategory.Location = new System.Drawing.Point(115, 56);
             this.ucJobCategory.Name = "ucJobCategory";
             this.ucJobCategory.Size = new System.Drawing.Size(120, 100);
             this.ucJobCategory.TabIndex = 34;
+            this.ucJobCategory.Visible = false;
             // 
             // ucSkills
             // 
             this.ucSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucSkills.ForeColor = System.Drawing.Color.Black;
             this.ucSkills.Location = new System.Drawing.Point(241, 56);
             this.ucSkills.Name = "ucSkills";
             this.ucSkills.Size = new System.Drawing.Size(100, 100);
             this.ucSkills.TabIndex = 35;
+            this.ucSkills.Visible = false;
             // 
             // ucRequirements
             // 
             this.ucRequirements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucRequirements.ForeColor = System.Drawing.Color.Black;
             this.ucRequirements.Location = new System.Drawing.Point(347, 56);
             this.ucRequirements.Name = "ucRequirements";
             this.ucRequirements.Size = new System.Drawing.Size(150, 100);
             this.ucRequirements.TabIndex = 36;
+            this.ucRequirements.Visible = false;
             // 
             // ucJobs
             // 
             this.ucJobs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobs.ForeColor = System.Drawing.Color.Black;
             this.ucJobs.Location = new System.Drawing.Point(503, 56);
             this.ucJobs.Name = "ucJobs";
             this.ucJobs.Size = new System.Drawing.Size(100, 100);
             this.ucJobs.TabIndex = 37;
+            this.ucJobs.Visible = false;
             // 
             // ucGenReqs
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Findstaff
 {
@@ -88,22 +89,22 @@ namespace Findstaff
         {
             connection.Open();
             string cmd = "";
-            if(txtName.Text == "")
+            if(txtFee2.Text == "")
             {
                 MessageBox.Show("Fee name must not be empty.", "Empty Fee Name Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 DialogResult rs = MessageBox.Show("Are you sure You want to update the record with the following details?"
-                    +"\nFee ID: "+txtID.Text+"\nNew Fee Name: "+txtName.Text, "Confirmation", MessageBoxButtons.YesNo);
+                    +"\nFee ID: "+txtID.Text+"\nNew Fee Name: "+txtFee2.Text, "Confirmation", MessageBoxButtons.YesNo);
                 if (rs == DialogResult.Yes)
                 {
-                    cmd = "Update Genfees_t set feename = '" + txtName.Text + "' where fee_id = '" + txtID.Text + "';";
+                    cmd = "Update Genfees_t set feename = '" + txtFee2.Text + "' where fee_id = '" + txtID.Text + "';";
                     com = new MySqlCommand(cmd, connection);
                     com.ExecuteNonQuery();
                     MessageBox.Show("Changes Saved!", "Update Fee Record!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtID.Clear();
-                    txtName.Clear();
+                    txtFee2.Clear();
                     this.Hide();
                 }
             }
@@ -113,7 +114,7 @@ namespace Findstaff
         private void btnCancel2_Click(object sender, EventArgs e)
         {
             txtID.Clear();
-            txtName.Clear();
+            txtFee2.Clear();
             this.Hide();
         }
 
@@ -121,6 +122,22 @@ namespace Findstaff
         {
             Connection con = new Connection();
             connection = con.dbConnection();
+        }
+
+        private void txtFees1_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFees1.Text)))
+            {
+                txtFees1.Text = "";
+            }
+        }
+
+        private void txtFee2_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFee2.Text)))
+            {
+                txtFee2.Text = "";
+            }
         }
     }
 }

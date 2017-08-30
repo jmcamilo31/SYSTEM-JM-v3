@@ -42,7 +42,7 @@
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.cbCategory1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtJobs2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -177,6 +177,7 @@
             this.txtJobs.Name = "txtJobs";
             this.txtJobs.Size = new System.Drawing.Size(214, 26);
             this.txtJobs.TabIndex = 268;
+            this.txtJobs.TextChanged += new System.EventHandler(this.txtJobs_TextChanged);
             // 
             // label8
             // 
@@ -195,7 +196,7 @@
             this.panel2.Controls.Add(this.btnCancel2);
             this.panel2.Controls.Add(this.cbCategory1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtName);
+            this.panel2.Controls.Add(this.txtJobs2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.txtID);
@@ -262,16 +263,17 @@
             this.label3.TabIndex = 280;
             this.label3.Text = "Job Name:";
             // 
-            // txtName
+            // txtJobs2
             // 
-            this.txtName.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(504, 169);
-            this.txtName.MaxLength = 30;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 26);
-            this.txtName.TabIndex = 279;
+            this.txtJobs2.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtJobs2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJobs2.ForeColor = System.Drawing.Color.Black;
+            this.txtJobs2.Location = new System.Drawing.Point(504, 169);
+            this.txtJobs2.MaxLength = 30;
+            this.txtJobs2.Name = "txtJobs2";
+            this.txtJobs2.Size = new System.Drawing.Size(200, 26);
+            this.txtJobs2.TabIndex = 279;
+            this.txtJobs2.TextChanged += new System.EventHandler(this.txtJobs2_TextChanged);
             // 
             // label4
             // 
@@ -359,7 +361,7 @@
         private System.Windows.Forms.TextBox txtJobs;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtJobs2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtID;

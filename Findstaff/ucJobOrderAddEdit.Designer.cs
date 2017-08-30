@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbEmployer = new System.Windows.Forms.ComboBox();
             this.btnCancel1 = new System.Windows.Forms.Button();
-            this.cbContractYear = new System.Windows.Forms.ComboBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
             this.btnAdd1 = new System.Windows.Forms.Button();
-            this.cbContractDay = new System.Windows.Forms.ComboBox();
+            this.cbDay = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbContractMonth = new System.Windows.Forms.ComboBox();
+            this.cbMonth = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtJobNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -60,11 +60,11 @@
             // 
             this.panel1.Controls.Add(this.cbEmployer);
             this.panel1.Controls.Add(this.btnCancel1);
-            this.panel1.Controls.Add(this.cbContractYear);
+            this.panel1.Controls.Add(this.cbYear);
             this.panel1.Controls.Add(this.btnAdd1);
-            this.panel1.Controls.Add(this.cbContractDay);
+            this.panel1.Controls.Add(this.cbDay);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cbContractMonth);
+            this.panel1.Controls.Add(this.cbMonth);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtJobNo);
             this.panel1.Controls.Add(this.label8);
@@ -121,16 +121,16 @@
             this.btnCancel1.UseVisualStyleBackColor = false;
             this.btnCancel1.Click += new System.EventHandler(this.btnCancel1_Click);
             // 
-            // cbContractYear
+            // cbYear
             // 
-            this.cbContractYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbContractYear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbContractYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbContractYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbContractYear.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbContractYear.ForeColor = System.Drawing.Color.Black;
-            this.cbContractYear.FormattingEnabled = true;
-            this.cbContractYear.Items.AddRange(new object[] {
+            this.cbYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbYear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbYear.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYear.ForeColor = System.Drawing.Color.Black;
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Items.AddRange(new object[] {
             "2017",
             "2016",
             "2015",
@@ -139,10 +139,10 @@
             "2012",
             "2011",
             "2010"});
-            this.cbContractYear.Location = new System.Drawing.Point(731, 221);
-            this.cbContractYear.Name = "cbContractYear";
-            this.cbContractYear.Size = new System.Drawing.Size(83, 27);
-            this.cbContractYear.TabIndex = 274;
+            this.cbYear.Location = new System.Drawing.Point(731, 221);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(83, 27);
+            this.cbYear.TabIndex = 274;
             // 
             // btnAdd1
             // 
@@ -163,16 +163,16 @@
             this.btnAdd1.UseVisualStyleBackColor = false;
             this.btnAdd1.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // cbContractDay
+            // cbDay
             // 
-            this.cbContractDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbContractDay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbContractDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbContractDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbContractDay.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbContractDay.ForeColor = System.Drawing.Color.Black;
-            this.cbContractDay.FormattingEnabled = true;
-            this.cbContractDay.Items.AddRange(new object[] {
+            this.cbDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbDay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDay.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDay.ForeColor = System.Drawing.Color.Black;
+            this.cbDay.FormattingEnabled = true;
+            this.cbDay.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -204,10 +204,10 @@
             "29",
             "30",
             "31"});
-            this.cbContractDay.Location = new System.Drawing.Point(665, 221);
-            this.cbContractDay.Name = "cbContractDay";
-            this.cbContractDay.Size = new System.Drawing.Size(60, 27);
-            this.cbContractDay.TabIndex = 273;
+            this.cbDay.Location = new System.Drawing.Point(665, 221);
+            this.cbDay.Name = "cbDay";
+            this.cbDay.Size = new System.Drawing.Size(60, 27);
+            this.cbDay.TabIndex = 273;
             // 
             // label1
             // 
@@ -220,16 +220,9 @@
             this.label1.TabIndex = 272;
             this.label1.Text = "Contract Start:";
             // 
-            // cbContractMonth
+            // cbMonth
             // 
-            this.cbContractMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbContractMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbContractMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbContractMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbContractMonth.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbContractMonth.ForeColor = System.Drawing.Color.Black;
-            this.cbContractMonth.FormattingEnabled = true;
-            this.cbContractMonth.Items.AddRange(new object[] {
+            this.cbMonth.AutoCompleteCustomSource.AddRange(new string[] {
             "January",
             "February",
             "March",
@@ -242,10 +235,31 @@
             "October",
             "November",
             "December"});
-            this.cbContractMonth.Location = new System.Drawing.Point(491, 221);
-            this.cbContractMonth.Name = "cbContractMonth";
-            this.cbContractMonth.Size = new System.Drawing.Size(168, 27);
-            this.cbContractMonth.TabIndex = 265;
+            this.cbMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMonth.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonth.ForeColor = System.Drawing.Color.Black;
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cbMonth.Location = new System.Drawing.Point(491, 221);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(168, 27);
+            this.cbMonth.TabIndex = 265;
+            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -534,13 +548,13 @@
         #endregion
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnAdd1;
-        private System.Windows.Forms.ComboBox cbContractMonth;
+        private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtJobNo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblAddJobOrder;
-        private System.Windows.Forms.ComboBox cbContractYear;
-        private System.Windows.Forms.ComboBox cbContractDay;
+        private System.Windows.Forms.ComboBox cbYear;
+        private System.Windows.Forms.ComboBox cbDay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.ComboBox cbEditYear;

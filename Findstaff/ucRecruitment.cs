@@ -15,32 +15,30 @@ namespace Findstaff
         public ucRecruitment()
         {
             InitializeComponent();
-            pnlAppList.Dock = DockStyle.Fill;
-            pnlJobApp.Dock = DockStyle.Fill;
+            ucAppList.Dock = DockStyle.Fill;
+            ucJobApp.Dock = DockStyle.Fill;
+            ucInterviewInitFin.Dock = DockStyle.Fill;
         }
 
         private void rbApplicantList_CheckedChanged(object sender, EventArgs e)
         {
-            pnlAppList.Visible = true;
-            pnlJobApp.Visible = false;
+            ucAppList.Visible = true;
+            ucJobApp.Visible = false;
+            ucInterviewInitFin.Visible = false;
         }
 
         private void rbJobApplicant_CheckedChanged(object sender, EventArgs e)
         {
-            pnlAppList.Visible = false;
-            pnlJobApp.Visible = true;
+            ucAppList.Visible = false;
+            ucJobApp.Visible = true;
+            ucInterviewInitFin.Visible = false;
         }
-
-        private void btnAdvSe_Click(object sender, EventArgs e)
+        
+        private void rbInterview_CheckedChanged(object sender, EventArgs e)
         {
-            fAdvSearch fas = new fAdvSearch();
-            fas.Show();
-        }
-
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            ucAppView.Dock = DockStyle.Fill;
-            ucAppView.Visible = true;
+            ucAppList.Visible = false;
+            ucJobApp.Visible = false;
+            ucInterviewInitFin.Visible = true;
         }
     }
 }

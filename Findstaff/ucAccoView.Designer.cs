@@ -36,6 +36,7 @@
             this.dgvViewAcco = new System.Windows.Forms.DataGridView();
             this.btnPayBal = new System.Windows.Forms.Button();
             this.pnlTabs = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAcco)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,9 +113,9 @@
             this.btnPayBal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayBal.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayBal.ForeColor = System.Drawing.Color.Black;
-            this.btnPayBal.Location = new System.Drawing.Point(459, 435);
+            this.btnPayBal.Location = new System.Drawing.Point(456, 435);
             this.btnPayBal.Name = "btnPayBal";
-            this.btnPayBal.Size = new System.Drawing.Size(200, 50);
+            this.btnPayBal.Size = new System.Drawing.Size(100, 50);
             this.btnPayBal.TabIndex = 6;
             this.btnPayBal.Text = "PAY BALANCE";
             this.btnPayBal.UseVisualStyleBackColor = false;
@@ -129,12 +130,31 @@
             this.pnlTabs.Size = new System.Drawing.Size(1118, 50);
             this.pnlTabs.TabIndex = 60;
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(562, 435);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 50);
+            this.btnClose.TabIndex = 61;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // ucAccoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlTabs);
             this.Controls.Add(this.btnPayBal);
             this.Controls.Add(this.dgvViewAcco);
@@ -161,5 +181,6 @@
         private System.Windows.Forms.DataGridView dgvViewAcco;
         private System.Windows.Forms.Button btnPayBal;
         private System.Windows.Forms.Panel pnlTabs;
+        private System.Windows.Forms.Button btnClose;
     }
 }

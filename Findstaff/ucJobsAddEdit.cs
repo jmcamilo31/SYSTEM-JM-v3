@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Findstaff
 {
@@ -134,6 +135,22 @@ namespace Findstaff
             {
                 cbCategory.Items.Clear();
                 cbCategory1.Items.Clear();
+            }
+        }
+
+        private void txtJobs_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtJobs.Text)))
+            {
+                txtJobs.Text = "";
+            }
+        }
+
+        private void txtJobs2_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtJobs2.Text)))
+            {
+                txtJobs2.Text = "";
             }
         }
     }

@@ -100,5 +100,34 @@ namespace Findstaff
                 cbEmployer.Items.Clear();
             }
         }
+
+        private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbDay.Items.Clear();
+            if (cbMonth.SelectedIndex == 0 || cbMonth.SelectedIndex == 2 || cbMonth.SelectedIndex == 4 ||
+                cbMonth.SelectedIndex == 6 || cbMonth.SelectedIndex == 7 || cbMonth.SelectedIndex == 9 ||
+                cbMonth.SelectedIndex == 11)
+            {
+                for (int x = 1; x <= 31; x++)
+                {
+                    cbDay.Items.Add(x);
+                }
+            }
+            else if (cbMonth.SelectedIndex == 3 || cbMonth.SelectedIndex == 5 || cbMonth.SelectedIndex == 8 ||
+                cbMonth.SelectedIndex == 10)
+            {
+                for (int x = 1; x <= 30; x++)
+                {
+                    cbDay.Items.Add(x);
+                }
+            }
+            else
+            {
+                for (int x = 1; x <= 28; x++)
+                {
+                    cbDay.Items.Add(x);
+                }
+            }
+        }
     }
 }
