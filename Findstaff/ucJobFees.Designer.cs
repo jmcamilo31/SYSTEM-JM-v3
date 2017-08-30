@@ -30,13 +30,13 @@
         {
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvCountry = new System.Windows.Forms.DataGridView();
+            this.dgvJobFees = new System.Windows.Forms.DataGridView();
             this.lblJobFees = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ucJobFeesAddEdit = new Findstaff.ucJobFeesAddEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobFees)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -71,13 +71,22 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgvCountry
+            // dgvJobFees
             // 
-            this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCountry.Location = new System.Drawing.Point(100, 130);
-            this.dgvCountry.Name = "dgvCountry";
-            this.dgvCountry.Size = new System.Drawing.Size(918, 200);
-            this.dgvCountry.TabIndex = 51;
+            this.dgvJobFees.AllowUserToAddRows = false;
+            this.dgvJobFees.AllowUserToDeleteRows = false;
+            this.dgvJobFees.AllowUserToResizeColumns = false;
+            this.dgvJobFees.AllowUserToResizeRows = false;
+            this.dgvJobFees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvJobFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJobFees.Location = new System.Drawing.Point(100, 130);
+            this.dgvJobFees.MultiSelect = false;
+            this.dgvJobFees.Name = "dgvJobFees";
+            this.dgvJobFees.ReadOnly = true;
+            this.dgvJobFees.RowHeadersVisible = false;
+            this.dgvJobFees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvJobFees.Size = new System.Drawing.Size(918, 200);
+            this.dgvJobFees.TabIndex = 51;
             // 
             // lblJobFees
             // 
@@ -136,6 +145,7 @@
             this.ucJobFeesAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucJobFeesAddEdit.TabIndex = 270;
             this.ucJobFeesAddEdit.Visible = false;
+            this.ucJobFeesAddEdit.VisibleChanged += new System.EventHandler(this.ucJobFeesAddEdit_VisibleChanged);
             // 
             // ucJobFees
             // 
@@ -148,12 +158,12 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dgvCountry);
+            this.Controls.Add(this.dgvJobFees);
             this.Controls.Add(this.lblJobFees);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobFees";
             this.Size = new System.Drawing.Size(1118, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobFees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,11 +173,11 @@
 
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dgvCountry;
         private System.Windows.Forms.Label lblJobFees;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label8;
         private ucJobFeesAddEdit ucJobFeesAddEdit;
+        public System.Windows.Forms.DataGridView dgvJobFees;
     }
 }

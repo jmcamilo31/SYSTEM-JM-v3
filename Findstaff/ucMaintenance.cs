@@ -144,7 +144,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
-            cmd = "select jorder_id'Job Order ID', Cntrctstart'Contract Start' from Joborder_t;";
+            cmd = "Select J.jorder_id 'Job Order ID', e.employername'Employer', j.Cntrctstart 'Contract Start' from Joborder_t j join employer_t e on j.employer_id = e.employer_id";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
@@ -166,14 +166,14 @@ namespace Findstaff
             ucJobList.Visible = true;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
-            cmd = "select username'Username', fname + ' ' + lname'Employee Name', DEPTNAME'Department' from Emp_t;";
+            cmd = "select jo.jorder_id'Job Order ID', j.jobname'Job', e.employername'Employer', jl.reqapp'No. of Required Applicants' from joborder_t jo join joblist_t jl on jo.JORDER_ID = jl.jorder_id join employer_t e on jo.employer_id = e.employer_id join job_t j on jl.job_id = j.job_id where jo.cntrctstat = 'Active' or jo.cntrctstat = 'Renewed'; ";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucEmployee.dgvEmployee.DataSource = ds.Tables[0];
+                    ucJobList.dgvJobList.DataSource = ds.Tables[0];
                 }
             }
         }
@@ -188,14 +188,14 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = true;
             ucGenReqs.Visible = false;
-            cmd = "select username'Username', fname + ' ' + lname'Employee Name', DEPTNAME'Department' from Emp_t;";
+            cmd = "select jo.jorder_id'Job Order ID', count(jf.fee_id)'No. of Fees' from joborder_t jo join jobfees_t jf on jo.jorder_id = jf.jorder_id";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
                 {
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                    ucEmployee.dgvEmployee.DataSource = ds.Tables[0];
+                    ucJobFees.dgvJobFees.DataSource = ds.Tables[0];
                 }
             }
         }

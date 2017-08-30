@@ -45,7 +45,7 @@ namespace Findstaff
                     ctr = int.Parse(com.ExecuteScalar() + "");
                     if (ctr == 0)
                     {
-                        string cmd = "Insert into joborder_t (Jorder_id, employer_id, cntrctstart, cntrctend, cntrctstat) values ('" + txtJobNo.Text + "','" + empid + "','" + cbContractYear.Text + "-" + cbContractMonth.SelectedIndex+1 + "-" + cbContractDay.Text + "','" + (Convert.ToUInt32(cbContractYear.Text)+4).ToString() + "-" + cbContractMonth.SelectedIndex + 1 + "-" + cbContractDay.Text + "', 'Active')";
+                        string cmd = "Insert into joborder_t (Jorder_id, employer_id, cntrctstart, cntrctend, cntrctstat) values ('" + txtJobNo.Text + "','" + empid + "','" + cbContractYear.Text + "-" + (cbContractMonth.SelectedIndex+1) + "-" + cbContractDay.Text + "','" + (Convert.ToUInt32(cbContractYear.Text)+4).ToString() + "-" + (cbContractMonth.SelectedIndex + 1) + "-" + cbContractDay.Text + "', 'Active')";
                         com = new MySqlCommand(cmd, connection);
                         com.ExecuteNonQuery();
                         MessageBox.Show("Added!", "Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -52,6 +52,7 @@
             this.dgvJobOrder.Location = new System.Drawing.Point(100, 140);
             this.dgvJobOrder.Name = "dgvJobOrder";
             this.dgvJobOrder.ReadOnly = true;
+            this.dgvJobOrder.RowHeadersVisible = false;
             this.dgvJobOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvJobOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvJobOrder.Size = new System.Drawing.Size(918, 200);

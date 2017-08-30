@@ -32,7 +32,7 @@
             this.btnEmpDel = new System.Windows.Forms.Button();
             this.btnEmpEdit = new System.Windows.Forms.Button();
             this.btnEmpAdd = new System.Windows.Forms.Button();
-            this.dgvRecruitment = new System.Windows.Forms.DataGridView();
+            this.dgvJobList = new System.Windows.Forms.DataGridView();
             this.btnAdvSe = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             this.lblJobList = new System.Windows.Forms.Label();
             this.ucJobListView = new Findstaff.ucJobListView();
             this.ucJobListAddEdit = new Findstaff.ucJobListAddEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEmpView
@@ -107,13 +107,23 @@
             this.btnEmpAdd.UseVisualStyleBackColor = false;
             this.btnEmpAdd.Click += new System.EventHandler(this.btnEmpAdd_Click);
             // 
-            // dgvRecruitment
+            // dgvJobList
             // 
-            this.dgvRecruitment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecruitment.Location = new System.Drawing.Point(100, 140);
-            this.dgvRecruitment.Name = "dgvRecruitment";
-            this.dgvRecruitment.Size = new System.Drawing.Size(918, 200);
-            this.dgvRecruitment.TabIndex = 56;
+            this.dgvJobList.AllowUserToAddRows = false;
+            this.dgvJobList.AllowUserToDeleteRows = false;
+            this.dgvJobList.AllowUserToResizeColumns = false;
+            this.dgvJobList.AllowUserToResizeRows = false;
+            this.dgvJobList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvJobList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJobList.Location = new System.Drawing.Point(100, 140);
+            this.dgvJobList.MultiSelect = false;
+            this.dgvJobList.Name = "dgvJobList";
+            this.dgvJobList.ReadOnly = true;
+            this.dgvJobList.RowHeadersVisible = false;
+            this.dgvJobList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvJobList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvJobList.Size = new System.Drawing.Size(918, 200);
+            this.dgvJobList.TabIndex = 56;
             // 
             // btnAdvSe
             // 
@@ -198,6 +208,7 @@
             this.ucJobListAddEdit.Size = new System.Drawing.Size(10, 10);
             this.ucJobListAddEdit.TabIndex = 61;
             this.ucJobListAddEdit.Visible = false;
+            this.ucJobListAddEdit.VisibleChanged += new System.EventHandler(this.ucJobListAddEdit_VisibleChanged);
             // 
             // ucJobList
             // 
@@ -210,7 +221,7 @@
             this.Controls.Add(this.btnEmpDel);
             this.Controls.Add(this.btnEmpEdit);
             this.Controls.Add(this.btnEmpAdd);
-            this.Controls.Add(this.dgvRecruitment);
+            this.Controls.Add(this.dgvJobList);
             this.Controls.Add(this.btnAdvSe);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -219,7 +230,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucJobList";
             this.Size = new System.Drawing.Size(1118, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +242,6 @@
         private System.Windows.Forms.Button btnEmpDel;
         private System.Windows.Forms.Button btnEmpEdit;
         private System.Windows.Forms.Button btnEmpAdd;
-        private System.Windows.Forms.DataGridView dgvRecruitment;
         private System.Windows.Forms.Button btnAdvSe;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
@@ -239,5 +249,6 @@
         private System.Windows.Forms.Label lblJobList;
         private ucJobListAddEdit ucJobListAddEdit;
         private ucJobListView ucJobListView;
+        public System.Windows.Forms.DataGridView dgvJobList;
     }
 }

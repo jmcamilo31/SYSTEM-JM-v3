@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStart1 = new System.Windows.Forms.Button();
+            this.cbJobOrder1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAmount1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmployer1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnAddAll = new System.Windows.Forms.Button();
-            this.dgvJobOrderFees = new System.Windows.Forms.DataGridView();
-            this.btnRemoveRequire = new System.Windows.Forms.Button();
-            this.btnAddRequire = new System.Windows.Forms.Button();
-            this.cbReq = new System.Windows.Forms.ComboBox();
+            this.dgvFees1 = new System.Windows.Forms.DataGridView();
+            this.btnRemoveFee = new System.Windows.Forms.Button();
+            this.btnAddFee1 = new System.Windows.Forms.Button();
+            this.cbFees1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCoun = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,7 +65,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvJobOrderFees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,25 +74,57 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnStart1);
+            this.panel1.Controls.Add(this.cbJobOrder1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtAmount1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtEmployer1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.dgvJobOrderFees);
-            this.panel1.Controls.Add(this.btnRemoveRequire);
-            this.panel1.Controls.Add(this.btnAddRequire);
-            this.panel1.Controls.Add(this.cbReq);
+            this.panel1.Controls.Add(this.dgvFees1);
+            this.panel1.Controls.Add(this.btnRemoveFee);
+            this.panel1.Controls.Add(this.btnAddFee1);
+            this.panel1.Controls.Add(this.cbFees1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtCoun);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 450);
+            this.panel1.Size = new System.Drawing.Size(878, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // btnStart1
+            // 
+            this.btnStart1.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnStart1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnStart1.FlatAppearance.BorderSize = 0;
+            this.btnStart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart1.ForeColor = System.Drawing.Color.Black;
+            this.btnStart1.Location = new System.Drawing.Point(773, 95);
+            this.btnStart1.Name = "btnStart1";
+            this.btnStart1.Size = new System.Drawing.Size(100, 30);
+            this.btnStart1.TabIndex = 286;
+            this.btnStart1.Text = "START";
+            this.btnStart1.UseVisualStyleBackColor = false;
+            this.btnStart1.Click += new System.EventHandler(this.btnStart1_Click);
+            // 
+            // cbJobOrder1
+            // 
+            this.cbJobOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbJobOrder1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbJobOrder1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbJobOrder1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbJobOrder1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbJobOrder1.ForeColor = System.Drawing.Color.Black;
+            this.cbJobOrder1.FormattingEnabled = true;
+            this.cbJobOrder1.Location = new System.Drawing.Point(215, 98);
+            this.cbJobOrder1.Name = "cbJobOrder1";
+            this.cbJobOrder1.Size = new System.Drawing.Size(254, 27);
+            this.cbJobOrder1.TabIndex = 285;
+            this.cbJobOrder1.SelectedIndexChanged += new System.EventHandler(this.cbJobOrder1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -104,16 +137,18 @@
             this.label3.TabIndex = 284;
             this.label3.Text = "JOB ORDER FEES";
             // 
-            // textBox2
+            // txtAmount1
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(543, 207);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 283;
+            this.txtAmount1.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtAmount1.Enabled = false;
+            this.txtAmount1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount1.ForeColor = System.Drawing.Color.Black;
+            this.txtAmount1.Location = new System.Drawing.Point(543, 207);
+            this.txtAmount1.MaxLength = 30;
+            this.txtAmount1.Name = "txtAmount1";
+            this.txtAmount1.Size = new System.Drawing.Size(200, 26);
+            this.txtAmount1.TabIndex = 283;
+            this.txtAmount1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount1_KeyPress);
             // 
             // label2
             // 
@@ -127,16 +162,17 @@
             this.label2.TabIndex = 282;
             this.label2.Text = "Amount: P";
             // 
-            // textBox1
+            // txtEmployer1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(513, 97);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 281;
+            this.txtEmployer1.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmployer1.Enabled = false;
+            this.txtEmployer1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployer1.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployer1.Location = new System.Drawing.Point(567, 97);
+            this.txtEmployer1.MaxLength = 30;
+            this.txtEmployer1.Name = "txtEmployer1";
+            this.txtEmployer1.Size = new System.Drawing.Size(200, 26);
+            this.txtEmployer1.TabIndex = 281;
             // 
             // label1
             // 
@@ -144,7 +180,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(421, 100);
+            this.label1.Location = new System.Drawing.Point(475, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 280;
@@ -184,6 +220,7 @@
             // 
             this.btnAddAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAddAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddAll.Enabled = false;
             this.btnAddAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddAll.FlatAppearance.BorderSize = 0;
             this.btnAddAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -199,70 +236,72 @@
             this.btnAddAll.UseVisualStyleBackColor = false;
             this.btnAddAll.Click += new System.EventHandler(this.btnAddAll_Click);
             // 
-            // dgvJobOrderFees
+            // dgvFees1
             // 
-            this.dgvJobOrderFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobOrderFees.Location = new System.Drawing.Point(104, 240);
-            this.dgvJobOrderFees.Name = "dgvJobOrderFees";
-            this.dgvJobOrderFees.Size = new System.Drawing.Size(918, 150);
-            this.dgvJobOrderFees.TabIndex = 278;
+            this.dgvFees1.AllowUserToAddRows = false;
+            this.dgvFees1.AllowUserToDeleteRows = false;
+            this.dgvFees1.AllowUserToResizeColumns = false;
+            this.dgvFees1.AllowUserToResizeRows = false;
+            this.dgvFees1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFees1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFees1.ColumnHeadersVisible = false;
+            this.dgvFees1.Location = new System.Drawing.Point(104, 240);
+            this.dgvFees1.MultiSelect = false;
+            this.dgvFees1.Name = "dgvFees1";
+            this.dgvFees1.ReadOnly = true;
+            this.dgvFees1.RowHeadersVisible = false;
+            this.dgvFees1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFees1.Size = new System.Drawing.Size(918, 150);
+            this.dgvFees1.TabIndex = 278;
             // 
-            // btnRemoveRequire
+            // btnRemoveFee
             // 
-            this.btnRemoveRequire.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnRemoveRequire.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRemoveRequire.FlatAppearance.BorderSize = 0;
-            this.btnRemoveRequire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveRequire.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveRequire.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveRequire.Location = new System.Drawing.Point(922, 396);
-            this.btnRemoveRequire.Name = "btnRemoveRequire";
-            this.btnRemoveRequire.Size = new System.Drawing.Size(100, 30);
-            this.btnRemoveRequire.TabIndex = 277;
-            this.btnRemoveRequire.Text = "REMOVE";
-            this.btnRemoveRequire.UseVisualStyleBackColor = false;
+            this.btnRemoveFee.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnRemoveFee.Enabled = false;
+            this.btnRemoveFee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoveFee.FlatAppearance.BorderSize = 0;
+            this.btnRemoveFee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveFee.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveFee.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoveFee.Location = new System.Drawing.Point(922, 396);
+            this.btnRemoveFee.Name = "btnRemoveFee";
+            this.btnRemoveFee.Size = new System.Drawing.Size(100, 30);
+            this.btnRemoveFee.TabIndex = 277;
+            this.btnRemoveFee.Text = "REMOVE";
+            this.btnRemoveFee.UseVisualStyleBackColor = false;
+            this.btnRemoveFee.Click += new System.EventHandler(this.btnRemoveFee_Click);
             // 
-            // btnAddRequire
+            // btnAddFee1
             // 
-            this.btnAddRequire.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnAddRequire.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddRequire.FlatAppearance.BorderSize = 0;
-            this.btnAddRequire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRequire.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRequire.ForeColor = System.Drawing.Color.Black;
-            this.btnAddRequire.Location = new System.Drawing.Point(749, 204);
-            this.btnAddRequire.Name = "btnAddRequire";
-            this.btnAddRequire.Size = new System.Drawing.Size(100, 30);
-            this.btnAddRequire.TabIndex = 276;
-            this.btnAddRequire.Text = "ADD";
-            this.btnAddRequire.UseVisualStyleBackColor = false;
+            this.btnAddFee1.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAddFee1.Enabled = false;
+            this.btnAddFee1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddFee1.FlatAppearance.BorderSize = 0;
+            this.btnAddFee1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFee1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFee1.ForeColor = System.Drawing.Color.Black;
+            this.btnAddFee1.Location = new System.Drawing.Point(749, 204);
+            this.btnAddFee1.Name = "btnAddFee1";
+            this.btnAddFee1.Size = new System.Drawing.Size(100, 30);
+            this.btnAddFee1.TabIndex = 276;
+            this.btnAddFee1.Text = "ADD";
+            this.btnAddFee1.UseVisualStyleBackColor = false;
+            this.btnAddFee1.Click += new System.EventHandler(this.btnAddFee1_Click);
             // 
-            // cbReq
+            // cbFees1
             // 
-            this.cbReq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbReq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbReq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbReq.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbReq.ForeColor = System.Drawing.Color.Black;
-            this.cbReq.FormattingEnabled = true;
-            this.cbReq.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.cbReq.Location = new System.Drawing.Point(263, 207);
-            this.cbReq.Name = "cbReq";
-            this.cbReq.Size = new System.Drawing.Size(184, 27);
-            this.cbReq.TabIndex = 275;
+            this.cbFees1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbFees1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFees1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFees1.Enabled = false;
+            this.cbFees1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbFees1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFees1.ForeColor = System.Drawing.Color.Black;
+            this.cbFees1.FormattingEnabled = true;
+            this.cbFees1.Location = new System.Drawing.Point(193, 207);
+            this.cbFees1.Name = "cbFees1";
+            this.cbFees1.Size = new System.Drawing.Size(254, 27);
+            this.cbFees1.TabIndex = 275;
             // 
             // label7
             // 
@@ -271,20 +310,9 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(100, 210);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 19);
+            this.label7.Size = new System.Drawing.Size(89, 19);
             this.label7.TabIndex = 274;
-            this.label7.Text = "Requirement Name:";
-            // 
-            // txtCoun
-            // 
-            this.txtCoun.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtCoun.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoun.ForeColor = System.Drawing.Color.Black;
-            this.txtCoun.Location = new System.Drawing.Point(215, 97);
-            this.txtCoun.MaxLength = 30;
-            this.txtCoun.Name = "txtCoun";
-            this.txtCoun.Size = new System.Drawing.Size(200, 26);
-            this.txtCoun.TabIndex = 273;
+            this.label7.Text = "Fee Name:";
             // 
             // label8
             // 
@@ -557,10 +585,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucJobFeesAddEdit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.VisibleChanged += new System.EventHandler(this.ucJobFeesAddEdit_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvJobOrderFees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -573,18 +602,17 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnAddAll;
-        private System.Windows.Forms.DataGridView dgvJobOrderFees;
-        private System.Windows.Forms.Button btnRemoveRequire;
-        private System.Windows.Forms.Button btnAddRequire;
-        private System.Windows.Forms.ComboBox cbReq;
+        private System.Windows.Forms.DataGridView dgvFees1;
+        private System.Windows.Forms.Button btnRemoveFee;
+        private System.Windows.Forms.Button btnAddFee1;
+        private System.Windows.Forms.ComboBox cbFees1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCoun;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAmount1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmployer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
@@ -604,5 +632,7 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbJobOrder1;
+        private System.Windows.Forms.Button btnStart1;
     }
 }

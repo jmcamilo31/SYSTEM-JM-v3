@@ -477,9 +477,20 @@
             // 
             // dgvCountry
             // 
+            this.dgvCountry.AllowUserToAddRows = false;
+            this.dgvCountry.AllowUserToDeleteRows = false;
+            this.dgvCountry.AllowUserToResizeColumns = false;
+            this.dgvCountry.AllowUserToResizeRows = false;
+            this.dgvCountry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCountry.ColumnHeadersVisible = false;
             this.dgvCountry.Location = new System.Drawing.Point(100, 130);
+            this.dgvCountry.MultiSelect = false;
             this.dgvCountry.Name = "dgvCountry";
+            this.dgvCountry.ReadOnly = true;
+            this.dgvCountry.RowHeadersVisible = false;
+            this.dgvCountry.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCountry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCountry.Size = new System.Drawing.Size(918, 150);
             this.dgvCountry.TabIndex = 269;
             // 
@@ -497,6 +508,7 @@
             this.btnRemoveRequire.TabIndex = 267;
             this.btnRemoveRequire.Text = "REMOVE";
             this.btnRemoveRequire.UseVisualStyleBackColor = false;
+            this.btnRemoveRequire.Click += new System.EventHandler(this.btnRemoveRequire_Click);
             // 
             // btnAddRequire
             // 
@@ -512,6 +524,7 @@
             this.btnAddRequire.TabIndex = 266;
             this.btnAddRequire.Text = "ADD";
             this.btnAddRequire.UseVisualStyleBackColor = false;
+            this.btnAddRequire.Click += new System.EventHandler(this.btnAddRequire_Click);
             // 
             // cbReq
             // 

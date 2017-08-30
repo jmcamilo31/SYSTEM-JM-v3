@@ -41,7 +41,7 @@ namespace Findstaff
         {
             Connection con = new Connection();
             connection = con.dbConnection();
-            string com = "Select country_id 'Country Id', countryname 'Country Name' from Country_t";
+            string com = "select c.COUNTRY_ID'Country ID', c.COUNTRYNAME'Name of Country', count(cr.req_id)'No. of requirements' from country_t c join countryreqs_t cr on  c.country_id = cr.country_id;";
             using (connection)
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))

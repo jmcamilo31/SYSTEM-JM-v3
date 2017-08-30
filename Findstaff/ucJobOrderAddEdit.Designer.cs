@@ -264,7 +264,7 @@
             this.txtJobNo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJobNo.ForeColor = System.Drawing.Color.Black;
             this.txtJobNo.Location = new System.Drawing.Point(491, 157);
-            this.txtJobNo.MaxLength = 30;
+            this.txtJobNo.MaxLength = 6;
             this.txtJobNo.Name = "txtJobNo";
             this.txtJobNo.Size = new System.Drawing.Size(200, 26);
             this.txtJobNo.TabIndex = 107;

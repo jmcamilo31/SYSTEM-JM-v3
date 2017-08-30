@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Findstaff
 {
     public partial class ucJobFees : UserControl
     {
+        private MySqlConnection connection;
+        MySqlCommand com = new MySqlCommand();
+        private string cmd = "";
+
         public ucJobFees()
         {
             InitializeComponent();
@@ -31,6 +36,24 @@ namespace Findstaff
             ucJobFeesAddEdit.Visible = true;
             ucJobFeesAddEdit.panel1.Visible = false;
             ucJobFeesAddEdit.panel2.Visible = true;
+        }
+
+        private void ucJobFeesAddEdit_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Findstaff.Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            cmd = "select jo.jorder_id'Job Order ID', count(jf.fee_id)'No. of Fees' from joborder_t jo join jobfees_t jf on jo.jorder_id = jf.jorder_id";
+            using (connection)
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dgvJobFees.DataSource = ds.Tables[0];
+                }
+            }
+            connection.Close();
         }
     }
 }
