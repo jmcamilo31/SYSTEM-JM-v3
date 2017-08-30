@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Findstaff
 {
@@ -88,22 +89,22 @@ namespace Findstaff
         {
             connection.Open();
             string cmd = "";
-            if (txtName.Text == "")
+            if (txtCategory2.Text == "")
             {
                 MessageBox.Show("Category name must not be empty.", "Empty Category Name Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 DialogResult rs = MessageBox.Show("Are you sure You want to update the record with the following details?"
-                    + "\nCategory ID: " + txtID.Text + "\nNew Catogory Name: " + txtName.Text, "Confirmation", MessageBoxButtons.YesNo);
+                    + "\nCategory ID: " + txtID.Text + "\nNew Catogory Name: " + txtCategory2.Text, "Confirmation", MessageBoxButtons.YesNo);
                 if (rs == DialogResult.Yes)
                 {
-                    cmd = "Update jobcategory_t set categoryname = '" + txtName.Text + "' where Category_id = '" + txtID.Text + "';";
+                    cmd = "Update jobcategory_t set categoryname = '" + txtCategory2.Text + "' where Category_id = '" + txtID.Text + "';";
                     com = new MySqlCommand(cmd, connection);
                     com.ExecuteNonQuery();
                     MessageBox.Show("Changes Saved!", "Update Fee Record!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtID.Clear();
-                    txtName.Clear();
+                    txtCategory2.Clear();
                     this.Hide();
                 }
             }
@@ -119,6 +120,22 @@ namespace Findstaff
         {
             Connection con = new Connection();
             connection = con.dbConnection();
+        }
+
+        private void txtCategory_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtCategory.Text)))
+            {
+                txtCategory.Text = "";
+            }
+        }
+
+        private void txtCategory2_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtCategory2.Text)))
+            {
+                txtCategory2.Text = "";
+            }
         }
     }
 }

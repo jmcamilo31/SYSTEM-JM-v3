@@ -24,11 +24,6 @@ namespace Findstaff
             ucSkills.Dock = DockStyle.Fill;
             ucRequirements.Dock = DockStyle.Fill;
             ucJobs.Dock = DockStyle.Fill;
-            ucFees.Visible = false;
-            ucJobCategory.Visible = false;
-            ucSkills.Visible = false;
-            ucRequirements.Visible = false;
-            ucJobs.Visible = false;
         }
 
         private void rbFees_CheckedChanged(object sender, EventArgs e)
@@ -38,6 +33,7 @@ namespace Findstaff
             ucSkills.Visible = false;
             ucRequirements.Visible = false;
             ucJobs.Visible = false;
+
             string com = "Select Fee_ID'Fee ID', Feename'Fee Name' from Genfees_t";
             using (connection)
             {
@@ -57,6 +53,7 @@ namespace Findstaff
             ucSkills.Visible = false;
             ucRequirements.Visible = false;
             ucJobs.Visible = false;
+
             string com = "Select Category_ID'Category ID', categoryname'Category Name' from jobcategory_t";
             using (connection)
             {
@@ -76,6 +73,7 @@ namespace Findstaff
             ucSkills.Visible = true;
             ucRequirements.Visible = false;
             ucJobs.Visible = false;
+
             string com = "Select Skill_ID'Skill ID', skillname'Skill Name' from Genskills_t";
             using (connection)
             {
@@ -95,6 +93,7 @@ namespace Findstaff
             ucSkills.Visible = false;
             ucRequirements.Visible = true;
             ucJobs.Visible = false;
+
             string com = "Select Req_ID'Requirement ID', Reqname'Requirement Name', Allocation'Requirement for' from Genreqs_t;";
             using (connection)
             {
@@ -114,6 +113,7 @@ namespace Findstaff
             ucSkills.Visible = false;
             ucRequirements.Visible = false;
             ucJobs.Visible = true;
+
             string com = "select j.job_id'Job ID', j.Jobname'Job Name', c.categoryname'Category', j.jobtype'Type of Job' from jobcategory_t c join job_t j on c.category_id = j.category_id;";
             using (connection)
             {

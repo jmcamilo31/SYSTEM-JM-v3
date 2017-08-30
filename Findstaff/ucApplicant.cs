@@ -41,7 +41,15 @@ namespace Findstaff
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string cmd = "delete from app_t where app_id = '" + dgvApplicant.SelectedRows[0].Cells[0].Value.ToString() + "';";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+            dgvApplicant.Rows.Remove(dgvApplicant.SelectedRows[0]);
+            MessageBox.Show("Applicant Deleted!", "Applicant Record Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
         }
 
         private void btnView_Click(object sender, EventArgs e)

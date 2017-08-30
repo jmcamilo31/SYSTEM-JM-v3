@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Findstaff
 {
@@ -373,6 +374,11 @@ namespace Findstaff
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtLastName.Text)))
+            {
+                txtLastName.Text = "";
+            }
+
             if (txtLastName.Text != "")
             {
                 lblLNameStatus.Text = "";
@@ -385,6 +391,11 @@ namespace Findstaff
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFirstName.Text)))
+            {
+                txtFirstName.Text = "";
+            }
+
             if (txtFirstName.Text != "")
             {
                 lblFNameStatus.Text = "";
@@ -478,6 +489,38 @@ namespace Findstaff
         {
             Connection con = new Connection();
             connection = con.dbConnection();
+        }
+
+        private void txtMiddleName_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtMiddleName.Text)))
+            {
+                txtMiddleName.Text = "";
+            }
+        }
+
+        private void txtLastName2_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtLastName2.Text)))
+            {
+                txtLastName2.Text = "";
+            }
+        }
+
+        private void txtFirstName2_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFirstName2.Text)))
+            {
+                txtFirstName2.Text = "";
+            }
+        }
+
+        private void txtMiddleName2_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtMiddleName2.Text)))
+            {
+                txtMiddleName2.Text = "";
+            }
         }
     }
 }

@@ -400,7 +400,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 32;
             // 
             // cbYearEnd
@@ -634,6 +634,7 @@
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Size = new System.Drawing.Size(252, 26);
             this.txtContactPerson.TabIndex = 300;
+            this.txtContactPerson.TextChanged += new System.EventHandler(this.txtContactPerson_TextChanged);
             // 
             // label32
             // 
@@ -816,6 +817,7 @@
             this.txtChildName.Name = "txtChildName";
             this.txtChildName.Size = new System.Drawing.Size(287, 26);
             this.txtChildName.TabIndex = 290;
+            this.txtChildName.TextChanged += new System.EventHandler(this.txtChildName_TextChanged);
             // 
             // label28
             // 
@@ -1033,6 +1035,7 @@
             this.txtPos.Name = "txtPos";
             this.txtPos.Size = new System.Drawing.Size(204, 26);
             this.txtPos.TabIndex = 278;
+            this.txtPos.TextChanged += new System.EventHandler(this.txtPos_TextChanged);
             // 
             // label25
             // 
@@ -1225,6 +1228,7 @@
             this.txtDegree.Name = "txtDegree";
             this.txtDegree.Size = new System.Drawing.Size(432, 26);
             this.txtDegree.TabIndex = 261;
+            this.txtDegree.TextChanged += new System.EventHandler(this.txtDegree_TextChanged);
             // 
             // label19
             // 
@@ -1405,6 +1409,7 @@
             this.txtSOccu.Name = "txtSOccu";
             this.txtSOccu.Size = new System.Drawing.Size(223, 26);
             this.txtSOccu.TabIndex = 245;
+            this.txtSOccu.TextChanged += new System.EventHandler(this.txtSOccu_TextChanged);
             // 
             // label124
             // 
@@ -1449,6 +1454,7 @@
             this.txtSpouse.Name = "txtSpouse";
             this.txtSpouse.Size = new System.Drawing.Size(287, 26);
             this.txtSpouse.TabIndex = 241;
+            this.txtSpouse.TextChanged += new System.EventHandler(this.txtSpouse_TextChanged);
             // 
             // label126
             // 
@@ -1471,6 +1477,7 @@
             this.txtMOccu.Name = "txtMOccu";
             this.txtMOccu.Size = new System.Drawing.Size(223, 26);
             this.txtMOccu.TabIndex = 239;
+            this.txtMOccu.TextChanged += new System.EventHandler(this.txtMOccu_TextChanged);
             // 
             // label120
             // 
@@ -1515,6 +1522,7 @@
             this.txtMother.Name = "txtMother";
             this.txtMother.Size = new System.Drawing.Size(287, 26);
             this.txtMother.TabIndex = 235;
+            this.txtMother.TextChanged += new System.EventHandler(this.txtMother_TextChanged);
             // 
             // label123
             // 
@@ -1537,6 +1545,7 @@
             this.txtFOccu.Name = "txtFOccu";
             this.txtFOccu.Size = new System.Drawing.Size(223, 26);
             this.txtFOccu.TabIndex = 233;
+            this.txtFOccu.TextChanged += new System.EventHandler(this.txtFOccu_TextChanged);
             // 
             // label121
             // 
@@ -1581,6 +1590,7 @@
             this.txtFather.Name = "txtFather";
             this.txtFather.Size = new System.Drawing.Size(287, 26);
             this.txtFather.TabIndex = 229;
+            this.txtFather.TextChanged += new System.EventHandler(this.txtFather_TextChanged);
             // 
             // label119
             // 
@@ -2091,6 +2101,7 @@
             this.txtMiddleName.Size = new System.Drawing.Size(180, 26);
             this.txtMiddleName.TabIndex = 109;
             this.txtMiddleName.Text = "Middle Name";
+            this.txtMiddleName.TextChanged += new System.EventHandler(this.txtMiddleName_TextChanged);
             this.txtMiddleName.Enter += new System.EventHandler(this.txtMiddleName_Enter);
             this.txtMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMiddleName_KeyPress);
             // 
@@ -2105,6 +2116,7 @@
             this.txtFirstName.Size = new System.Drawing.Size(233, 26);
             this.txtFirstName.TabIndex = 108;
             this.txtFirstName.Text = "First Name";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
             this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
@@ -2119,6 +2131,7 @@
             this.txtLastName.Size = new System.Drawing.Size(180, 26);
             this.txtLastName.TabIndex = 107;
             this.txtLastName.Text = "Last Name";
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             this.txtLastName.Enter += new System.EventHandler(this.txtLastName_Enter);
             this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 

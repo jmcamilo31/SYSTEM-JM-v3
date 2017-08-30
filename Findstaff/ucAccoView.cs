@@ -25,10 +25,15 @@ namespace Findstaff
                 MessageBox.Show("Paid!", "Paid!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
             }
-            else
-            {
-                this.Hide();
-            }
+            //else
+            //{
+            //    this.Hide();
+            //}
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

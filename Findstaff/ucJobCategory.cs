@@ -39,7 +39,7 @@ namespace Findstaff
                 ucJobCategoryAddEdit.panel1.Visible = false;
                 ucJobCategoryAddEdit.panel2.Visible = true;
                 ucJobCategoryAddEdit.txtID.Text = dgvJobCategory.SelectedRows[0].Cells[0].Value.ToString();
-                ucJobCategoryAddEdit.txtName.Text = dgvJobCategory.SelectedRows[0].Cells[1].Value.ToString();
+                ucJobCategoryAddEdit.txtCategory2.Text = dgvJobCategory.SelectedRows[0].Cells[1].Value.ToString();
             }
             else
             {

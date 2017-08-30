@@ -13,11 +13,6 @@ namespace Findstaff
 {
     public partial class fMain : Form
     {
-        //SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=FINDSTAFF;Integrated Security=True");
-        //SqlCommand com = new SqlCommand();
-        //SqlDataReader dr;
-        public static string EmpName = "";
-
         public fMain()
         {
             InitializeComponent();
@@ -25,10 +20,6 @@ namespace Findstaff
             ucDocumentation.Dock = DockStyle.Fill;
             ucAcco.Dock = DockStyle.Fill;
             ucMaintenance.Dock = DockStyle.Fill;
-            ucRecruitment.Visible = false;
-            ucDocumentation.Visible = false;
-            ucAcco.Visible = false;
-            ucMaintenance.Visible = false;
         }
 
         private void Main_Load(object sender, EventArgs e)

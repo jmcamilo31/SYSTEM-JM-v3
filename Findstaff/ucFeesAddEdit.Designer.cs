@@ -40,7 +40,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEditFees = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFee2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 400);
+            this.panel1.Size = new System.Drawing.Size(10, 400);
             this.panel1.TabIndex = 0;
             // 
             // btnCancel1
@@ -112,6 +112,7 @@
             this.txtFees1.Name = "txtFees1";
             this.txtFees1.Size = new System.Drawing.Size(200, 26);
             this.txtFees1.TabIndex = 268;
+            this.txtFees1.TextChanged += new System.EventHandler(this.txtFees1_TextChanged);
             // 
             // label8
             // 
@@ -132,7 +133,7 @@
             this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblEditFees);
-            this.panel2.Controls.Add(this.txtName);
+            this.panel2.Controls.Add(this.txtFee2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1108, 0);
@@ -207,16 +208,17 @@
             this.lblEditFees.TabIndex = 274;
             this.lblEditFees.Text = "Edit Fees";
             // 
-            // txtName
+            // txtFee2
             // 
-            this.txtName.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(497, 167);
-            this.txtName.MaxLength = 30;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 26);
-            this.txtName.TabIndex = 272;
+            this.txtFee2.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtFee2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFee2.ForeColor = System.Drawing.Color.Black;
+            this.txtFee2.Location = new System.Drawing.Point(497, 167);
+            this.txtFee2.MaxLength = 30;
+            this.txtFee2.Name = "txtFee2";
+            this.txtFee2.Size = new System.Drawing.Size(200, 26);
+            this.txtFee2.TabIndex = 272;
+            this.txtFee2.TextChanged += new System.EventHandler(this.txtFee2_TextChanged);
             // 
             // label2
             // 
@@ -261,7 +263,7 @@
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnCancel2;
-        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtFee2;
         public System.Windows.Forms.TextBox txtID;
     }
 }

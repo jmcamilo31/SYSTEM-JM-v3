@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Findstaff
 {
@@ -509,6 +510,110 @@ namespace Findstaff
                 {
                     cbChildDay.Items.Add(x);
                 }
+            }
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtLastName.Text)))
+            {
+                txtLastName.Text = "";
+            }
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFirstName.Text)))
+            {
+                txtFirstName.Text = "";
+            }
+        }
+
+        private void txtMiddleName_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtMiddleName.Text)))
+            {
+                txtMiddleName.Text = "";
+            }
+        }
+
+        private void txtDegree_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtDegree.Text)))
+            {
+                txtDegree.Text = "";
+            }
+        }
+
+        private void txtPos_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtPos.Text)))
+            {
+                txtPos.Text = "";
+            }
+        }
+
+        private void txtFather_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFather.Text)))
+            {
+                txtFather.Text = "";
+            }
+        }
+
+        private void txtMother_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtMother.Text)))
+            {
+                txtMother.Text = "";
+            }
+        }
+
+        private void txtSpouse_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtSpouse.Text)))
+            {
+                txtSpouse.Text = "";
+            }
+        }
+
+        private void txtFOccu_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtFOccu.Text)))
+            {
+                txtFOccu.Text = "";
+            }
+        }
+
+        private void txtMOccu_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtMOccu.Text)))
+            {
+                txtMOccu.Text = "";
+            }
+        }
+
+        private void txtSOccu_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtSOccu.Text)))
+            {
+                txtSOccu.Text = "";
+            }
+        }
+
+        private void txtChildName_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtChildName.Text)))
+            {
+                txtChildName.Text = "";
+            }
+        }
+
+        private void txtContactPerson_TextChanged(object sender, EventArgs e)
+        {
+            if (!(new Regex(@"^[a-zA-Z ]*$").IsMatch(txtContactPerson.Text)))
+            {
+                txtContactPerson.Text = "";
             }
         }
     }

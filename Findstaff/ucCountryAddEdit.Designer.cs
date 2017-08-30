@@ -395,6 +395,7 @@
             this.txtCountryName.Name = "txtCountryName";
             this.txtCountryName.Size = new System.Drawing.Size(200, 26);
             this.txtCountryName.TabIndex = 107;
+            this.txtCountryName.TextChanged += new System.EventHandler(this.txtCountryName_TextChanged);
             // 
             // label3
             // 
@@ -434,7 +435,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1058, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 2;
             // 
             // btnCancel1
@@ -562,6 +563,7 @@
             this.txtCountryName1.Name = "txtCountryName1";
             this.txtCountryName1.Size = new System.Drawing.Size(200, 26);
             this.txtCountryName1.TabIndex = 107;
+            this.txtCountryName1.TextChanged += new System.EventHandler(this.txtCountryName1_TextChanged);
             // 
             // label8
             // 

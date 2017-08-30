@@ -92,9 +92,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtMiddleName2 = new System.Windows.Forms.TextBox();
+            this.txtFirstName2 = new System.Windows.Forms.TextBox();
+            this.txtLastName2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -153,7 +153,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 2;
             // 
             // lblDeptStatus
@@ -607,6 +607,7 @@
             this.txtMiddleName.Size = new System.Drawing.Size(300, 26);
             this.txtMiddleName.TabIndex = 45;
             this.txtMiddleName.Text = "Middle Name";
+            this.txtMiddleName.TextChanged += new System.EventHandler(this.txtMiddleName_TextChanged);
             this.txtMiddleName.Enter += new System.EventHandler(this.txtMiddleName_Enter);
             this.txtMiddleName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMiddleName_KeyPress);
             // 
@@ -767,9 +768,9 @@
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.txtMiddleName2);
+            this.panel2.Controls.Add(this.txtFirstName2);
+            this.panel2.Controls.Add(this.txtLastName2);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label19);
@@ -1198,41 +1199,44 @@
             this.label16.TabIndex = 116;
             this.label16.Text = "*";
             // 
-            // textBox8
+            // txtMiddleName2
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox8.Location = new System.Drawing.Point(305, 363);
-            this.textBox8.MaxLength = 30;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(300, 26);
-            this.textBox8.TabIndex = 115;
-            this.textBox8.Text = "Middle Name";
+            this.txtMiddleName2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtMiddleName2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddleName2.ForeColor = System.Drawing.Color.DimGray;
+            this.txtMiddleName2.Location = new System.Drawing.Point(305, 363);
+            this.txtMiddleName2.MaxLength = 30;
+            this.txtMiddleName2.Name = "txtMiddleName2";
+            this.txtMiddleName2.Size = new System.Drawing.Size(300, 26);
+            this.txtMiddleName2.TabIndex = 115;
+            this.txtMiddleName2.Text = "Middle Name";
+            this.txtMiddleName2.TextChanged += new System.EventHandler(this.txtMiddleName2_TextChanged);
             // 
-            // textBox9
+            // txtFirstName2
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox9.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox9.Location = new System.Drawing.Point(305, 327);
-            this.textBox9.MaxLength = 30;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(300, 26);
-            this.textBox9.TabIndex = 114;
-            this.textBox9.Text = "First Name";
+            this.txtFirstName2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtFirstName2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName2.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFirstName2.Location = new System.Drawing.Point(305, 327);
+            this.txtFirstName2.MaxLength = 30;
+            this.txtFirstName2.Name = "txtFirstName2";
+            this.txtFirstName2.Size = new System.Drawing.Size(300, 26);
+            this.txtFirstName2.TabIndex = 114;
+            this.txtFirstName2.Text = "First Name";
+            this.txtFirstName2.TextChanged += new System.EventHandler(this.txtFirstName2_TextChanged);
             // 
-            // textBox10
+            // txtLastName2
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox10.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox10.Location = new System.Drawing.Point(305, 291);
-            this.textBox10.MaxLength = 30;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(300, 26);
-            this.textBox10.TabIndex = 113;
-            this.textBox10.Text = "Last Name";
+            this.txtLastName2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtLastName2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName2.ForeColor = System.Drawing.Color.DimGray;
+            this.txtLastName2.Location = new System.Drawing.Point(305, 291);
+            this.txtLastName2.MaxLength = 30;
+            this.txtLastName2.Name = "txtLastName2";
+            this.txtLastName2.Size = new System.Drawing.Size(300, 26);
+            this.txtLastName2.TabIndex = 113;
+            this.txtLastName2.Text = "Last Name";
+            this.txtLastName2.TextChanged += new System.EventHandler(this.txtLastName2_TextChanged);
             // 
             // label17
             // 
@@ -1434,9 +1438,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtMiddleName2;
+        private System.Windows.Forms.TextBox txtFirstName2;
+        private System.Windows.Forms.TextBox txtLastName2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;

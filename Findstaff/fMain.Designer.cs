@@ -200,6 +200,7 @@
             this.ucMaintenance.Name = "ucMaintenance";
             this.ucMaintenance.Size = new System.Drawing.Size(200, 50);
             this.ucMaintenance.TabIndex = 4;
+            this.ucMaintenance.Visible = false;
             // 
             // ucRecruitment
             // 
@@ -208,14 +209,17 @@
             this.ucRecruitment.Name = "ucRecruitment";
             this.ucRecruitment.Size = new System.Drawing.Size(200, 50);
             this.ucRecruitment.TabIndex = 3;
+            this.ucRecruitment.Visible = false;
             // 
             // ucAcco
             // 
             this.ucAcco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucAcco.ForeColor = System.Drawing.Color.Black;
             this.ucAcco.Location = new System.Drawing.Point(3, 149);
             this.ucAcco.Name = "ucAcco";
             this.ucAcco.Size = new System.Drawing.Size(200, 50);
             this.ucAcco.TabIndex = 2;
+            this.ucAcco.Visible = false;
             // 
             // ucDocumentation
             // 
@@ -224,6 +228,7 @@
             this.ucDocumentation.Name = "ucDocumentation";
             this.ucDocumentation.Size = new System.Drawing.Size(200, 50);
             this.ucDocumentation.TabIndex = 1;
+            this.ucDocumentation.Visible = false;
             // 
             // btnX
             // 

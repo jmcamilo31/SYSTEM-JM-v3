@@ -236,50 +236,62 @@
             // ucJobFees
             // 
             this.ucJobFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobFees.ForeColor = System.Drawing.Color.Black;
             this.ucJobFees.Location = new System.Drawing.Point(645, 56);
             this.ucJobFees.Name = "ucJobFees";
             this.ucJobFees.Size = new System.Drawing.Size(100, 100);
             this.ucJobFees.TabIndex = 40;
+            this.ucJobFees.Visible = false;
             // 
             // ucApplicant
             // 
             this.ucApplicant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucApplicant.ForeColor = System.Drawing.Color.Black;
             this.ucApplicant.Location = new System.Drawing.Point(115, 56);
             this.ucApplicant.Name = "ucApplicant";
             this.ucApplicant.Size = new System.Drawing.Size(100, 100);
             this.ucApplicant.TabIndex = 39;
+            this.ucApplicant.Visible = false;
             // 
             // ucEmployer
             // 
             this.ucEmployer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucEmployer.ForeColor = System.Drawing.Color.Black;
             this.ucEmployer.Location = new System.Drawing.Point(327, 56);
             this.ucEmployer.Name = "ucEmployer";
             this.ucEmployer.Size = new System.Drawing.Size(100, 100);
             this.ucEmployer.TabIndex = 36;
+            this.ucEmployer.Visible = false;
             // 
             // ucEmployee
             // 
             this.ucEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucEmployee.ForeColor = System.Drawing.Color.Black;
             this.ucEmployee.Location = new System.Drawing.Point(9, 56);
             this.ucEmployee.Name = "ucEmployee";
             this.ucEmployee.Size = new System.Drawing.Size(100, 100);
             this.ucEmployee.TabIndex = 34;
+            this.ucEmployee.Visible = false;
             // 
             // ucJobOrder
             // 
             this.ucJobOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobOrder.ForeColor = System.Drawing.Color.Black;
             this.ucJobOrder.Location = new System.Drawing.Point(433, 56);
             this.ucJobOrder.Name = "ucJobOrder";
             this.ucJobOrder.Size = new System.Drawing.Size(100, 100);
             this.ucJobOrder.TabIndex = 33;
+            this.ucJobOrder.Visible = false;
             // 
             // ucCountry
             // 
             this.ucCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucCountry.ForeColor = System.Drawing.Color.Black;
             this.ucCountry.Location = new System.Drawing.Point(221, 56);
             this.ucCountry.Name = "ucCountry";
             this.ucCountry.Size = new System.Drawing.Size(100, 100);
             this.ucCountry.TabIndex = 32;
+            this.ucCountry.Visible = false;
             // 
             // ucGenReqs
             // 
@@ -288,14 +300,17 @@
             this.ucGenReqs.Name = "ucGenReqs";
             this.ucGenReqs.Size = new System.Drawing.Size(200, 100);
             this.ucGenReqs.TabIndex = 41;
+            this.ucGenReqs.Visible = false;
             // 
             // ucJobList
             // 
             this.ucJobList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobList.ForeColor = System.Drawing.Color.Black;
             this.ucJobList.Location = new System.Drawing.Point(539, 56);
             this.ucJobList.Name = "ucJobList";
             this.ucJobList.Size = new System.Drawing.Size(100, 100);
             this.ucJobList.TabIndex = 42;
+            this.ucJobList.Visible = false;
             // 
             // ucMaintenance
             // 

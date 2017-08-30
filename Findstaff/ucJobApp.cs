@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Findstaff
 {
-    public partial class ucDocAppDetails : UserControl
+    public partial class ucJobApp : UserControl
     {
-        public ucDocAppDetails()
+        public ucJobApp()
         {
             InitializeComponent();
         }
 
-        private void btnMoveToAcco_Click(object sender, EventArgs e)
+        private void btnSetForInitInt_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }
