@@ -8,11 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Findstaff
 {
     public partial class fMain : Form
     {
+        private MySqlConnection connection;
+        MySqlCommand com = new MySqlCommand();
+        MySqlDataAdapter adapter;
+        private string cmd = "";
+
         public fMain()
         {
             InitializeComponent();
@@ -24,6 +30,8 @@ namespace Findstaff
 
         private void Main_Load(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            connection = con.dbConnection();
             timer1.Start();
         }
 
@@ -66,6 +74,20 @@ namespace Findstaff
             ucDocumentation.Visible = true;
             ucAcco.Visible = false;
             ucMaintenance.Visible = false;
+            connection.Open();
+            cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', count(ad.req_id)'No. of Documents to be passed' "
+                    + "from app_t app join appdoc_t ad "
+                    + "on app.app_id = ad.app_id ";
+            using (connection)
+            {
+                using (adapter = new MySqlDataAdapter(cmd, connection))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    ucDocumentation.dgvDocumentation.DataSource = ds.Tables[0];
+                }
+            }
+            connection.Close();
         }
 
         private void rbAcco_CheckedChanged(object sender, EventArgs e)

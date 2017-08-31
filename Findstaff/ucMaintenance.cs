@@ -29,14 +29,6 @@ namespace Findstaff
             ucJobList.Dock = DockStyle.Fill;
             ucJobFees.Dock = DockStyle.Fill;
             ucGenReqs.Dock = DockStyle.Fill;
-            ucEmployee.Visible = false;
-            ucApplicant.Visible = false;
-            ucCountry.Visible = false;
-            ucEmployer.Visible = false;
-            ucJobOrder.Visible = false;
-            ucJobList.Visible = false;
-            ucJobFees.Visible = false;
-            ucGenReqs.Visible = false;
         }
 
         private void rbEmployee_CheckedChanged(object sender, EventArgs e)
@@ -49,6 +41,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
+
             cmd = "select username'Username', Concat(fname , ' ' , lname)'Employee Name', DEPTNAME'Department' from Emp_t;";
             using (connection)
             {
@@ -71,6 +64,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
+
             cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', apps.app_no'Active Application', job.jobname'Applying for' "
                     + "from app_t app join applications_t apps " 
                     + "on app.app_id = apps.app_id "
@@ -98,6 +92,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
+
             cmd = "select c.COUNTRY_ID'Country ID', c.COUNTRYNAME'Name of Country', count(cr.req_id)'No. of requirements' from country_t c join countryreqs_t cr on  c.country_id = cr.country_id;";
             using (connection)
             {
@@ -120,6 +115,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
+
             cmd = "select e.employer_id'Employer_ID', e.employername'Name of Employer', e.foreignprin'Foreign Principal', c.countryname'Country' "
                 + "from employer_t e join country_t c "
                 + "on e.country_id = c.country_id;";
@@ -144,6 +140,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
+
             cmd = "Select J.jorder_id 'Job Order ID', e.employername'Employer', j.Cntrctstart 'Contract Start' from Joborder_t j join employer_t e on j.employer_id = e.employer_id";
             using (connection)
             {
@@ -166,6 +163,7 @@ namespace Findstaff
             ucJobList.Visible = true;
             ucJobFees.Visible = false;
             ucGenReqs.Visible = false;
+
             cmd = "select jo.jorder_id'Job Order ID', j.jobname'Job', e.employername'Employer', jl.reqapp'No. of Required Applicants' from joborder_t jo join joblist_t jl on jo.JORDER_ID = jl.jorder_id join employer_t e on jo.employer_id = e.employer_id join job_t j on jl.job_id = j.job_id where jo.cntrctstat = 'Active' or jo.cntrctstat = 'Renewed'; ";
             using (connection)
             {
@@ -188,6 +186,7 @@ namespace Findstaff
             ucJobList.Visible = false;
             ucJobFees.Visible = true;
             ucGenReqs.Visible = false;
+
             cmd = "select jo.jorder_id'Job Order ID', count(jf.fee_id)'No. of Fees' from joborder_t jo join jobfees_t jf on jo.jorder_id = jf.jorder_id";
             using (connection)
             {

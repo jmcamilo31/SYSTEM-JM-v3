@@ -38,10 +38,6 @@
             this.rbDocumentation = new System.Windows.Forms.RadioButton();
             this.rbRecruitment = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ucMaintenance = new Findstaff.ucMaintenance();
-            this.ucRecruitment = new Findstaff.ucRecruitment();
-            this.ucAcco = new Findstaff.ucAcco();
-            this.ucDocumentation = new Findstaff.ucDocumentation();
             this.btnX = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -50,6 +46,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCopyright = new System.Windows.Forms.Label();
+            this.ucMaintenance = new Findstaff.ucMaintenance();
+            this.ucRecruitment = new Findstaff.ucRecruitment();
+            this.ucAcco = new Findstaff.ucAcco();
+            this.ucDocumentation = new Findstaff.ucDocumentation();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -193,43 +193,6 @@
             this.panel2.Size = new System.Drawing.Size(1118, 500);
             this.panel2.TabIndex = 18;
             // 
-            // ucMaintenance
-            // 
-            this.ucMaintenance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucMaintenance.Location = new System.Drawing.Point(3, 199);
-            this.ucMaintenance.Name = "ucMaintenance";
-            this.ucMaintenance.Size = new System.Drawing.Size(200, 50);
-            this.ucMaintenance.TabIndex = 4;
-            this.ucMaintenance.Visible = false;
-            // 
-            // ucRecruitment
-            // 
-            this.ucRecruitment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucRecruitment.Location = new System.Drawing.Point(3, 49);
-            this.ucRecruitment.Name = "ucRecruitment";
-            this.ucRecruitment.Size = new System.Drawing.Size(200, 50);
-            this.ucRecruitment.TabIndex = 3;
-            this.ucRecruitment.Visible = false;
-            // 
-            // ucAcco
-            // 
-            this.ucAcco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucAcco.ForeColor = System.Drawing.Color.Black;
-            this.ucAcco.Location = new System.Drawing.Point(3, 149);
-            this.ucAcco.Name = "ucAcco";
-            this.ucAcco.Size = new System.Drawing.Size(200, 50);
-            this.ucAcco.TabIndex = 2;
-            this.ucAcco.Visible = false;
-            // 
-            // ucDocumentation
-            // 
-            this.ucDocumentation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucDocumentation.Location = new System.Drawing.Point(3, 99);
-            this.ucDocumentation.Name = "ucDocumentation";
-            this.ucDocumentation.Size = new System.Drawing.Size(200, 50);
-            this.ucDocumentation.TabIndex = 1;
-            this.ucDocumentation.Visible = false;
-            // 
             // btnX
             // 
             this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -274,7 +237,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(1242, 95);
+            this.btnLogout.Location = new System.Drawing.Point(1242, 94);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(100, 50);
             this.btnLogout.TabIndex = 22;
@@ -317,6 +280,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // lblCopyright
             // 
@@ -330,6 +294,44 @@
             this.lblCopyright.Text = "©2017 Polytechnic University of the Philippines\r\nBachelor of Science in Informati" +
     "on Technology";
             this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCopyright.Visible = false;
+            // 
+            // ucMaintenance
+            // 
+            this.ucMaintenance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucMaintenance.Location = new System.Drawing.Point(3, 199);
+            this.ucMaintenance.Name = "ucMaintenance";
+            this.ucMaintenance.Size = new System.Drawing.Size(200, 50);
+            this.ucMaintenance.TabIndex = 4;
+            this.ucMaintenance.Visible = false;
+            // 
+            // ucRecruitment
+            // 
+            this.ucRecruitment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucRecruitment.Location = new System.Drawing.Point(3, 49);
+            this.ucRecruitment.Name = "ucRecruitment";
+            this.ucRecruitment.Size = new System.Drawing.Size(200, 50);
+            this.ucRecruitment.TabIndex = 3;
+            this.ucRecruitment.Visible = false;
+            // 
+            // ucAcco
+            // 
+            this.ucAcco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucAcco.ForeColor = System.Drawing.Color.Black;
+            this.ucAcco.Location = new System.Drawing.Point(3, 149);
+            this.ucAcco.Name = "ucAcco";
+            this.ucAcco.Size = new System.Drawing.Size(200, 50);
+            this.ucAcco.TabIndex = 2;
+            this.ucAcco.Visible = false;
+            // 
+            // ucDocumentation
+            // 
+            this.ucDocumentation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucDocumentation.Location = new System.Drawing.Point(3, 99);
+            this.ucDocumentation.Name = "ucDocumentation";
+            this.ucDocumentation.Size = new System.Drawing.Size(200, 50);
+            this.ucDocumentation.TabIndex = 1;
+            this.ucDocumentation.Visible = false;
             // 
             // fMain
             // 
@@ -338,7 +340,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1367, 780);
+            this.ClientSize = new System.Drawing.Size(1367, 772);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDate);

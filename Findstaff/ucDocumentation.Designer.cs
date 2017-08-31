@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMName = new System.Windows.Forms.TextBox();
             this.txtFName = new System.Windows.Forms.TextBox();
-            this.dgvRecruitment = new System.Windows.Forms.DataGridView();
+            this.dgvDocumentation = new System.Windows.Forms.DataGridView();
             this.btnAdvSe = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtLName = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             this.lblDocu = new System.Windows.Forms.Label();
             this.ucDocAppDetails = new Findstaff.ucDocAppDetails();
             this.pnlTabs = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocumentation)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,13 +72,21 @@
             this.txtFName.Size = new System.Drawing.Size(120, 26);
             this.txtFName.TabIndex = 52;
             // 
-            // dgvRecruitment
+            // dgvDocumentation
             // 
-            this.dgvRecruitment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecruitment.Location = new System.Drawing.Point(100, 200);
-            this.dgvRecruitment.Name = "dgvRecruitment";
-            this.dgvRecruitment.Size = new System.Drawing.Size(918, 200);
-            this.dgvRecruitment.TabIndex = 51;
+            this.dgvDocumentation.AllowUserToAddRows = false;
+            this.dgvDocumentation.AllowUserToDeleteRows = false;
+            this.dgvDocumentation.AllowUserToResizeColumns = false;
+            this.dgvDocumentation.AllowUserToResizeRows = false;
+            this.dgvDocumentation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDocumentation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocumentation.Location = new System.Drawing.Point(100, 200);
+            this.dgvDocumentation.Name = "dgvDocumentation";
+            this.dgvDocumentation.RowHeadersVisible = false;
+            this.dgvDocumentation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvDocumentation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDocumentation.Size = new System.Drawing.Size(918, 200);
+            this.dgvDocumentation.TabIndex = 51;
             // 
             // btnAdvSe
             // 
@@ -188,7 +196,7 @@
             this.Controls.Add(this.ucDocAppDetails);
             this.Controls.Add(this.txtMName);
             this.Controls.Add(this.txtFName);
-            this.Controls.Add(this.dgvRecruitment);
+            this.Controls.Add(this.dgvDocumentation);
             this.Controls.Add(this.btnAdvSe);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtLName);
@@ -197,7 +205,7 @@
             this.Controls.Add(this.lblDocu);
             this.Name = "ucDocumentation";
             this.Size = new System.Drawing.Size(1118, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecruitment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocumentation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +216,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMName;
         private System.Windows.Forms.TextBox txtFName;
-        private System.Windows.Forms.DataGridView dgvRecruitment;
         private System.Windows.Forms.Button btnAdvSe;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtLName;
@@ -217,5 +224,6 @@
         private System.Windows.Forms.Label lblDocu;
         private ucDocAppDetails ucDocAppDetails;
         private System.Windows.Forms.Panel pnlTabs;
+        public System.Windows.Forms.DataGridView dgvDocumentation;
     }
 }

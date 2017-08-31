@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Findstaff
 {
     public partial class Login : Form
     {
-        public int tries = 3;
+        private MySqlConnection connection;
+        MySqlCommand com = new MySqlCommand();
 
         public Login()
         {
@@ -54,12 +56,12 @@ namespace Findstaff
         {
             txtPassword.Clear();
             txtPassword.ForeColor = Color.Black;
-            txtPassword.PasswordChar = '•';
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             txtPassword.ForeColor = Color.Black;
+            txtPassword.PasswordChar = '❤';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

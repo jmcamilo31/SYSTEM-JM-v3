@@ -141,9 +141,10 @@
             // ucIntListInit
             // 
             this.ucIntListInit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucIntListInit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ucIntListInit.Location = new System.Drawing.Point(0, 0);
             this.ucIntListInit.Name = "ucIntListInit";
-            this.ucIntListInit.Size = new System.Drawing.Size(10, 10);
+            this.ucIntListInit.Size = new System.Drawing.Size(5, 5);
             this.ucIntListInit.TabIndex = 41;
             this.ucIntListInit.Visible = false;
             // 
@@ -152,7 +153,7 @@
             this.ucIntListFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ucIntListFinal.Location = new System.Drawing.Point(0, 0);
             this.ucIntListFinal.Name = "ucIntListFinal";
-            this.ucIntListFinal.Size = new System.Drawing.Size(10, 10);
+            this.ucIntListFinal.Size = new System.Drawing.Size(5, 5);
             this.ucIntListFinal.TabIndex = 44;
             this.ucIntListFinal.Visible = false;
             // 

@@ -395,7 +395,6 @@
             this.txtCountryName.Name = "txtCountryName";
             this.txtCountryName.Size = new System.Drawing.Size(200, 26);
             this.txtCountryName.TabIndex = 107;
-            this.txtCountryName.TextChanged += new System.EventHandler(this.txtCountryName_TextChanged);
             // 
             // label3
             // 
@@ -576,7 +575,6 @@
             this.txtCountryName1.Name = "txtCountryName1";
             this.txtCountryName1.Size = new System.Drawing.Size(200, 26);
             this.txtCountryName1.TabIndex = 107;
-            this.txtCountryName1.TextChanged += new System.EventHandler(this.txtCountryName1_TextChanged);
             // 
             // label8
             // 

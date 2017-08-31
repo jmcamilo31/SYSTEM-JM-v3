@@ -75,10 +75,10 @@
             this.label26 = new System.Windows.Forms.Label();
             this.btnRemoveSkill = new System.Windows.Forms.Button();
             this.cbSkillName = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvReq1 = new System.Windows.Forms.DataGridView();
             this.btnReqAdd = new System.Windows.Forms.Button();
             this.btnAddSkill = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbProf = new System.Windows.Forms.ComboBox();
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.cbCategory1 = new System.Windows.Forms.ComboBox();
@@ -95,7 +95,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvSpecDocReq1 = new System.Windows.Forms.DataGridView();
+            this.dgvSkills1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSalary1 = new System.Windows.Forms.TextBox();
             this.lblSpecDocReq = new System.Windows.Forms.Label();
@@ -109,9 +109,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReq1)).BeginInit();
             this.pnlEmpBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSpecDocReq1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -597,10 +597,10 @@
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.btnRemoveSkill);
             this.panel1.Controls.Add(this.cbSkillName);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvReq1);
             this.panel1.Controls.Add(this.btnReqAdd);
             this.panel1.Controls.Add(this.btnAddSkill);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cbProf);
             this.panel1.Controls.Add(this.txtWeight);
             this.panel1.Controls.Add(this.txtHeight);
             this.panel1.Controls.Add(this.cbCategory1);
@@ -615,7 +615,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dgvSpecDocReq1);
+            this.panel1.Controls.Add(this.dgvSkills1);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.txtSalary1);
             this.panel1.Controls.Add(this.lblSpecDocReq);
@@ -627,7 +627,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(869, 450);
+            this.panel1.Size = new System.Drawing.Size(984, 450);
             this.panel1.TabIndex = 16;
             // 
             // txtEmployer1
@@ -691,6 +691,7 @@
             this.btnReqRemove.TabIndex = 62;
             this.btnReqRemove.Text = "REMOVE";
             this.btnReqRemove.UseVisualStyleBackColor = false;
+            this.btnReqRemove.Click += new System.EventHandler(this.btnReqRemove_Click);
             // 
             // cbReqName
             // 
@@ -729,6 +730,7 @@
             this.btnRemoveSkill.TabIndex = 59;
             this.btnRemoveSkill.Text = "REMOVE";
             this.btnRemoveSkill.UseVisualStyleBackColor = false;
+            this.btnRemoveSkill.Click += new System.EventHandler(this.btnRemoveSkill_Click);
             // 
             // cbSkillName
             // 
@@ -741,17 +743,29 @@
             this.cbSkillName.Size = new System.Drawing.Size(300, 27);
             this.cbSkillName.TabIndex = 58;
             // 
-            // dataGridView1
+            // dgvReq1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(104, 643);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 150);
-            this.dataGridView1.TabIndex = 46;
+            this.dgvReq1.AllowUserToAddRows = false;
+            this.dgvReq1.AllowUserToDeleteRows = false;
+            this.dgvReq1.AllowUserToResizeColumns = false;
+            this.dgvReq1.AllowUserToResizeRows = false;
+            this.dgvReq1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReq1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReq1.ColumnHeadersVisible = false;
+            this.dgvReq1.Location = new System.Drawing.Point(104, 643);
+            this.dgvReq1.MultiSelect = false;
+            this.dgvReq1.Name = "dgvReq1";
+            this.dgvReq1.ReadOnly = true;
+            this.dgvReq1.RowHeadersVisible = false;
+            this.dgvReq1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvReq1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReq1.Size = new System.Drawing.Size(900, 150);
+            this.dgvReq1.TabIndex = 46;
             // 
             // btnReqAdd
             // 
             this.btnReqAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnReqAdd.Enabled = false;
             this.btnReqAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnReqAdd.FlatAppearance.BorderSize = 0;
             this.btnReqAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -763,10 +777,12 @@
             this.btnReqAdd.TabIndex = 45;
             this.btnReqAdd.Text = "ADD";
             this.btnReqAdd.UseVisualStyleBackColor = false;
+            this.btnReqAdd.Click += new System.EventHandler(this.btnReqAdd_Click);
             // 
             // btnAddSkill
             // 
             this.btnAddSkill.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAddSkill.Enabled = false;
             this.btnAddSkill.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddSkill.FlatAppearance.BorderSize = 0;
             this.btnAddSkill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -778,17 +794,24 @@
             this.btnAddSkill.TabIndex = 43;
             this.btnAddSkill.Text = "ADD";
             this.btnAddSkill.UseVisualStyleBackColor = false;
+            this.btnAddSkill.Click += new System.EventHandler(this.btnAddSkill_Click);
             // 
-            // comboBox2
+            // cbProf
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(579, 327);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 27);
-            this.comboBox2.TabIndex = 42;
+            this.cbProf.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbProf.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProf.ForeColor = System.Drawing.Color.Black;
+            this.cbProf.FormattingEnabled = true;
+            this.cbProf.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbProf.Location = new System.Drawing.Point(579, 327);
+            this.cbProf.Name = "cbProf";
+            this.cbProf.Size = new System.Drawing.Size(150, 27);
+            this.cbProf.TabIndex = 42;
             // 
             // txtWeight
             // 
@@ -800,6 +823,7 @@
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(150, 26);
             this.txtWeight.TabIndex = 40;
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // txtHeight
             // 
@@ -811,6 +835,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(150, 26);
             this.txtHeight.TabIndex = 39;
+            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
             // 
             // cbCategory1
             // 
@@ -822,6 +847,7 @@
             this.cbCategory1.Name = "cbCategory1";
             this.cbCategory1.Size = new System.Drawing.Size(300, 27);
             this.cbCategory1.TabIndex = 38;
+            this.cbCategory1.SelectedIndexChanged += new System.EventHandler(this.cbCategory1_SelectedIndexChanged);
             // 
             // pnlEmpBtn
             // 
@@ -852,6 +878,7 @@
             // btnAddAll
             // 
             this.btnAddAll.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAddAll.Enabled = false;
             this.btnAddAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddAll.FlatAppearance.BorderSize = 0;
             this.btnAddAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -985,13 +1012,24 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Salary :  P";
             // 
-            // dgvSpecDocReq1
+            // dgvSkills1
             // 
-            this.dgvSpecDocReq1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSpecDocReq1.Location = new System.Drawing.Point(104, 359);
-            this.dgvSpecDocReq1.Name = "dgvSpecDocReq1";
-            this.dgvSpecDocReq1.Size = new System.Drawing.Size(900, 150);
-            this.dgvSpecDocReq1.TabIndex = 20;
+            this.dgvSkills1.AllowUserToAddRows = false;
+            this.dgvSkills1.AllowUserToDeleteRows = false;
+            this.dgvSkills1.AllowUserToResizeColumns = false;
+            this.dgvSkills1.AllowUserToResizeRows = false;
+            this.dgvSkills1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSkills1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSkills1.ColumnHeadersVisible = false;
+            this.dgvSkills1.Location = new System.Drawing.Point(104, 359);
+            this.dgvSkills1.MultiSelect = false;
+            this.dgvSkills1.Name = "dgvSkills1";
+            this.dgvSkills1.ReadOnly = true;
+            this.dgvSkills1.RowHeadersVisible = false;
+            this.dgvSkills1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSkills1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSkills1.Size = new System.Drawing.Size(900, 150);
+            this.dgvSkills1.TabIndex = 20;
             // 
             // btnAdd
             // 
@@ -1019,6 +1057,7 @@
             this.txtSalary1.Name = "txtSalary1";
             this.txtSalary1.Size = new System.Drawing.Size(150, 26);
             this.txtSalary1.TabIndex = 16;
+            this.txtSalary1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary1_KeyPress);
             // 
             // lblSpecDocReq
             // 
@@ -1042,6 +1081,7 @@
             this.txtReqApp1.Name = "txtReqApp1";
             this.txtReqApp1.Size = new System.Drawing.Size(175, 26);
             this.txtReqApp1.TabIndex = 11;
+            this.txtReqApp1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReqApp1_KeyPress);
             // 
             // lblPrincipal1
             // 
@@ -1108,9 +1148,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReq1)).EndInit();
             this.pnlEmpBtn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSpecDocReq1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1129,7 +1169,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvSpecDocReq1;
+        private System.Windows.Forms.DataGridView dgvSkills1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtSalary1;
         private System.Windows.Forms.Label lblSpecDocReq;
@@ -1144,10 +1184,10 @@
         private System.Windows.Forms.Panel pnlEmpBtn;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnAddAll;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvReq1;
         private System.Windows.Forms.Button btnReqAdd;
         private System.Windows.Forms.Button btnAddSkill;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbProf;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label16;
