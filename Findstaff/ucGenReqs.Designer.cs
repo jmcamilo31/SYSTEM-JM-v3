@@ -34,11 +34,11 @@
             this.rbSkills = new System.Windows.Forms.RadioButton();
             this.rbJobCategory = new System.Windows.Forms.RadioButton();
             this.rbFees = new System.Windows.Forms.RadioButton();
-            this.ucFees = new Findstaff.ucFees();
-            this.ucJobCategory = new Findstaff.ucJobCategory();
-            this.ucSkills = new Findstaff.ucSkills();
-            this.ucRequirements = new Findstaff.ucRequirements();
             this.ucJobs = new Findstaff.ucJobs();
+            this.ucRequirements = new Findstaff.ucRequirements();
+            this.ucSkills = new Findstaff.ucSkills();
+            this.ucJobCategory = new Findstaff.ucJobCategory();
+            this.ucFees = new Findstaff.ucFees();
             this.pnlTabs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             this.rbJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbJobs.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbJobs.ForeColor = System.Drawing.Color.White;
-            this.rbJobs.Location = new System.Drawing.Point(503, 10);
+            this.rbJobs.Location = new System.Drawing.Point(822, 10);
             this.rbJobs.Name = "rbJobs";
             this.rbJobs.Size = new System.Drawing.Size(100, 40);
             this.rbJobs.TabIndex = 6;
@@ -89,7 +89,7 @@
             this.rbRequirements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbRequirements.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbRequirements.ForeColor = System.Drawing.Color.White;
-            this.rbRequirements.Location = new System.Drawing.Point(347, 10);
+            this.rbRequirements.Location = new System.Drawing.Point(666, 10);
             this.rbRequirements.Name = "rbRequirements";
             this.rbRequirements.Size = new System.Drawing.Size(150, 40);
             this.rbRequirements.TabIndex = 4;
@@ -110,7 +110,7 @@
             this.rbSkills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbSkills.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSkills.ForeColor = System.Drawing.Color.White;
-            this.rbSkills.Location = new System.Drawing.Point(241, 10);
+            this.rbSkills.Location = new System.Drawing.Point(560, 10);
             this.rbSkills.Name = "rbSkills";
             this.rbSkills.Size = new System.Drawing.Size(100, 40);
             this.rbSkills.TabIndex = 3;
@@ -131,7 +131,7 @@
             this.rbJobCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbJobCategory.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbJobCategory.ForeColor = System.Drawing.Color.White;
-            this.rbJobCategory.Location = new System.Drawing.Point(115, 10);
+            this.rbJobCategory.Location = new System.Drawing.Point(434, 10);
             this.rbJobCategory.Name = "rbJobCategory";
             this.rbJobCategory.Size = new System.Drawing.Size(120, 40);
             this.rbJobCategory.TabIndex = 2;
@@ -152,7 +152,7 @@
             this.rbFees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbFees.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFees.ForeColor = System.Drawing.Color.White;
-            this.rbFees.Location = new System.Drawing.Point(9, 10);
+            this.rbFees.Location = new System.Drawing.Point(328, 10);
             this.rbFees.Name = "rbFees";
             this.rbFees.Size = new System.Drawing.Size(100, 40);
             this.rbFees.TabIndex = 1;
@@ -161,55 +161,55 @@
             this.rbFees.UseVisualStyleBackColor = false;
             this.rbFees.CheckedChanged += new System.EventHandler(this.rbFees_CheckedChanged);
             // 
-            // ucFees
+            // ucJobs
             // 
-            this.ucFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucFees.ForeColor = System.Drawing.Color.Black;
-            this.ucFees.Location = new System.Drawing.Point(9, 56);
-            this.ucFees.Name = "ucFees";
-            this.ucFees.Size = new System.Drawing.Size(100, 100);
-            this.ucFees.TabIndex = 33;
-            this.ucFees.Visible = false;
-            // 
-            // ucJobCategory
-            // 
-            this.ucJobCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucJobCategory.ForeColor = System.Drawing.Color.Black;
-            this.ucJobCategory.Location = new System.Drawing.Point(115, 56);
-            this.ucJobCategory.Name = "ucJobCategory";
-            this.ucJobCategory.Size = new System.Drawing.Size(120, 100);
-            this.ucJobCategory.TabIndex = 34;
-            this.ucJobCategory.Visible = false;
-            // 
-            // ucSkills
-            // 
-            this.ucSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucSkills.ForeColor = System.Drawing.Color.Black;
-            this.ucSkills.Location = new System.Drawing.Point(241, 56);
-            this.ucSkills.Name = "ucSkills";
-            this.ucSkills.Size = new System.Drawing.Size(100, 100);
-            this.ucSkills.TabIndex = 35;
-            this.ucSkills.Visible = false;
+            this.ucJobs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobs.ForeColor = System.Drawing.Color.Black;
+            this.ucJobs.Location = new System.Drawing.Point(822, 56);
+            this.ucJobs.Name = "ucJobs";
+            this.ucJobs.Size = new System.Drawing.Size(100, 100);
+            this.ucJobs.TabIndex = 37;
+            this.ucJobs.Visible = false;
             // 
             // ucRequirements
             // 
             this.ucRequirements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ucRequirements.ForeColor = System.Drawing.Color.Black;
-            this.ucRequirements.Location = new System.Drawing.Point(347, 56);
+            this.ucRequirements.Location = new System.Drawing.Point(666, 56);
             this.ucRequirements.Name = "ucRequirements";
             this.ucRequirements.Size = new System.Drawing.Size(150, 100);
             this.ucRequirements.TabIndex = 36;
             this.ucRequirements.Visible = false;
             // 
-            // ucJobs
+            // ucSkills
             // 
-            this.ucJobs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ucJobs.ForeColor = System.Drawing.Color.Black;
-            this.ucJobs.Location = new System.Drawing.Point(503, 56);
-            this.ucJobs.Name = "ucJobs";
-            this.ucJobs.Size = new System.Drawing.Size(100, 100);
-            this.ucJobs.TabIndex = 37;
-            this.ucJobs.Visible = false;
+            this.ucSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucSkills.ForeColor = System.Drawing.Color.Black;
+            this.ucSkills.Location = new System.Drawing.Point(560, 56);
+            this.ucSkills.Name = "ucSkills";
+            this.ucSkills.Size = new System.Drawing.Size(100, 100);
+            this.ucSkills.TabIndex = 35;
+            this.ucSkills.Visible = false;
+            // 
+            // ucJobCategory
+            // 
+            this.ucJobCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucJobCategory.ForeColor = System.Drawing.Color.Black;
+            this.ucJobCategory.Location = new System.Drawing.Point(434, 56);
+            this.ucJobCategory.Name = "ucJobCategory";
+            this.ucJobCategory.Size = new System.Drawing.Size(120, 100);
+            this.ucJobCategory.TabIndex = 34;
+            this.ucJobCategory.Visible = false;
+            // 
+            // ucFees
+            // 
+            this.ucFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ucFees.ForeColor = System.Drawing.Color.Black;
+            this.ucFees.Location = new System.Drawing.Point(328, 56);
+            this.ucFees.Name = "ucFees";
+            this.ucFees.Size = new System.Drawing.Size(100, 100);
+            this.ucFees.TabIndex = 33;
+            this.ucFees.Visible = false;
             // 
             // ucGenReqs
             // 

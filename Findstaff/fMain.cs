@@ -22,6 +22,7 @@ namespace Findstaff
         public fMain()
         {
             InitializeComponent();
+            ucJobOrderManagement.Dock = DockStyle.Fill;
             ucRecruitment.Dock = DockStyle.Fill;
             ucDocumentation.Dock = DockStyle.Fill;
             ucAcco.Dock = DockStyle.Fill;
@@ -60,8 +61,18 @@ namespace Findstaff
             }
         }
 
+        private void rbJobOrderManagement_CheckedChanged(object sender, EventArgs e)
+        {
+            ucJobOrderManagement.Visible = true;
+            ucRecruitment.Visible = false;
+            ucDocumentation.Visible = false;
+            ucAcco.Visible = false;
+            ucMaintenance.Visible = false;
+        }
+
         private void rbRecruitment_CheckedChanged(object sender, EventArgs e)
         {
+            ucJobOrderManagement.Visible = false;
             ucRecruitment.Visible = true;
             ucDocumentation.Visible = false;
             ucAcco.Visible = false;
@@ -70,10 +81,12 @@ namespace Findstaff
 
         private void rbDocumentation_CheckedChanged(object sender, EventArgs e)
         {
+            ucJobOrderManagement.Visible = false;
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = true;
             ucAcco.Visible = false;
             ucMaintenance.Visible = false;
+
             connection.Open();
             cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', count(ad.req_id)'No. of Documents to be passed' "
                     + "from app_t app join appdoc_t ad "
@@ -92,6 +105,7 @@ namespace Findstaff
 
         private void rbAcco_CheckedChanged(object sender, EventArgs e)
         {
+            ucJobOrderManagement.Visible = false;
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = false;
             ucAcco.Visible = true;
@@ -100,12 +114,13 @@ namespace Findstaff
 
         private void rbMaintenance_CheckedChanged(object sender, EventArgs e)
         {
+            ucJobOrderManagement.Visible = false;
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = false;
             ucAcco.Visible = false;
             ucMaintenance.Visible = true;
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToLongDateString();

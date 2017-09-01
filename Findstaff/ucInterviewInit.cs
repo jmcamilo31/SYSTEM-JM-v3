@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace Findstaff
 {
-    public partial class ucInterviewInitFin : UserControl
+    public partial class ucInterviewInit : UserControl
     {
-        public ucInterviewInitFin()
+        public ucInterviewInit()
         {
             InitializeComponent();
-            panel1.Dock = DockStyle.Fill;
         }
 
-        private void btnViewIntList1_Click(object sender, EventArgs e)
+        private void btnViewIntList_Click(object sender, EventArgs e)
         {
             ucIntListInit.Dock = DockStyle.Fill;
             ucIntListInit.Visible = true;
-        }
-
-        private void btnViewIntList2_Click(object sender, EventArgs e)
-        {
-            ucIntListFinal.Dock = DockStyle.Fill;
-            ucIntListFinal.Visible = true;
         }
     }
 }

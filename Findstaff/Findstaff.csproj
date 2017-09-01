@@ -178,6 +178,12 @@
     <Compile Include="ucGenReqs.Designer.cs">
       <DependentUpon>ucGenReqs.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucInterviewFin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInterviewFin.Designer.cs">
+      <DependentUpon>ucInterviewFin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucIntListFinal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,11 +196,11 @@
     <Compile Include="ucIntListInit.Designer.cs">
       <DependentUpon>ucIntListInit.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucInterviewInitFin.cs">
+    <Compile Include="ucInterviewInit.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucInterviewInitFin.Designer.cs">
-      <DependentUpon>ucInterviewInitFin.cs</DependentUpon>
+    <Compile Include="ucInterviewInit.Designer.cs">
+      <DependentUpon>ucInterviewInit.cs</DependentUpon>
     </Compile>
     <Compile Include="ucJobApp.cs">
       <SubType>UserControl</SubType>
@@ -249,6 +255,12 @@
     </Compile>
     <Compile Include="ucJobOrderAddEdit.Designer.cs">
       <DependentUpon>ucJobOrderAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucJobOrderManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucJobOrderManagement.Designer.cs">
+      <DependentUpon>ucJobOrderManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="ucJobs.cs">
       <SubType>UserControl</SubType>
@@ -396,14 +408,17 @@
     <EmbeddedResource Include="ucGenReqs.resx">
       <DependentUpon>ucGenReqs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucInterviewFin.resx">
+      <DependentUpon>ucInterviewFin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucIntListFinal.resx">
       <DependentUpon>ucIntListFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucIntListInit.resx">
       <DependentUpon>ucIntListInit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucInterviewInitFin.resx">
-      <DependentUpon>ucInterviewInitFin.cs</DependentUpon>
+    <EmbeddedResource Include="ucInterviewInit.resx">
+      <DependentUpon>ucInterviewInit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucJobApp.resx">
       <DependentUpon>ucJobApp.cs</DependentUpon>
@@ -431,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucJobOrderAddEdit.resx">
       <DependentUpon>ucJobOrderAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucJobOrderManagement.resx">
+      <DependentUpon>ucJobOrderManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucJobs.resx">
       <DependentUpon>ucJobs.cs</DependentUpon>
