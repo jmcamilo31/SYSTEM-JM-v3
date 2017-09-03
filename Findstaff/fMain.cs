@@ -31,9 +31,27 @@ namespace Findstaff
 
         private void Main_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+
+            string lname = "", fname = "", mname = "", deptname = "";
+
             Connection con = new Connection();
             connection = con.dbConnection();
-            timer1.Start();
+            connection.Open();
+            string query = "SELECT * FROM EMP_T;";
+            com = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = com.ExecuteReader();
+            while (dataReader.Read())
+            {
+                lname = dataReader.GetString(3);
+                fname = dataReader.GetString(4);
+                mname = dataReader.GetString(5);
+                deptname = dataReader.GetString(10);
+            }
+            connection.Close();
+
+            lblName.Text = (fname + mname + lname);
+            lblDept.Text = deptname;
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

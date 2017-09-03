@@ -296,6 +296,7 @@
             this.Controls.Add(this.lblViewEmp);
             this.Name = "ucEmployeeView";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucEmployeeView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

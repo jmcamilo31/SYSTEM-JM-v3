@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnViewIntList = new System.Windows.Forms.Button();
             this.dgvInitInt = new System.Windows.Forms.DataGridView();
             this.lblInitInt = new System.Windows.Forms.Label();
@@ -53,9 +56,45 @@
             // 
             // dgvInitInt
             // 
+            this.dgvInitInt.AllowUserToAddRows = false;
+            this.dgvInitInt.AllowUserToDeleteRows = false;
+            this.dgvInitInt.AllowUserToResizeColumns = false;
+            this.dgvInitInt.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInitInt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInitInt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInitInt.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvInitInt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInitInt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInitInt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInitInt.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInitInt.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvInitInt.Location = new System.Drawing.Point(100, 100);
+            this.dgvInitInt.MultiSelect = false;
             this.dgvInitInt.Name = "dgvInitInt";
+            this.dgvInitInt.ReadOnly = true;
+            this.dgvInitInt.RowHeadersVisible = false;
+            this.dgvInitInt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvInitInt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInitInt.Size = new System.Drawing.Size(918, 200);
             this.dgvInitInt.TabIndex = 42;
             // 
@@ -99,8 +138,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnViewIntList;
-        private System.Windows.Forms.DataGridView dgvInitInt;
         private System.Windows.Forms.Label lblInitInt;
         private ucIntListInit ucIntListInit;
+        public System.Windows.Forms.DataGridView dgvInitInt;
     }
 }

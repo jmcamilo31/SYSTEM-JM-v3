@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblIntervieweeList = new System.Windows.Forms.Label();
             this.lblEmp = new System.Windows.Forms.Label();
             this.lblJobOrder = new System.Windows.Forms.Label();
@@ -36,6 +39,9 @@
             this.dgvIntervieweeList = new System.Windows.Forms.DataGridView();
             this.btnFailInt = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.employer = new System.Windows.Forms.Label();
+            this.joborder = new System.Windows.Forms.Label();
+            this.jobname = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntervieweeList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +107,45 @@
             // 
             // dgvIntervieweeList
             // 
+            this.dgvIntervieweeList.AllowUserToAddRows = false;
+            this.dgvIntervieweeList.AllowUserToDeleteRows = false;
+            this.dgvIntervieweeList.AllowUserToResizeColumns = false;
+            this.dgvIntervieweeList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvIntervieweeList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvIntervieweeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvIntervieweeList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvIntervieweeList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIntervieweeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvIntervieweeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIntervieweeList.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvIntervieweeList.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvIntervieweeList.Location = new System.Drawing.Point(100, 140);
+            this.dgvIntervieweeList.MultiSelect = false;
             this.dgvIntervieweeList.Name = "dgvIntervieweeList";
+            this.dgvIntervieweeList.ReadOnly = true;
+            this.dgvIntervieweeList.RowHeadersVisible = false;
+            this.dgvIntervieweeList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvIntervieweeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIntervieweeList.Size = new System.Drawing.Size(918, 200);
             this.dgvIntervieweeList.TabIndex = 43;
             // 
@@ -139,11 +181,50 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // employer
+            // 
+            this.employer.AutoSize = true;
+            this.employer.BackColor = System.Drawing.Color.Transparent;
+            this.employer.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer.ForeColor = System.Drawing.Color.Black;
+            this.employer.Location = new System.Drawing.Point(857, 100);
+            this.employer.Name = "employer";
+            this.employer.Size = new System.Drawing.Size(85, 19);
+            this.employer.TabIndex = 490;
+            this.employer.Text = "employer";
+            // 
+            // joborder
+            // 
+            this.joborder.AutoSize = true;
+            this.joborder.BackColor = System.Drawing.Color.Transparent;
+            this.joborder.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joborder.ForeColor = System.Drawing.Color.Black;
+            this.joborder.Location = new System.Drawing.Point(198, 100);
+            this.joborder.Name = "joborder";
+            this.joborder.Size = new System.Drawing.Size(76, 19);
+            this.joborder.TabIndex = 489;
+            this.joborder.Text = "joborder";
+            // 
+            // jobname
+            // 
+            this.jobname.AutoSize = true;
+            this.jobname.BackColor = System.Drawing.Color.Transparent;
+            this.jobname.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobname.ForeColor = System.Drawing.Color.Black;
+            this.jobname.Location = new System.Drawing.Point(496, 100);
+            this.jobname.Name = "jobname";
+            this.jobname.Size = new System.Drawing.Size(78, 19);
+            this.jobname.TabIndex = 488;
+            this.jobname.Text = "jobname";
+            // 
             // ucIntListInit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.employer);
+            this.Controls.Add(this.joborder);
+            this.Controls.Add(this.jobname);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnFailInt);
             this.Controls.Add(this.btnPassInt);
@@ -154,6 +235,7 @@
             this.Controls.Add(this.lblIntervieweeList);
             this.Name = "ucIntListInit";
             this.Size = new System.Drawing.Size(1118, 450);
+            this.Load += new System.EventHandler(this.ucIntListInit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntervieweeList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,8 +249,11 @@
         private System.Windows.Forms.Label lblJobOrder;
         private System.Windows.Forms.Label lblJob;
         private System.Windows.Forms.Button btnPassInt;
-        private System.Windows.Forms.DataGridView dgvIntervieweeList;
         private System.Windows.Forms.Button btnFailInt;
         private System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.DataGridView dgvIntervieweeList;
+        private System.Windows.Forms.Label employer;
+        private System.Windows.Forms.Label joborder;
+        private System.Windows.Forms.Label jobname;
     }
 }

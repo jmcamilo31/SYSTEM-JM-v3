@@ -28,6 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -36,7 +48,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.btnEditJob = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvReqdDocs2 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
@@ -44,7 +56,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dgvSkills2 = new System.Windows.Forms.DataGridView();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -52,12 +64,9 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblNoOfEmpReqd2 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -75,7 +84,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.btnRemoveSkill = new System.Windows.Forms.Button();
             this.cbSkillName = new System.Windows.Forms.ComboBox();
-            this.dgvReq1 = new System.Windows.Forms.DataGridView();
+            this.dgvReqdDocs1 = new System.Windows.Forms.DataGridView();
             this.btnReqAdd = new System.Windows.Forms.Button();
             this.btnAddSkill = new System.Windows.Forms.Button();
             this.cbProf = new System.Windows.Forms.ComboBox();
@@ -91,14 +100,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSkills1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSalary1 = new System.Windows.Forms.TextBox();
-            this.lblSpecDocReq = new System.Windows.Forms.Label();
+            this.lblNoOfEmpReqd = new System.Windows.Forms.Label();
             this.txtReqApp1 = new System.Windows.Forms.TextBox();
             this.lblPrincipal1 = new System.Windows.Forms.Label();
             this.lblCountry1 = new System.Windows.Forms.Label();
@@ -106,10 +112,10 @@
             this.lblAddJobList = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReqdDocs2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReq1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReqdDocs1)).BeginInit();
             this.pnlEmpBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills1)).BeginInit();
             this.SuspendLayout();
@@ -122,7 +128,7 @@
             this.panel2.Controls.Add(this.comboBox3);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dataGridView4);
+            this.panel2.Controls.Add(this.dgvReqdDocs2);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.comboBox9);
@@ -130,7 +136,7 @@
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label30);
             this.panel2.Controls.Add(this.label31);
-            this.panel2.Controls.Add(this.dataGridView5);
+            this.panel2.Controls.Add(this.dgvSkills2);
             this.panel2.Controls.Add(this.textBox14);
             this.panel2.Controls.Add(this.textBox13);
             this.panel2.Controls.Add(this.label27);
@@ -138,12 +144,9 @@
             this.panel2.Controls.Add(this.textBox8);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.lblNoOfEmpReqd2);
             this.panel2.Controls.Add(this.textBox10);
             this.panel2.Controls.Add(this.textBox11);
             this.panel2.Controls.Add(this.textBox12);
@@ -248,13 +251,49 @@
             this.btnEditJob.UseVisualStyleBackColor = false;
             this.btnEditJob.Click += new System.EventHandler(this.btnEditJob_Click);
             // 
-            // dataGridView4
+            // dgvReqdDocs2
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(100, 656);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(900, 150);
-            this.dataGridView4.TabIndex = 74;
+            this.dgvReqdDocs2.AllowUserToAddRows = false;
+            this.dgvReqdDocs2.AllowUserToDeleteRows = false;
+            this.dgvReqdDocs2.AllowUserToResizeColumns = false;
+            this.dgvReqdDocs2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvReqdDocs2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvReqdDocs2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReqdDocs2.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvReqdDocs2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReqdDocs2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvReqdDocs2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReqdDocs2.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvReqdDocs2.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvReqdDocs2.Location = new System.Drawing.Point(100, 656);
+            this.dgvReqdDocs2.MultiSelect = false;
+            this.dgvReqdDocs2.Name = "dgvReqdDocs2";
+            this.dgvReqdDocs2.ReadOnly = true;
+            this.dgvReqdDocs2.RowHeadersVisible = false;
+            this.dgvReqdDocs2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvReqdDocs2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReqdDocs2.Size = new System.Drawing.Size(900, 150);
+            this.dgvReqdDocs2.TabIndex = 74;
             // 
             // button5
             // 
@@ -345,35 +384,73 @@
             this.label31.TabIndex = 65;
             this.label31.Text = "SKILLS";
             // 
-            // dataGridView5
+            // dgvSkills2
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(100, 354);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(900, 150);
-            this.dataGridView5.TabIndex = 64;
+            this.dgvSkills2.AllowUserToAddRows = false;
+            this.dgvSkills2.AllowUserToDeleteRows = false;
+            this.dgvSkills2.AllowUserToResizeColumns = false;
+            this.dgvSkills2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSkills2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvSkills2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSkills2.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvSkills2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSkills2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvSkills2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSkills2.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvSkills2.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvSkills2.Location = new System.Drawing.Point(100, 354);
+            this.dgvSkills2.MultiSelect = false;
+            this.dgvSkills2.Name = "dgvSkills2";
+            this.dgvSkills2.ReadOnly = true;
+            this.dgvSkills2.RowHeadersVisible = false;
+            this.dgvSkills2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSkills2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSkills2.Size = new System.Drawing.Size(900, 150);
+            this.dgvSkills2.TabIndex = 64;
             // 
             // textBox14
             // 
             this.textBox14.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox14.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.ForeColor = System.Drawing.Color.Black;
+            this.textBox14.ForeColor = System.Drawing.Color.DimGray;
             this.textBox14.Location = new System.Drawing.Point(709, 193);
             this.textBox14.MaxLength = 30;
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(150, 26);
             this.textBox14.TabIndex = 63;
+            this.textBox14.Text = "kg";
             // 
             // textBox13
             // 
             this.textBox13.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox13.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.Black;
+            this.textBox13.ForeColor = System.Drawing.Color.DimGray;
             this.textBox13.Location = new System.Drawing.Point(709, 161);
             this.textBox13.MaxLength = 30;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(150, 26);
             this.textBox13.TabIndex = 62;
+            this.textBox13.Text = "cm";
             // 
             // label27
             // 
@@ -391,12 +468,13 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox7.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.ForeColor = System.Drawing.Color.DimGray;
             this.textBox7.Location = new System.Drawing.Point(709, 129);
             this.textBox7.MaxLength = 30;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(150, 26);
             this.textBox7.TabIndex = 60;
+            this.textBox7.Text = "/ month";
             // 
             // textBox8
             // 
@@ -433,42 +511,6 @@
             this.label17.TabIndex = 55;
             this.label17.Text = "Height :";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(865, 197);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 19);
-            this.label18.TabIndex = 54;
-            this.label18.Text = "lbs.";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(865, 165);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 19);
-            this.label19.TabIndex = 53;
-            this.label19.Text = "cm";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(865, 133);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 19);
-            this.label20.TabIndex = 52;
-            this.label20.Text = "/month";
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -492,17 +534,17 @@
             this.textBox9.Size = new System.Drawing.Size(300, 26);
             this.textBox9.TabIndex = 49;
             // 
-            // label22
+            // lblNoOfEmpReqd2
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(99, 196);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(215, 19);
-            this.label22.TabIndex = 48;
-            this.label22.Text = "No. of Applicants Required :";
+            this.lblNoOfEmpReqd2.AutoSize = true;
+            this.lblNoOfEmpReqd2.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoOfEmpReqd2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoOfEmpReqd2.ForeColor = System.Drawing.Color.Black;
+            this.lblNoOfEmpReqd2.Location = new System.Drawing.Point(99, 196);
+            this.lblNoOfEmpReqd2.Name = "lblNoOfEmpReqd2";
+            this.lblNoOfEmpReqd2.Size = new System.Drawing.Size(219, 19);
+            this.lblNoOfEmpReqd2.TabIndex = 48;
+            this.lblNoOfEmpReqd2.Text = "No. of Employees Required :";
             // 
             // textBox10
             // 
@@ -597,7 +639,7 @@
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.btnRemoveSkill);
             this.panel1.Controls.Add(this.cbSkillName);
-            this.panel1.Controls.Add(this.dgvReq1);
+            this.panel1.Controls.Add(this.dgvReqdDocs1);
             this.panel1.Controls.Add(this.btnReqAdd);
             this.panel1.Controls.Add(this.btnAddSkill);
             this.panel1.Controls.Add(this.cbProf);
@@ -611,14 +653,11 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvSkills1);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.txtSalary1);
-            this.panel1.Controls.Add(this.lblSpecDocReq);
+            this.panel1.Controls.Add(this.lblNoOfEmpReqd);
             this.panel1.Controls.Add(this.txtReqApp1);
             this.panel1.Controls.Add(this.lblPrincipal1);
             this.panel1.Controls.Add(this.lblCountry1);
@@ -627,7 +666,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 16;
             // 
             // txtEmployer1
@@ -685,7 +724,7 @@
             this.btnReqRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReqRemove.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReqRemove.ForeColor = System.Drawing.Color.Black;
-            this.btnReqRemove.Location = new System.Drawing.Point(908, 799);
+            this.btnReqRemove.Location = new System.Drawing.Point(904, 793);
             this.btnReqRemove.Name = "btnReqRemove";
             this.btnReqRemove.Size = new System.Drawing.Size(96, 30);
             this.btnReqRemove.TabIndex = 62;
@@ -724,7 +763,7 @@
             this.btnRemoveSkill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveSkill.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveSkill.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveSkill.Location = new System.Drawing.Point(908, 515);
+            this.btnRemoveSkill.Location = new System.Drawing.Point(904, 509);
             this.btnRemoveSkill.Name = "btnRemoveSkill";
             this.btnRemoveSkill.Size = new System.Drawing.Size(96, 30);
             this.btnRemoveSkill.TabIndex = 59;
@@ -743,24 +782,50 @@
             this.cbSkillName.Size = new System.Drawing.Size(300, 27);
             this.cbSkillName.TabIndex = 58;
             // 
-            // dgvReq1
+            // dgvReqdDocs1
             // 
-            this.dgvReq1.AllowUserToAddRows = false;
-            this.dgvReq1.AllowUserToDeleteRows = false;
-            this.dgvReq1.AllowUserToResizeColumns = false;
-            this.dgvReq1.AllowUserToResizeRows = false;
-            this.dgvReq1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvReq1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReq1.ColumnHeadersVisible = false;
-            this.dgvReq1.Location = new System.Drawing.Point(104, 643);
-            this.dgvReq1.MultiSelect = false;
-            this.dgvReq1.Name = "dgvReq1";
-            this.dgvReq1.ReadOnly = true;
-            this.dgvReq1.RowHeadersVisible = false;
-            this.dgvReq1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvReq1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReq1.Size = new System.Drawing.Size(900, 150);
-            this.dgvReq1.TabIndex = 46;
+            this.dgvReqdDocs1.AllowUserToAddRows = false;
+            this.dgvReqdDocs1.AllowUserToDeleteRows = false;
+            this.dgvReqdDocs1.AllowUserToResizeColumns = false;
+            this.dgvReqdDocs1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvReqdDocs1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.dgvReqdDocs1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReqdDocs1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvReqdDocs1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReqdDocs1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dgvReqdDocs1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReqdDocs1.ColumnHeadersVisible = false;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReqdDocs1.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvReqdDocs1.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvReqdDocs1.Location = new System.Drawing.Point(100, 643);
+            this.dgvReqdDocs1.MultiSelect = false;
+            this.dgvReqdDocs1.Name = "dgvReqdDocs1";
+            this.dgvReqdDocs1.ReadOnly = true;
+            this.dgvReqdDocs1.RowHeadersVisible = false;
+            this.dgvReqdDocs1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvReqdDocs1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReqdDocs1.Size = new System.Drawing.Size(900, 150);
+            this.dgvReqdDocs1.TabIndex = 46;
             // 
             // btnReqAdd
             // 
@@ -817,24 +882,26 @@
             // 
             this.txtWeight.BackColor = System.Drawing.Color.Gainsboro;
             this.txtWeight.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.ForeColor = System.Drawing.Color.Black;
+            this.txtWeight.ForeColor = System.Drawing.Color.DimGray;
             this.txtWeight.Location = new System.Drawing.Point(687, 208);
             this.txtWeight.MaxLength = 30;
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(150, 26);
             this.txtWeight.TabIndex = 40;
+            this.txtWeight.Text = "kg";
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // txtHeight
             // 
             this.txtHeight.BackColor = System.Drawing.Color.Gainsboro;
             this.txtHeight.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.ForeColor = System.Drawing.Color.Black;
+            this.txtHeight.ForeColor = System.Drawing.Color.DimGray;
             this.txtHeight.Location = new System.Drawing.Point(687, 172);
             this.txtHeight.MaxLength = 30;
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(150, 26);
             this.txtHeight.TabIndex = 39;
+            this.txtHeight.Text = "cm";
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
             // 
             // cbCategory1
@@ -964,42 +1031,6 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Height :";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(844, 212);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 19);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "lbs.";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(843, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 19);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "cm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(843, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 19);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "/month";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1018,10 +1049,35 @@
             this.dgvSkills1.AllowUserToDeleteRows = false;
             this.dgvSkills1.AllowUserToResizeColumns = false;
             this.dgvSkills1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSkills1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvSkills1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSkills1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvSkills1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSkills1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvSkills1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSkills1.ColumnHeadersVisible = false;
-            this.dgvSkills1.Location = new System.Drawing.Point(104, 359);
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSkills1.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvSkills1.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvSkills1.Location = new System.Drawing.Point(100, 359);
             this.dgvSkills1.MultiSelect = false;
             this.dgvSkills1.Name = "dgvSkills1";
             this.dgvSkills1.ReadOnly = true;
@@ -1051,25 +1107,26 @@
             // 
             this.txtSalary1.BackColor = System.Drawing.Color.Gainsboro;
             this.txtSalary1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary1.ForeColor = System.Drawing.Color.Black;
+            this.txtSalary1.ForeColor = System.Drawing.Color.DimGray;
             this.txtSalary1.Location = new System.Drawing.Point(687, 136);
             this.txtSalary1.MaxLength = 30;
             this.txtSalary1.Name = "txtSalary1";
             this.txtSalary1.Size = new System.Drawing.Size(150, 26);
             this.txtSalary1.TabIndex = 16;
+            this.txtSalary1.Text = "/ month";
             this.txtSalary1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary1_KeyPress);
             // 
-            // lblSpecDocReq
+            // lblNoOfEmpReqd
             // 
-            this.lblSpecDocReq.AutoSize = true;
-            this.lblSpecDocReq.BackColor = System.Drawing.Color.Transparent;
-            this.lblSpecDocReq.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecDocReq.ForeColor = System.Drawing.Color.Black;
-            this.lblSpecDocReq.Location = new System.Drawing.Point(100, 239);
-            this.lblSpecDocReq.Name = "lblSpecDocReq";
-            this.lblSpecDocReq.Size = new System.Drawing.Size(215, 19);
-            this.lblSpecDocReq.TabIndex = 15;
-            this.lblSpecDocReq.Text = "No. of Applicants Required :";
+            this.lblNoOfEmpReqd.AutoSize = true;
+            this.lblNoOfEmpReqd.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoOfEmpReqd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoOfEmpReqd.ForeColor = System.Drawing.Color.Black;
+            this.lblNoOfEmpReqd.Location = new System.Drawing.Point(100, 239);
+            this.lblNoOfEmpReqd.Name = "lblNoOfEmpReqd";
+            this.lblNoOfEmpReqd.Size = new System.Drawing.Size(219, 19);
+            this.lblNoOfEmpReqd.TabIndex = 15;
+            this.lblNoOfEmpReqd.Text = "No. of Employees Required :";
             // 
             // txtReqApp1
             // 
@@ -1144,11 +1201,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReqdDocs2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReq1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReqdDocs1)).EndInit();
             this.pnlEmpBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills1)).EndInit();
             this.ResumeLayout(false);
@@ -1165,14 +1222,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvSkills1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtSalary1;
-        private System.Windows.Forms.Label lblSpecDocReq;
+        private System.Windows.Forms.Label lblNoOfEmpReqd;
         private System.Windows.Forms.TextBox txtReqApp1;
         private System.Windows.Forms.Label lblPrincipal1;
         private System.Windows.Forms.Label lblCountry1;
@@ -1184,7 +1237,6 @@
         private System.Windows.Forms.Panel pnlEmpBtn;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnAddAll;
-        private System.Windows.Forms.DataGridView dgvReq1;
         private System.Windows.Forms.Button btnReqAdd;
         private System.Windows.Forms.Button btnAddSkill;
         private System.Windows.Forms.ComboBox cbProf;
@@ -1192,12 +1244,9 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblNoOfEmpReqd2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
@@ -1209,7 +1258,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.Button btnEditJob;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox comboBox9;
@@ -1217,7 +1265,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label27;
@@ -1233,5 +1280,9 @@
         private System.Windows.Forms.ComboBox cbJOrder1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtEmployer1;
+        public System.Windows.Forms.DataGridView dgvSkills2;
+        public System.Windows.Forms.DataGridView dgvReqdDocs2;
+        public System.Windows.Forms.DataGridView dgvSkills1;
+        public System.Windows.Forms.DataGridView dgvReqdDocs1;
     }
 }

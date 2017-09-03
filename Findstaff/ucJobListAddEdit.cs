@@ -79,9 +79,9 @@ namespace Findstaff
             com = new MySqlCommand(cmd, connection);
             com.ExecuteNonQuery();
             cmd = "insert into jobdocs_t values ";
-            for (int x = 0; x < dgvReq1.Rows.Count; x++)
+            for (int x = 0; x < dgvReqdDocs1.Rows.Count; x++)
             {
-                cmd2 = "select req_id from genreqs_t where reqname = '"+ dgvReq1.Rows[x].Cells[0].Value.ToString() + "'";
+                cmd2 = "select req_id from genreqs_t where reqname = '"+ dgvReqdDocs1.Rows[x].Cells[0].Value.ToString() + "'";
                 com = new MySqlCommand(cmd, connection);
                 dr = com.ExecuteReader();
                 while (dr.Read())
@@ -90,7 +90,7 @@ namespace Findstaff
                 }
                 dr.Close();
                 cmd += "('" + cbJOrder1.Text + "','" + empID + "','" + catID + "','" + jobID + "','" + reqID + "')";
-                if (x < dgvReq1.Rows.Count - 1)
+                if (x < dgvReqdDocs1.Rows.Count - 1)
                 {
                     cmd += ",";
                 }
@@ -110,9 +110,9 @@ namespace Findstaff
                 cbSkillName.Items.Add(dgvSkills1.Rows[x].Cells[0].Value.ToString());
             }
             dgvSkills1.Rows.Clear();
-            for (int x = 0; x < dgvReq1.Rows.Count; x++)
+            for (int x = 0; x < dgvReqdDocs1.Rows.Count; x++)
             {
-                cbSkillName.Items.Add(dgvReq1.Rows[x].Cells[0].Value.ToString());
+                cbSkillName.Items.Add(dgvReqdDocs1.Rows[x].Cells[0].Value.ToString());
             }
             dgvSkills1.Rows.Clear();
         }
@@ -133,9 +133,9 @@ namespace Findstaff
                 cbSkillName.Items.Add(dgvSkills1.Rows[x].Cells[0].Value.ToString());
             }
             dgvSkills1.Rows.Clear();
-            for (int x = 0; x < dgvReq1.Rows.Count; x++)
+            for (int x = 0; x < dgvReqdDocs1.Rows.Count; x++)
             {
-                cbSkillName.Items.Add(dgvReq1.Rows[x].Cells[0].Value.ToString());
+                cbSkillName.Items.Add(dgvReqdDocs1.Rows[x].Cells[0].Value.ToString());
             }
             dgvSkills1.Rows.Clear();
             cbJOrder1.Enabled = true;
@@ -254,18 +254,18 @@ namespace Findstaff
         {
             if (cbReqName.Text != "")
             {
-                dgvReq1.ColumnCount = 1;
-                dgvReq1.Rows.Add(cbReqName.Text);
+                dgvReqdDocs1.ColumnCount = 1;
+                dgvReqdDocs1.Rows.Add(cbReqName.Text);
                 cbReqName.Items.Remove(cbReqName.Text);
             }
         }
 
         private void btnReqRemove_Click(object sender, EventArgs e)
         {
-            if (dgvReq1.Rows.Count != 0)
+            if (dgvReqdDocs1.Rows.Count != 0)
             {
-                cbReqName.Items.Add(dgvReq1.SelectedRows[0].Cells[0].Value.ToString());
-                dgvReq1.Rows.Remove(dgvReq1.SelectedRows[0]);
+                cbReqName.Items.Add(dgvReqdDocs1.SelectedRows[0].Cells[0].Value.ToString());
+                dgvReqdDocs1.Rows.Remove(dgvReqdDocs1.SelectedRows[0]);
             }
         }
 

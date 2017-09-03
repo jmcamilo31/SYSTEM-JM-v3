@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblViewAcco = new System.Windows.Forms.Label();
             this.lblApp = new System.Windows.Forms.Label();
             this.lblJobName = new System.Windows.Forms.Label();
@@ -37,12 +40,17 @@
             this.btnPayBal = new System.Windows.Forms.Button();
             this.pnlTabs = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.applicant = new System.Windows.Forms.Label();
+            this.jobname = new System.Windows.Forms.Label();
+            this.joborder = new System.Windows.Forms.Label();
+            this.employer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAcco)).BeginInit();
             this.SuspendLayout();
             // 
             // lblViewAcco
             // 
             this.lblViewAcco.AutoSize = true;
+            this.lblViewAcco.BackColor = System.Drawing.Color.Transparent;
             this.lblViewAcco.Font = new System.Drawing.Font("Rockwell", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewAcco.ForeColor = System.Drawing.Color.Black;
             this.lblViewAcco.Location = new System.Drawing.Point(25, 75);
@@ -54,6 +62,7 @@
             // lblApp
             // 
             this.lblApp.AutoSize = true;
+            this.lblApp.BackColor = System.Drawing.Color.Transparent;
             this.lblApp.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApp.ForeColor = System.Drawing.Color.Black;
             this.lblApp.Location = new System.Drawing.Point(100, 150);
@@ -65,6 +74,7 @@
             // lblJobName
             // 
             this.lblJobName.AutoSize = true;
+            this.lblJobName.BackColor = System.Drawing.Color.Transparent;
             this.lblJobName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobName.ForeColor = System.Drawing.Color.Black;
             this.lblJobName.Location = new System.Drawing.Point(100, 180);
@@ -76,6 +86,7 @@
             // lblJobOrder
             // 
             this.lblJobOrder.AutoSize = true;
+            this.lblJobOrder.BackColor = System.Drawing.Color.Transparent;
             this.lblJobOrder.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobOrder.ForeColor = System.Drawing.Color.Black;
             this.lblJobOrder.Location = new System.Drawing.Point(600, 150);
@@ -87,6 +98,7 @@
             // lblEmp
             // 
             this.lblEmp.AutoSize = true;
+            this.lblEmp.BackColor = System.Drawing.Color.Transparent;
             this.lblEmp.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmp.ForeColor = System.Drawing.Color.Black;
             this.lblEmp.Location = new System.Drawing.Point(600, 180);
@@ -97,9 +109,45 @@
             // 
             // dgvViewAcco
             // 
+            this.dgvViewAcco.AllowUserToAddRows = false;
+            this.dgvViewAcco.AllowUserToDeleteRows = false;
+            this.dgvViewAcco.AllowUserToResizeColumns = false;
+            this.dgvViewAcco.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvViewAcco.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvViewAcco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvViewAcco.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvViewAcco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvViewAcco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvViewAcco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvViewAcco.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvViewAcco.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvViewAcco.Location = new System.Drawing.Point(100, 220);
+            this.dgvViewAcco.MultiSelect = false;
             this.dgvViewAcco.Name = "dgvViewAcco";
+            this.dgvViewAcco.ReadOnly = true;
+            this.dgvViewAcco.RowHeadersVisible = false;
+            this.dgvViewAcco.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvViewAcco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvViewAcco.Size = new System.Drawing.Size(918, 200);
             this.dgvViewAcco.TabIndex = 5;
             // 
@@ -148,12 +196,64 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // applicant
+            // 
+            this.applicant.AutoSize = true;
+            this.applicant.BackColor = System.Drawing.Color.Transparent;
+            this.applicant.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant.ForeColor = System.Drawing.Color.Black;
+            this.applicant.Location = new System.Drawing.Point(194, 150);
+            this.applicant.Name = "applicant";
+            this.applicant.Size = new System.Drawing.Size(84, 19);
+            this.applicant.TabIndex = 62;
+            this.applicant.Text = "applicant";
+            // 
+            // jobname
+            // 
+            this.jobname.AutoSize = true;
+            this.jobname.BackColor = System.Drawing.Color.Transparent;
+            this.jobname.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobname.ForeColor = System.Drawing.Color.Black;
+            this.jobname.Location = new System.Drawing.Point(196, 180);
+            this.jobname.Name = "jobname";
+            this.jobname.Size = new System.Drawing.Size(78, 19);
+            this.jobname.TabIndex = 63;
+            this.jobname.Text = "jobname";
+            // 
+            // joborder
+            // 
+            this.joborder.AutoSize = true;
+            this.joborder.BackColor = System.Drawing.Color.Transparent;
+            this.joborder.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joborder.ForeColor = System.Drawing.Color.Black;
+            this.joborder.Location = new System.Drawing.Point(698, 150);
+            this.joborder.Name = "joborder";
+            this.joborder.Size = new System.Drawing.Size(76, 19);
+            this.joborder.TabIndex = 64;
+            this.joborder.Text = "joborder";
+            // 
+            // employer
+            // 
+            this.employer.AutoSize = true;
+            this.employer.BackColor = System.Drawing.Color.Transparent;
+            this.employer.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer.ForeColor = System.Drawing.Color.Black;
+            this.employer.Location = new System.Drawing.Point(696, 180);
+            this.employer.Name = "employer";
+            this.employer.Size = new System.Drawing.Size(85, 19);
+            this.employer.TabIndex = 65;
+            this.employer.Text = "employer";
+            // 
             // ucAccoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.employer);
+            this.Controls.Add(this.joborder);
+            this.Controls.Add(this.jobname);
+            this.Controls.Add(this.applicant);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlTabs);
             this.Controls.Add(this.btnPayBal);
@@ -165,6 +265,7 @@
             this.Controls.Add(this.lblViewAcco);
             this.Name = "ucAccoView";
             this.Size = new System.Drawing.Size(1118, 500);
+            this.Load += new System.EventHandler(this.ucAccoView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAcco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,9 +279,13 @@
         private System.Windows.Forms.Label lblJobName;
         private System.Windows.Forms.Label lblJobOrder;
         private System.Windows.Forms.Label lblEmp;
-        private System.Windows.Forms.DataGridView dgvViewAcco;
         private System.Windows.Forms.Button btnPayBal;
         private System.Windows.Forms.Panel pnlTabs;
         private System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.DataGridView dgvViewAcco;
+        private System.Windows.Forms.Label applicant;
+        private System.Windows.Forms.Label jobname;
+        private System.Windows.Forms.Label joborder;
+        private System.Windows.Forms.Label employer;
     }
 }

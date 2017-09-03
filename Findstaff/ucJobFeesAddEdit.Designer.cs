@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRemoveFee = new System.Windows.Forms.Button();
             this.btnStart1 = new System.Windows.Forms.Button();
             this.cbJobOrder1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,13 +47,13 @@
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.btnAddAll = new System.Windows.Forms.Button();
             this.dgvFees1 = new System.Windows.Forms.DataGridView();
-            this.btnRemoveFee = new System.Windows.Forms.Button();
             this.btnAddFee1 = new System.Windows.Forms.Button();
             this.cbFees1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,8 +62,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dgvFees2 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,12 +74,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnRemoveFee);
             this.panel1.Controls.Add(this.btnStart1);
             this.panel1.Controls.Add(this.cbJobOrder1);
             this.panel1.Controls.Add(this.label3);
@@ -83,7 +90,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.dgvFees1);
-            this.panel1.Controls.Add(this.btnRemoveFee);
             this.panel1.Controls.Add(this.btnAddFee1);
             this.panel1.Controls.Add(this.cbFees1);
             this.panel1.Controls.Add(this.label7);
@@ -92,8 +98,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(878, 450);
+            this.panel1.Size = new System.Drawing.Size(10, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // btnRemoveFee
+            // 
+            this.btnRemoveFee.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnRemoveFee.Enabled = false;
+            this.btnRemoveFee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoveFee.FlatAppearance.BorderSize = 0;
+            this.btnRemoveFee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveFee.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveFee.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoveFee.Location = new System.Drawing.Point(900, 390);
+            this.btnRemoveFee.Name = "btnRemoveFee";
+            this.btnRemoveFee.Size = new System.Drawing.Size(100, 30);
+            this.btnRemoveFee.TabIndex = 277;
+            this.btnRemoveFee.Text = "REMOVE";
+            this.btnRemoveFee.UseVisualStyleBackColor = false;
+            this.btnRemoveFee.Click += new System.EventHandler(this.btnRemoveFee_Click);
             // 
             // btnStart1
             // 
@@ -242,34 +265,44 @@
             this.dgvFees1.AllowUserToDeleteRows = false;
             this.dgvFees1.AllowUserToResizeColumns = false;
             this.dgvFees1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFees1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFees1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFees1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvFees1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFees1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFees1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFees1.ColumnHeadersVisible = false;
-            this.dgvFees1.Location = new System.Drawing.Point(104, 240);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFees1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFees1.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvFees1.Location = new System.Drawing.Point(100, 240);
             this.dgvFees1.MultiSelect = false;
             this.dgvFees1.Name = "dgvFees1";
             this.dgvFees1.ReadOnly = true;
             this.dgvFees1.RowHeadersVisible = false;
+            this.dgvFees1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvFees1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFees1.Size = new System.Drawing.Size(918, 150);
+            this.dgvFees1.Size = new System.Drawing.Size(900, 150);
             this.dgvFees1.TabIndex = 278;
-            // 
-            // btnRemoveFee
-            // 
-            this.btnRemoveFee.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnRemoveFee.Enabled = false;
-            this.btnRemoveFee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRemoveFee.FlatAppearance.BorderSize = 0;
-            this.btnRemoveFee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveFee.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveFee.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveFee.Location = new System.Drawing.Point(922, 396);
-            this.btnRemoveFee.Name = "btnRemoveFee";
-            this.btnRemoveFee.Size = new System.Drawing.Size(100, 30);
-            this.btnRemoveFee.TabIndex = 277;
-            this.btnRemoveFee.Text = "REMOVE";
-            this.btnRemoveFee.UseVisualStyleBackColor = false;
-            this.btnRemoveFee.Click += new System.EventHandler(this.btnRemoveFee_Click);
             // 
             // btnAddFee1
             // 
@@ -340,14 +373,14 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.dgvFees2);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label10);
@@ -359,6 +392,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 450);
             this.panel2.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(900, 390);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 30);
+            this.button4.TabIndex = 277;
+            this.button4.Text = "REMOVE";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -466,28 +514,49 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dataGridView1
+            // dgvFees2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(100, 240);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(918, 150);
-            this.dataGridView1.TabIndex = 278;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(918, 396);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 30);
-            this.button4.TabIndex = 277;
-            this.button4.Text = "REMOVE";
-            this.button4.UseVisualStyleBackColor = false;
+            this.dgvFees2.AllowUserToAddRows = false;
+            this.dgvFees2.AllowUserToDeleteRows = false;
+            this.dgvFees2.AllowUserToResizeColumns = false;
+            this.dgvFees2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFees2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFees2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFees2.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvFees2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFees2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFees2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFees2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvFees2.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvFees2.Location = new System.Drawing.Point(100, 240);
+            this.dgvFees2.MultiSelect = false;
+            this.dgvFees2.Name = "dgvFees2";
+            this.dgvFees2.ReadOnly = true;
+            this.dgvFees2.RowHeadersVisible = false;
+            this.dgvFees2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvFees2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFees2.Size = new System.Drawing.Size(900, 150);
+            this.dgvFees2.TabIndex = 278;
             // 
             // button5
             // 
@@ -593,7 +662,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -602,7 +671,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnAddAll;
-        private System.Windows.Forms.DataGridView dgvFees1;
         private System.Windows.Forms.Button btnRemoveFee;
         private System.Windows.Forms.Button btnAddFee1;
         private System.Windows.Forms.ComboBox cbFees1;
@@ -622,7 +690,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCancel2;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -634,5 +701,7 @@
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbJobOrder1;
         private System.Windows.Forms.Button btnStart1;
+        public System.Windows.Forms.DataGridView dgvFees1;
+        public System.Windows.Forms.DataGridView dgvFees2;
     }
 }

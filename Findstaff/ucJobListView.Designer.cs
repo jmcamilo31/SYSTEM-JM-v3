@@ -28,37 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblSpecDocReq = new System.Windows.Forms.Label();
+            this.lblNoOfEmpReqd = new System.Windows.Forms.Label();
             this.lblPrincipal1 = new System.Windows.Forms.Label();
             this.lblCountry1 = new System.Windows.Forms.Label();
             this.lblEmp1 = new System.Windows.Forms.Label();
             this.pnlEmpBtn = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.dgvSpecDocReq1 = new System.Windows.Forms.DataGridView();
+            this.dgvSkills = new System.Windows.Forms.DataGridView();
             this.weight = new System.Windows.Forms.Label();
             this.height = new System.Windows.Forms.Label();
             this.salary = new System.Windows.Forms.Label();
-            this.appreq = new System.Windows.Forms.Label();
-            this.jname = new System.Windows.Forms.Label();
+            this.noofempreq = new System.Windows.Forms.Label();
+            this.jobname = new System.Windows.Forms.Label();
             this.category = new System.Windows.Forms.Label();
-            this.emp = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.employer = new System.Windows.Forms.Label();
+            this.dgvRequiredDocs = new System.Windows.Forms.DataGridView();
+            this.dgvFees = new System.Windows.Forms.DataGridView();
+            this.contractdate = new System.Windows.Forms.Label();
+            this.interdate = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblViewJobList = new System.Windows.Forms.Label();
             this.pnlEmpBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSpecDocReq1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequiredDocs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -133,17 +142,17 @@
             this.label1.TabIndex = 43;
             this.label1.Text = "Salary :  P";
             // 
-            // lblSpecDocReq
+            // lblNoOfEmpReqd
             // 
-            this.lblSpecDocReq.AutoSize = true;
-            this.lblSpecDocReq.BackColor = System.Drawing.Color.Transparent;
-            this.lblSpecDocReq.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecDocReq.ForeColor = System.Drawing.Color.Black;
-            this.lblSpecDocReq.Location = new System.Drawing.Point(346, 208);
-            this.lblSpecDocReq.Name = "lblSpecDocReq";
-            this.lblSpecDocReq.Size = new System.Drawing.Size(215, 19);
-            this.lblSpecDocReq.TabIndex = 42;
-            this.lblSpecDocReq.Text = "No. of Applicants Required :";
+            this.lblNoOfEmpReqd.AutoSize = true;
+            this.lblNoOfEmpReqd.BackColor = System.Drawing.Color.Transparent;
+            this.lblNoOfEmpReqd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoOfEmpReqd.ForeColor = System.Drawing.Color.Black;
+            this.lblNoOfEmpReqd.Location = new System.Drawing.Point(342, 208);
+            this.lblNoOfEmpReqd.Name = "lblNoOfEmpReqd";
+            this.lblNoOfEmpReqd.Size = new System.Drawing.Size(219, 19);
+            this.lblNoOfEmpReqd.TabIndex = 42;
+            this.lblNoOfEmpReqd.Text = "No. of Employees Required :";
             // 
             // lblPrincipal1
             // 
@@ -205,13 +214,49 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // dgvSpecDocReq1
+            // dgvSkills
             // 
-            this.dgvSpecDocReq1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSpecDocReq1.Location = new System.Drawing.Point(106, 490);
-            this.dgvSpecDocReq1.Name = "dgvSpecDocReq1";
-            this.dgvSpecDocReq1.Size = new System.Drawing.Size(900, 150);
-            this.dgvSpecDocReq1.TabIndex = 53;
+            this.dgvSkills.AllowUserToAddRows = false;
+            this.dgvSkills.AllowUserToDeleteRows = false;
+            this.dgvSkills.AllowUserToResizeColumns = false;
+            this.dgvSkills.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSkills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSkills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSkills.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvSkills.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSkills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSkills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSkills.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSkills.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvSkills.Location = new System.Drawing.Point(106, 490);
+            this.dgvSkills.MultiSelect = false;
+            this.dgvSkills.Name = "dgvSkills";
+            this.dgvSkills.ReadOnly = true;
+            this.dgvSkills.RowHeadersVisible = false;
+            this.dgvSkills.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSkills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSkills.Size = new System.Drawing.Size(900, 150);
+            this.dgvSkills.TabIndex = 53;
             // 
             // weight
             // 
@@ -249,29 +294,29 @@
             this.salary.TabIndex = 58;
             this.salary.Text = "salary";
             // 
-            // appreq
+            // noofempreq
             // 
-            this.appreq.AutoSize = true;
-            this.appreq.BackColor = System.Drawing.Color.Transparent;
-            this.appreq.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appreq.ForeColor = System.Drawing.Color.Black;
-            this.appreq.Location = new System.Drawing.Point(588, 208);
-            this.appreq.Name = "appreq";
-            this.appreq.Size = new System.Drawing.Size(64, 19);
-            this.appreq.TabIndex = 57;
-            this.appreq.Text = "appreq";
+            this.noofempreq.AutoSize = true;
+            this.noofempreq.BackColor = System.Drawing.Color.Transparent;
+            this.noofempreq.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noofempreq.ForeColor = System.Drawing.Color.Black;
+            this.noofempreq.Location = new System.Drawing.Point(588, 208);
+            this.noofempreq.Name = "noofempreq";
+            this.noofempreq.Size = new System.Drawing.Size(104, 19);
+            this.noofempreq.TabIndex = 57;
+            this.noofempreq.Text = "noofempreq";
             // 
-            // jname
+            // jobname
             // 
-            this.jname.AutoSize = true;
-            this.jname.BackColor = System.Drawing.Color.Transparent;
-            this.jname.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jname.ForeColor = System.Drawing.Color.Black;
-            this.jname.Location = new System.Drawing.Point(588, 172);
-            this.jname.Name = "jname";
-            this.jname.Size = new System.Drawing.Size(59, 19);
-            this.jname.TabIndex = 56;
-            this.jname.Text = "jname";
+            this.jobname.AutoSize = true;
+            this.jobname.BackColor = System.Drawing.Color.Transparent;
+            this.jobname.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobname.ForeColor = System.Drawing.Color.Black;
+            this.jobname.Location = new System.Drawing.Point(588, 172);
+            this.jobname.Name = "jobname";
+            this.jobname.Size = new System.Drawing.Size(78, 19);
+            this.jobname.TabIndex = 56;
+            this.jobname.Text = "jobname";
             // 
             // category
             // 
@@ -285,57 +330,129 @@
             this.category.TabIndex = 55;
             this.category.Text = "category";
             // 
-            // emp
+            // employer
             // 
-            this.emp.AutoSize = true;
-            this.emp.BackColor = System.Drawing.Color.Transparent;
-            this.emp.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emp.ForeColor = System.Drawing.Color.Black;
-            this.emp.Location = new System.Drawing.Point(588, 100);
-            this.emp.Name = "emp";
-            this.emp.Size = new System.Drawing.Size(44, 19);
-            this.emp.TabIndex = 54;
-            this.emp.Text = "emp";
+            this.employer.AutoSize = true;
+            this.employer.BackColor = System.Drawing.Color.Transparent;
+            this.employer.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer.ForeColor = System.Drawing.Color.Black;
+            this.employer.Location = new System.Drawing.Point(588, 100);
+            this.employer.Name = "employer";
+            this.employer.Size = new System.Drawing.Size(85, 19);
+            this.employer.TabIndex = 54;
+            this.employer.Text = "employer";
             // 
-            // dataGridView1
+            // dgvRequiredDocs
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(106, 715);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 150);
-            this.dataGridView1.TabIndex = 61;
+            this.dgvRequiredDocs.AllowUserToAddRows = false;
+            this.dgvRequiredDocs.AllowUserToDeleteRows = false;
+            this.dgvRequiredDocs.AllowUserToResizeColumns = false;
+            this.dgvRequiredDocs.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvRequiredDocs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvRequiredDocs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRequiredDocs.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvRequiredDocs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRequiredDocs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvRequiredDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRequiredDocs.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvRequiredDocs.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvRequiredDocs.Location = new System.Drawing.Point(106, 715);
+            this.dgvRequiredDocs.MultiSelect = false;
+            this.dgvRequiredDocs.Name = "dgvRequiredDocs";
+            this.dgvRequiredDocs.ReadOnly = true;
+            this.dgvRequiredDocs.RowHeadersVisible = false;
+            this.dgvRequiredDocs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvRequiredDocs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRequiredDocs.Size = new System.Drawing.Size(900, 150);
+            this.dgvRequiredDocs.TabIndex = 61;
             // 
-            // dataGridView2
+            // dgvFees
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(106, 940);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(900, 150);
-            this.dataGridView2.TabIndex = 62;
+            this.dgvFees.AllowUserToAddRows = false;
+            this.dgvFees.AllowUserToDeleteRows = false;
+            this.dgvFees.AllowUserToResizeColumns = false;
+            this.dgvFees.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvFees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFees.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvFees.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFees.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvFees.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvFees.Location = new System.Drawing.Point(106, 940);
+            this.dgvFees.MultiSelect = false;
+            this.dgvFees.Name = "dgvFees";
+            this.dgvFees.ReadOnly = true;
+            this.dgvFees.RowHeadersVisible = false;
+            this.dgvFees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvFees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFees.Size = new System.Drawing.Size(900, 150);
+            this.dgvFees.TabIndex = 62;
             // 
-            // label2
+            // contractdate
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(588, 384);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 19);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "mmddyyyy";
+            this.contractdate.AutoSize = true;
+            this.contractdate.BackColor = System.Drawing.Color.Transparent;
+            this.contractdate.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contractdate.ForeColor = System.Drawing.Color.Black;
+            this.contractdate.Location = new System.Drawing.Point(588, 384);
+            this.contractdate.Name = "contractdate";
+            this.contractdate.Size = new System.Drawing.Size(108, 19);
+            this.contractdate.TabIndex = 68;
+            this.contractdate.Text = "contractdate";
             // 
-            // label3
+            // interdate
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(588, 350);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 19);
-            this.label3.TabIndex = 67;
-            this.label3.Text = "mmddyyyy";
+            this.interdate.AutoSize = true;
+            this.interdate.BackColor = System.Drawing.Color.Transparent;
+            this.interdate.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interdate.ForeColor = System.Drawing.Color.Black;
+            this.interdate.Location = new System.Drawing.Point(588, 350);
+            this.interdate.Name = "interdate";
+            this.interdate.Size = new System.Drawing.Size(81, 19);
+            this.interdate.TabIndex = 67;
+            this.interdate.Text = "interdate";
             // 
             // label15
             // 
@@ -379,20 +496,20 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.lblViewJobList);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.contractdate);
+            this.Controls.Add(this.interdate);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFees);
+            this.Controls.Add(this.dgvRequiredDocs);
             this.Controls.Add(this.weight);
             this.Controls.Add(this.height);
             this.Controls.Add(this.salary);
-            this.Controls.Add(this.appreq);
-            this.Controls.Add(this.jname);
+            this.Controls.Add(this.noofempreq);
+            this.Controls.Add(this.jobname);
             this.Controls.Add(this.category);
-            this.Controls.Add(this.emp);
-            this.Controls.Add(this.dgvSpecDocReq1);
+            this.Controls.Add(this.employer);
+            this.Controls.Add(this.dgvSkills);
             this.Controls.Add(this.pnlEmpBtn);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -400,16 +517,17 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblSpecDocReq);
+            this.Controls.Add(this.lblNoOfEmpReqd);
             this.Controls.Add(this.lblPrincipal1);
             this.Controls.Add(this.lblCountry1);
             this.Controls.Add(this.lblEmp1);
             this.Name = "ucJobListView";
-            this.Size = new System.Drawing.Size(1101, 450);
+            this.Size = new System.Drawing.Size(1067, 450);
+            this.Load += new System.EventHandler(this.ucJobListView_Load);
             this.pnlEmpBtn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSpecDocReq1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequiredDocs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,26 +540,26 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblSpecDocReq;
+        private System.Windows.Forms.Label lblNoOfEmpReqd;
         private System.Windows.Forms.Label lblPrincipal1;
         private System.Windows.Forms.Label lblCountry1;
         private System.Windows.Forms.Label lblEmp1;
         private System.Windows.Forms.Panel pnlEmpBtn;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridView dgvSpecDocReq1;
         private System.Windows.Forms.Label weight;
         private System.Windows.Forms.Label height;
         private System.Windows.Forms.Label salary;
-        private System.Windows.Forms.Label appreq;
-        private System.Windows.Forms.Label jname;
+        private System.Windows.Forms.Label noofempreq;
+        private System.Windows.Forms.Label jobname;
         private System.Windows.Forms.Label category;
-        private System.Windows.Forms.Label emp;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label employer;
+        private System.Windows.Forms.Label contractdate;
+        private System.Windows.Forms.Label interdate;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblViewJobList;
+        public System.Windows.Forms.DataGridView dgvSkills;
+        public System.Windows.Forms.DataGridView dgvRequiredDocs;
+        public System.Windows.Forms.DataGridView dgvFees;
     }
 }

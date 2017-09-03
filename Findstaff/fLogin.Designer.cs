@@ -51,7 +51,7 @@
             this.btnLogin.Location = new System.Drawing.Point(148, 216);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 40);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -65,7 +65,7 @@
             this.txtPassword.MaxLength = 30;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(280, 30);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "Password";
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
@@ -79,7 +79,7 @@
             this.txtUsername.MaxLength = 30;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(280, 30);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Text = "Username";
             this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseClick);
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
@@ -96,7 +96,7 @@
             this.btnMinimize.Location = new System.Drawing.Point(454, -1);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(25, 25);
-            this.btnMinimize.TabIndex = 8;
+            this.btnMinimize.TabIndex = 4;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -112,7 +112,7 @@
             this.btnX.Location = new System.Drawing.Point(477, -1);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(25, 25);
-            this.btnX.TabIndex = 9;
+            this.btnX.TabIndex = 5;
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
@@ -131,7 +131,7 @@
             this.btnClear.Location = new System.Drawing.Point(254, 216);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 40);
-            this.btnClear.TabIndex = 10;
+            this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -154,7 +154,6 @@
             this.Name = "Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

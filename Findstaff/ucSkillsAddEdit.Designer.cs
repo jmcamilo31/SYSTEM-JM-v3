@@ -135,9 +135,9 @@
             this.panel2.Controls.Add(this.txtSkillName2);
             this.panel2.Controls.Add(this.lblSkillName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(946, 0);
+            this.panel2.Location = new System.Drawing.Point(1108, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(172, 400);
+            this.panel2.Size = new System.Drawing.Size(10, 400);
             this.panel2.TabIndex = 2;
             // 
             // btnCancel2

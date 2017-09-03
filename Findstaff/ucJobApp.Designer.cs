@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSetForInitInt = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAppMatch = new System.Windows.Forms.TabPage();
@@ -98,10 +104,46 @@
             // 
             // dgvAppMatch
             // 
+            this.dgvAppMatch.AllowUserToAddRows = false;
+            this.dgvAppMatch.AllowUserToDeleteRows = false;
+            this.dgvAppMatch.AllowUserToResizeColumns = false;
+            this.dgvAppMatch.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAppMatch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAppMatch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAppMatch.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvAppMatch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAppMatch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAppMatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAppMatch.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAppMatch.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvAppMatch.Location = new System.Drawing.Point(75, 75);
+            this.dgvAppMatch.MultiSelect = false;
             this.dgvAppMatch.Name = "dgvAppMatch";
-            this.dgvAppMatch.Size = new System.Drawing.Size(748, 150);
+            this.dgvAppMatch.ReadOnly = true;
+            this.dgvAppMatch.RowHeadersVisible = false;
+            this.dgvAppMatch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAppMatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAppMatch.Size = new System.Drawing.Size(750, 150);
             this.dgvAppMatch.TabIndex = 18;
             // 
             // btnFilter
@@ -184,10 +226,46 @@
             // 
             // dgvJobSuggest
             // 
+            this.dgvJobSuggest.AllowUserToAddRows = false;
+            this.dgvJobSuggest.AllowUserToDeleteRows = false;
+            this.dgvJobSuggest.AllowUserToResizeColumns = false;
+            this.dgvJobSuggest.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvJobSuggest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvJobSuggest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvJobSuggest.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvJobSuggest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJobSuggest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvJobSuggest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvJobSuggest.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvJobSuggest.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvJobSuggest.Location = new System.Drawing.Point(75, 75);
+            this.dgvJobSuggest.MultiSelect = false;
             this.dgvJobSuggest.Name = "dgvJobSuggest";
-            this.dgvJobSuggest.Size = new System.Drawing.Size(748, 150);
+            this.dgvJobSuggest.ReadOnly = true;
+            this.dgvJobSuggest.RowHeadersVisible = false;
+            this.dgvJobSuggest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvJobSuggest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvJobSuggest.Size = new System.Drawing.Size(750, 150);
             this.dgvJobSuggest.TabIndex = 19;
             // 
             // btnResults
@@ -208,35 +286,38 @@
             // txtMiddle
             // 
             this.txtMiddle.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtMiddle.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddle.ForeColor = System.Drawing.Color.Black;
+            this.txtMiddle.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddle.ForeColor = System.Drawing.Color.DimGray;
             this.txtMiddle.Location = new System.Drawing.Point(352, 22);
             this.txtMiddle.MaxLength = 30;
             this.txtMiddle.Name = "txtMiddle";
             this.txtMiddle.Size = new System.Drawing.Size(120, 26);
             this.txtMiddle.TabIndex = 15;
+            this.txtMiddle.Text = "Middle Name";
             // 
             // txtFirst
             // 
             this.txtFirst.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtFirst.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirst.ForeColor = System.Drawing.Color.Black;
+            this.txtFirst.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirst.ForeColor = System.Drawing.Color.DimGray;
             this.txtFirst.Location = new System.Drawing.Point(226, 22);
             this.txtFirst.MaxLength = 30;
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(120, 26);
             this.txtFirst.TabIndex = 13;
+            this.txtFirst.Text = "First Name";
             // 
             // txtLast
             // 
             this.txtLast.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtLast.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLast.ForeColor = System.Drawing.Color.Black;
+            this.txtLast.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLast.ForeColor = System.Drawing.Color.DimGray;
             this.txtLast.Location = new System.Drawing.Point(100, 22);
             this.txtLast.MaxLength = 30;
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(120, 26);
             this.txtLast.TabIndex = 11;
+            this.txtLast.Text = "Last Name";
             // 
             // lbljaSearch
             // 
@@ -286,14 +367,12 @@
         #endregion
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabAppMatch;
-        private System.Windows.Forms.DataGridView dgvAppMatch;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.ComboBox cbEmployer;
         private System.Windows.Forms.Label lblEmployer;
         private System.Windows.Forms.ComboBox cbJob;
         private System.Windows.Forms.Label lblJob;
         private System.Windows.Forms.TabPage tabJobSuggest;
-        private System.Windows.Forms.DataGridView dgvJobSuggest;
         private System.Windows.Forms.Button btnResults;
         private System.Windows.Forms.TextBox txtMiddle;
         private System.Windows.Forms.TextBox txtFirst;
@@ -301,5 +380,7 @@
         private System.Windows.Forms.Label lbljaSearch;
         private System.Windows.Forms.Label lblJobApp;
         public System.Windows.Forms.Button btnSetForInitInt;
+        public System.Windows.Forms.DataGridView dgvAppMatch;
+        public System.Windows.Forms.DataGridView dgvJobSuggest;
     }
 }

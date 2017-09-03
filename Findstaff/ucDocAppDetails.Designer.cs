@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblAppDetails = new System.Windows.Forms.Label();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnMoveToAcco = new System.Windows.Forms.Button();
@@ -43,6 +49,10 @@
             this.lblAddlReqs = new System.Windows.Forms.Label();
             this.btnPassed2 = new System.Windows.Forms.Button();
             this.dgvAddlReqs = new System.Windows.Forms.DataGridView();
+            this.employer = new System.Windows.Forms.Label();
+            this.joborder = new System.Windows.Forms.Label();
+            this.jobname = new System.Windows.Forms.Label();
+            this.applicant = new System.Windows.Forms.Label();
             this.pnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBasicReqs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddlReqs)).BeginInit();
@@ -65,7 +75,7 @@
             this.pnlButtons.Controls.Add(this.btnMoveToAcco);
             this.pnlButtons.Controls.Add(this.btnClose);
             this.pnlButtons.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlButtons.Location = new System.Drawing.Point(409, 900);
+            this.pnlButtons.Location = new System.Drawing.Point(418, 900);
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(282, 80);
             this.pnlButtons.TabIndex = 462;
@@ -114,7 +124,7 @@
             this.pnlTabs.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTabs.Location = new System.Drawing.Point(0, 0);
             this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(1050, 50);
+            this.pnlTabs.Size = new System.Drawing.Size(1084, 50);
             this.pnlTabs.TabIndex = 469;
             // 
             // btnPassed1
@@ -137,9 +147,45 @@
             // 
             // dgvBasicReqs
             // 
+            this.dgvBasicReqs.AllowUserToAddRows = false;
+            this.dgvBasicReqs.AllowUserToDeleteRows = false;
+            this.dgvBasicReqs.AllowUserToResizeColumns = false;
+            this.dgvBasicReqs.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBasicReqs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvBasicReqs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBasicReqs.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvBasicReqs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBasicReqs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBasicReqs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBasicReqs.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvBasicReqs.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvBasicReqs.Location = new System.Drawing.Point(100, 300);
+            this.dgvBasicReqs.MultiSelect = false;
             this.dgvBasicReqs.Name = "dgvBasicReqs";
+            this.dgvBasicReqs.ReadOnly = true;
+            this.dgvBasicReqs.RowHeadersVisible = false;
+            this.dgvBasicReqs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBasicReqs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBasicReqs.Size = new System.Drawing.Size(900, 200);
             this.dgvBasicReqs.TabIndex = 470;
             // 
@@ -195,9 +241,9 @@
             this.lblBasicReqs.ForeColor = System.Drawing.Color.Black;
             this.lblBasicReqs.Location = new System.Drawing.Point(25, 250);
             this.lblBasicReqs.Name = "lblBasicReqs";
-            this.lblBasicReqs.Size = new System.Drawing.Size(219, 25);
+            this.lblBasicReqs.Size = new System.Drawing.Size(258, 25);
             this.lblBasicReqs.TabIndex = 476;
-            this.lblBasicReqs.Text = "Basic Requirements";
+            this.lblBasicReqs.Text = "BASIC REQUIREMENTS";
             // 
             // lblAddlReqs
             // 
@@ -207,9 +253,9 @@
             this.lblAddlReqs.ForeColor = System.Drawing.Color.Black;
             this.lblAddlReqs.Location = new System.Drawing.Point(25, 570);
             this.lblAddlReqs.Name = "lblAddlReqs";
-            this.lblAddlReqs.Size = new System.Drawing.Size(268, 25);
+            this.lblAddlReqs.Size = new System.Drawing.Size(351, 25);
             this.lblAddlReqs.TabIndex = 477;
-            this.lblAddlReqs.Text = "Additional Requirements";
+            this.lblAddlReqs.Text = "ADDITIONAAL REQUIREMENTS";
             // 
             // btnPassed2
             // 
@@ -231,11 +277,95 @@
             // 
             // dgvAddlReqs
             // 
+            this.dgvAddlReqs.AllowUserToAddRows = false;
+            this.dgvAddlReqs.AllowUserToDeleteRows = false;
+            this.dgvAddlReqs.AllowUserToResizeColumns = false;
+            this.dgvAddlReqs.AllowUserToResizeRows = false;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAddlReqs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvAddlReqs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAddlReqs.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvAddlReqs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddlReqs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvAddlReqs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddlReqs.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvAddlReqs.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvAddlReqs.Location = new System.Drawing.Point(100, 620);
+            this.dgvAddlReqs.MultiSelect = false;
             this.dgvAddlReqs.Name = "dgvAddlReqs";
+            this.dgvAddlReqs.ReadOnly = true;
+            this.dgvAddlReqs.RowHeadersVisible = false;
+            this.dgvAddlReqs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAddlReqs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAddlReqs.Size = new System.Drawing.Size(900, 200);
             this.dgvAddlReqs.TabIndex = 478;
+            // 
+            // employer
+            // 
+            this.employer.AutoSize = true;
+            this.employer.BackColor = System.Drawing.Color.Transparent;
+            this.employer.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer.ForeColor = System.Drawing.Color.Black;
+            this.employer.Location = new System.Drawing.Point(696, 150);
+            this.employer.Name = "employer";
+            this.employer.Size = new System.Drawing.Size(85, 19);
+            this.employer.TabIndex = 483;
+            this.employer.Text = "employer";
+            // 
+            // joborder
+            // 
+            this.joborder.AutoSize = true;
+            this.joborder.BackColor = System.Drawing.Color.Transparent;
+            this.joborder.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joborder.ForeColor = System.Drawing.Color.Black;
+            this.joborder.Location = new System.Drawing.Point(198, 150);
+            this.joborder.Name = "joborder";
+            this.joborder.Size = new System.Drawing.Size(76, 19);
+            this.joborder.TabIndex = 482;
+            this.joborder.Text = "joborder";
+            // 
+            // jobname
+            // 
+            this.jobname.AutoSize = true;
+            this.jobname.BackColor = System.Drawing.Color.Transparent;
+            this.jobname.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobname.ForeColor = System.Drawing.Color.Black;
+            this.jobname.Location = new System.Drawing.Point(198, 178);
+            this.jobname.Name = "jobname";
+            this.jobname.Size = new System.Drawing.Size(78, 19);
+            this.jobname.TabIndex = 481;
+            this.jobname.Text = "jobname";
+            // 
+            // applicant
+            // 
+            this.applicant.AutoSize = true;
+            this.applicant.BackColor = System.Drawing.Color.Transparent;
+            this.applicant.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant.ForeColor = System.Drawing.Color.Black;
+            this.applicant.Location = new System.Drawing.Point(694, 178);
+            this.applicant.Name = "applicant";
+            this.applicant.Size = new System.Drawing.Size(84, 19);
+            this.applicant.TabIndex = 480;
+            this.applicant.Text = "applicant";
             // 
             // ucDocAppDetails
             // 
@@ -243,6 +373,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.employer);
+            this.Controls.Add(this.joborder);
+            this.Controls.Add(this.jobname);
+            this.Controls.Add(this.applicant);
             this.Controls.Add(this.btnPassed2);
             this.Controls.Add(this.dgvAddlReqs);
             this.Controls.Add(this.lblAddlReqs);
@@ -257,7 +391,8 @@
             this.Controls.Add(this.lblAppDetails);
             this.Controls.Add(this.pnlButtons);
             this.Name = "ucDocAppDetails";
-            this.Size = new System.Drawing.Size(1050, 500);
+            this.Size = new System.Drawing.Size(1084, 500);
+            this.Load += new System.EventHandler(this.ucDocAppDetails_Load);
             this.pnlButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBasicReqs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddlReqs)).EndInit();
@@ -273,7 +408,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlTabs;
         private System.Windows.Forms.Button btnPassed1;
-        private System.Windows.Forms.DataGridView dgvBasicReqs;
         private System.Windows.Forms.Label lblEmp;
         private System.Windows.Forms.Label lblJobOrder;
         private System.Windows.Forms.Label lblJob;
@@ -281,6 +415,11 @@
         private System.Windows.Forms.Label lblBasicReqs;
         private System.Windows.Forms.Label lblAddlReqs;
         private System.Windows.Forms.Button btnPassed2;
-        private System.Windows.Forms.DataGridView dgvAddlReqs;
+        public System.Windows.Forms.DataGridView dgvBasicReqs;
+        public System.Windows.Forms.DataGridView dgvAddlReqs;
+        private System.Windows.Forms.Label employer;
+        private System.Windows.Forms.Label joborder;
+        private System.Windows.Forms.Label jobname;
+        private System.Windows.Forms.Label applicant;
     }
 }
