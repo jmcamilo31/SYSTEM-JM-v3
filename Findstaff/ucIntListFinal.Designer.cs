@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnFailInt = new System.Windows.Forms.Button();
-            this.btnPassInt = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvIntervieweeList = new System.Windows.Forms.DataGridView();
             this.lblJob = new System.Windows.Forms.Label();
             this.lblEmp = new System.Windows.Forms.Label();
@@ -42,56 +39,11 @@
             this.employer = new System.Windows.Forms.Label();
             this.joborder = new System.Windows.Forms.Label();
             this.jobname = new System.Windows.Forms.Label();
+            this.btnPassInt = new System.Windows.Forms.Button();
+            this.btnFailInt = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntervieweeList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(509, 402);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 30);
-            this.btnClose.TabIndex = 54;
-            this.btnClose.Text = "CLOSE";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnFailInt
-            // 
-            this.btnFailInt.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnFailInt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnFailInt.FlatAppearance.BorderSize = 0;
-            this.btnFailInt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFailInt.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFailInt.ForeColor = System.Drawing.Color.Black;
-            this.btnFailInt.Location = new System.Drawing.Point(563, 366);
-            this.btnFailInt.Name = "btnFailInt";
-            this.btnFailInt.Size = new System.Drawing.Size(200, 30);
-            this.btnFailInt.TabIndex = 53;
-            this.btnFailInt.Text = "FAIL INTERVIEWEE";
-            this.btnFailInt.UseVisualStyleBackColor = false;
-            this.btnFailInt.Click += new System.EventHandler(this.btnFailInt_Click);
-            // 
-            // btnPassInt
-            // 
-            this.btnPassInt.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnPassInt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPassInt.FlatAppearance.BorderSize = 0;
-            this.btnPassInt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPassInt.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPassInt.ForeColor = System.Drawing.Color.Black;
-            this.btnPassInt.Location = new System.Drawing.Point(357, 366);
-            this.btnPassInt.Name = "btnPassInt";
-            this.btnPassInt.Size = new System.Drawing.Size(200, 30);
-            this.btnPassInt.TabIndex = 52;
-            this.btnPassInt.Text = "PASS INTERVIEWEE";
-            this.btnPassInt.UseVisualStyleBackColor = false;
-            this.btnPassInt.Click += new System.EventHandler(this.btnPassInt_Click);
             // 
             // dgvIntervieweeList
             // 
@@ -99,33 +51,33 @@
             this.dgvIntervieweeList.AllowUserToDeleteRows = false;
             this.dgvIntervieweeList.AllowUserToResizeColumns = false;
             this.dgvIntervieweeList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvIntervieweeList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvIntervieweeList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvIntervieweeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIntervieweeList.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvIntervieweeList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIntervieweeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIntervieweeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvIntervieweeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIntervieweeList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIntervieweeList.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvIntervieweeList.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvIntervieweeList.Location = new System.Drawing.Point(100, 140);
             this.dgvIntervieweeList.MultiSelect = false;
@@ -217,6 +169,54 @@
             this.jobname.TabIndex = 485;
             this.jobname.Text = "jobname";
             // 
+            // btnPassInt
+            // 
+            this.btnPassInt.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPassInt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPassInt.FlatAppearance.BorderSize = 0;
+            this.btnPassInt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPassInt.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassInt.ForeColor = System.Drawing.Color.Black;
+            this.btnPassInt.Location = new System.Drawing.Point(357, 366);
+            this.btnPassInt.Name = "btnPassInt";
+            this.btnPassInt.Size = new System.Drawing.Size(200, 30);
+            this.btnPassInt.TabIndex = 52;
+            this.btnPassInt.Text = "PASS INTERVIEWEE";
+            this.btnPassInt.UseVisualStyleBackColor = false;
+            this.btnPassInt.Click += new System.EventHandler(this.btnPassInt_Click);
+            // 
+            // btnFailInt
+            // 
+            this.btnFailInt.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnFailInt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFailInt.FlatAppearance.BorderSize = 0;
+            this.btnFailInt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFailInt.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFailInt.ForeColor = System.Drawing.Color.Black;
+            this.btnFailInt.Location = new System.Drawing.Point(563, 366);
+            this.btnFailInt.Name = "btnFailInt";
+            this.btnFailInt.Size = new System.Drawing.Size(200, 30);
+            this.btnFailInt.TabIndex = 53;
+            this.btnFailInt.Text = "FAIL INTERVIEWEE";
+            this.btnFailInt.UseVisualStyleBackColor = false;
+            this.btnFailInt.Click += new System.EventHandler(this.btnFailInt_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(509, 402);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 30);
+            this.btnClose.TabIndex = 54;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // ucIntListFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,10 +243,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnFailInt;
-        private System.Windows.Forms.Button btnPassInt;
         private System.Windows.Forms.Label lblJob;
         private System.Windows.Forms.Label lblEmp;
         private System.Windows.Forms.Label lblJobOrder;
@@ -255,5 +251,8 @@
         private System.Windows.Forms.Label employer;
         private System.Windows.Forms.Label joborder;
         private System.Windows.Forms.Label jobname;
+        private System.Windows.Forms.Button btnPassInt;
+        private System.Windows.Forms.Button btnFailInt;
+        private System.Windows.Forms.Button btnClose;
     }
 }

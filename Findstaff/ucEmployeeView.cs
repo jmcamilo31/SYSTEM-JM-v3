@@ -62,7 +62,7 @@ namespace Findstaff
 
             empID.Text = empId;
             username.Text = uname;
-            name.Text = (fname + mname + lname);
+            name.Text = (fname +" "+ mname +" "+ lname);
             gender.Text = gnder;
             bday.Text = birthdate;
             address.Text = add;

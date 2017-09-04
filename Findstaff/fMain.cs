@@ -14,10 +14,8 @@ namespace Findstaff
 {
     public partial class fMain : Form
     {
-        private MySqlConnection connection;
+        MySqlConnection connection;
         MySqlCommand com = new MySqlCommand();
-        MySqlDataAdapter adapter;
-        private string cmd = "";
 
         public fMain()
         {
@@ -26,6 +24,7 @@ namespace Findstaff
             ucRecruitment.Dock = DockStyle.Fill;
             ucDocumentation.Dock = DockStyle.Fill;
             ucAcco.Dock = DockStyle.Fill;
+            ucFlightBooking.Dock = DockStyle.Fill;
             ucMaintenance.Dock = DockStyle.Fill;
         }
 
@@ -50,7 +49,7 @@ namespace Findstaff
             }
             connection.Close();
 
-            lblName.Text = (fname + mname + lname);
+            lblName.Text = (fname +" "+ mname +" "+ lname);
             lblDept.Text = deptname;
         }
 
@@ -85,6 +84,7 @@ namespace Findstaff
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = false;
             ucAcco.Visible = false;
+            ucFlightBooking.Visible = false;
             ucMaintenance.Visible = false;
         }
 
@@ -94,6 +94,7 @@ namespace Findstaff
             ucRecruitment.Visible = true;
             ucDocumentation.Visible = false;
             ucAcco.Visible = false;
+            ucFlightBooking.Visible = false;
             ucMaintenance.Visible = false;
         }
 
@@ -103,22 +104,8 @@ namespace Findstaff
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = true;
             ucAcco.Visible = false;
+            ucFlightBooking.Visible = false;
             ucMaintenance.Visible = false;
-
-            connection.Open();
-            cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', count(ad.req_id)'No. of Documents to be passed' "
-                    + "from app_t app join appdoc_t ad "
-                    + "on app.app_id = ad.app_id ";
-            using (connection)
-            {
-                using (adapter = new MySqlDataAdapter(cmd, connection))
-                {
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    ucDocumentation.dgvDocumentation.DataSource = ds.Tables[0];
-                }
-            }
-            connection.Close();
         }
 
         private void rbAcco_CheckedChanged(object sender, EventArgs e)
@@ -127,6 +114,17 @@ namespace Findstaff
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = false;
             ucAcco.Visible = true;
+            ucFlightBooking.Visible = false;
+            ucMaintenance.Visible = false;
+        }
+
+        private void rbFlightBooking_CheckedChanged(object sender, EventArgs e)
+        {
+            ucJobOrderManagement.Visible = false;
+            ucRecruitment.Visible = false;
+            ucDocumentation.Visible = false;
+            ucAcco.Visible = false;
+            ucFlightBooking.Visible = true;
             ucMaintenance.Visible = false;
         }
 
@@ -136,9 +134,10 @@ namespace Findstaff
             ucRecruitment.Visible = false;
             ucDocumentation.Visible = false;
             ucAcco.Visible = false;
+            ucFlightBooking.Visible = false;
             ucMaintenance.Visible = true;
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToLongDateString();

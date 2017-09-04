@@ -28,7 +28,7 @@ namespace Findstaff
             Connection con = new Connection();
             connection = con.dbConnection();
             connection.Open();
-            string query = "";
+            string query = "SELECT * FROM EMP_T;";
             com = new MySqlCommand(query, connection);
             MySqlDataReader dataReader = com.ExecuteReader();
             while (dataReader.Read())
@@ -47,13 +47,11 @@ namespace Findstaff
         private void btnPassInt_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Passed!", "Passed!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
         }
 
         private void btnFailInt_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Failed!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

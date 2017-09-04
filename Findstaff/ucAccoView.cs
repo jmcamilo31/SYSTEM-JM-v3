@@ -28,7 +28,7 @@ namespace Findstaff
             Connection con = new Connection();
             connection = con.dbConnection();
             connection.Open();
-            string query = "";
+            string query = "SELECT * FROM EMP_T;";
             com = new MySqlCommand(query, connection);
             MySqlDataReader dataReader = com.ExecuteReader();
             while (dataReader.Read())
