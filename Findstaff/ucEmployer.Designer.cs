@@ -34,7 +34,7 @@
             this.dgvEmployer = new System.Windows.Forms.DataGridView();
             this.btnAdvSe = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtEmpName = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblEmployer = new System.Windows.Forms.Label();
             this.btnEmpView = new System.Windows.Forms.Button();
@@ -121,16 +121,16 @@
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // txtSearch
+            // txtEmpName
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSearch.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.Location = new System.Drawing.Point(175, 97);
-            this.txtSearch.MaxLength = 30;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 26);
-            this.txtSearch.TabIndex = 40;
+            this.txtEmpName.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmpName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpName.Location = new System.Drawing.Point(175, 97);
+            this.txtEmpName.MaxLength = 30;
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(200, 26);
+            this.txtEmpName.TabIndex = 40;
             // 
             // lblSearch
             // 
@@ -252,7 +252,7 @@
             this.Controls.Add(this.dgvEmployer);
             this.Controls.Add(this.btnAdvSe);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.txtEmpName);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblEmployer);
             this.ForeColor = System.Drawing.Color.Black;
@@ -267,7 +267,7 @@
         #endregion
         private System.Windows.Forms.Button btnAdvSe;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtEmpName;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblEmployer;
         private System.Windows.Forms.Button btnEmpView;

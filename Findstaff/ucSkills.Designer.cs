@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvSkills = new System.Windows.Forms.DataGridView();
             this.lblSkills = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtSkillName = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.ucSkillsAddEdit = new Findstaff.ucSkillsAddEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
             this.SuspendLayout();
@@ -78,35 +80,35 @@
             this.dgvSkills.AllowUserToDeleteRows = false;
             this.dgvSkills.AllowUserToResizeColumns = false;
             this.dgvSkills.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvSkills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSkills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSkills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSkills.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvSkills.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSkills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSkills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSkills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSkills.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSkills.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSkills.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvSkills.Location = new System.Drawing.Point(100, 100);
+            this.dgvSkills.Location = new System.Drawing.Point(100, 107);
             this.dgvSkills.MultiSelect = false;
             this.dgvSkills.Name = "dgvSkills";
             this.dgvSkills.ReadOnly = true;
@@ -144,6 +146,30 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // txtSkillName
+            // 
+            this.txtSkillName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtSkillName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSkillName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSkillName.Location = new System.Drawing.Point(164, 72);
+            this.txtSkillName.MaxLength = 30;
+            this.txtSkillName.Name = "txtSkillName";
+            this.txtSkillName.Size = new System.Drawing.Size(231, 26);
+            this.txtSkillName.TabIndex = 108;
+            this.txtSkillName.TextChanged += new System.EventHandler(this.txtSkillName_TextChanged);
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Black;
+            this.lbl.Location = new System.Drawing.Point(98, 77);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(65, 19);
+            this.lbl.TabIndex = 109;
+            this.lbl.Text = "Search:";
+            // 
             // ucSkillsAddEdit
             // 
             this.ucSkillsAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -165,9 +191,12 @@
             this.Controls.Add(this.dgvSkills);
             this.Controls.Add(this.lblSkills);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtSkillName);
+            this.Controls.Add(this.lbl);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucSkills";
             this.Size = new System.Drawing.Size(1118, 400);
+            this.Load += new System.EventHandler(this.ucSkills_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,5 +211,7 @@
         private System.Windows.Forms.Button btnAdd;
         private ucSkillsAddEdit ucSkillsAddEdit;
         public System.Windows.Forms.DataGridView dgvSkills;
+        private System.Windows.Forms.TextBox txtSkillName;
+        private System.Windows.Forms.Label lbl;
     }
 }

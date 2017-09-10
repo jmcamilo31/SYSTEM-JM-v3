@@ -63,7 +63,7 @@ namespace Findstaff
         {
             Connection con = new Connection();
             connection = con.dbConnection();
-            string com = "Select skill_id 'Skill Id', skillname 'Skill Name' from Genskills_t";
+            string com = "Select skill_id 'Skill ID', skillname 'Skill Name' from Genskills_t";
             using (connection)
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(com, connection))
@@ -73,6 +73,32 @@ namespace Findstaff
                     dgvSkills.DataSource = ds.Tables[0];
                 }
             }
+        }
+
+        public void searchData(string valueToFind)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+
+            string cmd = "Select skill_id 'Skill ID', skillname 'Skill Name' from Genskills_t WHERE skillname LIKE '%" + valueToFind + "%'";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd, connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgvSkills.DataSource = table;
+        }
+
+        private void txtSkillName_TextChanged(object sender, EventArgs e)
+        {
+            searchData(txtSkillName.Text);
+        }
+
+        private void ucSkills_Load(object sender, EventArgs e)
+        {
+            searchData(txtSkillName.Text);
         }
     }
 }

@@ -75,5 +75,31 @@ namespace Findstaff
                 }
             }
         }
+
+        public void searchData(string valueToFind)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+
+            string cmd = "Select Category_ID'Category ID', categoryname'Category Name' from jobcategory_t WHERE categoryname LIKE '%" + valueToFind + "%'";
+            com = new MySqlCommand(cmd, connection);
+            com.ExecuteNonQuery();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd, connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgvJobCategory.DataSource = table;
+        }
+
+        private void txtCategoryName_TextChanged(object sender, EventArgs e)
+        {
+            searchData(txtCategoryName.Text);
+        }
+
+        private void ucJobCategory_Load(object sender, EventArgs e)
+        {
+            searchData(txtCategoryName.Text);
+        }
     }
 }

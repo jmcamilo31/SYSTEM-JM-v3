@@ -76,7 +76,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvApplicant.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvApplicant.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvApplicant.Location = new System.Drawing.Point(100, 100);
+            this.dgvApplicant.Location = new System.Drawing.Point(100, 98);
             this.dgvApplicant.MultiSelect = false;
             this.dgvApplicant.Name = "dgvApplicant";
             this.dgvApplicant.ReadOnly = true;

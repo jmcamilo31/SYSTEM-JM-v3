@@ -36,6 +36,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvFees = new System.Windows.Forms.DataGridView();
+            this.txtFeeName = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.ucFeesAddEdit = new Findstaff.ucFeesAddEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).BeginInit();
             this.SuspendLayout();
@@ -145,6 +147,30 @@
             this.dgvFees.Size = new System.Drawing.Size(918, 200);
             this.dgvFees.TabIndex = 106;
             // 
+            // txtFeeName
+            // 
+            this.txtFeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtFeeName.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFeeName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFeeName.Location = new System.Drawing.Point(167, 68);
+            this.txtFeeName.MaxLength = 30;
+            this.txtFeeName.Name = "txtFeeName";
+            this.txtFeeName.Size = new System.Drawing.Size(231, 26);
+            this.txtFeeName.TabIndex = 110;
+            this.txtFeeName.TextChanged += new System.EventHandler(this.txtFeeName_TextChanged);
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Black;
+            this.lbl.Location = new System.Drawing.Point(101, 73);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(65, 19);
+            this.lbl.TabIndex = 111;
+            this.lbl.Text = "Search:";
+            // 
             // ucFeesAddEdit
             // 
             this.ucFeesAddEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -159,15 +185,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.ucFeesAddEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblFees);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvFees);
+            this.Controls.Add(this.txtFeeName);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ucFees";
             this.Size = new System.Drawing.Size(1118, 400);
+            this.Load += new System.EventHandler(this.ucFees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,5 +211,7 @@
         private System.Windows.Forms.Button btnEdit;
         private ucFeesAddEdit ucFeesAddEdit;
         public System.Windows.Forms.DataGridView dgvFees;
+        private System.Windows.Forms.TextBox txtFeeName;
+        private System.Windows.Forms.Label lbl;
     }
 }

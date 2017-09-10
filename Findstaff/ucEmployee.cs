@@ -15,7 +15,7 @@ namespace Findstaff
     {
         private MySqlConnection connection;
         MySqlCommand com = new MySqlCommand();
-         
+
         public ucEmployee()
         {
             InitializeComponent();
