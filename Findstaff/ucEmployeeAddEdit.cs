@@ -201,17 +201,155 @@ namespace Findstaff
             this.Hide();
         }
 
+        private void panel2_VisibleChanged(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string query = "SELECT * FROM EMP_T;";
+            com = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = com.ExecuteReader();
+            while (dataReader.Read())
+            {
+                txtUsername2.Text = dataReader.GetString(1);
+                txtPassword2.Text = dataReader.GetString(2);
+                txtLastName2.Text = dataReader.GetString(3);
+                txtFirstName2.Text = dataReader.GetString(4);
+                txtMiddleName2.Text = dataReader.GetString(5);
+                if (dataReader.GetString(6) == "Male")
+                {
+                    rbMale2.Select();
+                }
+                else
+                {
+                    rbFemale2.Select();
+                }
+                txtAddress2.Text = dataReader.GetString(8);
+                txtContact2.Text = dataReader.GetString(9);
+                cbDept2.SelectedItem = Convert.ToString(dataReader.GetString(10));
+            }
+            dataReader.Close();
+            connection.Close();
+
+            //connection.Open();
+            //string query1 = "select datepart(mm, birthday), datepart(dd, birthday), datepart(yyyy, birthday) from emp_t";
+            //MySqlCommand com1 = new MySqlCommand(query1, connection);
+            //MySqlDataReader dataReader1 = com1.ExecuteReader();
+            //while (dataReader1.Read())
+            //{
+            //    cbMonth.SelectedItem = Convert.ToString(dataReader1.GetDateTime(7));
+            //    cbDay.SelectedItem = Convert.ToString(dataReader1.GetDateTime(7));
+            //    cbYear.SelectedItem = Convert.ToString(dataReader1.GetDateTime(7));
+            //}
+            //dataReader1.Close();
+            //connection.Close();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
+            string empId = "",
+                uname = "",
+                pword = "",
+                lname = "",
+                fname = "",
+                mname = "",
+                gender = "",
+                bday = "",
+                address = "",
+                contact = "",
+                dept = "";
+
+            Connection con = new Connection();
+            connection = con.dbConnection();
+            connection.Open();
+            string query = "SELECT * FROM EMP_T";
+            MySqlCommand com = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = com.ExecuteReader();
+            while (dataReader.Read())
+            {
+                empId = dataReader.GetString(0);
+                uname = dataReader.GetString(1);
+                pword = dataReader.GetString(2);
+                lname = dataReader.GetString(3);
+                fname = dataReader.GetString(4);
+                mname = dataReader.GetString(5);
+                gender = dataReader.GetString(6);
+                bday = dataReader.GetString(7);
+                address = dataReader.GetString(8);
+                contact = dataReader.GetString(9);
+                dept = dataReader.GetString(10);
+            }
+            dataReader.Close();
+            connection.Close();
+            
+            uname = txtUsername2.Text;
+            pword = txtPassword2.Text;
+            lname = txtLastName.Text;
+            fname = txtFirstName.Text;
+            mname = txtMiddleName.Text;
+            if (rbMale.Checked)
+            {
+                gender = "Male";
+            }
+            else if (rbFemale.Checked)
+            {
+                gender = "Female";
+            }
+            //bday = 
+            address = txtAddress.Text;
+            contact = txtContact2.Text;
+            dept = cbDept2.SelectedItem.ToString();
+
+            connection.Open();
+            string query1 = "UPDATE EMP_T SET USERNAME = '" + uname + "', PASS = '"+ pword +"', LNAME = '"+ lname +"', FNAME = '" +
+                fname + "', MNAME = '" + mname + "', GENDER = '" + gender + "', ADDRSS = '" + address + "', CONTACT = '" +
+                contact + "', DEPTNAME = '" + dept + "' WHERE EMP_ID = '" + empId + "')";
+            MySqlCommand com1 = new MySqlCommand(query1, connection);
+            com1.ExecuteNonQuery();
+            connection.Close();
+            
             MessageBox.Show("Saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            txtUsername.Clear();
+            lblUserStatus.Text = "*";
+            txtPass.Clear();
+            lblPassStatus.Text = "*";
+            txtConPass.Clear();
+            lblConPassStatus.Text = "*";
+            txtLastName.Text = "Last Name";
+            lblLNameStatus.Text = "*";
+            txtLastName.ForeColor = Color.Gray;
+            txtLastName.Font = new Font(txtLastName.Font, FontStyle.Italic);
+            txtFirstName.Text = "First Name";
+            lblFNameStatus.Text = "*";
+            txtFirstName.ForeColor = Color.Gray;
+            txtFirstName.Font = new Font(txtFirstName.Font, FontStyle.Italic);
+            txtMiddleName.Text = "Middle Name";
+            txtMiddleName.ForeColor = Color.Gray;
+            txtMiddleName.Font = new Font(txtMiddleName.Font, FontStyle.Italic);
+            rbMale.Checked = false;
+            rbFemale.Checked = false;
+            lblGenderStatus.Text = "*";
+            cbMonth.SelectedIndex = -1;
+            cbDay.Items.Clear();
+            cbYear.SelectedIndex = -1;
+            lblBirthdayStatus.Text = "*";
+            txtAddress.Text = "House Number, Street, City/Province";
+            txtAddress.ForeColor = Color.Gray;
+            txtAddress.Font = new Font(txtAddress.Font, FontStyle.Italic);
+            lblAddressStatus.Text = "*";
+            txtContact.Clear();
+            lblContactStatus.Text = "*";
+            cbDept.SelectedIndex = -1;
+            lblDeptStatus.Text = "*";
             this.Hide();
         }
 
+        #region
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar)|| Char.IsPunctuation(e.KeyChar))
@@ -522,5 +660,6 @@ namespace Findstaff
                 txtMiddleName2.Text = "";
             }
         }
+        #endregion
     }
 }

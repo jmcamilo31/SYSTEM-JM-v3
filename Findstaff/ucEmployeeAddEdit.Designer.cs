@@ -67,22 +67,22 @@
             this.lblAddEmp = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbYear2 = new System.Windows.Forms.ComboBox();
+            this.cbDay2 = new System.Windows.Forms.ComboBox();
+            this.cbMonth2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel2 = new System.Windows.Forms.Button();
+            this.cbDept2 = new System.Windows.Forms.ComboBox();
+            this.txtContact2 = new System.Windows.Forms.TextBox();
+            this.txtAddress2 = new System.Windows.Forms.TextBox();
+            this.rbFemale2 = new System.Windows.Forms.RadioButton();
+            this.rbMale2 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -99,12 +99,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtConPass2 = new System.Windows.Forms.TextBox();
+            this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtUsername2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmpId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlButtons1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -745,20 +745,20 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.cbYear2);
+            this.panel2.Controls.Add(this.cbDay2);
+            this.panel2.Controls.Add(this.cbMonth2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.comboBox5);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.cbDept2);
+            this.panel2.Controls.Add(this.txtContact2);
+            this.panel2.Controls.Add(this.txtAddress2);
+            this.panel2.Controls.Add(this.rbFemale2);
+            this.panel2.Controls.Add(this.rbMale2);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
@@ -775,28 +775,30 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.textBox11);
-            this.panel2.Controls.Add(this.textBox12);
+            this.panel2.Controls.Add(this.txtConPass2);
+            this.panel2.Controls.Add(this.txtPassword2);
             this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.textBox13);
+            this.panel2.Controls.Add(this.txtUsername2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtEmpId);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(1108, 0);
+            this.panel2.Location = new System.Drawing.Point(335, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 450);
+            this.panel2.Size = new System.Drawing.Size(783, 450);
             this.panel2.TabIndex = 3;
+            this.panel2.VisibleChanged += new System.EventHandler(this.panel2_VisibleChanged);
             // 
-            // comboBox1
+            // cbYear2
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbYear2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbYear2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbYear2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbYear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbYear2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYear2.ForeColor = System.Drawing.Color.Black;
+            this.cbYear2.FormattingEnabled = true;
+            this.cbYear2.Items.AddRange(new object[] {
             "1999",
             "1998",
             "1997",
@@ -840,21 +842,21 @@
             "1959",
             "1958",
             "1957"});
-            this.comboBox1.Location = new System.Drawing.Point(523, 430);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 27);
-            this.comboBox1.TabIndex = 146;
+            this.cbYear2.Location = new System.Drawing.Point(523, 430);
+            this.cbYear2.Name = "cbYear2";
+            this.cbYear2.Size = new System.Drawing.Size(100, 27);
+            this.cbYear2.TabIndex = 146;
             // 
-            // comboBox2
+            // cbDay2
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbDay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbDay2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDay2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDay2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDay2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDay2.ForeColor = System.Drawing.Color.Black;
+            this.cbDay2.FormattingEnabled = true;
+            this.cbDay2.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -886,21 +888,21 @@
             "29",
             "30",
             "31"});
-            this.comboBox2.Location = new System.Drawing.Point(442, 430);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(75, 27);
-            this.comboBox2.TabIndex = 145;
+            this.cbDay2.Location = new System.Drawing.Point(442, 430);
+            this.cbDay2.Name = "cbDay2";
+            this.cbDay2.Size = new System.Drawing.Size(75, 27);
+            this.cbDay2.TabIndex = 145;
             // 
-            // comboBox3
+            // cbMonth2
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.Black;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbMonth2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbMonth2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbMonth2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonth2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMonth2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonth2.ForeColor = System.Drawing.Color.Black;
+            this.cbMonth2.FormattingEnabled = true;
+            this.cbMonth2.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -913,10 +915,10 @@
             "October",
             "November",
             "December"});
-            this.comboBox3.Location = new System.Drawing.Point(305, 430);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(131, 27);
-            this.comboBox3.TabIndex = 144;
+            this.cbMonth2.Location = new System.Drawing.Point(305, 430);
+            this.cbMonth2.Name = "cbMonth2";
+            this.cbMonth2.Size = new System.Drawing.Size(131, 27);
+            this.cbMonth2.TabIndex = 144;
             // 
             // label2
             // 
@@ -980,116 +982,116 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.btnSave);
+            this.panel3.Controls.Add(this.btnCancel2);
             this.panel3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(434, 635);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 80);
             this.panel3.TabIndex = 134;
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(2, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 50);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "SAVE";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(2, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(120, 50);
+            this.btnSave.TabIndex = 56;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnCancel2
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(128, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 50);
-            this.button4.TabIndex = 57;
-            this.button4.Text = "CANCEL";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCancel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel2.FlatAppearance.BorderSize = 0;
+            this.btnCancel2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCancel2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCancel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel2.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel2.Location = new System.Drawing.Point(128, 3);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(120, 50);
+            this.btnCancel2.TabIndex = 57;
+            this.btnCancel2.Text = "CANCEL";
+            this.btnCancel2.UseVisualStyleBackColor = false;
+            this.btnCancel2.Click += new System.EventHandler(this.button4_Click);
             // 
-            // comboBox5
+            // cbDept2
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(306, 539);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(195, 27);
-            this.comboBox5.TabIndex = 130;
+            this.cbDept2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbDept2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDept2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDept2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDept2.FormattingEnabled = true;
+            this.cbDept2.Location = new System.Drawing.Point(306, 539);
+            this.cbDept2.Name = "cbDept2";
+            this.cbDept2.Size = new System.Drawing.Size(195, 27);
+            this.cbDept2.TabIndex = 130;
             // 
-            // textBox6
+            // txtContact2
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(306, 503);
-            this.textBox6.MaxLength = 11;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(300, 26);
-            this.textBox6.TabIndex = 129;
+            this.txtContact2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtContact2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact2.ForeColor = System.Drawing.Color.Black;
+            this.txtContact2.Location = new System.Drawing.Point(306, 503);
+            this.txtContact2.MaxLength = 11;
+            this.txtContact2.Name = "txtContact2";
+            this.txtContact2.Size = new System.Drawing.Size(300, 26);
+            this.txtContact2.TabIndex = 129;
             // 
-            // textBox7
+            // txtAddress2
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox7.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox7.Location = new System.Drawing.Point(305, 467);
-            this.textBox7.MaxLength = 100;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(436, 26);
-            this.textBox7.TabIndex = 128;
-            this.textBox7.Text = "House Number, Street, City/Province";
+            this.txtAddress2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtAddress2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress2.ForeColor = System.Drawing.Color.DimGray;
+            this.txtAddress2.Location = new System.Drawing.Point(305, 467);
+            this.txtAddress2.MaxLength = 100;
+            this.txtAddress2.Name = "txtAddress2";
+            this.txtAddress2.Size = new System.Drawing.Size(436, 26);
+            this.txtAddress2.TabIndex = 128;
+            this.txtAddress2.Text = "House Number, Street, City/Province";
             // 
-            // radioButton1
+            // rbFemale2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(384, 399);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 23);
-            this.radioButton1.TabIndex = 127;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Female";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rbFemale2.AutoSize = true;
+            this.rbFemale2.BackColor = System.Drawing.Color.Transparent;
+            this.rbFemale2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbFemale2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemale2.ForeColor = System.Drawing.Color.Black;
+            this.rbFemale2.Location = new System.Drawing.Point(384, 399);
+            this.rbFemale2.Name = "rbFemale2";
+            this.rbFemale2.Size = new System.Drawing.Size(81, 23);
+            this.rbFemale2.TabIndex = 127;
+            this.rbFemale2.TabStop = true;
+            this.rbFemale2.Text = "Female";
+            this.rbFemale2.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rbMale2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(306, 399);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 23);
-            this.radioButton2.TabIndex = 126;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Male";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbMale2.AutoSize = true;
+            this.rbMale2.BackColor = System.Drawing.Color.Transparent;
+            this.rbMale2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbMale2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMale2.ForeColor = System.Drawing.Color.Black;
+            this.rbMale2.Location = new System.Drawing.Point(306, 399);
+            this.rbMale2.Name = "rbMale2";
+            this.rbMale2.Size = new System.Drawing.Size(63, 23);
+            this.rbMale2.TabIndex = 126;
+            this.rbMale2.TabStop = true;
+            this.rbMale2.Text = "Male";
+            this.rbMale2.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -1286,29 +1288,29 @@
             this.label20.TabIndex = 109;
             this.label20.Text = "Username :";
             // 
-            // textBox11
+            // txtConPass2
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox11.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.Color.Black;
-            this.textBox11.Location = new System.Drawing.Point(305, 203);
-            this.textBox11.MaxLength = 30;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.PasswordChar = '•';
-            this.textBox11.Size = new System.Drawing.Size(300, 26);
-            this.textBox11.TabIndex = 108;
+            this.txtConPass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtConPass2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConPass2.ForeColor = System.Drawing.Color.Black;
+            this.txtConPass2.Location = new System.Drawing.Point(305, 203);
+            this.txtConPass2.MaxLength = 30;
+            this.txtConPass2.Name = "txtConPass2";
+            this.txtConPass2.PasswordChar = '•';
+            this.txtConPass2.Size = new System.Drawing.Size(300, 26);
+            this.txtConPass2.TabIndex = 108;
             // 
-            // textBox12
+            // txtPassword2
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox12.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.Color.Black;
-            this.textBox12.Location = new System.Drawing.Point(305, 167);
-            this.textBox12.MaxLength = 30;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.PasswordChar = '•';
-            this.textBox12.Size = new System.Drawing.Size(300, 26);
-            this.textBox12.TabIndex = 107;
+            this.txtPassword2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtPassword2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword2.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword2.Location = new System.Drawing.Point(305, 167);
+            this.txtPassword2.MaxLength = 30;
+            this.txtPassword2.Name = "txtPassword2";
+            this.txtPassword2.PasswordChar = '•';
+            this.txtPassword2.Size = new System.Drawing.Size(300, 26);
+            this.txtPassword2.TabIndex = 107;
             // 
             // label21
             // 
@@ -1322,16 +1324,16 @@
             this.label21.TabIndex = 106;
             this.label21.Text = "Edit Employee";
             // 
-            // textBox13
+            // txtUsername2
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox13.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.Black;
-            this.textBox13.Location = new System.Drawing.Point(305, 131);
-            this.textBox13.MaxLength = 30;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(300, 26);
-            this.textBox13.TabIndex = 105;
+            this.txtUsername2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtUsername2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername2.ForeColor = System.Drawing.Color.Black;
+            this.txtUsername2.Location = new System.Drawing.Point(305, 131);
+            this.txtUsername2.MaxLength = 30;
+            this.txtUsername2.Name = "txtUsername2";
+            this.txtUsername2.Size = new System.Drawing.Size(300, 26);
+            this.txtUsername2.TabIndex = 105;
             // 
             // label1
             // 
@@ -1345,16 +1347,16 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Employee ID :";
             // 
-            // textBox1
+            // txtEmpId
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(305, 95);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 26);
-            this.textBox1.TabIndex = 35;
+            this.txtEmpId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtEmpId.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpId.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpId.Location = new System.Drawing.Point(305, 95);
+            this.txtEmpId.MaxLength = 30;
+            this.txtEmpId.Name = "txtEmpId";
+            this.txtEmpId.Size = new System.Drawing.Size(300, 26);
+            this.txtEmpId.TabIndex = 35;
             // 
             // ucEmployeeAddEdit
             // 
@@ -1413,22 +1415,22 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label lblAddEmp;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbYear2;
+        private System.Windows.Forms.ComboBox cbDay2;
+        private System.Windows.Forms.ComboBox cbMonth2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel2;
+        private System.Windows.Forms.ComboBox cbDept2;
+        private System.Windows.Forms.TextBox txtContact2;
+        private System.Windows.Forms.TextBox txtAddress2;
+        private System.Windows.Forms.RadioButton rbFemale2;
+        private System.Windows.Forms.RadioButton rbMale2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -1445,12 +1447,12 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtConPass2;
+        private System.Windows.Forms.TextBox txtPassword2;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtUsername2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmpId;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblDeptStatus;
