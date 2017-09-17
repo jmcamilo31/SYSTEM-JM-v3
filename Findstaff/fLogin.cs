@@ -16,6 +16,8 @@ namespace Findstaff
     {
         private MySqlConnection connection;
         MySqlCommand com = new MySqlCommand();
+        MySqlDataReader dr;
+        private string cmd = "";
 
         public Login()
         {
@@ -56,16 +58,39 @@ namespace Findstaff
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             txtPassword.ForeColor = Color.Black;
-            txtPassword.PasswordChar = '❤';
+            txtPassword.PasswordChar = '*';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fMain m = new fMain();
-            m.Show();
+            connection.Open();
+            string empID = "";
+            cmd = "select emp_id, count(*) from emp_t where username = '"+txtUsername.Text+"' and pass = '"+txtPassword.Text+"';";
+            com = new MySqlCommand(cmd, connection);
+            bool read = false;
+            dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                empID = dr[0].ToString();
+                read = true;
+            }
+            dr.Close();
+            if(read)
+            {
+                cmd = "insert into logs_t (emp_id, intime) values ('"+empID+"', current_timestamp())";
+                com = new MySqlCommand(cmd, connection);
+                com.ExecuteNonQuery();
+                this.Hide();
+                fMain m = new fMain();
+                m.Show();
+            }
+            else
+            {
+                MessageBox.Show("User is not existing in the database.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
         }
-
+        
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtUsername.Text = "Username";
@@ -73,6 +98,12 @@ namespace Findstaff
             txtPassword.Text = "Password";
             txtPassword.ForeColor = Color.DimGray;
             txtPassword.PasswordChar = '\0';
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            Connection con = new Connection();
+            connection = con.dbConnection();
         }
     }
 }

@@ -16,6 +16,8 @@ namespace Findstaff
     {
         MySqlConnection connection;
         MySqlCommand com = new MySqlCommand();
+        MySqlDataReader dr;
+        private string cmd = "";
 
         public fMain()
         {
@@ -32,25 +34,60 @@ namespace Findstaff
         {
             timer1.Start();
 
-            string lname = "", fname = "", mname = "", deptname = "";
+            string name = "", dept = "";
 
             Connection con = new Connection();
             connection = con.dbConnection();
             connection.Open();
-            string query = "SELECT * FROM EMP_T;";
-            com = new MySqlCommand(query, connection);
-            MySqlDataReader dataReader = com.ExecuteReader();
-            while (dataReader.Read())
+            cmd = "SELECT concat(E.fname, ' ', E.mname, ' ', E.lname), E.deptname FROM EMP_T E JOIN LOGS_T L"
+                + " ON E.EMP_ID = L.EMP_ID where LOG_ID = (SELECT MAX(LOG_ID) FROM LOGS_T);";
+            com = new MySqlCommand(cmd, connection);
+            dr = com.ExecuteReader();
+            while (dr.Read())
             {
-                lname = dataReader.GetString(3);
-                fname = dataReader.GetString(4);
-                mname = dataReader.GetString(5);
-                deptname = dataReader.GetString(10);
+                name = dr[0].ToString();
+                dept = dr[1].ToString();
             }
+            dr.Close();
             connection.Close();
-
-            lblName.Text = (fname +" "+ mname +" "+ lname);
-            lblDept.Text = deptname;
+            lblName.Text = name;
+            lblDept.Text = dept;
+            if(dept == "Recruitment")
+            {
+                rbJobOrderManagement.Enabled = false;
+                rbRecruitment.Enabled = true;
+                rbDocumentation.Enabled = false;
+                rbAcco.Enabled = false;
+                rbFlightBooking.Enabled = false;
+                rbMaintenance.Enabled = false;
+            }
+            else if (dept == "Documentation")
+            {
+                rbJobOrderManagement.Enabled = false;
+                rbRecruitment.Enabled = false;
+                rbDocumentation.Enabled = true;
+                rbAcco.Enabled = false;
+                rbFlightBooking.Enabled = true;
+                rbMaintenance.Enabled = false;
+            }
+            else if (dept == "Accounting")
+            {
+                rbJobOrderManagement.Enabled = false;
+                rbRecruitment.Enabled = false;
+                rbDocumentation.Enabled = false;
+                rbAcco.Enabled = true;
+                rbFlightBooking.Enabled = false;
+                rbMaintenance.Enabled = false;
+            }
+            else if (dept == "Marketing")
+            {
+                rbJobOrderManagement.Enabled = false;
+                rbRecruitment.Enabled = false;
+                rbDocumentation.Enabled = false;
+                rbAcco.Enabled = false;
+                rbFlightBooking.Enabled = false;
+                rbMaintenance.Enabled = true;
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -65,17 +102,27 @@ namespace Findstaff
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            connection.Open();
+            string empID = "";
             DialogResult y = MessageBox.Show("Are you sure you want to logout?", "Logout?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DialogResult.Yes == y)
             {
+                cmd = "select emp_id from emp_t where concat(fname, ' ', mname, ' ', lname) = '" + lblName.Text + "'";
+                com = new MySqlCommand(cmd, connection);
+                dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    empID = dr[0].ToString();
+                }
+                dr.Close();
+                cmd = "update logs_t set outtime = current_timestamp() where outtime is null and emp_id = '"+empID+"'";
+                com = new MySqlCommand(cmd, connection);
+                com.ExecuteNonQuery();
+                this.Hide();
                 Login l = new Login();
                 l.Show();
             }
-            else
-            {
-                this.Show();
-            }
+            connection.Close();
         }
 
         private void rbJobOrderManagement_CheckedChanged(object sender, EventArgs e)
