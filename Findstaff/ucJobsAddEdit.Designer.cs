@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 400);
+            this.panel1.Size = new System.Drawing.Size(518, 400);
             this.panel1.TabIndex = 2;
             // 
             // btnCancel1
@@ -203,9 +203,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblEditJobs);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1108, 0);
+            this.panel2.Location = new System.Drawing.Point(524, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 400);
+            this.panel2.Size = new System.Drawing.Size(594, 400);
             this.panel2.TabIndex = 3;
             // 
             // btnCancel2
@@ -361,20 +361,20 @@
         private System.Windows.Forms.TextBox txtJobs;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtJobs2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEditJobs;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancel2;
         public System.Windows.Forms.ComboBox cbCategory;
-        public System.Windows.Forms.ComboBox cbCategory1;
         private System.Windows.Forms.Button btnCancel1;
         private System.Windows.Forms.Button btnAdd;
         public System.Windows.Forms.ComboBox cbJobType;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox txtJobs2;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.ComboBox cbCategory1;
     }
 }

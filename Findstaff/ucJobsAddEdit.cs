@@ -17,6 +17,8 @@ namespace Findstaff
 
         private MySqlConnection connection;
         MySqlCommand com = new MySqlCommand();
+        private string cmd = "";
+        MySqlDataReader dr;
 
         public ucJobsAddEdit()
         {
@@ -104,12 +106,47 @@ namespace Findstaff
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
+            connection.Open();
+            if (txtJobs2.Text == "")
+            {
+                MessageBox.Show("Job name must not be empty.", "Empty Job Name Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult rs = MessageBox.Show("Are you sure You want to update the record with the following details?"
+                    + "\nJob ID: " + txtID.Text
+                    + "\nNew Category: " + cbCategory1.Text
+                    + "\nNew Job Name: " + txtJobs2.Text, "Confirmation", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    string categID = "";
+                    cmd = "select category_id from jobcategory_t where categoryname = '" + cbCategory1.Text + "'";
+                    com = new MySqlCommand(cmd, connection);
+                    dr = com.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        categID = dr[0].ToString();
+                    }
+                    dr.Close();
+                    cmd = "Update Job_t set category_id = '" + categID + "', jobname = '" + txtJobs2.Text + "' where job_id = '" + txtID.Text + "';";
+                    com = new MySqlCommand(cmd, connection);
+                    com.ExecuteNonQuery();
+                    MessageBox.Show("Changes Saved!", "Updated Requirement Record!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtID.Clear();
+                    cbCategory1.SelectedIndex = -1;
+                    txtJobs2.Clear();
+                    this.Hide();
+                }
+            }
+            connection.Close();
         }
 
         private void btnCancel2_Click(object sender, EventArgs e)
         {
+            txtID.Clear();
+            cbCategory1.SelectedIndex = -1;
+            txtJobs2.Clear();
+
             this.Hide();
         }
 
