@@ -31,10 +31,21 @@ namespace Findstaff
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ucJobsAddEdit.Dock = DockStyle.Fill;
-            ucJobsAddEdit.Visible = true;
-            ucJobsAddEdit.panel1.Visible = false;
-            ucJobsAddEdit.panel2.Visible = true;
+            if (dgvJobs.Rows.Count != 0)
+            {
+                ucJobsAddEdit.Dock = DockStyle.Fill;
+                ucJobsAddEdit.txtID.Text = dgvJobs.SelectedRows[0].Cells[0].Value.ToString();
+                ucJobsAddEdit.txtJobs2.Text = dgvJobs.SelectedRows[0].Cells[1].Value.ToString();
+                ucJobsAddEdit.cbCategory1.Text = dgvJobs.SelectedRows[0].Cells[2].Value.ToString();
+                ucJobsAddEdit.Visible = true;
+                ucJobsAddEdit.panel1.Visible = false;
+                ucJobsAddEdit.panel2.Visible = true;
+
+            }
+            else
+            {
+                MessageBox.Show("No record available for edit.", "No Existing Record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

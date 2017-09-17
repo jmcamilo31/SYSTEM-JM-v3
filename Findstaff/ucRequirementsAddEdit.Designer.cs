@@ -173,9 +173,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblEditRequirements);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1108, 0);
+            this.panel2.Location = new System.Drawing.Point(240, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 400);
+            this.panel2.Size = new System.Drawing.Size(878, 400);
             this.panel2.TabIndex = 2;
             // 
             // btnCancel2
@@ -208,18 +208,9 @@
             this.cbDesignation1.ForeColor = System.Drawing.Color.Black;
             this.cbDesignation1.FormattingEnabled = true;
             this.cbDesignation1.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
+            "Country",
+            "Job",
+            "Basic"});
             this.cbDesignation1.Location = new System.Drawing.Point(516, 187);
             this.cbDesignation1.Name = "cbDesignation1";
             this.cbDesignation1.Size = new System.Drawing.Size(200, 27);

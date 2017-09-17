@@ -60,14 +60,11 @@ namespace Findstaff
 
         private void ucAppAddEdit_VisibleChanged(object sender, EventArgs e)
         {
-            Connection con = new Findstaff.Connection();
+            Connection con = new Connection();
             connection = con.dbConnection();
-            cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', apps.app_no'Active Application', job.jobname'Applying for' "
-                    + "from app_t app join applications_t apps "
-                    + "on app.app_id = apps.app_id "
-                    + "join job_t job "
-                    + "on apps.job_id = job.job_id "
-                    + "where apps.appstats = 'Active';";
+            cmd = "select app.app_id'App ID', concat(app.lname, ', ', app.fname, ' ', app.mname)'Applicant Name', job.jobname'Applying for' "
+                    + "from app_t app join job_t job "
+                    + "on app.position = job.jobname ";
             using (connection)
             {
                 using (adapter = new MySqlDataAdapter(cmd, connection))
