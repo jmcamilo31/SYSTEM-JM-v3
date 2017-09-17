@@ -63,7 +63,7 @@
             this.dgvContactPersons = new System.Windows.Forms.DataGridView();
             this.label129 = new System.Windows.Forms.Label();
             this.pnlButtons1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.position = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
@@ -515,7 +515,7 @@
             // pnlButtons1
             // 
             this.pnlButtons1.BackColor = System.Drawing.Color.Transparent;
-            this.pnlButtons1.Controls.Add(this.btnCancel);
+            this.pnlButtons1.Controls.Add(this.btnClose);
             this.pnlButtons1.Controls.Add(this.btnPrint);
             this.pnlButtons1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlButtons1.Location = new System.Drawing.Point(425, 1704);
@@ -523,23 +523,24 @@
             this.pnlButtons1.Size = new System.Drawing.Size(250, 80);
             this.pnlButtons1.TabIndex = 309;
             // 
-            // btnCancel
+            // btnClose
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(128, 3);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(120, 50);
-            this.btnCancel.TabIndex = 57;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(128, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(120, 50);
+            this.btnClose.TabIndex = 57;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnPrint
             // 
@@ -887,7 +888,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblViewApp);
             this.Name = "ucAppView";
-            this.Size = new System.Drawing.Size(1101, 450);
+            this.Size = new System.Drawing.Size(1084, 450);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEducBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpHistory)).EndInit();
@@ -936,7 +937,7 @@
         private System.Windows.Forms.DataGridView dgvContactPersons;
         private System.Windows.Forms.Label label129;
         private System.Windows.Forms.Panel pnlButtons1;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Label position;
         private System.Windows.Forms.Label name;
